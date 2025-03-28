@@ -11,7 +11,7 @@
     dcterms:title "Kontrollpunkte-Liste"@de ;
     owl:versionInfo "0.1.0" .
 
-:InspectionPointGroup a owl:Class ;
+dcterms:Collection a owl:Class ;
     rdfs:label "Kontrollpunkt-Gruppe"@de .
 
 :Program a owl:Class ;
@@ -35,7 +35,7 @@
 schema:Organization a owl:Class ;
     rdfs:label "Organisation"@de .
 
-:hasParentGroup a owl:ObjectProperty ;
+:schema:isPartOf a owl:ObjectProperty ;
     rdfs:label "hat Übergruppe"@de ;
     rdfs:domain :InspectionPointGroup ;
     rdfs:range :InspectionPointGroup .
