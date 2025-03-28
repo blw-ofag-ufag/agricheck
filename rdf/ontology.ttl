@@ -14,7 +14,7 @@
 :InspectionPointGroup a owl:Class ;
     rdfs:label "Kontrollpunkt-Gruppe"@de .
 
-:Programm a owl:Class ;
+:Program a owl:Class ;
     rdfs:label "Programm"@de ;
     rdfs:comment "Ein Programm ist etwas, zu dem man sich als Landwirt *anmelden* kann."@de ;
     rdfs:subClassOf :InspectionPointGroup .
