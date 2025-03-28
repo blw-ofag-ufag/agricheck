@@ -1,8 +1,64 @@
 @prefix : <https://agriculture.ld.admin.ch/inspection/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+schema:Organization a owl:Class ;
+    rdfs:label "Organisation"@de ;
+    schema:name "Organisation"@de .
+
+:InspectionPoint a owl:Class ;
+    rdfs:label "Kontrollpunkte"@de ;
+    schema:name "Kontrollpunkte"@de ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty rdfs:label ;
+            owl:someValuesFrom xsd:string ],
+        [ a owl:Restriction ;
+            owl:onProperty rdfs:comment ;
+            owl:someValuesFrom xsd:string ] .
+
+:InspectionPointGroup a owl:Class ;
+    rdfs:label "Kontrollpunkt-Gruppe"@de ;
+    schema:name "Kontrollpunkt-Gruppe"@de .
+
+:Programm a owl:Class ;
+    rdfs:label "Programm"@de ;
+    schema:description "Ein Programm ist etwas, zu dem man sich als Landwirt *anmelden* kann."@de ;
+    schema:name "Programm"@de ;
+    rdfs:comment "Ein Programm ist etwas, zu dem man sich als Landwirt *anmelden* kann."@de ;
+    rdfs:subClassOf :InspectionPointGroup .
+
+:belongsToGroup a owl:ObjectProperty ;
+    rdfs:label "gehört zu Kontrollpunkt-Gruppe"@de ;
+    schema:name "gehört zu Kontrollpunkt-Gruppe"@de ;
+    rdfs:domain :InspectionPoint ;
+    rdfs:range :InspectionPointGroup .
+
+:hasParentGroup a owl:ObjectProperty ;
+    rdfs:label "hat Übergruppe"@de ;
+    schema:name "hat Übergruppe"@de ;
+    rdfs:domain :InspectionPointGroup ;
+    rdfs:range :InspectionPointGroup .
+
+:isResponsibleFor a owl:ObjectProperty ;
+    rdfs:label "ist verantwortlich für"@de ;
+    schema:name "ist verantwortlich für"@de ;
+    rdfs:domain schema:Organization ;
+    rdfs:range :InspectionPointGroup .
+
+: a owl:Ontology ;
+    dcterms:title "Kontrollpunkte-Liste"@de ;
+    owl:versionInfo "0.1.0" .
 
 <https://agriculture.ld.admin.ch/23a09c2a-df4b-4677-9356-b77ce2295f0c> a :InspectionPoint ;
     rdfs:label "Insekten"@de,
+        "Médicaments vétérinaires insectes"@fr,
+        "Medicamenti veterinari insetti"@it ;
+    schema:description "Der korrekte und fachgerechte Einsatz von Tierarzneimitteln ist gewährleistet"@de,
+        "È garantito l'impiego a regola d'arte e corretto dei MVet."@it ;
+    schema:name "Insekten"@de,
         "Médicaments vétérinaires insectes"@fr,
         "Medicamenti veterinari insetti"@it ;
     rdfs:comment "Der korrekte und fachgerechte Einsatz von Tierarzneimitteln ist gewährleistet"@de,
@@ -12,11 +68,21 @@
     rdfs:label "Weitere Aspekte Hygiene in der Primärproduktion"@de,
         "Autres aspects concernant l'hygiène dans la production primaire"@fr,
         "Altri aspetti concernenti l'igiene nella produzione primaria"@it ;
+    schema:description "Weitere Aspekte Hygiene in der Primärproduktion"@de,
+        "Altri aspetti concernenti l'igiene nella produzione primaria"@it ;
+    schema:name "Weitere Aspekte Hygiene in der Primärproduktion"@de,
+        "Autres aspects concernant l'hygiène dans la production primaire"@fr,
+        "Altri aspetti concernenti l'igiene nella produzione primaria"@it ;
     rdfs:comment "Weitere Aspekte Hygiene in der Primärproduktion"@de,
         "Altri aspetti concernenti l'igiene nella produzione primaria"@it .
 
 <https://agriculture.ld.admin.ch/4f50660c-bf4d-47ed-ab24-d884ff5df912> a :InspectionPoint ;
     rdfs:label "Die Rückverfolgbarkeit der Primärprodukte und ihrer Produktionsmittel, einschliesslich der Futtermittel, ist gewährleistet."@de,
+        "La traçabilité des produits primaires et de leur moyens de production dont les aliments pour animaux est assurée."@fr,
+        "È garantita la tracciabilità dei prodotti primari e dei loro mezzi di produzione, compresi gli alimenti per animali."@it ;
+    schema:description "Der Betrieb ist in der Lage, anhand von schriftlichen Dokumenten darüber Aus-kunft zu geben, an wen sie ihre Primärprodukte geliefert haben sowie von wem sie ihre Produktionsmittel bezogen haben, insbesondere die Art und Herkunft der verwendeten Futtermittel.  Die Rückverfolgbarkeit gilt nicht für direkte Lieferungen an die Konsumentinnen und Konsumenten oder an lokale Einzelhandelsgeschäfte. Die Dokumente sowie die Berichte über Analysen und Untersuchungen von Tieren und Primärprodukten sind während drei Jahren aufzubewahren.  a)"@de,
+        "die Betriebe stellen sicher, dass keine für Insekten (zur Gewinnung von Lebens- bzw. Futtermitteln) nicht zulässigen Stoffe verfüttert werden b)"@it ;
+    schema:name "Die Rückverfolgbarkeit der Primärprodukte und ihrer Produktionsmittel, einschliesslich der Futtermittel, ist gewährleistet."@de,
         "La traçabilité des produits primaires et de leur moyens de production dont les aliments pour animaux est assurée."@fr,
         "È garantita la tracciabilità dei prodotti primari e dei loro mezzi di produzione, compresi gli alimenti per animali."@it ;
     rdfs:comment "Der Betrieb ist in der Lage, anhand von schriftlichen Dokumenten darüber Aus-kunft zu geben, an wen sie ihre Primärprodukte geliefert haben sowie von wem sie ihre Produktionsmittel bezogen haben, insbesondere die Art und Herkunft der verwendeten Futtermittel.  Die Rückverfolgbarkeit gilt nicht für direkte Lieferungen an die Konsumentinnen und Konsumenten oder an lokale Einzelhandelsgeschäfte. Die Dokumente sowie die Berichte über Analysen und Untersuchungen von Tieren und Primärprodukten sind während drei Jahren aufzubewahren.  a)"@de,
@@ -26,11 +92,21 @@
     rdfs:label "Der Betrieb ist registriert und alle Einrichtungen, welche mit Futtermitteln, Nährsubstraten und tierischen Primärprodukten in Kontakt kommen, sind einwandfrei."@de,
         "L'établissement est enregistré et tous les équipements qui entrent en contact avec les aliments pour animaux, les substrats nutritifs et des produits primaires d'origine animale sont irréprochables."@fr,
         "L'azienda è registrata e le attrezzature che entrano in contatto con gli alimen-ti per gli animali, i substrati nutritivi e i prodotti primari di origine animale sono tutte ineccepibili."@it ;
+    schema:description "Erfüllt wenn: Der Betrieb ist (nach Art, 3 VPrP) von der zuständigen kantonalen Stelle registriert. Die Handhabung und die Lagerung der Insekten sowie der im Betrieb verwendeten und abgegebenen Produkte sind ordnungsgemäss. Es werden ausschliesslich Insektenarten und Nährsubstrate verwendet, die für den jeweiligen Verwendungszweck (Lebens- / Futtermittel) zugelassen sind.  Das Personal leidet nicht akut an einer durch Lebensmittel übertragbaren Krankheit und wird in Bezug auf die Gesundheitsmassnahmen unterrichtet. Kontaminationen durch Tiere, Schädlinge, Abfälle, schädliche Bestandteile der Luft, des Wassers und des Bodens sowie durch Rückstände von chemischen Stoffen und Verpackungsmaterial von Futtermitteln werden vermieden. Primärprodukte werden so produziert, gelagert, behandelt und befördert, dass diese in ihrer hygienischen Qualität und Sauberkeit nicht beeinträchtigt werden. Ergebnisse von Untersuchungen von Proben von pflanzlichem, tierischem und sonstigem Material, die für die Gesundheit von Mensch und Tier von Belang sind, werden berücksichtigt.   Anlagen, Einrichtungen, Geräte, Behälter, Transportkisten und Transportmittel sind sauber und in einwandfreiem Zustand. Des Weiteren dürfen sie die Übertragung von potenziell allergenen Stoffen auf Lebensmittel nicht begünstigen. Die Nutztiere müssen sauber sein.   Die Substrate werden so gelagert, dass die Gesundheit der Tiere und die Lebensmittelsicherheit nicht gefährdet sind.   Die zur Reinigung und Desinfektion verwendeten Chemikalien müssen gemäss den Anweisungen verwendet werden. Abfälle und gefährliche Stoffe müssen getrennt gelagert werden, um eine Kontamination von Lebens- und Futtermitteln zu vermeiden.  Die Futtermittel und das Tränkwasser dürfen weder die Gesundheit der Tiere noch die Qualität der daraus hergestellten Lebensmittel beeinträchtigen.  Falls im Betrieb selber Futter für die Insekten hergestellt oder aufbereitet wird, sind dafür spezifische Räumlichkeiten, Einrichtungen, sowie schriftliche festgelegte, standardisierte Abläufe vorhanden.  Für eine optimale Lagerung sind u.a. folgende Kriterien erfüllt: a)"@de,
+        "separater Lagerraum für Futtermittel (insbesondere keine Lagerung von Betriebsabfällen und chemischen Stoffen im selben Raum) b)"@it ;
+    schema:name "Der Betrieb ist registriert und alle Einrichtungen, welche mit Futtermitteln, Nährsubstraten und tierischen Primärprodukten in Kontakt kommen, sind einwandfrei."@de,
+        "L'établissement est enregistré et tous les équipements qui entrent en contact avec les aliments pour animaux, les substrats nutritifs et des produits primaires d'origine animale sont irréprochables."@fr,
+        "L'azienda è registrata e le attrezzature che entrano in contatto con gli alimen-ti per gli animali, i substrati nutritivi e i prodotti primari di origine animale sono tutte ineccepibili."@it ;
     rdfs:comment "Erfüllt wenn: Der Betrieb ist (nach Art, 3 VPrP) von der zuständigen kantonalen Stelle registriert. Die Handhabung und die Lagerung der Insekten sowie der im Betrieb verwendeten und abgegebenen Produkte sind ordnungsgemäss. Es werden ausschliesslich Insektenarten und Nährsubstrate verwendet, die für den jeweiligen Verwendungszweck (Lebens- / Futtermittel) zugelassen sind.  Das Personal leidet nicht akut an einer durch Lebensmittel übertragbaren Krankheit und wird in Bezug auf die Gesundheitsmassnahmen unterrichtet. Kontaminationen durch Tiere, Schädlinge, Abfälle, schädliche Bestandteile der Luft, des Wassers und des Bodens sowie durch Rückstände von chemischen Stoffen und Verpackungsmaterial von Futtermitteln werden vermieden. Primärprodukte werden so produziert, gelagert, behandelt und befördert, dass diese in ihrer hygienischen Qualität und Sauberkeit nicht beeinträchtigt werden. Ergebnisse von Untersuchungen von Proben von pflanzlichem, tierischem und sonstigem Material, die für die Gesundheit von Mensch und Tier von Belang sind, werden berücksichtigt.   Anlagen, Einrichtungen, Geräte, Behälter, Transportkisten und Transportmittel sind sauber und in einwandfreiem Zustand. Des Weiteren dürfen sie die Übertragung von potenziell allergenen Stoffen auf Lebensmittel nicht begünstigen. Die Nutztiere müssen sauber sein.   Die Substrate werden so gelagert, dass die Gesundheit der Tiere und die Lebensmittelsicherheit nicht gefährdet sind.   Die zur Reinigung und Desinfektion verwendeten Chemikalien müssen gemäss den Anweisungen verwendet werden. Abfälle und gefährliche Stoffe müssen getrennt gelagert werden, um eine Kontamination von Lebens- und Futtermitteln zu vermeiden.  Die Futtermittel und das Tränkwasser dürfen weder die Gesundheit der Tiere noch die Qualität der daraus hergestellten Lebensmittel beeinträchtigen.  Falls im Betrieb selber Futter für die Insekten hergestellt oder aufbereitet wird, sind dafür spezifische Räumlichkeiten, Einrichtungen, sowie schriftliche festgelegte, standardisierte Abläufe vorhanden.  Für eine optimale Lagerung sind u.a. folgende Kriterien erfüllt: a)"@de,
         "separater Lagerraum für Futtermittel (insbesondere keine Lagerung von Betriebsabfällen und chemischen Stoffen im selben Raum) b)"@it .
 
 <https://agriculture.ld.admin.ch/a07ef604-42b9-2b97-8aaa-3b546480a7c5> a :InspectionPoint ;
     rdfs:label "Öffentlich-rechtlich"@de,
+        "FR: Öffentlich-rechtlich"@fr,
+        "IT: Öffentlich-rechtlich"@it ;
+    schema:description "NA"@de,
+        "NA"@it ;
+    schema:name "Öffentlich-rechtlich"@de,
         "FR: Öffentlich-rechtlich"@fr,
         "IT: Öffentlich-rechtlich"@it ;
     rdfs:comment "NA"@de,
@@ -40,11 +116,21 @@
     rdfs:label "Alle mit Futtermitteln und tierischen Primärprodukten in Kontakt kommenden Einrichtungen sind einwandfrei."@de,
         "Équipements en contact avec les aliments pour animaux et les produits animaux primaires: tous irréprochables"@fr,
         "Le attrezzature che entrano in contatto con gli alimenti per gli animali e i prodotti primari di origine animale sono tutte ineccepibili."@it ;
+    schema:description "Erfüllt wenn: Anlagen, Stallungen und Einrichtungen sind einwandfrei.  Die Vorgaben betreffend Reinigung, Desinfektion und Sichtkontrolle von Ausrüstungen, Behältern, Transportkisten und Transportmitteln, die für Futtermittel und Lebensmittel verwendet werden, werden eingehalten.  Anlagen (einschliesslich der zur Lagerung und Behandlung von Futtermitteln und tierischen Primärprodukten verwendeten Anlagen), Stallungen und Einrichtungen, insbesondere solche zur Tränke und Fütterung von Tieren, Behälter, Transportkisten und Transportmittel müssen sauber sein (Desinfektion bei Bedarf). Einstreumaterial ist in einem Zustand zu halten, der die Gesundheit der Tiere und die Sicherheit von Nahrungsmitteln nicht gefährdet."@de,
+        "Soddisfatto se: Impianti, stalle e attrezzature sono ineccepibili.  Le prescrizioni concernenti la pulizia, la disinfezione e il controllo visivo di attrezzature, contenitori, casse e mezzi di trasporto utilizzati per gli alimenti per animali e le derrate alimentari sono rispettate.  Gli impianti (compresi quelli utilizzati per immagazzinare e manipolare gli alimenti per animali e i prodotti primari di origine animale), le stalle e le attrezzature, in particolare quelle utilizzate per l'abbeveraggio e il foraggiamento degli animali, i contenitori, le casse e i mezzi di trasporto devono essere puliti (disinfezione al bisogno). Le lettiere devono essere mantenute in uno stato tale da non pregiudicare la salute degli animali e la sicurezza degli alimenti per animali."@it ;
+    schema:name "Alle mit Futtermitteln und tierischen Primärprodukten in Kontakt kommenden Einrichtungen sind einwandfrei."@de,
+        "Équipements en contact avec les aliments pour animaux et les produits animaux primaires: tous irréprochables"@fr,
+        "Le attrezzature che entrano in contatto con gli alimenti per gli animali e i prodotti primari di origine animale sono tutte ineccepibili."@it ;
     rdfs:comment "Erfüllt wenn: Anlagen, Stallungen und Einrichtungen sind einwandfrei.  Die Vorgaben betreffend Reinigung, Desinfektion und Sichtkontrolle von Ausrüstungen, Behältern, Transportkisten und Transportmitteln, die für Futtermittel und Lebensmittel verwendet werden, werden eingehalten.  Anlagen (einschliesslich der zur Lagerung und Behandlung von Futtermitteln und tierischen Primärprodukten verwendeten Anlagen), Stallungen und Einrichtungen, insbesondere solche zur Tränke und Fütterung von Tieren, Behälter, Transportkisten und Transportmittel müssen sauber sein (Desinfektion bei Bedarf). Einstreumaterial ist in einem Zustand zu halten, der die Gesundheit der Tiere und die Sicherheit von Nahrungsmitteln nicht gefährdet."@de,
         "Soddisfatto se: Impianti, stalle e attrezzature sono ineccepibili.  Le prescrizioni concernenti la pulizia, la disinfezione e il controllo visivo di attrezzature, contenitori, casse e mezzi di trasporto utilizzati per gli alimenti per animali e le derrate alimentari sono rispettate.  Gli impianti (compresi quelli utilizzati per immagazzinare e manipolare gli alimenti per animali e i prodotti primari di origine animale), le stalle e le attrezzature, in particolare quelle utilizzate per l'abbeveraggio e il foraggiamento degli animali, i contenitori, le casse e i mezzi di trasporto devono essere puliti (disinfezione al bisogno). Le lettiere devono essere mantenute in uno stato tale da non pregiudicare la salute degli animali e la sicurezza degli alimenti per animali."@it .
 
 <https://agriculture.ld.admin.ch/a3b3ff82-cbaf-baf6-83e0-3b546480ae08> a :InspectionPoint ;
     rdfs:label "Korrekte Wartung der Melkanlage."@de,
+        "Installation de traite: entretenue correctement"@fr,
+        "Si provvede alla corretta manutenzione degli impianti per la mungitura."@it ;
+    schema:description "Erfüllt wenn:  - Die Melkanlage bzw. der Melkroboter funktioniert einwandfrei. - Wartungsarbeiten werden nach Vorgabe (mindestens 1x jährlich, Sömmerungsbetriebe mindestens einmal in zwei Jahren) durch eine anerkannte Fachperson durchgeführt. - Die Wartung ist anhand der Serviceblätter belegt. Serviceblätter werden 3 Jahre aufbewahrt.  Die Produzentinnen und Produzenten müssen für eine einwandfreie Funktionsweise der Melkanlagen sorgen. Die Servicearbeiten an den Melkanlagen müssen mindestens einmal pro Jahr und in Sömmerungsbetrieben mindestens einmal in zwei Jahren von einer Fachperson nach international anerkannten Normen durchgeführt werden. Die Serviceblätter sind drei Jahre aufzubewahren."@de,
+        "Soddisfatto se:  - L'impianto per la mungitura e il robot da mungitura funzionano in modo impeccabile. - La manutenzione viene effettuata secondo le prescrizioni (almeno una volta all'anno, per le aziende di estivazione almeno una volta ogni 2 anni) da uno specialista riconosciuto  - La manutenzione è provata dalle relative schede. Queste ultime vengono conservate per 3 anni.  I produttori devono garantire il funzionamento ineccepibile degli impianti per la mungitura. I lavori di manutenzione degli impianti per la mungitura devono essere effettuati almeno una volta l'anno, nelle aziende di estivazione almeno una volta ogni 2 anni, da uno specialista secondo le norme riconosciute a livello internazionale. Le schede di manutenzione devono essere conservate per 3 anni."@it ;
+    schema:name "Korrekte Wartung der Melkanlage."@de,
         "Installation de traite: entretenue correctement"@fr,
         "Si provvede alla corretta manutenzione degli impianti per la mungitura."@it ;
     rdfs:comment "Erfüllt wenn:  - Die Melkanlage bzw. der Melkroboter funktioniert einwandfrei. - Wartungsarbeiten werden nach Vorgabe (mindestens 1x jährlich, Sömmerungsbetriebe mindestens einmal in zwei Jahren) durch eine anerkannte Fachperson durchgeführt. - Die Wartung ist anhand der Serviceblätter belegt. Serviceblätter werden 3 Jahre aufbewahrt.  Die Produzentinnen und Produzenten müssen für eine einwandfreie Funktionsweise der Melkanlagen sorgen. Die Servicearbeiten an den Melkanlagen müssen mindestens einmal pro Jahr und in Sömmerungsbetrieben mindestens einmal in zwei Jahren von einer Fachperson nach international anerkannten Normen durchgeführt werden. Die Serviceblätter sind drei Jahre aufzubewahren."@de,
@@ -54,11 +140,21 @@
     rdfs:label "Futtermittel und tierische Primärprodukte werden von gefährlichen Stoffen und Abfällen getrennt gelagert."@de,
         "Les aliments pour animaux et les produits primaires d'origine animale sont entreposés séparément des substances dangereuses et des déchets"@fr,
         "Gli alimenti per animali e i prodotti primari di origine animale vengono conservati separatamente dalle sostanze pericolose e dai rifiuti."@it ;
+    schema:description "Erfüllt wenn: Es braucht nicht zwingend eine räumliche Trennung.  Betriebe der Primärproduktion sind für die Sicherheit ihrer Produkte (Lebens- und Futtermittel) verantwortlich und haben alles Erforderliche für deren Sicherheit vorzukehren. Sie müssen insbesondere: a) eine Kontamination der Produkte durch Personal, Tiere, Schädlinge, Abfälle, Tierarzneimittel, Verpackungsmaterial, Luft, Wasser, Boden usw. vermeiden, b) Primärprodukte hygienisch und sauber produzieren, lagern, behandeln und befördern.  - Futtermittel und tierische Primärprodukte werden von gefährlichen Stoffen und Abfällen getrennt gelagert, ev. auf versch. Paletten - keine Verunreinigung durch Oel, Diesel oder Düngemittel etc. durch Wegblasen oder Ausfliessen - bei Geruchsbeeinträchtigungen (Garage) müssen die Primärprodukte verschlossen in dichten Säcken (Papier oder Plastik) oder Behältern gelagert werden - Abfälle werden regelmässig entsorgt"@de,
+        "Soddisfatto se: Non è obbligatorio un isolamento in locali separati. Le aziende dedite alla produzione primaria sono responsabili della sicurezza dei loro prodotti (derrate alimentari e alimenti per animali) e sono tenute a prendere tutte le misure necessarie per garantirne la sicurezza. In particolare devono: a) evitare la contaminazione dei prodotti da parte di personale, animali, parassiti, rifiuti, medicamenti veterinari, materiale d'imballaggio, aria, acqua, suolo ecc., b) produrre, immagazzinare, manipolare e trasportare i prodotti primari in modo igienico e pulito.  - Gli alimenti per animali e i prodotti primari di origine animale vengono conservati separatamente dalle sostanze pericolose e dai rifiuti, event. su pallet differenti  - Non vi è alcuna contaminazione da petrolio, diesel, concimi, ecc. in seguito a emissioni nell'aria o fuoriuscite - In caso di ambienti maleodoranti (garage), i prodotti primari devono essere stoccati chiusi in contenitori o sacchi (carta o plastica) ad alto spessore - I rifiuti vengono smaltiti regolarmente"@it ;
+    schema:name "Futtermittel und tierische Primärprodukte werden von gefährlichen Stoffen und Abfällen getrennt gelagert."@de,
+        "Les aliments pour animaux et les produits primaires d'origine animale sont entreposés séparément des substances dangereuses et des déchets"@fr,
+        "Gli alimenti per animali e i prodotti primari di origine animale vengono conservati separatamente dalle sostanze pericolose e dai rifiuti."@it ;
     rdfs:comment "Erfüllt wenn: Es braucht nicht zwingend eine räumliche Trennung.  Betriebe der Primärproduktion sind für die Sicherheit ihrer Produkte (Lebens- und Futtermittel) verantwortlich und haben alles Erforderliche für deren Sicherheit vorzukehren. Sie müssen insbesondere: a) eine Kontamination der Produkte durch Personal, Tiere, Schädlinge, Abfälle, Tierarzneimittel, Verpackungsmaterial, Luft, Wasser, Boden usw. vermeiden, b) Primärprodukte hygienisch und sauber produzieren, lagern, behandeln und befördern.  - Futtermittel und tierische Primärprodukte werden von gefährlichen Stoffen und Abfällen getrennt gelagert, ev. auf versch. Paletten - keine Verunreinigung durch Oel, Diesel oder Düngemittel etc. durch Wegblasen oder Ausfliessen - bei Geruchsbeeinträchtigungen (Garage) müssen die Primärprodukte verschlossen in dichten Säcken (Papier oder Plastik) oder Behältern gelagert werden - Abfälle werden regelmässig entsorgt"@de,
         "Soddisfatto se: Non è obbligatorio un isolamento in locali separati. Le aziende dedite alla produzione primaria sono responsabili della sicurezza dei loro prodotti (derrate alimentari e alimenti per animali) e sono tenute a prendere tutte le misure necessarie per garantirne la sicurezza. In particolare devono: a) evitare la contaminazione dei prodotti da parte di personale, animali, parassiti, rifiuti, medicamenti veterinari, materiale d'imballaggio, aria, acqua, suolo ecc., b) produrre, immagazzinare, manipolare e trasportare i prodotti primari in modo igienico e pulito.  - Gli alimenti per animali e i prodotti primari di origine animale vengono conservati separatamente dalle sostanze pericolose e dai rifiuti, event. su pallet differenti  - Non vi è alcuna contaminazione da petrolio, diesel, concimi, ecc. in seguito a emissioni nell'aria o fuoriuscite - In caso di ambienti maleodoranti (garage), i prodotti primari devono essere stoccati chiusi in contenitori o sacchi (carta o plastica) ad alto spessore - I rifiuti vengono smaltiti regolarmente"@it .
 
 <https://agriculture.ld.admin.ch/a3b3ff82-d1b2-1b26-83e0-3b546480ae08> a :InspectionPoint ;
     rdfs:label "Art, Menge und Herkunft der zugekauften Futtermittel ist dokumentiert."@de,
+        "Aliments pour animaux achetés: type, quantité et provenance sont documentés"@fr,
+        "Il tipo, la quantità e la provenienza degli alimenti per animali acquistati sono documentati."@it ;
+    schema:description "Erfüllt wenn: Die Rückverfolgbarkeit der zugekauften Futtermittel ist belegt. Lieferscheine (bei überbetrieblicher Zusammenarbeit Vertrag) sind für alle Futtermittel von Dritten vollständig vorhanden. Es werden nur zulässige Stoffe verfüttert. Die Verbote und Beschränkungen für einzelne Stoffe werden eingehalten. Die Vorgaben betreffend Meldepflicht werden erfüllt.  Die Betriebe müssen jederzeit schriftlich die Art, Menge und Herkunft der an die Tiere verfütterten zugekauften Futtermittel belegen können. Die Dokumente, sowie die Berichte über Analysen und Untersuchungen von Tieren und Primärprodukten sind während 3 Jahren aufzubewahren.  Futtermittelzusatzstoffe sind nach den Anwendungsvorschriften zu verwenden.  Betriebe der Primärproduktion, die Futtermittel unter Verwendung von Futtermittelzu-satzstoffen, mit Ausnahme von Silierzusatzstoffen, oder von Vormischungen, die solche enthalten, erzeugen, müssen diese Tätigkeit dem BLW zwecks Registrierung oder Zulassung melden."@de,
+        "Soddisfatto se: È documentata la tracciabilità degli alimenti per animali acquistati. I bollettini di consegna (il contratto in caso di collaborazione interaziendale) relativi a tutti gli alimenti per animali forniti da terzi sono disponibili in forma completa. Vengono somministrate solo sostanze ammesse. I divieti e le limitazioni per singole sostanze sono rispettati. Le prescrizioni concernenti l'obbligo di notifica sono rispettate.  Le aziende devono essere in grado di indicare, in qualsiasi momento e con documenti scritti, il tipo, la quantità e la provenienza degli alimenti acquistati e somministrati agli animali. I documenti e i rapporti relativi ad analisi ed esami svolti su animali e prodotti primari vanno conservati per 3 anni.  Gli additivi per gli alimenti per animali devono essere utilizzati secondo le prescrizioni d'uso.  Le aziende della produzione primaria che producono alimenti per animali utilizzando additivi, ad eccezione degli additivi per insilati o di premiscele che li contengono, devono notificare questa attività all'UFAG per la registrazione o l'omologazione."@it ;
+    schema:name "Art, Menge und Herkunft der zugekauften Futtermittel ist dokumentiert."@de,
         "Aliments pour animaux achetés: type, quantité et provenance sont documentés"@fr,
         "Il tipo, la quantità e la provenienza degli alimenti per animali acquistati sono documentati."@it ;
     rdfs:comment "Erfüllt wenn: Die Rückverfolgbarkeit der zugekauften Futtermittel ist belegt. Lieferscheine (bei überbetrieblicher Zusammenarbeit Vertrag) sind für alle Futtermittel von Dritten vollständig vorhanden. Es werden nur zulässige Stoffe verfüttert. Die Verbote und Beschränkungen für einzelne Stoffe werden eingehalten. Die Vorgaben betreffend Meldepflicht werden erfüllt.  Die Betriebe müssen jederzeit schriftlich die Art, Menge und Herkunft der an die Tiere verfütterten zugekauften Futtermittel belegen können. Die Dokumente, sowie die Berichte über Analysen und Untersuchungen von Tieren und Primärprodukten sind während 3 Jahren aufzubewahren.  Futtermittelzusatzstoffe sind nach den Anwendungsvorschriften zu verwenden.  Betriebe der Primärproduktion, die Futtermittel unter Verwendung von Futtermittelzu-satzstoffen, mit Ausnahme von Silierzusatzstoffen, oder von Vormischungen, die solche enthalten, erzeugen, müssen diese Tätigkeit dem BLW zwecks Registrierung oder Zulassung melden."@de,
@@ -68,11 +164,21 @@
     rdfs:label "Weitere Aspekte Milchhygiene"@de,
         "Autres aspects concernant l'hygiène du lait"@fr,
         "Altri aspetti concernenti l'igiene del latte"@it ;
+    schema:description "- Fütterung von Silo / Silage für Rohmilchkäseproduktion sind verboten. Vorgaben für die Umstellung werden eingehalten.  - Wird korrekt gemolken (Melkhygiene / Melktechnik, Euter- und Zitzenreinigung)? - Werden Tiere, welche an auf den Menschen übertragbarer Krankheit leiden oder bei denen entsprechender Verdacht besteht, in wirksamer Weise abgesondert? - Kontrolle der Einhaltung der Vorgaben betreffend Futtermittel, die für in Milchviehställen gehaltenen Tiere verboten sind oder nur beschränkt eingesetzt werden dürfen.  - Es befinden sich keine anderen Nutztierarten als die erlaubten im Stall. - Die Anforderungen an die Verfütterung von flüssigen Milchnebenprodukten werden eingehalten."@de,
+        "raggiamento con insilati per la produzione di formaggi a base di latte crudo vietato. Le prescrizioni per la conversione sono rispettate. - Mungitura corretta (igiene / tecnica di mungitura, pulizia delle mammelle e dei capezzoli). - Gli animali che soffrono di una malattia trasmissibile all'uomo o che si sospetta siano affetti da una tale malattia vengono isolati in maniera efficace? - Controllo che vengano rispettate le prescrizioni concernenti gli alimenti per animali che sono vietati oppure possono essere utilizzati solo con limitazioni per gli animali tenuti in stalle. - Nella stalla del bestiame da latte sono presenti esclusivamente animali da reddito autorizzati.  - Le esigenze concernenti la somministrazione di sottoprodotti liquidi del latte sono soddisfatte."@it ;
+    schema:name "Weitere Aspekte Milchhygiene"@de,
+        "Autres aspects concernant l'hygiène du lait"@fr,
+        "Altri aspetti concernenti l'igiene del latte"@it ;
     rdfs:comment "- Fütterung von Silo / Silage für Rohmilchkäseproduktion sind verboten. Vorgaben für die Umstellung werden eingehalten.  - Wird korrekt gemolken (Melkhygiene / Melktechnik, Euter- und Zitzenreinigung)? - Werden Tiere, welche an auf den Menschen übertragbarer Krankheit leiden oder bei denen entsprechender Verdacht besteht, in wirksamer Weise abgesondert? - Kontrolle der Einhaltung der Vorgaben betreffend Futtermittel, die für in Milchviehställen gehaltenen Tiere verboten sind oder nur beschränkt eingesetzt werden dürfen.  - Es befinden sich keine anderen Nutztierarten als die erlaubten im Stall. - Die Anforderungen an die Verfütterung von flüssigen Milchnebenprodukten werden eingehalten."@de,
         "raggiamento con insilati per la produzione di formaggi a base di latte crudo vietato. Le prescrizioni per la conversione sono rispettate. - Mungitura corretta (igiene / tecnica di mungitura, pulizia delle mammelle e dei capezzoli). - Gli animali che soffrono di una malattia trasmissibile all'uomo o che si sospetta siano affetti da una tale malattia vengono isolati in maniera efficace? - Controllo che vengano rispettate le prescrizioni concernenti gli alimenti per animali che sono vietati oppure possono essere utilizzati solo con limitazioni per gli animali tenuti in stalle. - Nella stalla del bestiame da latte sono presenti esclusivamente animali da reddito autorizzati.  - Le esigenze concernenti la somministrazione di sottoprodotti liquidi del latte sono soddisfatte."@it .
 
 <https://agriculture.ld.admin.ch/a3b3ff82-d2e4-2e46-83e0-3b546480ae08> a :InspectionPoint ;
     rdfs:label "Weitere Aspekte Hygiene in der Primärproduktion"@de,
+        "FR: Weitere Aspekte Hygiene in der Primärproduktion"@fr,
+        "Altri aspetti concernenti l'igiene nella produzione primaria"@it ;
+    schema:description "NA"@de,
+        "NA"@it ;
+    schema:name "Weitere Aspekte Hygiene in der Primärproduktion"@de,
         "FR: Weitere Aspekte Hygiene in der Primärproduktion"@fr,
         "Altri aspetti concernenti l'igiene nella produzione primaria"@it ;
     rdfs:comment "NA"@de,
@@ -82,11 +188,21 @@
     rdfs:label "Futtermittel werden so gelagert und verabreicht, dass eine nachteilige Beeinflussung der Fische ausgeschlossen ist"@de,
         "FR: Futtermittel werden so gelagert und verabreicht, dass eine nachteilige Beeinflussung der Fische ausgeschlossen ist"@fr,
         "Gli alimenti per animali sono conservati e somministrati in maniera tale da escludere conseguenze dannose per i pesci"@it ;
+    schema:description "NA"@de,
+        "NA"@it ;
+    schema:name "Futtermittel werden so gelagert und verabreicht, dass eine nachteilige Beeinflussung der Fische ausgeschlossen ist"@de,
+        "FR: Futtermittel werden so gelagert und verabreicht, dass eine nachteilige Beeinflussung der Fische ausgeschlossen ist"@fr,
+        "Gli alimenti per animali sono conservati e somministrati in maniera tale da escludere conseguenze dannose per i pesci"@it ;
     rdfs:comment "NA"@de,
         "NA"@it .
 
 <https://agriculture.ld.admin.ch/a3b3ff82-d2e6-2e66-83e0-3b546480ae08> a :InspectionPoint ;
     rdfs:label "Die Herkunft der Futtermittel ist dokumentiert"@de,
+        "FR: Die Herkunft der Futtermittel ist dokumentiert"@fr,
+        "L'origine degli alimenti per animali è documentata"@it ;
+    schema:description "NA"@de,
+        "NA"@it ;
+    schema:name "Die Herkunft der Futtermittel ist dokumentiert"@de,
         "FR: Die Herkunft der Futtermittel ist dokumentiert"@fr,
         "L'origine degli alimenti per animali è documentata"@it ;
     rdfs:comment "NA"@de,
@@ -96,11 +212,21 @@
     rdfs:label "Die Handhabung und die Lagerung der Fische und Fischprodukte ist ordnungsgemäss"@de,
         "FR: Die Handhabung und die Lagerung der Fische und Fischprodukte ist ordnungsgemäss"@fr,
         "I pesci e i prodotti della pesca sono maneggiati e immagazzinati correttamente."@it ;
+    schema:description "NA"@de,
+        "NA"@it ;
+    schema:name "Die Handhabung und die Lagerung der Fische und Fischprodukte ist ordnungsgemäss"@de,
+        "FR: Die Handhabung und die Lagerung der Fische und Fischprodukte ist ordnungsgemäss"@fr,
+        "I pesci e i prodotti della pesca sono maneggiati e immagazzinati correttamente."@it ;
     rdfs:comment "NA"@de,
         "NA"@it .
 
 <https://agriculture.ld.admin.ch/a3b3ff82-d2e8-2e86-83e0-3b546480ae08> a :InspectionPoint ;
     rdfs:label "Weitere Aspekte Hygiene in der Primärproduktion"@de,
+        "Autres aspects concernant l'hygiène dans la production primaire"@fr,
+        "Altri aspetti concernenti l'igiene nella produzione primaria"@it ;
+    schema:description "Weitere Aspekte Hygiene in der Primärproduktion"@de,
+        "Altri aspetti concernenti l'igiene nella produzione primaria"@it ;
+    schema:name "Weitere Aspekte Hygiene in der Primärproduktion"@de,
         "Autres aspects concernant l'hygiène dans la production primaire"@fr,
         "Altri aspetti concernenti l'igiene nella produzione primaria"@it ;
     rdfs:comment "Weitere Aspekte Hygiene in der Primärproduktion"@de,
@@ -110,11 +236,21 @@
     rdfs:label "Leere Honigwaben in lebensmitteltauglichem Zustand,sauber, geruchsneutral und frei von Schädlingen gelagert"@de,
         "L'innocuité des rayons à miel est garantie et ils sont stockés dans un endroit propre, inodore et exempt d'organismes nuisibles."@fr,
         "I favi di covata e i favi da miele vuoti sono idonei al consumo e conservati in un luogo pulito, inodore e privo di organismi nocivi"@it ;
+    schema:description "Die Waben sind in lebensmitteltauglichem Zustand und werden korrekt gelagert."@de,
+        "Leere Honigwaben müssen frei von Schädlingen (Wachsmotte…) gelagert werden. Bebrütete Waben dürfen nicht für die Honigproduktion wiederverwendet werden."@it ;
+    schema:name "Leere Honigwaben in lebensmitteltauglichem Zustand,sauber, geruchsneutral und frei von Schädlingen gelagert"@de,
+        "L'innocuité des rayons à miel est garantie et ils sont stockés dans un endroit propre, inodore et exempt d'organismes nuisibles."@fr,
+        "I favi di covata e i favi da miele vuoti sono idonei al consumo e conservati in un luogo pulito, inodore e privo di organismi nocivi"@it ;
     rdfs:comment "Die Waben sind in lebensmitteltauglichem Zustand und werden korrekt gelagert."@de,
         "Leere Honigwaben müssen frei von Schädlingen (Wachsmotte…) gelagert werden. Bebrütete Waben dürfen nicht für die Honigproduktion wiederverwendet werden."@it .
 
 <https://agriculture.ld.admin.ch/a3b3ff82-d35e-35e6-83e0-3b546480ae08> a :InspectionPoint ;
     rdfs:label "Honig wird ordnungsgemäss gewonnen und verarbeitet"@de,
+        "Le miel est récolté et traité de façon règlementaire"@fr,
+        "Il miele viene estratto e lavorato correttamente"@it ;
+    schema:description "Der Honig wird ordnungsgemäss gewonnen und verarbeitet.  Wasserversorgung im Betrieb Im Betrieb muss in ausreichender Menge Trinkwasser zur Verfügung stehen, damit Lebensmittel nicht durch Wasser kontaminiert werden.   Honigproduktion Die Fütterung hat so zu erfolgen, dass möglichst kein Fütterungszucker in den Honig gelangen kann.  Honiggewinnung und -verarbeitung Honig soll unter Bedingungen gewonnen werden, dass sein Aroma, die Enzyme und die anderen biologischen Begleitstoffe nicht geschädigt werden und der Honig frei von Fremdkörpern und Verunreinigungen bleibt. a)"@de,
+        "Bei Kontrollen der Honigräume und Entnahme der Honigwaben wenig Rauch einsetzen ¿ Rauchgeschmack, Rückstände b)"@it ;
+    schema:name "Honig wird ordnungsgemäss gewonnen und verarbeitet"@de,
         "Le miel est récolté et traité de façon règlementaire"@fr,
         "Il miele viene estratto e lavorato correttamente"@it ;
     rdfs:comment "Der Honig wird ordnungsgemäss gewonnen und verarbeitet.  Wasserversorgung im Betrieb Im Betrieb muss in ausreichender Menge Trinkwasser zur Verfügung stehen, damit Lebensmittel nicht durch Wasser kontaminiert werden.   Honigproduktion Die Fütterung hat so zu erfolgen, dass möglichst kein Fütterungszucker in den Honig gelangen kann.  Honiggewinnung und -verarbeitung Honig soll unter Bedingungen gewonnen werden, dass sein Aroma, die Enzyme und die anderen biologischen Begleitstoffe nicht geschädigt werden und der Honig frei von Fremdkörpern und Verunreinigungen bleibt. a)"@de,
@@ -124,11 +260,21 @@
     rdfs:label "Der Honig wird ordnungsgemäss gelagert."@de,
         "Le miel est stocké de façon règlementaire"@fr,
         "Il miele viene stoccato correttamente"@it ;
+    schema:description "Der Honig wird ordnungsgemäss (an einem dunklen Ort) gelagert.  Der Honig muss kühl, trocken und dunkel gelagert werden. Lagerungsräume sollen bienendicht sein.  Honigverpackungen Umhüllungs- und Verpackungsmaterial darf keine Kontaminationsquelle für Lebensmittel darstellen. Insbesondere wenn Metall oder Glas verwendet wird, ist sicherzustellen, dass das betreffende Behältnis sauber und nicht beschädigt ist."@de,
+        "Il miele viene stoccato correttamente (al buio).  Il miele deve essere immagazzinato in luogo fresco, asciutto e buio. I locali di stoccaggio devono essere inaccessibili alle api.  Imballaggi per il miele  I materiali di confezionamento e di imballaggio non devono essere fonte di conta-minazione per le derrate alimentari. In particolare, i contenitori di metallo e di vetro devono essere controllati per verificare che siano in buono stato e puliti prima dell'uso."@it ;
+    schema:name "Der Honig wird ordnungsgemäss gelagert."@de,
+        "Le miel est stocké de façon règlementaire"@fr,
+        "Il miele viene stoccato correttamente"@it ;
     rdfs:comment "Der Honig wird ordnungsgemäss (an einem dunklen Ort) gelagert.  Der Honig muss kühl, trocken und dunkel gelagert werden. Lagerungsräume sollen bienendicht sein.  Honigverpackungen Umhüllungs- und Verpackungsmaterial darf keine Kontaminationsquelle für Lebensmittel darstellen. Insbesondere wenn Metall oder Glas verwendet wird, ist sicherzustellen, dass das betreffende Behältnis sauber und nicht beschädigt ist."@de,
         "Il miele viene stoccato correttamente (al buio).  Il miele deve essere immagazzinato in luogo fresco, asciutto e buio. I locali di stoccaggio devono essere inaccessibili alle api.  Imballaggi per il miele  I materiali di confezionamento e di imballaggio non devono essere fonte di conta-minazione per le derrate alimentari. In particolare, i contenitori di metallo e di vetro devono essere controllati per verificare che siano in buono stato e puliti prima dell'uso."@it .
 
 <https://agriculture.ld.admin.ch/a3b3ff82-d360-3606-83e0-3b546480ae08> a :InspectionPoint ;
     rdfs:label "Art, Menge und Empfänger von Honig ist dokumentiert"@de,
+        "Le type, la quantité et les destinataires du miel sont documentés"@fr,
+        "Il tipo, la quantità e il destinatario del miele sono documentati"@it ;
+    schema:description "Erfüllt wenn  Dokumentation vorhanden.  Der Bewirtschafter muss über die Art, die Menge und den Abnehmer der Primärprodukte Auskunft geben können. a) Dokumentation mit Belegen (Lieferscheine/Rechnungen) b) Aufbewahrungsfrist 3 Jahre c) gilt nicht bei direkter Abgabe an Konsumenten oder an lokale Einzelhandelsgeschäfte."@de,
+        "Soddisfatto se  È presente la documentazione necessaria.  Il gestore deve essere in grado di indicare il tipo, la quantità e l'acquirente dei prodotti primari. a) Documentazione mediante pezze giustificative (bollettini di consegna/fatture) b) Il termine di conservazione è di 3 anni c) Non si applica alle forniture dirette ai consumatori o agli esercizi di commercio al dettaglio locali."@it ;
+    schema:name "Art, Menge und Empfänger von Honig ist dokumentiert"@de,
         "Le type, la quantité et les destinataires du miel sont documentés"@fr,
         "Il tipo, la quantità e il destinatario del miele sono documentati"@it ;
     rdfs:comment "Erfüllt wenn  Dokumentation vorhanden.  Der Bewirtschafter muss über die Art, die Menge und den Abnehmer der Primärprodukte Auskunft geben können. a) Dokumentation mit Belegen (Lieferscheine/Rechnungen) b) Aufbewahrungsfrist 3 Jahre c) gilt nicht bei direkter Abgabe an Konsumenten oder an lokale Einzelhandelsgeschäfte."@de,
@@ -138,11 +284,21 @@
     rdfs:label "Eier werden sachgerecht gelagert."@de,
         "Les œufs sont entreposés de manière appropriée."@fr,
         "Le uova sono conservate in modo adeguato."@it ;
+    schema:description "Die Eier werden gemäss den Anforderungen gelagert. Die Rückverfolgbarkeit (inkl. Legedatum) muss gewährleistet sein. Die Angabe des Legedatums auf dem Ei wird empfohlen.  Die Eier dürfen bis am 28. Tag nach dem Legedatum an Konsumentinnen und Konsumenten abgegeben werden.   Gekühlte Eier müssen gekühlt verkauft werden (das Kondenswasser, das bei Erwärmung entsteht, macht die Poren durchlässiger).  Eier müssen bis zur Abgabe an Konsumenten sauber, trocken und frei von Fremdgeruch gehalten, sowie vor Stössen und vor Sonneneinstrahlung geschützt werden.  Sie müssen bei der Temperatur aufbewahrt und transportiert werden, die die hygienische Beschaffenheit des Erzeugnisses am besten gewährleistet. Die Temperatur sollte möglichst konstant sein.  Das Mindesthaltbarkeitsdatum nach Artikel 13 Absatz 1 LIV ist auf höchstens 28 Tage nach dem Legen festzusetzen."@de,
+        "Le uova sono conservate conformemente ai requisiti. La tracciabilità (incl. data di deposizione) deve essere garantita. Si consiglia di riportare la data di deposizione sull'uovo. Le uova possono essere consegnate ai consumatori fino a 28 giorni dopo la data di deposizione.  Le uova refrigerate devono essere vendute refrigerate (l'acqua di condensazio-ne che si forma con il riscaldamento rende i pori più permeabili).  Le uova devono essere conservate pulite, asciutte, prive di odori estranei e protette da urti e raggi solari fino al momento della consegna ai consumatori.  Devono essere conservate e trasportate alla temperatura che meglio garantisce le condizioni igieniche del prodotto. La temperatura deve essere il più possibile costante.  Il termine minimo di conservazione ai sensi dell'articolo 13 capoverso 1 OID deve essere fissato a un massimo di 28 giorni dopo la deposizione."@it ;
+    schema:name "Eier werden sachgerecht gelagert."@de,
+        "Les œufs sont entreposés de manière appropriée."@fr,
+        "Le uova sono conservate in modo adeguato."@it ;
     rdfs:comment "Die Eier werden gemäss den Anforderungen gelagert. Die Rückverfolgbarkeit (inkl. Legedatum) muss gewährleistet sein. Die Angabe des Legedatums auf dem Ei wird empfohlen.  Die Eier dürfen bis am 28. Tag nach dem Legedatum an Konsumentinnen und Konsumenten abgegeben werden.   Gekühlte Eier müssen gekühlt verkauft werden (das Kondenswasser, das bei Erwärmung entsteht, macht die Poren durchlässiger).  Eier müssen bis zur Abgabe an Konsumenten sauber, trocken und frei von Fremdgeruch gehalten, sowie vor Stössen und vor Sonneneinstrahlung geschützt werden.  Sie müssen bei der Temperatur aufbewahrt und transportiert werden, die die hygienische Beschaffenheit des Erzeugnisses am besten gewährleistet. Die Temperatur sollte möglichst konstant sein.  Das Mindesthaltbarkeitsdatum nach Artikel 13 Absatz 1 LIV ist auf höchstens 28 Tage nach dem Legen festzusetzen."@de,
         "Le uova sono conservate conformemente ai requisiti. La tracciabilità (incl. data di deposizione) deve essere garantita. Si consiglia di riportare la data di deposizione sull'uovo. Le uova possono essere consegnate ai consumatori fino a 28 giorni dopo la data di deposizione.  Le uova refrigerate devono essere vendute refrigerate (l'acqua di condensazio-ne che si forma con il riscaldamento rende i pori più permeabili).  Le uova devono essere conservate pulite, asciutte, prive di odori estranei e protette da urti e raggi solari fino al momento della consegna ai consumatori.  Devono essere conservate e trasportate alla temperatura che meglio garantisce le condizioni igieniche del prodotto. La temperatura deve essere il più possibile costante.  Il termine minimo di conservazione ai sensi dell'articolo 13 capoverso 1 OID deve essere fissato a un massimo di 28 giorni dopo la deposizione."@it .
 
 <https://agriculture.ld.admin.ch/a3b3ff82-d3d3-3d36-83e0-3b546480ae08> a :InspectionPoint ;
     rdfs:label "Weitere Aspekte Hygiene in der tierischen Primärproduktion"@de,
+        "Autres aspects concernant l'hygiène dans la production primaire animale"@fr,
+        "Altri aspetti concernenti l'igiene nella produzione primaria animale"@it ;
+    schema:description "- Ergebnisse von Analysen/Untersuchungen, welche für die Gesundheit von Mensch und Tier von Bedeutung sind, stehen zur Verfügung. - Kenntnis Rückrufpflichten. - Kenntnis Massnahmen, welche bei Zoonosen getroffen werden müssen. - Angaben zu Primärprodukten (z.B. Legedatum) werden so gehandhabt, dass die Lebensmittel gesetzeskonform gekennzeichnet werden können."@de,
+        "- Sono disponibili i risultati di analisi/esami rilevanti per la salute dell'uomo e dell'animale. - Conoscenza degli obblighi di ritiro. - Conoscenza delle misure da adottare in caso di zoonosi. - Le indicazioni sui prodotti primari (ad es. data di deposizione) devono essere gestite in modo tale che le derrate alimentari siano contrassegnate in modo conforme alla legge."@it ;
+    schema:name "Weitere Aspekte Hygiene in der tierischen Primärproduktion"@de,
         "Autres aspects concernant l'hygiène dans la production primaire animale"@fr,
         "Altri aspetti concernenti l'igiene nella produzione primaria animale"@it ;
     rdfs:comment "- Ergebnisse von Analysen/Untersuchungen, welche für die Gesundheit von Mensch und Tier von Bedeutung sind, stehen zur Verfügung. - Kenntnis Rückrufpflichten. - Kenntnis Massnahmen, welche bei Zoonosen getroffen werden müssen. - Angaben zu Primärprodukten (z.B. Legedatum) werden so gehandhabt, dass die Lebensmittel gesetzeskonform gekennzeichnet werden können."@de,
@@ -152,11 +308,21 @@
     rdfs:label "Euterkontrollen monatlich durchgeführt, dokumentiert und die Ergebnisse mind. 3 Jahre aufbewahrt."@de,
         "Contrôles de la mamelle: effectués chaque mois; résultats conservés au moins 3 ans"@fr,
         "I controlli delle mammelle vengono effettuati mensilmente, documentati e i risultati conservati per almeno 3 anni."@it ;
+    schema:description "Erfüllt wenn:  Euterkontrollen der laktierenden Kühe werden folgendermassen durchgeführt, dokumentiert und 3 Jahre aufbewahrt: a) Schalmtest mind. 1x pro Monat, oder b) monatliche Einzelkuh-Zellzahlbestimmung im 4/4-Tagesgemelk (durch Viehzuchtverbände), oder c) permanente, viertelsweise Leitfähigkeitsmessung (bei Melkrobotern)  Bei Zellzahlen höher als 150 000/ml oder abweichender Leitfähigkeit eines Viertels um 50 % von der Norm, muss der Schalmtest durchgeführt und dokumentiert werden.  Die Eutergesundheit aller Kühe, deren Milch abgeliefert wird, ist mindestens 1x pro Monat mittels Schalmtestkontrolle zu kontrollieren. Milch positiver Euterviertel (++, +++), gilt als fehlerhaft.  Auf Sömmerungsbetrieben muss eine erste Überprüfung spätestens 7 Tage nach der Bestossung durchgeführt sein.  Anstelle des Schalmtests können die Einzelkuh-Zellzahlbestimmungen im 4/4-Tagesgemelk, die von den Viehzuchtverbänden durchgeführt werden, oder die permanente, viertelsweise Leitfähigkeitsmessung als Kontrolle herangezogen werden. Ist die Zellzahl der Milch einer Kuh höher als 150 000 oder weicht die Leitfähigkeit der Milch eines Viertels um 50 Prozent von der Norm ab, so ist der Schalmtest durchzuführen.  Die Ergebnisse der Kontrollen sind schriftlich festzuhalten und 3 Jahre aufzubewahren."@de,
+        "Soddisfatto se: Il controllo delle mammelle delle vacche in lattazione viene effettuato co-me segue, documentato e i risultati vengono conservati per 3 anni: a) prova di Schalm almeno 1 volta al mese, oppure b) determinazione mensile del numero di cellule in campioni di mungitura  quotidiana dei 4/4, per ogni vacca (da parte delle federazioni di allevamento); oppure c) misurazione permanente della conduttività del latte di ogni quarto (mungitura mediante robot)  La salute delle mammelle di tutte le vacche il cui latte viene fornito deve essere controllata almeno una volta al mese attraverso la prova di Schalm; il latte dei quarti di mammella positivi (++, +++) è considerato difettoso.  Il primo controllo nelle aziende di estivazione va eseguito al più tardi 7 giorni dopo il carico dell'alpe.  In sostituzione della prova di Schalm valgono anche la determinazione del numero di cellule in campioni di mungitura quotidiana dei 4/4, per ogni vacca oppure la misurazione permanente della conduttività del latte di ogni quarto. In caso di nu-mero di cellule superiore a 150 000/ml o conduttività di un quarto divergente dalla norma del 50 % si deve procedere all'esecuzione di una prova di Schalm.  I risultati dei controlli devono essere registrati per scritto e conservati per 3 anni."@it ;
+    schema:name "Euterkontrollen monatlich durchgeführt, dokumentiert und die Ergebnisse mind. 3 Jahre aufbewahrt."@de,
+        "Contrôles de la mamelle: effectués chaque mois; résultats conservés au moins 3 ans"@fr,
+        "I controlli delle mammelle vengono effettuati mensilmente, documentati e i risultati conservati per almeno 3 anni."@it ;
     rdfs:comment "Erfüllt wenn:  Euterkontrollen der laktierenden Kühe werden folgendermassen durchgeführt, dokumentiert und 3 Jahre aufbewahrt: a) Schalmtest mind. 1x pro Monat, oder b) monatliche Einzelkuh-Zellzahlbestimmung im 4/4-Tagesgemelk (durch Viehzuchtverbände), oder c) permanente, viertelsweise Leitfähigkeitsmessung (bei Melkrobotern)  Bei Zellzahlen höher als 150 000/ml oder abweichender Leitfähigkeit eines Viertels um 50 % von der Norm, muss der Schalmtest durchgeführt und dokumentiert werden.  Die Eutergesundheit aller Kühe, deren Milch abgeliefert wird, ist mindestens 1x pro Monat mittels Schalmtestkontrolle zu kontrollieren. Milch positiver Euterviertel (++, +++), gilt als fehlerhaft.  Auf Sömmerungsbetrieben muss eine erste Überprüfung spätestens 7 Tage nach der Bestossung durchgeführt sein.  Anstelle des Schalmtests können die Einzelkuh-Zellzahlbestimmungen im 4/4-Tagesgemelk, die von den Viehzuchtverbänden durchgeführt werden, oder die permanente, viertelsweise Leitfähigkeitsmessung als Kontrolle herangezogen werden. Ist die Zellzahl der Milch einer Kuh höher als 150 000 oder weicht die Leitfähigkeit der Milch eines Viertels um 50 Prozent von der Norm ab, so ist der Schalmtest durchzuführen.  Die Ergebnisse der Kontrollen sind schriftlich festzuhalten und 3 Jahre aufzubewahren."@de,
         "Soddisfatto se: Il controllo delle mammelle delle vacche in lattazione viene effettuato co-me segue, documentato e i risultati vengono conservati per 3 anni: a) prova di Schalm almeno 1 volta al mese, oppure b) determinazione mensile del numero di cellule in campioni di mungitura  quotidiana dei 4/4, per ogni vacca (da parte delle federazioni di allevamento); oppure c) misurazione permanente della conduttività del latte di ogni quarto (mungitura mediante robot)  La salute delle mammelle di tutte le vacche il cui latte viene fornito deve essere controllata almeno una volta al mese attraverso la prova di Schalm; il latte dei quarti di mammella positivi (++, +++) è considerato difettoso.  Il primo controllo nelle aziende di estivazione va eseguito al più tardi 7 giorni dopo il carico dell'alpe.  In sostituzione della prova di Schalm valgono anche la determinazione del numero di cellule in campioni di mungitura quotidiana dei 4/4, per ogni vacca oppure la misurazione permanente della conduttività del latte di ogni quarto. In caso di nu-mero di cellule superiore a 150 000/ml o conduttività di un quarto divergente dalla norma del 50 % si deve procedere all'esecuzione di una prova di Schalm.  I risultati dei controlli devono essere registrati per scritto e conservati per 3 anni."@it .
 
 <https://agriculture.ld.admin.ch/a3b3ff82-d3d6-3d66-83e0-3b546480ae08> a :InspectionPoint ;
     rdfs:label "Voraussetzungen für erforderliche Hygiene beim Melken sind getroffen."@de,
+        "Hygiène lors de la traite: conditions remplies"@fr,
+        "I presupposti igienici necessari per la mungitura sono soddisfatti."@it ;
+    schema:description "Erfüllt wenn:  - Anlageteile, Behälter und Milchgeräte sind sauber und frei von Restwasser - Vorgemelk wird weggeleert - Eine Handwaschgelegenheit mit Seife und Einwegtrocknungsmaterial ist in der Nähe des Stalls oder der Milchkammer vorhanden - Die laktierenden Tiere sind sauber, insbesondere im Euterbereich - Nur zugelassene Zitzenbäder und -sprays werden verwendet  a) Vor dem Melken müssen die von der Milch berührten Anlageteile, Behälter und Milchgeräte sauber und von allfälligem Restwasser befreit sein.  b) Milchtiere sind sauber und gesund zu halten. Die Zitzen, das Euter und die angrenzenden Körperteile müssen vor Melkbeginn sauber sein. c) Die Milch jeden Tieres ist im Vorgemelk auf organoleptische und abnorme physikalisch-chemische Merkmale zu kontrollieren. Abweichende Milch darf nicht als Lebensmittel verwendet werden. d) Nur von der Swissmedic oder dem BAG zugelassene Zitzenbäder und –Sprays werden verwendet. e) Am Melkplatz müssen geeignete Waschvorrichtungen vorhanden sein, damit das Personal Arme und Hände regelmäßig reinigen kann. f) Das Melkpersonal muss saubere und zweckmäßige Kleider tragen. g) Personen, die akut an einer durch Lebensmittel übertragbaren Krankheit leiden oder auf Lebensmittel übertragbare Infektionserreger ausscheiden, dürfen weder melken, noch mit Lebensmitteln umgehen."@de,
+        "Soddisfatto se:  - Le parti dell'impianto, i recipienti e le attrezzature per il latte sono puliti e privi di resti d'acqua - Il latte della premungitura viene gettato via - Nei pressi della stalla o del locale di mungitura vi è la possibilità di lavarsi le mani e il punto predisposto è munito di sapone e asciugamani monouso - Le vacche in lattazione sono pulite, soprattutto nella zona delle mammelle - Vengono utilizzati solo prodotti e spray per mammelle autorizzati  a) Prima della mungitura occorre pulire ed eliminare da eventuali resti d'acqua le parti dell'impianto, i recipienti e le attrezzature per il latte entrate in contatto con il latte. b) Gli animali da latte devono essere tenuti puliti e in salute. Prima della mungitura, i capezzoli, le mammelle e le parti adiacenti devono essere puliti. c) In fase di premungitura il latte di ogni animale deve essere controllato al fine di rilevare anomalie organolettiche o fisico-chimiche. Il latte che presenta anomalie non può essere utilizzato quale derrata alimentare. d) I trattamenti per immersione o per vaporizzazione dei capezzoli sono possibili solo se autorizzati da Swissmedic o dall'UFSP. e) Nell'area di mungitura devono essere disponibili installazioni idonee che consentano alle persone di lavarsi regolarmente mani e braccia. f) Il personale addetto alla mungitura deve indossare abiti puliti e adeguati. g) Le persone affette dalla forma acuta di una malattia trasmissibile attraverso derrate alimentari o che espellono agenti patogeni in grado di contaminare le derrate alimentari non possono né mungere né trattare derrate alimentari"@it ;
+    schema:name "Voraussetzungen für erforderliche Hygiene beim Melken sind getroffen."@de,
         "Hygiène lors de la traite: conditions remplies"@fr,
         "I presupposti igienici necessari per la mungitura sono soddisfatti."@it ;
     rdfs:comment "Erfüllt wenn:  - Anlageteile, Behälter und Milchgeräte sind sauber und frei von Restwasser - Vorgemelk wird weggeleert - Eine Handwaschgelegenheit mit Seife und Einwegtrocknungsmaterial ist in der Nähe des Stalls oder der Milchkammer vorhanden - Die laktierenden Tiere sind sauber, insbesondere im Euterbereich - Nur zugelassene Zitzenbäder und -sprays werden verwendet  a) Vor dem Melken müssen die von der Milch berührten Anlageteile, Behälter und Milchgeräte sauber und von allfälligem Restwasser befreit sein.  b) Milchtiere sind sauber und gesund zu halten. Die Zitzen, das Euter und die angrenzenden Körperteile müssen vor Melkbeginn sauber sein. c) Die Milch jeden Tieres ist im Vorgemelk auf organoleptische und abnorme physikalisch-chemische Merkmale zu kontrollieren. Abweichende Milch darf nicht als Lebensmittel verwendet werden. d) Nur von der Swissmedic oder dem BAG zugelassene Zitzenbäder und –Sprays werden verwendet. e) Am Melkplatz müssen geeignete Waschvorrichtungen vorhanden sein, damit das Personal Arme und Hände regelmäßig reinigen kann. f) Das Melkpersonal muss saubere und zweckmäßige Kleider tragen. g) Personen, die akut an einer durch Lebensmittel übertragbaren Krankheit leiden oder auf Lebensmittel übertragbare Infektionserreger ausscheiden, dürfen weder melken, noch mit Lebensmitteln umgehen."@de,
@@ -166,11 +332,21 @@
     rdfs:label "Sauberkeit der Reinigungs- und Milchlagerräume, Tank- und milchführende Anlagen; Trinkwasserqualität."@de,
         "Propreté du local de nettoyage et du local d'entreposage du lait ainsi que de la citerne et des installations de transport du lait ; qualité de l'eau potable."@fr,
         "Pulizia dei locali per la pulizia e del magazzino per il latte nonché della cisterna e degli impianti per il trasporto del latte; qualità dell'acqua potabile."@it ;
+    schema:description "Erfüllt wenn:  - Sauberkeit entlang des Milchgewinnungsweges wird eingehalten. - Reinigung und Desinfektion der Tanks und Behälter wird durchgeführt. - Oberflächen mit Milchkontakt werden mindestens 1 Mal wöchentlich sauer gereinigt. - Für die Reinigung wird Wasser mit Trinkwasserqualität verwendet.  Bei privater Quelle Untersuchung der Wasserqualität aufgrund einer Risikoanalyse.  Nach der Benutzung müssen die Oberflächen gereinigt und erforderlichenfalls desinfiziert werden. Oberflächen im Kontakt mit Milch müssen mindestens 1x/Woche sauer gereinigt werden. a)"@de,
+        "Behälter und Tanks zur Beförderung von Milch müssen gereinigt und desinfiziert werden: nach jeder Benutzung b)"@it ;
+    schema:name "Sauberkeit der Reinigungs- und Milchlagerräume, Tank- und milchführende Anlagen; Trinkwasserqualität."@de,
+        "Propreté du local de nettoyage et du local d'entreposage du lait ainsi que de la citerne et des installations de transport du lait ; qualité de l'eau potable."@fr,
+        "Pulizia dei locali per la pulizia e del magazzino per il latte nonché della cisterna e degli impianti per il trasporto del latte; qualità dell'acqua potabile."@it ;
     rdfs:comment "Erfüllt wenn:  - Sauberkeit entlang des Milchgewinnungsweges wird eingehalten. - Reinigung und Desinfektion der Tanks und Behälter wird durchgeführt. - Oberflächen mit Milchkontakt werden mindestens 1 Mal wöchentlich sauer gereinigt. - Für die Reinigung wird Wasser mit Trinkwasserqualität verwendet.  Bei privater Quelle Untersuchung der Wasserqualität aufgrund einer Risikoanalyse.  Nach der Benutzung müssen die Oberflächen gereinigt und erforderlichenfalls desinfiziert werden. Oberflächen im Kontakt mit Milch müssen mindestens 1x/Woche sauer gereinigt werden. a)"@de,
         "Behälter und Tanks zur Beförderung von Milch müssen gereinigt und desinfiziert werden: nach jeder Benutzung b)"@it .
 
 <https://agriculture.ld.admin.ch/a3b3ff82-d46a-46a6-83e0-3b546480ae08> a :InspectionPoint ;
     rdfs:label "Das Tränkewasser und das Futter sind sauber und unverdorben."@de,
+        "L'eau d'abreuvement et les aliments pour animaux sont propres et non avariés."@fr,
+        "L'acqua di abbeveramento e gli alimenti per animali sono puliti e non guasti."@it ;
+    schema:description "Erfüllt wenn: Futtermittel und Wasser sind sauber und unverdorben sowie Tränkebecken sind sauber.  Die Vorgaben betreffend verbotene und unerwünschte Stoffe in Futtermitteln werden eingehalten.   Futtermittel und Tränkewasser dürfen die Gesundheit der Tiere und die Qualität der von ihnen stammenden Lebensmittel nicht beeinträchtigen. Futtermittel müssen sauber, hygienisch einwandfrei und unverdorben sein."@de,
+        "Soddisfatto se: Gli alimenti per animali e l'acqua sono puliti e non guasti e gli abbeveratoi sono puliti.  Le prescrizioni concernenti le sostanze vietate e indesiderabili negli alimenti per animali sono rispettate.  Gli alimenti per animali e l'acqua di abbeveramento non devono alterare la salute degli animali né la qualità delle derrate alimentari da essi derivate. Gli alimenti per animali devono essere puliti, ineccepibili dal profilo igienico e non guasti."@it ;
+    schema:name "Das Tränkewasser und das Futter sind sauber und unverdorben."@de,
         "L'eau d'abreuvement et les aliments pour animaux sont propres et non avariés."@fr,
         "L'acqua di abbeveramento e gli alimenti per animali sono puliti e non guasti."@it ;
     rdfs:comment "Erfüllt wenn: Futtermittel und Wasser sind sauber und unverdorben sowie Tränkebecken sind sauber.  Die Vorgaben betreffend verbotene und unerwünschte Stoffe in Futtermitteln werden eingehalten.   Futtermittel und Tränkewasser dürfen die Gesundheit der Tiere und die Qualität der von ihnen stammenden Lebensmittel nicht beeinträchtigen. Futtermittel müssen sauber, hygienisch einwandfrei und unverdorben sein."@de,
@@ -180,11 +356,21 @@
     rdfs:label "Personalhygiene im Betrieb ist genügend und angemessen."@de,
         "Hygiène du personnel dans l'exploitation: suffisante et appropriée"@fr,
         "L'igiene del personale nell'azienda è sufficiente e adeguata."@it ;
+    schema:description "Erfüllt wenn: Die personenhygienischen Anforderungen (z.B. saubere Hände) werden berücksichtigt. Keine Personen beschäftigt, welche akut an einer durch Lebensmittel übertragbaren Krankheit leiden oder auf Lebensmittel übertragbare Infektionserreger ausscheiden. Eine Handwaschgelegenheit in der Nähe des Rüstplatzes, des Verpackungsstandortes, des Stalles oder in der Milchkammer ist vorhanden. Sie muss mit Seife und Einwegtrocknungsmaterial ausgestattet sein. Handtücher dürfen nicht verwendet werden.  Die in der Primärproduktion tätigen Betriebe müssen dafür sorgen, dass:  a) das Personal nicht akut an einer durch Lebensmittel übertragbaren Krankheit leidet; b) das Personal in Bezug auf die Gesundheitsmassnahmen unterrichtet wird; c) Primärprodukte so produziert, gelagert, behandelt und befördert werden, dass diese in ihrer hygienischen Qualität und Sauberkeit nicht beeinträchtigt werden.  Personen, die Lebensmittel gewinnen oder behandeln, sind zu hoher persönlicher Sauberkeit verpflichtet. Sie müssen saubere, zweckmässige Kleider tragen.  Personen, die akut an einer durch Lebensmittel übertragbaren Krankheit leiden oder auf Lebensmittel übertragbare Infektionserreger ausscheiden, dürfen nicht direkt mit Lebens- oder Futtermitteln in Kontakt kommen. Allfällige ärztlich festgestellte Krankheitsbefunde sind der Produzentin oder dem Produzenten zu melden. Die Produzentinnen und Produzenten sind verpflichtet, das Personal über die Meldepflicht zu informieren."@de,
+        "Soddisfatto se: I requisiti concernenti l'igiene personale (ad es. mani pulite) sono soddisfatti. Non vengono impiegate persone affette dalla forma acuta di una malattia trasmissibile attraverso le derrate alimentari o che espellono agenti patogeni in grado di contaminare le derrate alimentari. C'è la possibilità di lavarsi le mani nelle vicinanze del posto di preparazione, del luogo di imballaggio, della stalla o nel locale di mungitura. Il punto predisposto deve essere munito di sapone e asciugamani monouso. Non è permesso l'utilizzo di asciugamani di stoffa riutilizzabili.  Le aziende dedite alla produzione primaria devono provvedere affinché:  a) il personale non soffra di alcuna malattia acuta trasmessa da derrate alimentari; b) il personale sia informato delle misure sanitarie; c) i prodotti primari siano fabbricati, immagazzinati, manipolati e trasportati in modo da non pregiudicarne la qualità igienica e la pulizia.  Le persone addette alla produzione o al trattamento di derrate alimentari devono curare con grande attenzione la pulizia personale. Esse devono indossare abiti puliti e adeguati.  Le persone affette dalla forma acuta di una malattia trasmissibile attraverso le derrate alimentari o che espellono agenti patogeni in grado di contaminare le derrate alimentari non possono entrare in contatto diretto con queste ultime o con alimenti per animali. Tali persone devono dichiarare al produttore eventuali sintomi di una malattia accertati da un medico. Il produttore è tenuto ad informare il proprio personale del carattere obbligatorio di tale dichiarazione."@it ;
+    schema:name "Personalhygiene im Betrieb ist genügend und angemessen."@de,
+        "Hygiène du personnel dans l'exploitation: suffisante et appropriée"@fr,
+        "L'igiene del personale nell'azienda è sufficiente e adeguata."@it ;
     rdfs:comment "Erfüllt wenn: Die personenhygienischen Anforderungen (z.B. saubere Hände) werden berücksichtigt. Keine Personen beschäftigt, welche akut an einer durch Lebensmittel übertragbaren Krankheit leiden oder auf Lebensmittel übertragbare Infektionserreger ausscheiden. Eine Handwaschgelegenheit in der Nähe des Rüstplatzes, des Verpackungsstandortes, des Stalles oder in der Milchkammer ist vorhanden. Sie muss mit Seife und Einwegtrocknungsmaterial ausgestattet sein. Handtücher dürfen nicht verwendet werden.  Die in der Primärproduktion tätigen Betriebe müssen dafür sorgen, dass:  a) das Personal nicht akut an einer durch Lebensmittel übertragbaren Krankheit leidet; b) das Personal in Bezug auf die Gesundheitsmassnahmen unterrichtet wird; c) Primärprodukte so produziert, gelagert, behandelt und befördert werden, dass diese in ihrer hygienischen Qualität und Sauberkeit nicht beeinträchtigt werden.  Personen, die Lebensmittel gewinnen oder behandeln, sind zu hoher persönlicher Sauberkeit verpflichtet. Sie müssen saubere, zweckmässige Kleider tragen.  Personen, die akut an einer durch Lebensmittel übertragbaren Krankheit leiden oder auf Lebensmittel übertragbare Infektionserreger ausscheiden, dürfen nicht direkt mit Lebens- oder Futtermitteln in Kontakt kommen. Allfällige ärztlich festgestellte Krankheitsbefunde sind der Produzentin oder dem Produzenten zu melden. Die Produzentinnen und Produzenten sind verpflichtet, das Personal über die Meldepflicht zu informieren."@de,
         "Soddisfatto se: I requisiti concernenti l'igiene personale (ad es. mani pulite) sono soddisfatti. Non vengono impiegate persone affette dalla forma acuta di una malattia trasmissibile attraverso le derrate alimentari o che espellono agenti patogeni in grado di contaminare le derrate alimentari. C'è la possibilità di lavarsi le mani nelle vicinanze del posto di preparazione, del luogo di imballaggio, della stalla o nel locale di mungitura. Il punto predisposto deve essere munito di sapone e asciugamani monouso. Non è permesso l'utilizzo di asciugamani di stoffa riutilizzabili.  Le aziende dedite alla produzione primaria devono provvedere affinché:  a) il personale non soffra di alcuna malattia acuta trasmessa da derrate alimentari; b) il personale sia informato delle misure sanitarie; c) i prodotti primari siano fabbricati, immagazzinati, manipolati e trasportati in modo da non pregiudicarne la qualità igienica e la pulizia.  Le persone addette alla produzione o al trattamento di derrate alimentari devono curare con grande attenzione la pulizia personale. Esse devono indossare abiti puliti e adeguati.  Le persone affette dalla forma acuta di una malattia trasmissibile attraverso le derrate alimentari o che espellono agenti patogeni in grado di contaminare le derrate alimentari non possono entrare in contatto diretto con queste ultime o con alimenti per animali. Tali persone devono dichiarare al produttore eventuali sintomi di una malattia accertati da un medico. Il produttore è tenuto ad informare il proprio personale del carattere obbligatorio di tale dichiarazione."@it .
 
 <https://agriculture.ld.admin.ch/a3b3ff82-d6c6-6c66-83e0-3b546480ae08> a :InspectionPoint ;
     rdfs:label "Art, Menge und Empfänger von tierischen Primärprodukten sind dokumentiert."@de,
+        "Produits animaux primaires: type, quantité et destinaires sont documentés"@fr,
+        "Il tipo, la quantità e i destinatari di prodotti primari di origine animale sono documentati."@it ;
+    schema:description "Erfüllt wenn: Dokumentation vorhanden.  Der Betrieb muss anhand von schriftlichen Dokumenten die Abgabe von Primärprodukten (Lebensmittel tierischer Herkunft und Futtermittel) belegen können: a) Verkauf von Milch an einen Milchkäufer (z.B. Käserei) b) Verkauf von Eiern an einen Zwischenhändler c) Verkauf von Honig an einen Zwischenhändler d) Verkauf von Futter an eine Futtermühle e) Verkauf von Tieren (Beleg = Begleitdokumente)   Die direkte Abgabe an den Konsumenten oder an lokale Einzelhandelsgeschäfte (z.B. Eier. an den Dorfladen in der näheren Umgebung) muss nicht aufgezeichnet werden. Die oben erwähnten Dokumente sowie die Berichte über Analysen und Untersuchungen von Tieren und Primärprodukten sind während drei Jahren aufzubewahren."@de,
+        "Soddisfatto se: È disponibile un'apposita documentazione.  L'azienda, sulla scorta di documenti scritti, deve essere in grado di comprovare la consegna di prodotti primari (derrate alimentari di origine animale e alimenti per animali): a) Vendita di latte a un acquirente di latte (ad es. caseificio) b) Vendita di uova a un intermediario  c) Vendita di miele a un intermediario  d) Vendita di alimenti per animali a un mangimificio e) Vendita di animali (prova = certificati d'accompagnamento)  Non occorre notificare la fornitura diretta al consumatore o a esercizi di commercio al dettaglio locali (ad es. uova al negozio di paese nelle immediate vicinanze). I documenti sopra citati e i rapporti relativi ad analisi ed esami svolti su animali e prodotti primari vanno conservati per tre anni."@it ;
+    schema:name "Art, Menge und Empfänger von tierischen Primärprodukten sind dokumentiert."@de,
         "Produits animaux primaires: type, quantité et destinaires sont documentés"@fr,
         "Il tipo, la quantità e i destinatari di prodotti primari di origine animale sono documentati."@it ;
     rdfs:comment "Erfüllt wenn: Dokumentation vorhanden.  Der Betrieb muss anhand von schriftlichen Dokumenten die Abgabe von Primärprodukten (Lebensmittel tierischer Herkunft und Futtermittel) belegen können: a) Verkauf von Milch an einen Milchkäufer (z.B. Käserei) b) Verkauf von Eiern an einen Zwischenhändler c) Verkauf von Honig an einen Zwischenhändler d) Verkauf von Futter an eine Futtermühle e) Verkauf von Tieren (Beleg = Begleitdokumente)   Die direkte Abgabe an den Konsumenten oder an lokale Einzelhandelsgeschäfte (z.B. Eier. an den Dorfladen in der näheren Umgebung) muss nicht aufgezeichnet werden. Die oben erwähnten Dokumente sowie die Berichte über Analysen und Untersuchungen von Tieren und Primärprodukten sind während drei Jahren aufzubewahren."@de,
@@ -194,11 +380,21 @@
     rdfs:label "Milchhygiene"@de,
         "Hygiène du lait"@fr,
         "Igiene del latte"@it ;
+    schema:description "Milchhygiene: Hygienische Milchgewinnung, Vorkehrungen gegen Rückstände sind getroffen."@de,
+        "Igiene del latte: Il latte viene prodotto in modo igienico e vengono adottati i provvedimenti contro i residui."@it ;
+    schema:name "Milchhygiene"@de,
+        "Hygiène du lait"@fr,
+        "Igiene del latte"@it ;
     rdfs:comment "Milchhygiene: Hygienische Milchgewinnung, Vorkehrungen gegen Rückstände sind getroffen."@de,
         "Igiene del latte: Il latte viene prodotto in modo igienico e vengono adottati i provvedimenti contro i residui."@it .
 
 <https://agriculture.ld.admin.ch/a3b3ff82-d9ff-9ff6-83e0-3b546480ae08> a :InspectionPoint ;
     rdfs:label "Fische: Hygiene in der Primärproduktion"@de,
+        "FR: Fische: Hygiene in der Primärproduktion"@fr,
+        "Pesci: Igiene nella produzione primaria"@it ;
+    schema:description "NA"@de,
+        "NA"@it ;
+    schema:name "Fische: Hygiene in der Primärproduktion"@de,
         "FR: Fische: Hygiene in der Primärproduktion"@fr,
         "Pesci: Igiene nella produzione primaria"@it ;
     rdfs:comment "NA"@de,
@@ -208,11 +404,21 @@
     rdfs:label "Rindviehhaltung mit Verkehrsmilchproduktion"@de,
         "Expl. de bovins avec prod. de lait commercialisé"@fr,
         "Det. di bovini con prod. di latte commerciale"@it ;
+    schema:description "18: Milchhygiene: Hygienische Milchgewinnung, Vorkehrungen gegen Rückstände sind getroffen."@de,
+        "18: Igiene del latte: Il latte viene prodotto in modo igienico e vengono adottati i provvedimenti contro i residui."@it ;
+    schema:name "Rindviehhaltung mit Verkehrsmilchproduktion"@de,
+        "Expl. de bovins avec prod. de lait commercialisé"@fr,
+        "Det. di bovini con prod. di latte commerciale"@it ;
     rdfs:comment "18: Milchhygiene: Hygienische Milchgewinnung, Vorkehrungen gegen Rückstände sind getroffen."@de,
         "18: Igiene del latte: Il latte viene prodotto in modo igienico e vengono adottati i provvedimenti contro i residui."@it .
 
 <https://agriculture.ld.admin.ch/a3b3ff82-da6a-a6a6-83e0-3b546480ae08> a :InspectionPoint ;
     rdfs:label "Bienen: Hygiene in der Primärproduktion"@de,
+        "Abeilles: Hygiène dans la production primaire"@fr,
+        "Api: Igiene nella produzione primaria"@it ;
+    schema:description "Bienen: Hygiene in der Primärproduktion: Hygienische und einwandfreie Honiggewinnung gewährleistet"@de,
+        "Api: Igiene nella produzione primaria: È garantita una produzione di miele igienica e ineccepibile"@it ;
+    schema:name "Bienen: Hygiene in der Primärproduktion"@de,
         "Abeilles: Hygiène dans la production primaire"@fr,
         "Api: Igiene nella produzione primaria"@it ;
     rdfs:comment "Bienen: Hygiene in der Primärproduktion: Hygienische und einwandfreie Honiggewinnung gewährleistet"@de,
@@ -222,11 +428,21 @@
     rdfs:label "Hygiene tierische Primärproduktion"@de,
         "Hygiène de la production primaire animale "@fr,
         "Igiene nella produzione primaria animale"@it ;
+    schema:description "Hygiene in der tierischen Primärproduktion: Herstellung tierischer Primärprodukte so, dass daraus gewonnene Lebensmittel sicher und hygienisch sind."@de,
+        "Igiene nella produzione primaria animale: La produzione dei prodotti primari di origine animale avviene in modo tale che le derrate alimentari che ne derivano siano sicure e igieniche."@it ;
+    schema:name "Hygiene tierische Primärproduktion"@de,
+        "Hygiène de la production primaire animale "@fr,
+        "Igiene nella produzione primaria animale"@it ;
     rdfs:comment "Hygiene in der tierischen Primärproduktion: Herstellung tierischer Primärprodukte so, dass daraus gewonnene Lebensmittel sicher und hygienisch sind."@de,
         "Igiene nella produzione primaria animale: La produzione dei prodotti primari di origine animale avviene in modo tale che le derrate alimentari che ne derivano siano sicure e igieniche."@it .
 
 <https://agriculture.ld.admin.ch/ae25706c-89d9-4894-80d5-9c54be2ee987> a :InspectionPoint ;
     rdfs:label "Primärprodukte von Insekten"@de,
+        "Produits primaires d'insectes"@fr,
+        "Produzione dei prodotti primari di insetti"@it ;
+    schema:description "Die Herstellung der Primärprodukte von Insekten erfolgt so, dass die daraus gewonnenen Lebensmittel und Futtermittel sicher und hygienisch sind"@de,
+        "La produzione dei prodotti primari di insetti avviene in modo tale che le derrate alimentari o gli alimenti per animali che ne derivano sono sicuri e igienici."@it ;
+    schema:name "Primärprodukte von Insekten"@de,
         "Produits primaires d'insectes"@fr,
         "Produzione dei prodotti primari di insetti"@it ;
     rdfs:comment "Die Herstellung der Primärprodukte von Insekten erfolgt so, dass die daraus gewonnenen Lebensmittel und Futtermittel sicher und hygienisch sind"@de,
@@ -236,11 +452,21 @@
     rdfs:label "Waschen von Frischgemüse und frischen Früchten mit Trinkwasser"@de,
         "FR: Waschen von Frischgemüse und frischen Früchten mit Trinkwasser"@fr,
         "Lavaggio della frutta fresca e della verdura fresca con acqua potabile"@it ;
+    schema:description "NA"@de,
+        "NA"@it ;
+    schema:name "Waschen von Frischgemüse und frischen Früchten mit Trinkwasser"@de,
+        "FR: Waschen von Frischgemüse und frischen Früchten mit Trinkwasser"@fr,
+        "Lavaggio della frutta fresca e della verdura fresca con acqua potabile"@it ;
     rdfs:comment "NA"@de,
         "NA"@it .
 
 <https://agriculture.ld.admin.ch/bc2a4cd9-9fc6-fc65-3ae0-3b546480af5b> a :InspectionPoint ;
     rdfs:label "Personalhygiene und Vorsichtsmassnahmen bei Krankheiten"@de,
+        "FR: Personalhygiene und Vorsichtsmassnahmen bei Krankheiten"@fr,
+        "Igiene del personale e misure precauzionali in caso di malattie"@it ;
+    schema:description "NA"@de,
+        "NA"@it ;
+    schema:name "Personalhygiene und Vorsichtsmassnahmen bei Krankheiten"@de,
         "FR: Personalhygiene und Vorsichtsmassnahmen bei Krankheiten"@fr,
         "Igiene del personale e misure precauzionali in caso di malattie"@it ;
     rdfs:comment "NA"@de,
@@ -250,11 +476,21 @@
     rdfs:label "Getrennte Lagerung von Primärprodukten und Abfällen / gefährlichen Stoffen"@de,
         "FR: Getrennte Lagerung von Primärprodukten und Abfällen / gefährlichen Stoffen"@fr,
         "Stoccaggio troppo vicino a scarti/sostanze pericolose, rischio di contaminazione esistente"@it ;
+    schema:description "NA"@de,
+        "NA"@it ;
+    schema:name "Getrennte Lagerung von Primärprodukten und Abfällen / gefährlichen Stoffen"@de,
+        "FR: Getrennte Lagerung von Primärprodukten und Abfällen / gefährlichen Stoffen"@fr,
+        "Stoccaggio troppo vicino a scarti/sostanze pericolose, rischio di contaminazione esistente"@it ;
     rdfs:comment "NA"@de,
         "NA"@it .
 
 <https://agriculture.ld.admin.ch/bc2a4cd9-9fc8-fc85-3ae0-3b546480af5b> a :InspectionPoint ;
     rdfs:label "Pflanzenschutzmittel und Biozide"@de,
+        "FR: Hygiene pflanzliche Produktion - Pflanzenschutzmittel und Biozide"@fr,
+        "Igiene produzione vegetale - Prodotti fitosanitari e biocidi"@it ;
+    schema:description "NA"@de,
+        "NA"@it ;
+    schema:name "Pflanzenschutzmittel und Biozide"@de,
         "FR: Hygiene pflanzliche Produktion - Pflanzenschutzmittel und Biozide"@fr,
         "Igiene produzione vegetale - Prodotti fitosanitari e biocidi"@it ;
     rdfs:comment "NA"@de,
@@ -264,11 +500,21 @@
     rdfs:label "Aufzeichnungen und korrekte Anwendung von Pflanzenschutzmitteln vor der Ernte"@de,
         "FR: Aufzeichnungen und korrekte Anwendung von Pflanzenschutzmitteln vor der Ernte"@fr,
         "Registrazioni e utilizzo corretto di prodotti fitosanitari prima del raccolto"@it ;
+    schema:description "NA"@de,
+        "NA"@it ;
+    schema:name "Aufzeichnungen und korrekte Anwendung von Pflanzenschutzmitteln vor der Ernte"@de,
+        "FR: Aufzeichnungen und korrekte Anwendung von Pflanzenschutzmitteln vor der Ernte"@fr,
+        "Registrazioni e utilizzo corretto di prodotti fitosanitari prima del raccolto"@it ;
     rdfs:comment "NA"@de,
         "NA"@it .
 
 <https://agriculture.ld.admin.ch/bc2a4cd9-9fca-fca5-3ae0-3b546480af5b> a :InspectionPoint ;
     rdfs:label "Aufzeichnungen und korrekte Anwendung von Pflanzenschutzmitteln und Bioziden während der Lagerung von Primärprodukten"@de,
+        "FR: Aufzeichnungen und korrekte Anwendung von Pflanzenschutzmitteln und Bioziden während der Lagerung von Primärprodukten"@fr,
+        "Registrazioni e utilizzo corretto di prodotti fitosanitari e biocidi durante lo stoccaggio dei prodotti primari"@it ;
+    schema:description "NA"@de,
+        "NA"@it ;
+    schema:name "Aufzeichnungen und korrekte Anwendung von Pflanzenschutzmitteln und Bioziden während der Lagerung von Primärprodukten"@de,
         "FR: Aufzeichnungen und korrekte Anwendung von Pflanzenschutzmitteln und Bioziden während der Lagerung von Primärprodukten"@fr,
         "Registrazioni e utilizzo corretto di prodotti fitosanitari e biocidi durante lo stoccaggio dei prodotti primari"@it ;
     rdfs:comment "NA"@de,
@@ -278,11 +524,21 @@
     rdfs:label "Allgemeine Bestimmungen"@de,
         "FR: Hygiene pflanzliche Produktion - Allgemeine Bestimmungen"@fr,
         "Igiene produzione vegetale - Requisiti generali"@it ;
+    schema:description "NA"@de,
+        "NA"@it ;
+    schema:name "Allgemeine Bestimmungen"@de,
+        "FR: Hygiene pflanzliche Produktion - Allgemeine Bestimmungen"@fr,
+        "Igiene produzione vegetale - Requisiti generali"@it ;
     rdfs:comment "NA"@de,
         "NA"@it .
 
 <https://agriculture.ld.admin.ch/bc2a4cd9-9fd5-fd55-3ae0-3b546480af5b> a :InspectionPoint ;
     rdfs:label "Rückverfolgbarkeit der Abgaben"@de,
+        "FR: Rückverfolgbarkeit der Abgaben"@fr,
+        "Tracciabilità delle vendite"@it ;
+    schema:description "NA"@de,
+        "NA"@it ;
+    schema:name "Rückverfolgbarkeit der Abgaben"@de,
         "FR: Rückverfolgbarkeit der Abgaben"@fr,
         "Tracciabilità delle vendite"@it ;
     rdfs:comment "NA"@de,
@@ -292,11 +548,21 @@
     rdfs:label "Untersuchungsergebnisse"@de,
         "FR: Untersuchungsergebnisse"@fr,
         "Risultati delle analisi"@it ;
+    schema:description "NA"@de,
+        "NA"@it ;
+    schema:name "Untersuchungsergebnisse"@de,
+        "FR: Untersuchungsergebnisse"@fr,
+        "Risultati delle analisi"@it ;
     rdfs:comment "NA"@de,
         "NA"@it .
 
 <https://agriculture.ld.admin.ch/bc2a4cd9-9fd7-fd75-3ae0-3b546480af5b> a :InspectionPoint ;
     rdfs:label "Rückrufpflicht und erforderliche Massnahmen bei Risikofällen"@de,
+        "FR: Rückrufpflicht und erforderliche Massnahmen bei Risikofällen"@fr,
+        "Obbligo di revoca e misure da adottare in caso di rischi"@it ;
+    schema:description "NA"@de,
+        "NA"@it ;
+    schema:name "Rückrufpflicht und erforderliche Massnahmen bei Risikofällen"@de,
         "FR: Rückrufpflicht und erforderliche Massnahmen bei Risikofällen"@fr,
         "Obbligo di revoca e misure da adottare in caso di rischi"@it ;
     rdfs:comment "NA"@de,
@@ -306,11 +572,21 @@
     rdfs:label "Massnahmen gegen Pflanzenkrankheiten und Pflanzen, die nachteilige Auswirkungen auf die Gesundheit haben"@de,
         "FR: Massnahmen gegen Pflanzenkrankheiten und Pflanzen, die nachteilige Auswirkungen auf die Gesundheit haben"@fr,
         "Misure contro le malattie delle piante e le piante con effetti negativi sulla salute"@it ;
+    schema:description "NA"@de,
+        "NA"@it ;
+    schema:name "Massnahmen gegen Pflanzenkrankheiten und Pflanzen, die nachteilige Auswirkungen auf die Gesundheit haben"@de,
+        "FR: Massnahmen gegen Pflanzenkrankheiten und Pflanzen, die nachteilige Auswirkungen auf die Gesundheit haben"@fr,
+        "Misure contro le malattie delle piante e le piante con effetti negativi sulla salute"@it ;
     rdfs:comment "NA"@de,
         "NA"@it .
 
 <https://agriculture.ld.admin.ch/bc2a4cd9-9fd9-fd95-3ae0-3b546480af5b> a :InspectionPoint ;
     rdfs:label "Kein Kontaminationsrisiko wegen mangelnder Sauberkeit oder unerwünschter Stoffe bei Anbau, Ernte und Transport"@de,
+        "FR: Kein Kontaminationsrisiko wegen mangelnder Sauberkeit oder unerwünschter Stoffe bei Anbau, Ernte und Transport"@fr,
+        "Nessun rischio di contaminazione legato a mancanza di pulizia o a sostanze indesiderabili a livello di coltivazione, raccolta e trasporto"@it ;
+    schema:description "NA"@de,
+        "NA"@it ;
+    schema:name "Kein Kontaminationsrisiko wegen mangelnder Sauberkeit oder unerwünschter Stoffe bei Anbau, Ernte und Transport"@de,
         "FR: Kein Kontaminationsrisiko wegen mangelnder Sauberkeit oder unerwünschter Stoffe bei Anbau, Ernte und Transport"@fr,
         "Nessun rischio di contaminazione legato a mancanza di pulizia o a sostanze indesiderabili a livello di coltivazione, raccolta e trasporto"@it ;
     rdfs:comment "NA"@de,
@@ -320,11 +596,21 @@
     rdfs:label "Es gibt für andere Insekten als Bienen keine zugelassenen Tierarzneimittel"@de,
         "Aucun médicament vétérinaire n'est actuellement enregistré pour les autres insectes que les abeilles"@fr,
         "Non ci sono medicamenti veterinari registrati per gli insetti (diversi delle api)."@it ;
+    schema:description "NA"@de,
+        "NA"@it ;
+    schema:name "Es gibt für andere Insekten als Bienen keine zugelassenen Tierarzneimittel"@de,
+        "Aucun médicament vétérinaire n'est actuellement enregistré pour les autres insectes que les abeilles"@fr,
+        "Non ci sono medicamenti veterinari registrati per gli insetti (diversi delle api)."@it ;
     rdfs:comment "NA"@de,
         "NA"@it .
 
 <https://agriculture.ld.admin.ch/cd4c74b7-8680-6801-74e0-3b546480a6e4> a :InspectionPoint ;
     rdfs:label "Pflanzliche Primärproduktion"@de,
+        "FR: Pflanzliche Primärproduktion"@fr,
+        "Pflanzliche Primärproduktion"@it ;
+    schema:description "NA"@de,
+        "NA"@it ;
+    schema:name "Pflanzliche Primärproduktion"@de,
         "FR: Pflanzliche Primärproduktion"@fr,
         "Pflanzliche Primärproduktion"@it ;
     rdfs:comment "NA"@de,
@@ -334,6 +620,11 @@
     rdfs:label "Tierische Primärproduktion"@de,
         "FR: Tierische Primärproduktion"@fr,
         "Tierische Primärproduktion"@it ;
+    schema:description "NA"@de,
+        "NA"@it ;
+    schema:name "Tierische Primärproduktion"@de,
+        "FR: Tierische Primärproduktion"@fr,
+        "Tierische Primärproduktion"@it ;
     rdfs:comment "NA"@de,
         "NA"@it .
 
@@ -341,11 +632,21 @@
     rdfs:label "Hygiene pflanzliche Produktion"@de,
         "FR: Hygiene pflanzliche Produktion"@fr,
         "Hygiene pflanzliche Produktion"@it ;
+    schema:description "NA"@de,
+        "NA"@it ;
+    schema:name "Hygiene pflanzliche Produktion"@de,
+        "FR: Hygiene pflanzliche Produktion"@fr,
+        "Hygiene pflanzliche Produktion"@it ;
     rdfs:comment "NA"@de,
         "NA"@it .
 
 <https://agriculture.ld.admin.ch/f3b8e22d-cdf5-4c57-b6de-a084382134f0> a :InspectionPoint ;
     rdfs:label "Weitere Aspekte Tierarzneimittel"@de,
+        "Autres aspects concernant les médicaments vétérinaires"@fr,
+        "Altri aspetti concernenti i medicamenti veterinari"@it ;
+    schema:description "NA"@de,
+        "NA"@it ;
+    schema:name "Weitere Aspekte Tierarzneimittel"@de,
         "Autres aspects concernant les médicaments vétérinaires"@fr,
         "Altri aspetti concernenti i medicamenti veterinari"@it ;
     rdfs:comment "NA"@de,

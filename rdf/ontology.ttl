@@ -1,15 +1,21 @@
-@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix : <https://agriculture.ld.admin.ch/inspection/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
-@prefix : <https://agriculture.ld.admin.ch/inspection/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix systemmap: <https://agriculture.ld.admin.ch/system-map> .
 
-: a owl:Ontology ;
-    dcterms:title "Kontrollpunkte-Liste"@de ;
-    owl:versionInfo "0.1.0" .
+schema:Organization a owl:Class ;
+    rdfs:label "Organisation"@de .
+
+:InspectionPoint a owl:Class ;
+    rdfs:label "Kontrollpunkte"@de ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty rdfs:label ;
+            owl:someValuesFrom xsd:string ],
+        [ a owl:Restriction ;
+            owl:onProperty rdfs:comment ;
+            owl:someValuesFrom xsd:string ] .
 
 :InspectionPointGroup a owl:Class ;
     rdfs:label "Kontrollpunkt-Gruppe"@de .
@@ -19,33 +25,22 @@
     rdfs:comment "Ein Programm ist etwas, zu dem man sich als Landwirt *anmelden* kann."@de ;
     rdfs:subClassOf :InspectionPointGroup .
 
-:InspectionPoint a owl:Class ;
-    rdfs:label "Kontrollpunkte"@de ;
-    rdfs:subClassOf [
-        a owl:Restriction ;
-        owl:onProperty rdfs:label ;
-        owl:someValuesFrom xsd:string
-    ] ,
-    [
-        a owl:Restriction ;
-        owl:onProperty rdfs:comment ;
-        owl:someValuesFrom xsd:string
-    ] .
-
-schema:Organization a owl:Class ;
-    rdfs:label "Organisation"@de .
+:belongsToGroup a owl:ObjectProperty ;
+    rdfs:label "gehört zu Kontrollpunkt-Gruppe"@de ;
+    rdfs:domain :InspectionPoint ;
+    rdfs:range :InspectionPointGroup .
 
 :hasParentGroup a owl:ObjectProperty ;
     rdfs:label "hat Übergruppe"@de ;
     rdfs:domain :InspectionPointGroup ;
     rdfs:range :InspectionPointGroup .
 
-:belongsToGroup a owl:ObjectProperty ;
-    rdfs:label "gehört zu Kontrollpunkt-Gruppe"@de ;
-    rdfs:domain :InspectionPoint ;
-    rdfs:range :InspectionPointGroup .
-
 :isResponsibleFor a owl:ObjectProperty ;
     rdfs:label "ist verantwortlich für"@de ;
     rdfs:domain schema:Organization ;
     rdfs:range :InspectionPointGroup .
+
+: a owl:Ontology ;
+    dcterms:title "Kontrollpunkte-Liste"@de ;
+    owl:versionInfo "0.1.0" .
+
