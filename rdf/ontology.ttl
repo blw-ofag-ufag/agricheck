@@ -35,7 +35,7 @@ dcterms:Collection a owl:Class ;
 schema:Organization a owl:Class ;
     rdfs:label "Organisation"@de .
 
-:schema:isPartOf a owl:ObjectProperty ;
+schema:isPartOf a owl:ObjectProperty ;
     rdfs:label "hat Übergruppe"@de ;
     rdfs:domain :InspectionPointGroup ;
     rdfs:range :InspectionPointGroup .
