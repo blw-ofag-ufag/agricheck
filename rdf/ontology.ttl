@@ -17,7 +17,7 @@ schema:Organization a owl:Class ;
             owl:onProperty rdfs:comment ;
             owl:someValuesFrom xsd:string ] .
 
-:InspectionPointGroup a owl:Class ;
+dcterms:Collection a owl:Class ;
     rdfs:label "Kontrollpunkt-Gruppe"@de .
 
 :Program a owl:Class ;
@@ -30,7 +30,7 @@ schema:Organization a owl:Class ;
     rdfs:domain :InspectionPoint ;
     rdfs:range :InspectionPointGroup .
 
-:hasParentGroup a owl:ObjectProperty ;
+schema:isPartOf a owl:ObjectProperty ;
     rdfs:label "hat Übergruppe"@de ;
     rdfs:domain :InspectionPointGroup ;
     rdfs:range :InspectionPointGroup .
