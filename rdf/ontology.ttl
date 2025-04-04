@@ -12,7 +12,7 @@ schema:Organization a owl:Class ;
     rdfs:label "Organisation"@de .
 
 :InspectionPoint a owl:Class ;
-    rdfs:label "Kontrollpunkte"@de ;
+    rdfs:label "Kontrollpunkt"@de ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty rdfs:label ;
             owl:someValuesFrom xsd:string ],
