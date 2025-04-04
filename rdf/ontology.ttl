@@ -5,6 +5,9 @@
 @prefix schema: <http://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+dcterms:Collection a owl:Class ;
+    rdfs:label "Kontrollpunkt-Gruppe"@de .
+
 schema:Organization a owl:Class ;
     rdfs:label "Organisation"@de .
 
@@ -17,22 +20,19 @@ schema:Organization a owl:Class ;
             owl:onProperty rdfs:comment ;
             owl:someValuesFrom xsd:string ] .
 
-dcterms:Collection a owl:Class ;
-    rdfs:label "Kontrollpunkt-Gruppe"@de .
-
 :Program a owl:Class ;
     rdfs:label "Programm"@de ;
     rdfs:comment "Ein Programm ist etwas, zu dem man sich als Landwirt *anmelden* kann."@de ;
     rdfs:subClassOf :InspectionPointGroup .
 
-:belongsToGroup a owl:ObjectProperty ;
-    rdfs:label "gehört zu Kontrollpunkt-Gruppe"@de ;
-    rdfs:domain :InspectionPoint ;
-    rdfs:range :InspectionPointGroup .
-
 schema:isPartOf a owl:ObjectProperty ;
     rdfs:label "hat Übergruppe"@de ;
     rdfs:domain :InspectionPointGroup ;
+    rdfs:range :InspectionPointGroup .
+
+:belongsToGroup a owl:ObjectProperty ;
+    rdfs:label "gehört zu Kontrollpunkt-Gruppe"@de ;
+    rdfs:domain :InspectionPoint ;
     rdfs:range :InspectionPointGroup .
 
 :isResponsibleFor a owl:ObjectProperty ;
