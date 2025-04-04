@@ -23,22 +23,26 @@ schema:Organization a owl:Class ;
 :Program a owl:Class ;
     rdfs:label "Programm"@de ;
     rdfs:comment "Ein Programm ist etwas, zu dem man sich als Landwirt *anmelden* kann."@de ;
-    rdfs:subClassOf :InspectionPointGroup .
+    rdfs:subClassOf dcterms:Collection .
+
+:hierarchyLevel a owl:DatatypeProperty ;
+    rdfs:label "Hierarchieebene"@de ;
+    rdfs:domain dcterms:Collection .
 
 schema:isPartOf a owl:ObjectProperty ;
     rdfs:label "hat Übergruppe"@de ;
-    rdfs:domain :InspectionPointGroup ;
-    rdfs:range :InspectionPointGroup .
+    rdfs:domain dcterms:Collection ;
+    rdfs:range dcterms:Collection .
 
 :belongsToGroup a owl:ObjectProperty ;
     rdfs:label "gehört zu Kontrollpunkt-Gruppe"@de ;
     rdfs:domain :InspectionPoint ;
-    rdfs:range :InspectionPointGroup .
+    rdfs:range dcterms:Collection .
 
 :isResponsibleFor a owl:ObjectProperty ;
     rdfs:label "ist verantwortlich für"@de ;
     rdfs:domain schema:Organization ;
-    rdfs:range :InspectionPointGroup .
+    rdfs:range dcterms:Collection .
 
 : a owl:Ontology ;
     dcterms:title "Kontrollpunkte-Liste"@de ;

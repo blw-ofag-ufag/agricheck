@@ -30,9 +30,17 @@ for (i in which(!is.na(data[,33]))) {
 # remove superfluous parts of data frame
 data <- data[,1:32]
 
+# sort by mastersort
+data <- data[order(data$MASTERSORT),]
+
+# function to truncate extended UUID
+truncateUUID <- function(x) {
+  unlist(strsplit(x, "_"))[1]
+}
+
 # define constants
 base = "https://agriculture.ld.admin.ch/inspection/"
-classes = c(Gruppe = uri("InspectionPointGroup", base),
+classes = c(Gruppe = uri("http://purl.org/dc/terms/Collection"),
             Kontrollpunkt = uri("InspectionPoint", base))
 
 # construct turtle file
@@ -52,7 +60,9 @@ for (i in 1:nrow(data)) {
   # construct IRI for the *thing* and define its class
   IRI = uri(data[i,"UUID"], base)
   class = classes[as.character(data[i,"NAME"])]
+  level = as.character(data[i,"EBENE"])
   if(!is.na(class)) triple(IRI, "a", class) |> cat()
+  if(!is.na(level)) triple(IRI, ":hierarchyLevel", literal(level)) |> cat()
   
   # give the thing a rdfs:label in German, French and Italian
   for (lang in c("de", "fr", "it")) {
@@ -70,7 +80,9 @@ for (i in 1:nrow(data)) {
   # give the thing a rdfs:comment (description) in German and Italian (French is missing)
   for (lang in c("de","it")) {
     x = data[i,paste0("HILFETEXT_",toupper(lang))]
+    y = data[i,paste0("BEZEICHNUNG_",toupper(lang))]
     if(is.na(x)) next
+    if(!is.na(y)) if(x==y) next # don't write the comment if it's the same as the label
     x = gsub('"', "\\\\\"", as.character(x))
     triple(IRI, "rdfs:comment", langstring(x, lang = lang)) |> cat()
   }
