@@ -86,6 +86,23 @@ for (i in 1:nrow(data)) {
     x = gsub('"', "\\\\\"", as.character(x))
     triple(IRI, "rdfs:comment", langstring(x, lang = lang)) |> cat()
   }
+  
+  # make relation to other control points
+  if(class%in%classes["Gruppe"]) {
+    x = as.character(data[i,"PARENT_KONTROLLPUNKT_ID"])
+    if(!is.na(x)) {
+      triple(IRI, "<http://schema.org/isPartOf>", uri(truncateUUID(x), base)) |> cat()
+    }
+  }
+  
+  # if it's a inspection point: link it to a group
+  if(class%in%classes["Kontrollpunkt"]) {
+    x = as.character(data[i,"PARENT_KONTROLLPUNKT_ID"])
+    if(!is.na(x)) {
+      triple(IRI, uri("belongsToGroup", base), uri(truncateUUID(x), base)) |> cat()
+    }
+  }
+  
 }
 sink()
 

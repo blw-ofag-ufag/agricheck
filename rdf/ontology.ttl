@@ -29,15 +29,29 @@ schema:Organization a owl:Class ;
     rdfs:label "Hierarchieebene"@de ;
     rdfs:domain dcterms:Collection .
 
+schema:hasPart a owl:ObjectProperty ;
+    rdfs:label "beinhaltet Untergruppen"@de ;
+    rdfs:domain dcterms:Collection ;
+    rdfs:range dcterms:Collection ;
+    owl:inverseOf schema:isPartOf .
+
 schema:isPartOf a owl:ObjectProperty ;
     rdfs:label "hat Übergruppe"@de ;
     rdfs:domain dcterms:Collection ;
-    rdfs:range dcterms:Collection .
+    rdfs:range dcterms:Collection ;
+    owl:inverseOf schema:hasPart .
 
 :belongsToGroup a owl:ObjectProperty ;
     rdfs:label "gehört zu Kontrollpunkt-Gruppe"@de ;
     rdfs:domain :InspectionPoint ;
-    rdfs:range dcterms:Collection .
+    rdfs:range dcterms:Collection ;
+    owl:inverseOf :includesInspectionPoints .
+
+:includesInspectionPoints a owl:ObjectProperty ;
+    rdfs:label "beinhaltet Kontrollpunkte"@de ;
+    rdfs:domain dcterms:Collection ;
+    rdfs:range :InspectionPoint ;
+    owl:inverseOf :belongsToGroup .
 
 :isResponsibleFor a owl:ObjectProperty ;
     rdfs:label "ist verantwortlich für"@de ;
