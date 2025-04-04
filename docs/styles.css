@@ -11,13 +11,17 @@ body {
 
 /* Indentation for nested items */
 .group-children {
-  margin-left: 2em;
+  margin-left: 1em;
 }
 
 /* Style for inspection points */
 .inspection-points {
-  margin-left: 2em;
-  font-style: italic;
+  margin-left: -1em;
+}
+
+.inspection-comment {
+  color: #888888;       /* or any color you prefer */
+  font-size: 0.8em;  /* adjust the size as needed */
 }
 
 /* Loading text style */

@@ -156,8 +156,8 @@ function buildGroupEntry(group, label, comment, level = 0) {
         ul.classList.add("inspection-points");
         points.forEach((p) => {
           const li = document.createElement("li");
-          li.innerHTML = `<strong>${p.label || p.iri}</strong>`
-            + (p.comment ? `<br><small>${p.comment}</small>` : "");
+          li.innerHTML = `${p.label || p.iri}`
+            + (p.comment ? `<br><small class="inspection-comment">${p.comment}</small>` : "");
           ul.appendChild(li);
         });
         subContainer.appendChild(ul);
