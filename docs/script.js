@@ -1,242 +1,290 @@
-// The LINDAS endpoint (public). Change if pointing somewhere else.
-const ENDPOINT = "https://lindas.admin.ch/query";
+document.addEventListener('DOMContentLoaded', () => {
+  const SPARQL_ENDPOINT = "https://lindas.admin.ch/query";
+  const TREE_CONTAINER = document.getElementById('tree-container');
+  const MAX_HEADING_LEVEL = 6;
 
-/**
- * Utility: run a SPARQL query against the endpoint, return JSON results.
- */
-async function getSparqlData(query) {
-  const url = `${ENDPOINT}?query=${encodeURIComponent(query)}`;
-  const response = await fetch(url, {
-    headers: { Accept: "application/sparql-results+json" },
-  });
-  return response.json();
-}
-
-/**
- * SPARQL queries:
- * 1) getTopLevelGroups: All dcterms:Collection without a parent (schema:isPartOf).
- * 2) getSubGroups: Find subgroups with schema:isPartOf = groupIRI.
- * 3) getInspectionPointsInGroup: Find all :InspectionPoint resources that belong to the group.
- */
-function getTopLevelGroupsQuery() {
-  return `
-    PREFIX dcterms: <http://purl.org/dc/terms/>
-    PREFIX schema: <http://schema.org/>
-    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-    SELECT ?group ?label ?comment
-    WHERE {
-      ?group a dcterms:Collection .
-      FILTER NOT EXISTS {
-        ?group schema:isPartOf ?someParent .
-      }
-      OPTIONAL {
-        ?group rdfs:label ?lbl .
-        FILTER (lang(?lbl) = "de")
-      }
-      BIND(COALESCE(?lbl, "") AS ?label)
-      
-      OPTIONAL {
-        ?group rdfs:comment ?cmt .
-        FILTER (lang(?cmt) = "de")
-      }
-      BIND(COALESCE(?cmt, "") AS ?comment)
-    }
-    ORDER BY ?label
+  const PREFIXES = `
+      PREFIX dcterms: <http://purl.org/dc/terms/>
+      PREFIX schema: <http://schema.org/>
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+      PREFIX admin:<https://schema.ld.admin.ch/>
+      PREFIX : <https://agriculture.ld.admin.ch/inspection/>
   `;
-}
 
-function getSubGroupsQuery(parentIRI) {
-  return `
-    PREFIX dcterms: <http://purl.org/dc/terms/>
-    PREFIX schema: <http://schema.org/>
-    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-    SELECT ?subgroup ?label ?comment
-    WHERE {
-      ?subgroup schema:isPartOf <${parentIRI}> ;
-                a dcterms:Collection .
-      OPTIONAL {
-        ?subgroup rdfs:label ?lbl .
-        FILTER (lang(?lbl) = "de")
+  // --- SPARQL Query Execution ---
+  // fetchSparql function remains the same...
+  async function fetchSparql(query) {
+      const url = `${SPARQL_ENDPOINT}?query=${encodeURIComponent(PREFIXES + query)}`;
+      try {
+          const response = await fetch(url, {
+              headers: { 'Accept': 'application/sparql-results+json' }
+          });
+          if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status} ${response.statusText}`);
+          }
+          return await response.json();
+      } catch (error) {
+          console.error("SPARQL query failed:", error);
+          displayError(`Failed to fetch data. Check console for details. Error: ${error.message}`, TREE_CONTAINER);
+          return null;
       }
-      BIND(COALESCE(?lbl, "") AS ?label)
-
-      OPTIONAL {
-        ?subgroup rdfs:comment ?cmt .
-        FILTER (lang(?cmt) = "de")
-      }
-      BIND(COALESCE(?cmt, "") AS ?comment)
-    }
-    ORDER BY ?label
-  `;
-}
-
-function getInspectionPointsInGroupQuery(groupIRI) {
-  return `
-    PREFIX : <https://agriculture.ld.admin.ch/inspection/>
-    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-    SELECT ?point ?label ?comment
-    WHERE {
-      <${groupIRI}> :includesInspectionPoints ?point .
-      OPTIONAL {
-        ?point rdfs:label ?lbl .
-        FILTER (lang(?lbl) = "de")
-      }
-      BIND(COALESCE(?lbl, "") AS ?label)
-
-      OPTIONAL {
-        ?point rdfs:comment ?cmt .
-        FILTER (lang(?cmt) = "de")
-      }
-      BIND(COALESCE(?cmt, "") AS ?comment)
-    }
-    ORDER BY ?label
-  `;
-}
-
-/**
- * Create a stable ID for an IRI, used for <input id="...">.
- */
-function generateId(str) {
-  return 'id-' + str.replace(/[^a-zA-Z0-9-_:.]/g, '-');
-}
-
-/**
- * Build a DOM tree for a group or subgroup, with a checkbox for expand/collapse.
- */
-function buildGroupEntry(group, label, comment, level = 0) {
-  const container = document.createElement("div");
-  container.classList.add("mb-3");
-
-  const checkboxId = generateId(group);
-
-  // The main markup for the group + checkbox
-  const entryLabel = document.createElement("div");
-  entryLabel.innerHTML = `
-    <input type="checkbox" class="expand-checkbox" id="${checkboxId}">
-    <label for="${checkboxId}">
-      <strong>${label || group}</strong>
-    </label>
-    ${comment ? `<p class="mb-1"><small>${comment}</small></p>` : ""}
-  `;
-  container.appendChild(entryLabel);
-
-  // Sub-container for child groups or inspection points
-  const subContainer = document.createElement("div");
-  subContainer.classList.add("group-children");
-  container.appendChild(subContainer);
-
-  // Checkbox behavior: load subgroups/points when checked
-  const checkbox = entryLabel.querySelector("input.expand-checkbox");
-  checkbox.addEventListener("change", async (evt) => {
-    if (!evt.target.checked) {
-      subContainer.innerHTML = "";
-      return;
-    }
-    subContainer.innerHTML = `<div class="loading">Lade Untergruppen / Kontrollpunkte...</div>`;
-    
-    const subGroups = await getSubGroups(group);
-    if (subGroups.length > 0) {
-      // We have subgroups
-      subContainer.innerHTML = "";
-      subGroups.forEach((sg) => {
-        const sgEl = buildGroupEntry(sg.iri, sg.label, sg.comment, level + 1);
-        subContainer.appendChild(sgEl);
-      });
-    } else {
-      // No subgroups => show inspection points
-      const points = await getInspectionPointsInGroup(group);
-      subContainer.innerHTML = "";
-      if (points.length === 0) {
-        subContainer.innerHTML = `<div class="inspection-points">Keine Kontrollpunkte.</div>`;
-      } else {
-        const ul = document.createElement("ul");
-        ul.classList.add("inspection-points");
-        points.forEach((p) => {
-          const li = document.createElement("li");
-          li.innerHTML = `${p.label || p.iri}`
-            + (p.comment ? `<br><small class="inspection-comment">${p.comment}</small>` : "");
-          ul.appendChild(li);
-        });
-        subContainer.appendChild(ul);
-      }
-    }
-  });
-
-  return container;
-}
-
-/**
- * Fetch subgroups for a given group IRI.
- */
-async function getSubGroups(parentIRI) {
-  const query = getSubGroupsQuery(parentIRI);
-  const results = await getSparqlData(query);
-  return parseGroups(results);
-}
-
-/**
- * Fetch inspection points for a given group IRI.
- */
-async function getInspectionPointsInGroup(groupIRI) {
-  const query = getInspectionPointsInGroupQuery(groupIRI);
-  const results = await getSparqlData(query);
-  return parsePoints(results);
-}
-
-/**
- * Parse SPARQL JSON results for groups
- */
-function parseGroups(json) {
-  if (!json || !json.results) return [];
-  return json.results.bindings.map((b) => ({
-    iri: b.subgroup.value,
-    label: b.label?.value ?? "",
-    comment: b.comment?.value ?? "",
-  }));
-}
-
-/**
- * Parse SPARQL JSON results for points
- */
-function parsePoints(json) {
-  if (!json || !json.results) return [];
-  return json.results.bindings.map((b) => ({
-    iri: b.point.value,
-    label: b.label?.value ?? "",
-    comment: b.comment?.value ?? "",
-  }));
-}
-
-/**
- * Initial load: get top-level groups, render them.
- */
-async function loadTopLevelGroups() {
-  const container = document.getElementById("tree-container");
-  container.innerHTML = `<div class="loading">Lade Top-Level-Gruppen...</div>`;
-
-  const query = getTopLevelGroupsQuery();
-  const data = await getSparqlData(query);
-
-  const topGroups = data.results.bindings.map((b) => ({
-    iri: b.group.value,
-    label: b.label?.value ?? "",
-    comment: b.comment?.value ?? "",
-  }));
-
-  if (topGroups.length === 0) {
-    container.innerHTML = "Keine Top-Level-Kontrollpunkt-Gruppen gefunden.";
-    return;
   }
 
-  container.innerHTML = "";
-  topGroups.forEach((g) => {
-    const gEl = buildGroupEntry(g.iri, g.label, g.comment, 0);
-    container.appendChild(gEl);
-  });
-}
 
-// Kick it off
-loadTopLevelGroups();
+  // --- Data Parsing ---
+  // parseSparqlJson function remains the same...
+   function parseSparqlJson(json, type) {
+      if (!json || !json.results || !json.results.bindings) {
+          console.warn("Received empty or invalid SPARQL JSON:", json);
+          return [];
+      }
+      return json.results.bindings.map(b => {
+          const iri = type === 'group' ? (b.group?.value || b.subgroup?.value) : b.point?.value;
+          const labelFallback = iri ? iri.split(/[/#]/).pop() : (type === 'group' ? 'Unnamed Group' : 'Unnamed Point');
+          return {
+              iri: iri,
+              label: b.label?.value || labelFallback,
+              comment: b.comment?.value || ""
+          };
+      });
+  }
+
+
+  // --- UI Rendering ---
+  // displayError function remains the same...
+   function displayError(message, parentElement = TREE_CONTAINER) {
+      const existingError = parentElement.querySelector(':scope > .error-message');
+       if (existingError) {
+          existingError.textContent = message;
+          return;
+       }
+       if (parentElement === TREE_CONTAINER && !document.body.contains(parentElement)) {
+           console.error("Cannot display error, TREE_CONTAINER not found.");
+           return
+       } else if (parentElement === TREE_CONTAINER) {
+           parentElement.innerHTML = '';
+       }
+      const errorDiv = document.createElement('div');
+      errorDiv.classList.add('error-message');
+      errorDiv.textContent = message;
+      parentElement.appendChild(errorDiv);
+  }
+
+  // createGroupElement function updated to set --level-color on details
+   function createGroupElement(groupData, level) {
+      const containerDiv = document.createElement('div');
+      containerDiv.classList.add('group-container');
+      // Removed setting color here, will be set on details element
+      containerDiv.dataset.iri = groupData.iri;
+      containerDiv.dataset.level = level;
+      containerDiv.dataset.loaded = 'false';
+
+      const details = document.createElement('details');
+      // Set the calculated level color as a CSS variable *on the details element*
+      details.style.setProperty('--level-color', calculateColor(level));
+
+      const summary = document.createElement('summary');
+      const summaryContent = document.createElement('div');
+      summaryContent.classList.add('summary-content');
+      const headingLevel = Math.min(level, MAX_HEADING_LEVEL);
+      const heading = document.createElement(`h${headingLevel}`);
+      heading.textContent = groupData.label;
+      summaryContent.appendChild(heading);
+      summary.appendChild(summaryContent);
+      details.appendChild(summary);
+
+      if (groupData.comment) {
+          const commentWrapper = document.createElement('div');
+          commentWrapper.classList.add('group-comment-wrapper');
+          commentWrapper.textContent = groupData.comment;
+          details.appendChild(commentWrapper);
+      }
+
+      details.addEventListener('toggle', handleToggle);
+      containerDiv.appendChild(details);
+      return containerDiv;
+  }
+
+
+  // renderInspectionPoints function updated to add 'checklist-parent' class
+  function renderInspectionPoints(pointsData, parentDetailsElement, level) {
+      if (pointsData.length === 0) {
+          // ... (no points message handling remains same)
+          const noPointsDiv = document.createElement('div');
+          noPointsDiv.classList.add('loading-indicator');
+          noPointsDiv.textContent = 'No inspection points found for this group.';
+          const lastStaticElement = parentDetailsElement.querySelector('.group-comment-wrapper') || parentDetailsElement.querySelector('summary');
+          if(lastStaticElement) {
+              lastStaticElement.insertAdjacentElement('afterend', noPointsDiv);
+          } else {
+               parentDetailsElement.appendChild(noPointsDiv);
+          }
+          return;
+      }
+
+      // ** NEW: Add class to parent details element **
+      parentDetailsElement.classList.add('checklist-parent');
+
+      pointsData.forEach(point => {
+          // ... (creating pointDiv, checkbox, wrapper, label, comment remains same)
+           const pointDiv = document.createElement('div');
+          pointDiv.classList.add('inspection-point');
+
+          const checkbox = document.createElement('input');
+          checkbox.type = 'checkbox';
+          checkbox.id = `point-${point.iri.replace(/[^a-zA-Z0-9]/g, '-')}`;
+          checkbox.value = point.iri;
+
+          const pointLabelCommentWrapper = document.createElement('div');
+          pointLabelCommentWrapper.classList.add('point-label-comment-wrapper');
+
+          const label = document.createElement('label');
+          label.htmlFor = checkbox.id;
+          label.textContent = point.label;
+          pointLabelCommentWrapper.appendChild(label);
+
+          if (point.comment) {
+              const comment = document.createElement('p');
+              comment.classList.add('point-comment');
+              comment.textContent = point.comment;
+              pointLabelCommentWrapper.appendChild(comment);
+          }
+
+          pointDiv.appendChild(checkbox);
+          pointDiv.appendChild(pointLabelCommentWrapper);
+
+          parentDetailsElement.appendChild(pointDiv);
+      });
+  }
+
+
+  // --- Event Handling & Data Loading Logic ---
+  // handleToggle function remains the same...
+  async function handleToggle(event) {
+      const detailsElement = event.target;
+      const containerDiv = detailsElement.closest('.group-container');
+      if (!containerDiv || detailsElement.tagName !== 'DETAILS') { return; }
+
+      if (detailsElement.open && containerDiv.dataset.loaded === 'false') {
+          containerDiv.dataset.loaded = 'true';
+          const groupIri = containerDiv.dataset.iri;
+          const currentLevel = parseInt(containerDiv.dataset.level, 10);
+
+          const loadingIndicator = document.createElement('div');
+          loadingIndicator.textContent = 'Loading...';
+          loadingIndicator.classList.add('loading-indicator');
+          const lastStaticElement = detailsElement.querySelector('.group-comment-wrapper') || detailsElement.querySelector('summary');
+          if (lastStaticElement) { lastStaticElement.insertAdjacentElement('afterend', loadingIndicator); }
+          else { detailsElement.appendChild(loadingIndicator); }
+
+          let contentAdded = false;
+          let fetchErrorOccurred = false;
+
+          try {
+              const subGroups = await fetchSubGroups(groupIri);
+              if (subGroups === null) { fetchErrorOccurred = true; }
+              else if (subGroups.length > 0) {
+                  // ** Before adding subgroup, remove checklist-parent class if it exists **
+                  // (Handles cases where data might change - e.g. points removed, subgroups added)
+                  detailsElement.classList.remove('checklist-parent');
+
+                  subGroups.forEach(subGroup => {
+                      const subGroupElement = createGroupElement(subGroup, currentLevel + 1);
+                      detailsElement.appendChild(subGroupElement);
+                  });
+                  contentAdded = true;
+              } else {
+                  const inspectionPoints = await fetchInspectionPoints(groupIri);
+                  if (inspectionPoints === null) { fetchErrorOccurred = true; }
+                  else {
+                      // renderInspectionPoints adds the class if points exist
+                      renderInspectionPoints(inspectionPoints, detailsElement, currentLevel + 1);
+                      if (inspectionPoints.length > 0) contentAdded = true;
+                      else {
+                          // ** If no points were rendered, ensure class is removed **
+                          detailsElement.classList.remove('checklist-parent');
+                      }
+                  }
+              }
+          } catch(error) {
+               console.error("Error processing subgroups or points:", error);
+               displayError(`Error displaying content: ${error.message}`, detailsElement);
+               fetchErrorOccurred = true;
+          } finally {
+               if (loadingIndicator.parentNode === detailsElement) {
+                  detailsElement.removeChild(loadingIndicator);
+               }
+               if (!contentAdded && !fetchErrorOccurred) {
+                  const noChildrenDiv = document.createElement('div');
+                  noChildrenDiv.classList.add('loading-indicator');
+                  noChildrenDiv.textContent = 'No subgroups or inspection points found.';
+                  detailsElement.classList.remove('checklist-parent'); // Ensure class removed if empty
+                  const lastElement = detailsElement.querySelector('.inspection-point:last-of-type') || detailsElement.querySelector('.group-container:last-of-type') || detailsElement.querySelector('.group-comment-wrapper') || detailsElement.querySelector('summary');
+                   if(lastElement) { lastElement.insertAdjacentElement('afterend', noChildrenDiv); }
+                   else { detailsElement.appendChild(noChildrenDiv); }
+               }
+          }
+      } else if (!detailsElement.open) { /* Optional close logic */ }
+  }
+
+
+  // fetchSubGroups function remains the same...
+  async function fetchSubGroups(parentIri) {
+      if (!parentIri) return null;
+      const safeParentIri = `<${parentIri}>`;
+      const query = ` SELECT ?subgroup ?label ?comment WHERE { BIND(${safeParentIri} AS ?parentGroup) ?subgroup schema:isPartOf ?parentGroup ; a dcterms:Collection . OPTIONAL { ?subgroup skos:prefLabel|rdfs:label ?lbl . FILTER (langMatches(lang(?lbl), "de") || langMatches(lang(?lbl), "")) } OPTIONAL { ?subgroup rdfs:comment ?cmt . FILTER (langMatches(lang(?cmt), "de") || langMatches(lang(?cmt), "")) } BIND(COALESCE(?lbl, "") AS ?label) BIND(COALESCE(?cmt, "") AS ?comment) } ORDER BY ?label `;
+      const json = await fetchSparql(query);
+      return json ? parseSparqlJson(json, 'group') : null;
+  }
+
+  // fetchInspectionPoints function remains the same...
+  async function fetchInspectionPoints(groupIri) {
+      if (!groupIri) return null;
+      const safeGroupIri = `<${groupIri}>`;
+      const query = ` SELECT ?point ?label ?comment WHERE { BIND(${safeGroupIri} AS ?groupIRI) ?groupIRI :includesInspectionPoints ?point . OPTIONAL { ?point skos:prefLabel|rdfs:label ?lbl . FILTER (langMatches(lang(?lbl), "de") || langMatches(lang(?lbl), "")) } OPTIONAL { ?point rdfs:comment ?cmt . FILTER (langMatches(lang(?cmt), "de") || langMatches(lang(?cmt), "")) } BIND(COALESCE(?lbl, "") AS ?label) BIND(COALESCE(?cmt, "") AS ?comment) } ORDER BY ?label `;
+      const json = await fetchSparql(query);
+      return json ? parseSparqlJson(json, 'point') : null;
+  }
+
+
+  // --- Color Calculation ---
+  // ** UPDATED for inverted shading (dark to light) **
+  function calculateColor(level) {
+      const baseHue = 210;        // Blueish base color
+      const baseSaturation = 55;  // Slightly adjusted saturation
+      const startLightness = 65;  // Start darker for level 1
+      const lightnessStep = 8;    // How much *lighter* each level gets
+      const maxLightness = 95;    // Cap near white (don't exceed)
+
+      // Increase lightness for deeper levels, but ensure it doesn't exceed maxLightness
+      const targetLightness = Math.min(maxLightness, startLightness + ((level - 1) * lightnessStep));
+
+      return `hsl(${baseHue}, ${baseSaturation}%, ${targetLightness}%)`;
+  }
+
+
+  // --- Initial Load ---
+  // initialize function remains the same...
+  async function initialize() {
+      const query = ` SELECT ?group ?label ?comment WHERE { ?group a dcterms:Collection . FILTER NOT EXISTS { ?group schema:isPartOf ?someParent . } OPTIONAL { ?group skos:prefLabel|rdfs:label ?lbl . FILTER (langMatches(lang(?lbl), "de") || langMatches(lang(?lbl), "")) } OPTIONAL { ?group rdfs:comment ?cmt . FILTER (langMatches(lang(?cmt), "de") || langMatches(lang(?cmt), "")) } BIND(COALESCE(?lbl, "") AS ?label) BIND(COALESCE(?cmt, "") AS ?comment) } ORDER BY ?label `;
+      TREE_CONTAINER.innerHTML = '<p class="loading-indicator" style="padding-left: 15px;">Loading top-level groups...</p>';
+      const json = await fetchSparql(query);
+      if (json) {
+          const topLevelGroups = parseSparqlJson(json, 'group');
+           if (document.body.contains(TREE_CONTAINER)) { TREE_CONTAINER.innerHTML = ''; }
+           else { console.error("TREE_CONTAINER not found after initial fetch."); return; }
+
+          if (topLevelGroups.length === 0) {
+              TREE_CONTAINER.innerHTML = '<p style="padding-left: 15px;">No top-level groups found.</p>';
+          } else {
+              topLevelGroups.forEach(group => {
+                  const groupElement = createGroupElement(group, 1);
+                  TREE_CONTAINER.appendChild(groupElement);
+              });
+          }
+      }
+  }
+
+  initialize();
+});

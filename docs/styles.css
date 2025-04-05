@@ -1,70 +1,150 @@
-/* Use the Roboto font from Google */
+/* Basic Reset & Body Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Define reusable variables */
+:root {
+  --inset-margin: 5pt;
+  --vertical-inset-spacing: 10pt;
+  --icon-width: 20px;
+  --icon-margin: 10px;
+  --text-align-padding: calc(var(--icon-width) + var(--icon-margin) + 5px); /* 35px */
+  --base-right-padding: 15px;
+  --base-background-color: #ffffff; /* Base white background */
+  --checklist-parent-background-color: #ffffff; /* White for checklist parents */
+}
+
+
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  background-color: var(--base-background-color); /* Use variable */
+  color: #212529;
 }
 
-.container {
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+header {
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #dee2e6;
 }
 
-/* Indentation for nested items */
-.group-children {
-  margin-left: 1em;
-}
-
-/* Style for inspection points */
-.inspection-points {
-  margin-left: -1em;
-}
-
-.inspection-comment {
-  color: #888888;       /* or any color you prefer */
-  font-size: 0.8em;  /* adjust the size as needed */
-}
-
-/* Loading text style */
-.loading {
-  font-size: 0.9em;
-  font-style: italic;
-  color: #777;
-}
-
-/* 
- * Custom "super-simple" checkboxes: 
- * A box with a thin black border and a checkmark if checked.
- */
-input[type="checkbox"].expand-checkbox {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  width: 1.2em;
-  height: 1.2em;
-  border: 1px solid #000;
-  border-radius: 2px; /* optional small rounding */
-  outline: none;
-  cursor: pointer;
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.2rem;
+  font-weight: 600;
+  line-height: 1.2;
   display: inline-block;
+  width: calc(100% - var(--icon-width) - var(--icon-margin));
   vertical-align: middle;
-  text-align: center;
-  line-height: 1.2em; /* helps center the check */
-  margin-right: 0.5em;
+}
+
+/* Container for each group/level */
+.group-container {
+  /* Base HSL values are now set in JS function calculateColor */
+  margin-bottom: var(--vertical-inset-spacing);
+  border-radius: 4px;
+  overflow: visible;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   position: relative;
-  background-color: #fff;
+}
+#tree-container > .group-container:last-child { margin-bottom: 0; }
+
+
+/* Styling the <details> element */
+details {
+  /* Background color is now set by --level-color JS */
+  background-color: var(--level-color, var(--base-background-color)); /* Use --level-color, fallback to white */
+  border-radius: inherit;
+  overflow: hidden;
 }
 
-/* Subtle hover effect (optional) */
-input[type="checkbox"].expand-checkbox:hover {
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+/* NEW: Override background for checklist parents */
+details.checklist-parent {
+  background-color: var(--checklist-parent-background-color);
 }
 
-/* Show checkmark when checked */
-input[type="checkbox"].expand-checkbox:checked::after {
-  content: "✓";  /* or "✕" if you want a cross */
-  color: #000;
-  font-size: 1em;
-  position: absolute;
-  top: -1px;  /* tweak as needed */
-  left: 3px;  /* tweak as needed */
+
+/* Styling the <summary> element */
+summary {
+  display: flex; align-items: center;
+  padding: 10px var(--base-right-padding) 10px var(--base-right-padding);
+  cursor: pointer; list-style: none; position: relative; font-weight: bold;
+}
+details[open] > summary { border-bottom: 1px dashed rgba(0, 0, 0, 0.1); }
+summary::-webkit-details-marker { display: none; }
+summary::before {
+  content: '+'; font-weight: bold; display: inline-block;
+  width: var(--icon-width); text-align: center; margin-right: var(--icon-margin);
+  font-size: 1.2em; color: #6c757d; flex-shrink: 0; transition: transform 0.2s ease-in-out;
+}
+details[open] > summary::before { content: '–'; transform: rotate(180deg); }
+.summary-content { flex-grow: 1; }
+
+
+/* Standard padding for text content alignment */
+.group-comment-wrapper,
+.loading-indicator,
+.inspection-point,
+.error-message {
+  padding-left: var(--text-align-padding); padding-right: var(--base-right-padding);
+  padding-top: 8px; padding-bottom: 8px;
+  border-top: 1px dashed rgba(0, 0, 0, 0.08);
+}
+/* Adjustments for specific elements */
+.group-comment-wrapper { font-size: 0.9em; color: #495057; border-top-color: rgba(0, 0, 0, 0.1); }
+details:not([open]) .group-comment-wrapper { border-top: none; padding-top: 0; padding-bottom: 0; max-height: 0; overflow: hidden; }
+.loading-indicator { font-style: italic; color: #6c757d; }
+.error-message { color: #dc3545; background-color: #f8d7da; border: 1px solid #f5c6cb; border-radius: 4px; margin: 0; }
+
+/* Inspection point specific styles */
+.inspection-point { display: flex; align-items: flex-start; border-top-color: rgba(0, 0, 0, 0.08); }
+.inspection-point:first-of-type { border-top-color: rgba(0, 0, 0, 0.1); margin-top: 0; }
+.inspection-point:last-child { margin-bottom: 0; padding-bottom: 8px;}
+.inspection-point input[type="checkbox"] { margin-right: 10px; margin-top: 0.2em; flex-shrink: 0; width: 1.3em; height: 1.3em; }
+.point-label-comment-wrapper { flex-grow: 1; }
+.inspection-point label { font-weight: 500; display: block; }
+.inspection-point .point-comment { font-size: 0.8em; color: #495057; display: block; margin-top: 4px; }
+
+
+/* ------- INSET LOGIC FOR NESTED BOXES ------- */
+details:has(> .group-container) { padding: var(--inset-margin); }
+details > .group-container {
+  margin-top: var(--vertical-inset-spacing); margin-bottom: var(--vertical-inset-spacing);
+  margin-left: 0; margin-right: 0; width: 100%;
+}
+details > .group-container:last-child { margin-bottom: 0; }
+details:has(> .group-container) > summary,
+details:has(> .group-container) > .group-comment-wrapper,
+details:has(> .group-container) > .inspection-point,
+details:has(> .group-container) > .loading-indicator,
+details:has(> .group-container) > .error-message {
+  margin-left: calc(-1 * var(--inset-margin)); margin-right: calc(-1 * var(--inset-margin));
+}
+details:has(> .group-container) > summary {
+  padding-left: calc(var(--base-right-padding) + var(--inset-margin));
+  padding-right: calc(var(--base-right-padding) + var(--inset-margin));
+  margin-top: calc(-1 * var(--inset-margin));
+}
+details:has(> .group-container) > summary + .group-comment-wrapper,
+details:has(> .group-container) > summary + .inspection-point,
+details:has(> .group-container) > summary + .loading-indicator,
+details:has(> .group-container) > summary + .error-message {
+   margin-top: calc(-1 * var(--inset-margin)); border-top: 1px dashed rgba(0,0,0,0.1);
+}
+details:has(> .group-container) > .group-comment-wrapper:last-child,
+details:has(> .group-container) > .inspection-point:last-child,
+details:has(> .group-container) > .loading-indicator:last-child,
+details:has(> .group-container) > .error-message:last-child {
+   margin-bottom: calc(-1 * var(--inset-margin));
+}
+/* ------- END INSET LOGIC ------- */
+
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  body { padding: 10px; }
+  h1, h2, h3, h4, h5, h6 { font-size: calc(1rem + 0.5vw); }
 }
