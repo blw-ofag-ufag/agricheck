@@ -11,3 +11,4 @@ The data model was written using OWL, the web ontology language. It is not only 
 
 - [Return the URI, name and level of each inspection point](https://s.zazuko.com/GA9HNb)
 - [How many inspection points can we find under each level 2 inspection point group?](https://s.zazuko.com/euSp56)
+- [Find inspection point groups with exactly one sub-item](https://s.zazuko.com/3pmApnf)
