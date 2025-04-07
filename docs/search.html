@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inspection Points Tree Table</title>
+
+  <!-- 1) Load jsTree CSS (core + default theme) -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/jstree@3.3.12/dist/themes/default/style.min.css" 
+  />
+
+  <!-- 2) Load jsTreeGrid (tree table) plugin CSS -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/jstree-grid@3.10.2/jstreegrid.css" 
+  />
+
+  <!-- 3) Bootstrap Icons (for the "bi-collection" and "bi-crosshair" icons) -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+  />
+
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 1rem;
+    }
+
+    h1 {
+      margin-bottom: 0.5rem;
+    }
+
+    #controls {
+      margin-bottom: 1rem;
+    }
+
+    /* 
+      Provide stripes for the table rows in jsTreeGrid 
+      (the plugin wraps a <table> around the tree rows).
+    */
+    .jstree-grid-wrapper table > tbody > tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    /* 
+      Add a bottom border for each row to create clearer lines
+      under each item. 
+    */
+    .jstree-grid-row {
+      border-bottom: 1px solid #ccc;
+    }
+
+    /*
+      Show “dots” or connecting lines in the tree portion. 
+      This references the standard jsTree sprite for dotted lines.
+    */
+    .jstree-default .jstree-dots .jstree-ocl {
+      background-position: -64px -30px; 
+    }
+
+    /* 
+      jsTree uses .jstree-search on the <a> or text span if it matches the search.
+      We'll highlight it with a bright background color.
+    */
+    .jstree-search {
+      background-color: #ffff66;
+      font-weight: bold;
+    }
+
+    /*
+      By default, jsTree tries to set a background-image on .jstree-icon.
+      But we want to use Bootstrap Icons classes instead.
+      So we override the default background so it won't conflict.
+    */
+    .jstree-icon {
+      background: none !important;
+    }
+
+    /* 
+      We'll set the column wide enough to fit Label + Comment 
+    */
+    .jstree-grid-column-0 {
+      width: 50rem;
+    }
+
+    /*
+      If you want to style the icons a bit more, you could do:
+      .jstree-icon.bi {
+        font-size: 1rem;
+        vertical-align: middle; 
+      }
+      ... or similar customizations
+    */
+  </style>
+</head>
+<body>
+
+<h1>Inspection Points Tree Table</h1>
+
+<div id="controls">
+  <input 
+    id="searchInput" 
+    type="text" 
+    placeholder="Search (press Enter)..." 
+    style="width: 300px;"
+  />
+  <button id="clearSearchBtn">Clear</button>
+</div>
+
+<!-- This is where the jsTree will render -->
+<div id="treeContainer"></div>
+
+<!-- 1) jQuery (jsTree & jsTreeGrid require jQuery) -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+
+<!-- 2) jsTree library (core + search plugin) -->
+<script src="https://cdn.jsdelivr.net/npm/jstree@3.3.12/dist/jstree.min.js"></script>
+
+<!-- 3) jsTreeGrid plugin (tree table) -->
+<script src="https://cdn.jsdelivr.net/npm/jstree-grid@3.10.2/jstreegrid.js"></script>
+
+<script>
+  // SPARQL endpoint and query
+  const endpointUrl = "https://lindas.admin.ch/query";
+  const sparqlQuery = `
+PREFIX : <https://agriculture.ld.admin.ch/inspection/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX schema: <http://schema.org/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?s ?sType ?sLabel ?sComment ?hierarchyLevel
+       ?subGroup ?subGroupLabel ?subGroupComment
+       ?superGroup
+       ?inspectionPoint ?inspectionPointLabel ?inspectionPointComment
+       ?parentGroup
+WHERE {
+  # Return only Collections or InspectionPoints
+  ?s a ?sType .
+  FILTER(?sType IN (dcterms:Collection, :InspectionPoint)) .
+
+  OPTIONAL {
+    ?s rdfs:label ?sLabel .
+    FILTER(LANG(?sLabel) = "de")
+  }
+  OPTIONAL {
+    ?s rdfs:comment ?sComment .
+    FILTER(LANG(?sComment) = "de")
+  }
+  OPTIONAL {
+    ?s :hierarchyLevel ?hierarchyLevel .
+  }
+
+  OPTIONAL {
+    ?s schema:hasPart ?subGroup .
+    OPTIONAL {
+      ?subGroup rdfs:label ?subGroupLabel .
+      FILTER(LANG(?subGroupLabel) = "de")
+    }
+    OPTIONAL {
+      ?subGroup rdfs:comment ?subGroupComment .
+      FILTER(LANG(?subGroupComment) = "de")
+    }
+  }
+  OPTIONAL {
+    ?s schema:isPartOf ?superGroup .
+  }
+  OPTIONAL {
+    ?s :includesInspectionPoints ?inspectionPoint .
+    OPTIONAL {
+      ?inspectionPoint rdfs:label ?inspectionPointLabel .
+      FILTER(LANG(?inspectionPointLabel) = "de")
+    }
+    OPTIONAL {
+      ?inspectionPoint rdfs:comment ?inspectionPointComment .
+      FILTER(LANG(?inspectionPointComment) = "de")
+    }
+  }
+  OPTIONAL {
+    ?s :belongsToGroup ?parentGroup .
+  }
+}
+`;
+
+  // Fetch data from the SPARQL endpoint
+  fetch(endpointUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/sparql-query',
+      'Accept': 'application/sparql-results+json'
+    },
+    body: sparqlQuery
+  })
+  .then(response => response.json())
+  .then(data => {
+    // Build an internal hierarchy
+    const nodeMap = buildHierarchy(data.results.bindings);
+    // Convert to jsTree-compatible data
+    const jsTreeData = buildJsTreeData(nodeMap);
+    // Initialize the tree
+    initJsTree(jsTreeData);
+  })
+  .catch(err => console.error("SPARQL query failed:", err));
+
+
+  /**
+   * Build a dictionary of nodes, keyed by their URI,
+   * storing type, label, comment, subgroups, etc.
+   */
+  function buildHierarchy(bindings) {
+    const nodeMap = {};
+
+    function getNode(uri) {
+      if (!nodeMap[uri]) {
+        nodeMap[uri] = {
+          uri,
+          type: "",
+          label: "",
+          comment: "",
+          hierarchyLevel: null,
+          subGroups: new Set(),
+          superGroup: null,
+          inspectionPoints: new Set(),
+          parentGroup: null
+        };
+      }
+      return nodeMap[uri];
+    }
+
+    for (const b of bindings) {
+      const s = b.s?.value;
+      if (!s) continue;
+      const node = getNode(s);
+
+      // Type
+      if (b.sType?.value.endsWith("Collection")) {
+        node.type = "Collection";
+      } else if (b.sType?.value.endsWith("InspectionPoint")) {
+        node.type = "InspectionPoint";
+      }
+
+      // Label, Comment, Hierarchy
+      if (b.sLabel) node.label = b.sLabel.value;
+      if (b.sComment) node.comment = b.sComment.value;
+      if (b.hierarchyLevel) node.hierarchyLevel = b.hierarchyLevel.value;
+
+      // SubGroup
+      if (b.subGroup) {
+        const sgUri = b.subGroup.value;
+        node.subGroups.add(sgUri);
+        const sgNode = getNode(sgUri);
+        sgNode.type = "Collection"; // subgroups are also Collections
+        if (b.subGroupLabel) sgNode.label = b.subGroupLabel.value;
+        if (b.subGroupComment) sgNode.comment = b.subGroupComment.value;
+      }
+
+      // SuperGroup
+      if (b.superGroup) {
+        node.superGroup = b.superGroup.value;
+        getNode(b.superGroup.value);
+      }
+
+      // InspectionPoints
+      if (b.inspectionPoint) {
+        const ipUri = b.inspectionPoint.value;
+        node.inspectionPoints.add(ipUri);
+        const ipNode = getNode(ipUri);
+        ipNode.type = "InspectionPoint";
+        if (b.inspectionPointLabel) ipNode.label = b.inspectionPointLabel.value;
+        if (b.inspectionPointComment) ipNode.comment = b.inspectionPointComment.value;
+      }
+
+      // ParentGroup
+      if (b.parentGroup) {
+        node.parentGroup = b.parentGroup.value;
+        getNode(b.parentGroup.value);
+      }
+    }
+    return nodeMap;
+  }
+
+  /**
+   * Identify root-level Collections (no superGroup, no parentGroup)
+   * and recursively produce jsTree data.
+   */
+  function buildJsTreeData(nodeMap) {
+    const roots = [];
+    for (const uri in nodeMap) {
+      const n = nodeMap[uri];
+      if (n.type === 'Collection') {
+        if (!n.superGroup && !n.parentGroup) {
+          roots.push(n);
+        }
+      }
+    }
+    return roots.map(r => toJsTreeNode(r, nodeMap));
+  }
+
+  /**
+   * Convert a node to jsTree node {id, text, icon, data, children}.
+   * We'll show label in `text`, store comment in `data.comment`.
+   */
+  function toJsTreeNode(node, nodeMap) {
+    // Build children from subGroups + inspectionPoints
+    const children = [];
+    node.subGroups.forEach(sgUri => {
+      const childNode = nodeMap[sgUri];
+      if (childNode) {
+        children.push(toJsTreeNode(childNode, nodeMap));
+      }
+    });
+    node.inspectionPoints.forEach(ipUri => {
+      const ipNode = nodeMap[ipUri];
+      if (ipNode) {
+        children.push(toJsTreeNode(ipNode, nodeMap));
+      }
+    });
+
+    // Decide icon class (Bootstrap Icons)
+    // We'll assign something like: icon: "bi bi-collection"
+    let iconClass = "";
+    if (node.type === "Collection") {
+      iconClass = "bi bi-collection";  // from bootstrap icons
+    } else if (node.type === "InspectionPoint") {
+      iconClass = "bi bi-crosshair";
+    }
+
+    return {
+      id: node.uri,
+      text: node.label || shortUri(node.uri),
+      icon: iconClass,
+      data: {
+        comment: node.comment || "",
+        hierarchyLevel: node.hierarchyLevel || ""
+      },
+      children
+    };
+  }
+
+  function shortUri(uri) {
+    return uri.replace(/^.*[#/]/, '');
+  }
+
+  /**
+   * Initialize jsTree with:
+   *  - "grid" plugin for a tree table
+   *  - "search" plugin for highlighting
+   *  - "dots: true" to show dotted lines
+   *  - "stripes: true" for row striping
+   */
+  function initJsTree(jsTreeData) {
+    const $tree = $("#treeContainer");
+
+    // Destroy any old instance
+    try { $tree.jstree("destroy"); } catch {}
+
+    $tree.jstree({
+      core: {
+        data: jsTreeData,
+        themes: {
+          name: "default",
+          icons: true,
+          dots: true,
+          stripes: true
+        }
+      },
+      plugins: ["search", "grid"],
+      grid: {
+        columns: [
+          {
+            header: "Label / Comment",
+            tree: true,
+            wide: true,
+            value: function(node) {
+              const lbl = node.text || "";
+              const cmt = node.data.comment || "";
+              // We'll put the comment below the label
+              if (cmt) {
+                return escapeHtml(lbl) + "<br><small>" + escapeHtml(cmt) + "</small>";
+              } else {
+                return escapeHtml(lbl);
+              }
+            },
+            format: "html"
+          }
+        ],
+        resizable: true
+      }
+    });
+
+    // Hook up the search
+    const $searchInput = $("#searchInput");
+    const $clearBtn = $("#clearSearchBtn");
+
+    $searchInput.on("keyup", function(e) {
+      if (e.key === "Enter") {
+        $tree.jstree(true).search($(this).val().trim());
+      }
+    });
+
+    $clearBtn.on("click", function() {
+      $searchInput.val("");
+      $tree.jstree(true).clear_search();
+    });
+  }
+
+  function escapeHtml(str) {
+    return str
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+</script>
+
+</body>
+</html>
