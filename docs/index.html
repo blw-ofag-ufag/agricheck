@@ -3,58 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AgriCheck – Inspektionspunkte Explorer</title>
-
-    <!-- Bootstrap & Icons for quick styling -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-
-    <!-- jsTree CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/jstree@3.3.12/dist/themes/default/style.min.css"
-      rel="stylesheet"
-    />
-
-    <style>
-      /* Keep the tree container height constrained and scrollable */
-      #tree {
-        max-height: 70vh;
-        overflow: auto;
-        border: 1px solid #dee2e6;
-        border-radius: 0.5rem;
-        padding: 1rem;
-      }
-      /* Optional: details panel styling */
-      #details {
-        min-height: 6rem;
-      }
-    </style>
+    <title>Agricheck</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/jstree@3.3.12/dist/themes/default/style.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
   </head>
+
   <body>
     <div class="container py-4">
-      <h1 class="mb-4">AgriCheck – Inspektionspunkte Explorer</h1>
+      <h1 class="mb-4">Agricheck</h1>
 
-      <!-- Search -->
-      <div class="mb-3">
-        <input
-          id="search"
-          class="form-control"
-          type="search"
-          placeholder="Suche nach Kontrollpunkt oder Gruppe…"
-          aria-label="Suche"
-        />
+      <!-- Search + global actions -->
+      <div class="input-group mb-3">
+        <input id="search" class="form-control" type="search"
+               placeholder="Suche nach Kontrollpunkt oder Gruppe…" aria-label="Suche" />
+        <button class="btn btn-outline-secondary" type="button" id="search-btn"   title="Suche starten"><i class="bi bi-search"></i></button>
+        <button class="btn btn-outline-secondary" type="button" id="clear-btn"    title="Alle Filter zurücksetzen"><i class="bi bi-x-circle"></i></button>
+        <button class="btn btn-outline-secondary" type="button" id="collapse-btn" title="Baum einklappen"><i class="bi bi-arrows-collapse"></i></button>
       </div>
 
-      <!-- Tree -->
       <div id="tree" role="tree"></div>
-
-      <!-- Details -->
+      <div id="results" class="mt-4"></div>
       <div id="details" class="mt-4"></div>
     </div>
 
@@ -63,256 +33,137 @@
     <script src="https://cdn.jsdelivr.net/npm/jstree@3.3.12/dist/jstree.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lunr/lunr.js"></script>
 
-    <!-- Main logic -->
     <script type="module">
-      const ENDPOINT = "https://lindas.admin.ch/query";
-
-      const SPARQL_QUERY = `PREFIX :           <https://agriculture.ld.admin.ch/inspection/>
-PREFIX dcterms:    <http://purl.org/dc/terms/>
-PREFIX schema:     <http://schema.org/>
-PREFIX rdfs:       <http://www.w3.org/2000/01/rdf-schema#>
-
-SELECT
-  ?s ?sType ?sLabel ?sComment ?hierarchyLevel
-  ?subGroup ?subGroupLabel ?subGroupComment
-  ?superGroup
-  ?inspectionPoint ?inspectionPointLabel ?inspectionPointComment
-  ?parentGroup
-WHERE {
-  ?s a ?sType .
-  FILTER(?sType IN (dcterms:Collection, :InspectionPoint))
-
-  OPTIONAL { ?s rdfs:label   ?sLabel   . FILTER(LANG(?sLabel)   = "de") }
-  OPTIONAL { ?s rdfs:comment ?sComment . FILTER(LANG(?sComment) = "de") }
-  OPTIONAL { ?s :hierarchyLevel ?hierarchyLevel }
-
-  OPTIONAL {
-    ?s schema:hasPart ?subGroup .
-    OPTIONAL { ?subGroup rdfs:label   ?subGroupLabel   . FILTER(LANG(?subGroupLabel)   = "de") }
-    OPTIONAL { ?subGroup rdfs:comment ?subGroupComment . FILTER(LANG(?subGroupComment) = "de") }
+      /* ---------- 1. fetch data ---------- */
+      const ENDPOINT="https://lindas.admin.ch/query";
+      const SPARQL_QUERY=`PREFIX : <https://agriculture.ld.admin.ch/inspection/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX schema:  <http://schema.org/>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?s ?sType ?sLabel ?sComment ?hierarchyLevel
+       ?subGroup ?subGroupLabel ?subGroupComment
+       ?superGroup
+       ?inspectionPoint ?inspectionPointLabel ?inspectionPointComment
+       ?parentGroup
+WHERE{
+  ?s a ?sType. FILTER(?sType IN(dcterms:Collection,:InspectionPoint))
+  OPTIONAL{?s rdfs:label ?sLabel. FILTER(LANG(?sLabel)="de")}
+  OPTIONAL{?s rdfs:comment ?sComment. FILTER(LANG(?sComment)="de")}
+  OPTIONAL{?s :hierarchyLevel ?hierarchyLevel}
+  OPTIONAL{
+    ?s schema:hasPart ?subGroup.
+    OPTIONAL{?subGroup rdfs:label ?subGroupLabel. FILTER(LANG(?subGroupLabel)="de")}
+    OPTIONAL{?subGroup rdfs:comment ?subGroupComment. FILTER(LANG(?subGroupComment)="de")}
   }
-
-  OPTIONAL { ?s schema:isPartOf ?superGroup }
-
-  OPTIONAL {
-    ?s :includesInspectionPoints ?inspectionPoint .
-    OPTIONAL { ?inspectionPoint rdfs:label   ?inspectionPointLabel   . FILTER(LANG(?inspectionPointLabel)   = "de") }
-    OPTIONAL { ?inspectionPoint rdfs:comment ?inspectionPointComment . FILTER(LANG(?inspectionPointComment) = "de") }
+  OPTIONAL{?s schema:isPartOf ?superGroup}
+  OPTIONAL{
+    ?s :includesInspectionPoints ?inspectionPoint.
+    OPTIONAL{?inspectionPoint rdfs:label ?inspectionPointLabel. FILTER(LANG(?inspectionPointLabel)="de")}
+    OPTIONAL{?inspectionPoint rdfs:comment ?inspectionPointComment. FILTER(LANG(?inspectionPointComment)="de")}
   }
-
-  OPTIONAL { ?s :belongsToGroup ?parentGroup }
+  OPTIONAL{?s :belongsToGroup ?parentGroup}
 }`;
 
-      /**
-       * Fetch data from the SPARQL endpoint.
-       * @returns {Promise<any[]>} Array of SPARQL bindings
-       */
-      async function fetchBindings() {
-        const response = await fetch(ENDPOINT, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/sparql-query",
-            Accept: "application/sparql-results+json",
-          },
-          body: SPARQL_QUERY,
-        });
-        if (!response.ok) {
-          throw new Error(`SPARQL request failed: ${response.statusText}`);
-        }
-        const json = await response.json();
-        return json.results.bindings;
+      async function fetchBindings(){
+        const r=await fetch(ENDPOINT,{method:"POST",headers:{"Content-Type":"application/sparql-query",Accept:"application/sparql-results+json"},body:SPARQL_QUERY});
+        if(!r.ok)throw new Error(r.statusText);
+        return (await r.json()).results.bindings;
       }
 
-      /**
-       * Build a node map keyed by URI.
-       */
-      function buildNodeMap(bindings) {
-        const map = new Map();
-
-        function ensure(uri) {
-          if (!map.has(uri)) {
-            map.set(uri, {
-              id: uri,
-              type: null,
-              label: null,
-              comment: null,
-              hierarchyLevel: null,
-              subGroups: new Set(),
-              inspectionPoints: new Set(),
-              superGroup: null,
-              parentGroup: null,
-            });
-          }
-          return map.get(uri);
-        }
-
-        bindings.forEach((b) => {
-          const s = ensure(b.s.value);
-          s.type = b.sType.value.endsWith("Collection") ? "collection" : "inspection";
-          if (b.sLabel) s.label = b.sLabel.value;
-          if (b.sComment) s.comment = b.sComment.value;
-          if (b.hierarchyLevel) s.hierarchyLevel = b.hierarchyLevel.value;
-          if (b.subGroup) {
+      /* ---------- 2. build model ---------- */
+      function buildNodeMap(bindings){
+        const m=new Map();
+        const ensure=u=>{
+          if(!m.has(u))m.set(u,{id:u,type:null,label:null,comment:null,hierarchyLevel:null,subGroups:new Set(),inspectionPoints:new Set(),superGroup:null,parentGroup:null});
+          return m.get(u);
+        };
+        bindings.forEach(b=>{
+          const s=ensure(b.s.value);
+          s.type=b.sType.value.endsWith("Collection")?"collection":"inspection";
+          if(b.sLabel)s.label=b.sLabel.value;
+          if(b.sComment)s.comment=b.sComment.value;
+          if(b.hierarchyLevel)s.hierarchyLevel=b.hierarchyLevel.value;
+          if(b.subGroup){
             s.subGroups.add(b.subGroup.value);
-            const sg = ensure(b.subGroup.value);
-            if (b.subGroupLabel) sg.label = b.subGroupLabel.value;
-            if (b.subGroupComment) sg.comment = b.subGroupComment.value;
-            sg.type = "collection";
+            const sg=ensure(b.subGroup.value);
+            sg.type="collection";
+            if(b.subGroupLabel)sg.label=b.subGroupLabel.value;
+            if(b.subGroupComment)sg.comment=b.subGroupComment.value;
           }
-          if (b.superGroup) s.superGroup = b.superGroup.value;
-          if (b.parentGroup) s.parentGroup = b.parentGroup.value;
-          if (b.inspectionPoint) {
+          if(b.inspectionPoint){
             s.inspectionPoints.add(b.inspectionPoint.value);
-            const ip = ensure(b.inspectionPoint.value);
-            ip.type = "inspection";
-            if (b.inspectionPointLabel) ip.label = b.inspectionPointLabel.value;
-            if (b.inspectionPointComment) ip.comment = b.inspectionPointComment.value;
+            const ip=ensure(b.inspectionPoint.value);
+            ip.type="inspection";
+            if(b.inspectionPointLabel)ip.label=b.inspectionPointLabel.value;
+            if(b.inspectionPointComment)ip.comment=b.inspectionPointComment.value;
           }
+          if(b.superGroup)s.superGroup=b.superGroup.value;
+          if(b.parentGroup)s.parentGroup=b.parentGroup.value;
         });
-
-        return map;
+        return m;
       }
-
-      /**
-       * Build hierarchical tree for jsTree.
-       */
-      function buildTree(map) {
-        // Roots: collections without superGroup or parentGroup
-        const roots = [...map.values()].filter(
-          (n) =>
-            n.type === "collection" &&
-            n.superGroup === null &&
-            n.parentGroup === null
-        );
-
-        function rec(node) {
-          // Collection children: subGroups + inspectionPoints
-          const children = [];
-          node.subGroups.forEach((uri) => {
-            children.push(rec(map.get(uri)));
-          });
-          node.inspectionPoints.forEach((uri) => {
-            children.push(rec(map.get(uri)));
-          });
-
-          return {
-            id: node.id,
-            text: node.label || uriLocalName(node.id),
-            icon:
-              node.type === "collection"
-                ? "bi bi-collection"
-                : "bi bi-crosshair",
-            data: {
-              comment: node.comment || "",
-              hierarchyLevel: node.hierarchyLevel || "",
-              type: node.type,
-            },
-            children,
-          };
-        }
-
+      const local=u=>u.split("/").pop();
+      function buildTree(m){
+        const roots=[...m.values()].filter(n=>n.type==="collection"&&!n.superGroup&&!n.parentGroup);
+        const rec=n=>{
+          const children=[];
+          n.subGroups.forEach(u=>children.push(rec(m.get(u))));
+          n.inspectionPoints.forEach(u=>children.push(rec(m.get(u))));
+          return{id:n.id,text:n.label||local(n.id),icon:n.type==="collection"?"bi bi-collection":"bi bi-crosshair",
+            data:{label:n.label||local(n.id),comment:n.comment||"",hierarchyLevel:n.hierarchyLevel||"",type:n.type},children};
+        };
         return roots.map(rec);
       }
+      function buildIdx(m){return lunr(function(){this.ref("id");this.field("label");this.field("comment");for(const n of m.values())this.add({id:n.id,label:n.label||"",comment:n.comment||""});});}
 
-      /** Extract local name after last slash */
-      function uriLocalName(uri) {
-        return uri.split("/").slice(-1)[0];
+      /* ---------- 3. UI helpers ---------- */
+      function breadcrumbs(u){
+        const bc=[],vis=new Set();
+        let cur=(nodeMap.get(u)?.superGroup||nodeMap.get(u)?.parentGroup)||null;
+        while(cur&&!vis.has(cur)){vis.add(cur);const c=nodeMap.get(cur);if(c?.type==="collection")bc.unshift(c.label||local(c.id));cur=c?(c.superGroup||c.parentGroup):null;}
+        return bc.join(" &gt; ");
       }
-
-      /**
-       * Build Lunr search index.
-       */
-      function buildSearchIndex(map) {
-        return lunr(function () {
-          this.ref("id");
-          this.field("label");
-          this.field("comment");
-
-          for (const node of map.values()) {
-            this.add({ id: node.id, label: node.label || "", comment: node.comment || "" });
-          }
-        });
+      function getDescIPs(u){
+        const ips=new Set(),stk=[nodeMap.get(u)];
+        while(stk.length){const c=stk.pop();c?.inspectionPoints.forEach(i=>ips.add(i));c?.subGroups.forEach(sg=>stk.push(nodeMap.get(sg)));}return[...ips];
       }
-
-      /**
-       * Initialize jsTree widget.
-       */
-      function initJsTree(treeData) {
-        $("#tree").jstree("destroy");
-        $("#tree").jstree({
-          core: {
-            data: treeData,
-            themes: { dots: true },
-          },
-          plugins: ["search"],
-        });
+      function card(n){
+        const ico=n.type==="collection"?"bi bi-collection":"bi bi-crosshair";
+        const listBtn=n.type==="collection"?`<a href="#" class="agri-action-btn agri-desc-btn" data-uri="${n.id}" title="Alle Kontrollpunkte dieser Gruppe"><i class="bi bi-card-list"></i></a>`:"";
+        return `<div class="card mb-2"><div class="card-body">
+        ${breadcrumbs(n.id)?`<p class="small text-muted mb-1">${breadcrumbs(n.id)}</p>`:""}
+        <h5 class="card-title d-flex align-items-center gap-2"><i class="${ico}"></i><span>${n.label||local(n.id)}</span>
+        <a href="${n.id}" target="_blank" title="URI"><i class="bi bi-link-45deg"></i></a>${listBtn}</h5>
+        ${n.comment?`<p class="card-text">${n.comment}</p>`:""}
+        ${n.hierarchyLevel?`<span class="badge bg-secondary me-1">Level ${n.hierarchyLevel}</span>`:""}
+        <span class="badge bg-info">${n.type==="collection"?"Gruppe":"Kontrollpunkt"}</span></div></div>`;
       }
-
-      /**
-       * Display details of a selected node.
-       */
-      function showDetails(node) {
-        const { label, comment, hierarchyLevel, type } = node.data;
-        $("#details").html(`
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">
-                <i class="${node.icon}"></i> ${label}
-              </h5>
-              ${comment ? `<p class="card-text">${comment}</p>` : ""}
-              ${hierarchyLevel ? `<span class="badge bg-secondary">Level ${hierarchyLevel}</span>` : ""}
-              <span class="badge bg-info">${type === "collection" ? "Gruppe" : "Kontrollpunkt"}</span>
-            </div>
-          </div>
-        `);
+      const HIGHLIGHT="agri-search-hit";
+      function clearHi(){ $("#tree").find("."+HIGHLIGHT).removeClass(HIGHLIGHT); }
+      function list(ids,h=""){jst.deselect_all();clearHi();$("#results").empty();
+        if(!ids.length)return;
+        ids.forEach(id=>{jst.get_node(id).parents.forEach(p=>jst.open_node(p));const $li=jst.get_node(id,true);if($li.length)$li.addClass(HIGHLIGHT);});
+        $("#results").html(`${h?`<h4 class="mb-3">${h}</h4>`:""}${ids.map(id=>card(nodeMap.get(id))).join("")}`);
       }
+      function search(q){q=q.trim();if(!q){list([]);return;}const ids=idx.search(`${lunr.utils.asString(q)}*`).map(r=>r.ref);list(ids,`Suchergebnisse für <strong>${q}</strong>`);}
+      function clearAll(){ $("#search").val("");list([]);$("#details").empty();}
 
-      /**
-       * Main app bootstrap
-       */
-      async function bootstrap() {
-        try {
-          $("#tree").text("Lade Daten…");
-          const bindings = await fetchBindings();
-          const nodeMap = buildNodeMap(bindings);
-          const treeData = buildTree(nodeMap);
-          const searchIndex = buildSearchIndex(nodeMap);
-
-          initJsTree(treeData);
-
-          // Selection event
-          $("#tree").on("select_node.jstree", function (e, data) {
-            showDetails(data.node);
-          });
-
-          // Search event (debounced)
-          let timeout = null;
-          $("#search").on("input", function () {
-            clearTimeout(timeout);
-            const query = this.value.trim();
-            timeout = setTimeout(() => {
-              if (query === "") {
-                $("#tree").jstree(true).search("");
-              } else {
-                const ids = searchIndex.search(query + "*").map((r) => r.ref);
-                // custom search: highlight matching ids
-                $("#tree").jstree(true).search(() => false); // reset
-                $("#tree").jstree(true).select_node(ids);
-              }
-            }, 300);
-          });
-
-          // Expand to root nodes initially
-          $("#tree").jstree("open_all");
-        } catch (err) {
-          console.error(err);
-          $("#tree").html(
-            `<div class="alert alert-danger">Fehler beim Laden der Daten: ${err.message}</div>`
-          );
-        }
+      /* ---------- 4. bootstrap ---------- */
+      let nodeMap,idx,jst;
+      async function init(){
+        $("#tree").text("Lade Daten…");
+        nodeMap=buildNodeMap(await fetchBindings());
+        idx=buildIdx(nodeMap);
+        $("#tree").jstree({core:{data:buildTree(nodeMap),themes:{dots:true}},plugins:["search"]});
+        jst=$("#tree").jstree(true);jst.open_all();
+        $("#tree").on("select_node.jstree",(_,d)=>$("#details").html(card({...nodeMap.get(d.node.id),icon:d.node.icon})));
+        $("#search").on("keydown",e=>{if(e.key==="Enter"){e.preventDefault();search($("#search").val());}});
+        $("#search-btn").on("click",()=>search($("#search").val()));
+        $("#clear-btn").on("click",clearAll);
+        $("#collapse-btn").on("click",()=>jst.close_all());
+        $(document).on("click",".agri-desc-btn",e=>{e.preventDefault();const u=$(e.currentTarget).data("uri");list(getDescIPs(u),`Kontrollpunkte in <strong>${nodeMap.get(u)?.label||local(u)}</strong>`);});
       }
-
-      bootstrap();
+      init();
     </script>
   </body>
 </html>
