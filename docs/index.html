@@ -1,21 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hierarchical Inspection Data Viewer</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agricheck – Navigator</title>
+
+  <!-- Bootstrap & icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <!-- jsTree -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jstree@3.3.14/dist/themes/default/style.min.css">
+
+  <!-- Highlight colour for search hits (override jsTree’s default red/bold) -->
+  <style>
+    .jstree-search {
+      background: yellow !important;
+      color: inherit  !important;
+      font-weight: normal !important;
+      font-style:  normal !important;
+    }
+  </style>
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <header>
-        <h1>Agricheck</h1>
-    </header>
-    <main>
-        <div id="tree-container">
-            <p>Loading top-level groups...</p>
-            </div>
-    </main>
 
-    <script src="script.js"></script>
+  <!-- Agricheck Navbar -->
+  <nav class="navbar navbar-agricheck mb-4">
+    <div class="container-fluid">
+
+      <!-- Brand: calendar-check icon + text -->
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <i class="bi bi-calendar-check fs-3 me-2"></i>
+        <span class="fs-3 fw-bold">Agricheck</span>
+      </a>
+
+      <!-- Help link -->
+      <a class="nav-link d-flex align-items-center ms-auto" href="https://blw.admin.ch" target="_blank">
+        <i class="bi bi-question-square fs-4"></i>
+      </a>
+    </div>
+  </nav>
+
+  <div class="container py-4">
+
+    <!-- Search input + action buttons + Generate -->
+    <div class="mb-3 input-group">
+      <input id="search" class="form-control" type="search"
+            placeholder="Suche (Label oder Kommentar)…">
+
+      <!-- run search -->
+      <button id="searchBtn" class="btn btn-outline-secondary"
+              title="Suche ausführen">
+        <i class="bi bi-search"></i>
+      </button>
+
+      <!-- remove highlight -->
+      <button id="clearFilterBtn" class="btn btn-outline-secondary"
+              title="Filter entfernen">
+        <i class="bi bi-x-circle"></i>
+      </button>
+
+      <!-- fold & deselect -->
+      <button id="foldTreeBtn" class="btn btn-outline-secondary"
+              title="Baum zuklappen / Auswahl aufheben">
+        <i class="bi bi-arrows-collapse"></i>
+      </button>
+
+      <!-- primary CTA now lives here, visually aligned -->
+      <button id="generate" class="btn btn-outline-secondary me-2" disabled>
+        <i class="bi bi-gear-fill"></i> Generiere Kontrollpunkte-Liste
+      </button>
+    </div>
+
+    <!-- Tree widget -->
+    <div id="tree" class="border rounded p-2"></div>
+
+  </div>
+
+  <!-- Libraries -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jstree@3.3.14/dist/jstree.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lunr/lunr.min.js"></script>
+
+  <!-- Page logic -->
+  <script type="module" src="js/index.js"></script>
 </body>
 </html>

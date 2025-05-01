@@ -1,0 +1,53 @@
+/* print.css – print-only rules for Agricheck checklist */
+@media print {
+
+  /* 1) hide the interactive toolbar */
+  #toolbar {
+    display: none !important;
+  }
+
+  /* 2) page dimensions & margins */
+  @page {
+    size: A4 portrait;
+    margin: 1.5m;                /* 1 cm on all four sides */
+    margin-left: .5cm;
+    margin-right: .5cm;
+    
+    /* margin-box footer (for UAs that support it) */
+    @bottom-right {
+      content: "Seite " counter(page);
+      font-size: 10pt;
+      color: #333;
+    }
+  }
+
+  /* 3) remove any extra HTML/body gutter */
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: auto !important;
+    counter-reset: page;
+  }
+
+  /* 4) base typography */
+  body {
+    font-size: 11pt;
+    line-height: 1.35;
+  }
+
+  /* 5) ensure section numbers stay light grey */
+  .section-number {
+    color: #bbb !important;
+  }
+
+  /* 6) keep headings together with next content */
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+
+  /* 7) avoid breaking a checklist item across pages */
+  ul.checklist {
+    page-break-inside: avoid;
+  }
+
+}
