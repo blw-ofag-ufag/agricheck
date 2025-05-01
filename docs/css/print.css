@@ -1,0 +1,36 @@
+/* Print‑only rules for the checklist */
+@media print {
+
+  /* Hide interactive toolbar */
+  #toolbar {
+    display: none !important;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 1.5cm;
+  }
+
+  body {
+    font-size: 11pt;
+    line-height: 1.35;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+
+  ul {
+    page-break-inside: avoid;
+  }
+
+  /* Simple page number footer */
+  body:after {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    counter-increment: page;
+    content: "Seite " counter(page);
+    font-size: 10pt;
+  }
+}
