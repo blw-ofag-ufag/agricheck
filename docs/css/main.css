@@ -1,0 +1,103 @@
+/* Google Font import */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700;900&display=swap');
+
+/* Typography -------------------------------------------------------------- */
+body { font-family: 'Lato', sans-serif; font-weight: 400; }
+
+strong, b { font-weight: 900; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 900;
+  margin-top: 2rem;
+  margin-bottom: .75rem;
+}
+
+/* Section-number prefix */
+.section-number {
+  color: #888;
+  margin-right: .5rem;
+}
+
+/* Checklist styling ------------------------------------------------------- */
+ul.checklist        { 
+    list-style: none;
+    margin: 0 0 1rem 0;
+    padding: 0; 
+}
+ul.checklist li     { 
+    margin-bottom: 0.75rem; 
+}
+ul.checklist input  { 
+    margin-right: .5rem; 
+}
+ul.checklist label  { 
+    cursor: pointer; 
+}
+ul.checklist input[type="checkbox"] {
+    border: 1px solid #000000;       /* darker border */
+}
+  
+
+/* JStree search */
+.jstree-search {
+    background: rgb(255, 255, 173) !important;
+    color: inherit  !important;
+    font-weight: normal !important;
+    font-style:  normal !important;
+}
+
+/* Agricheck navbar ------------------------------------------------------ */
+.navbar-agricheck {
+    background: #b3b8bd;        /* light grey */
+    padding: .5rem 1rem;
+}
+.navbar-agricheck .navbar-brand,
+.navbar-agricheck .nav-link {
+    color: #fff !important;     /* white text & icons */
+    text-decoration: none;
+}
+.navbar-agricheck .nav-link:hover,
+.navbar-agricheck .navbar-brand:hover {
+    opacity: .8;
+}
+
+/* ------------------------------------------------------------------
+   jsTree custom checkbox states – blue tick / blue indeterminate bar
+   (selector must dig into the <a> wrapper to reach the <i>)
+-------------------------------------------------------------------*/
+
+/* fully-checked node: blue background + white tick */
+#tree li.jstree-checked > .jstree-anchor > .jstree-checkbox {
+    background: #0d6efd;
+    border-color: #0d6efd;
+    position: relative;
+  }
+  #tree li.jstree-checked > .jstree-anchor > .jstree-checkbox::after {
+    content: '';
+    position: absolute;
+    top: 0.15em;
+    left: 0.26em;
+    width: 0.55em;
+    height: 0.3em;
+    border: 2px solid #fff;          /* create the ✓ with borders */
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+  }
+  
+  /* half-checked (undetermined) node: blue background + white bar */
+  #tree li.jstree-undetermined > .jstree-anchor > .jstree-checkbox {
+    background: #0d6efd;
+    border-color: #0d6efd;
+    position: relative;
+  }
+  #tree li.jstree-undetermined > .jstree-anchor > .jstree-checkbox::after {
+    content: '';
+    position: absolute;
+    top: 0.44em;
+    left: 0.2em;
+    width: 0.6em;
+    height: 2px;
+    background: #fff;
+  }
+  
