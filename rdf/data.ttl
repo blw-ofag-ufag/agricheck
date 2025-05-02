@@ -340,60 +340,60 @@
     rdfs:label "Beitragsvoraussetzungen"@de,
         "FR: Beitragsvoraussetzungen"@fr,
         "Ambito Condizioni per i contributi"@it ;
-    schema:isPartOf :a07ef604-42b9-2b97-8aaa-3b546480a7c5 ;
+    schema:isPartOf :a07ef604-42b9-2b97-8bbb-3b546480a7c5 ;
     :hierarchyLevel "2" .
 
 :a07ef604-42b9-2b97-2222-3b546480a7c5 a dcterms:Collection ;
     rdfs:label "Strukturdaten"@de,
         "FR: Strukturdaten"@fr,
         "Ambito Dati strutturali"@it ;
-    schema:isPartOf :a07ef604-42b9-2b97-8aaa-3b546480a7c5 ;
+    schema:isPartOf :a07ef604-42b9-2b97-8bbb-3b546480a7c5 ;
     :hierarchyLevel "2" .
 
 :a07ef604-42b9-2b97-3333-3b546480a7c5 a dcterms:Collection ;
     rdfs:label "Ökologischer Leistungsnachweis (ÖLN)"@de,
         "FR: Ökologischer Leistungsnachweis"@fr,
         "Ambito Prova che le esigenze ecologiche sono rispettates"@it ;
-    schema:isPartOf :a07ef604-42b9-2b97-8aaa-3b546480a7c5 ;
+    schema:isPartOf :a07ef604-42b9-2b97-8bbb-3b546480a7c5 ;
     :hierarchyLevel "2" .
 
 :a07ef604-42b9-2b97-4444-3b546480a7c5 a dcterms:Collection ;
     rdfs:label "Biodiversitätsförderflächen (BFF)"@de,
         "FR: Biodiversitätsförderflächen"@fr,
         "Ambito Superfici per la promozione della biodiversità"@it ;
-    schema:isPartOf :a07ef604-42b9-2b97-8aaa-3b546480a7c5 ;
+    schema:isPartOf :a07ef604-42b9-2b97-8bbb-3b546480a7c5 ;
     :hierarchyLevel "2" .
 
 :a07ef604-42b9-2b97-5555-3b546480a7c5 a dcterms:Collection ;
     rdfs:label "Biologische Landwirtschaft"@de,
         "FR: Biologische Landwirtschaft"@fr,
         "Ambito Agricoltura biologica"@it ;
-    schema:isPartOf :a07ef604-42b9-2b97-8aaa-3b546480a7c5 ;
+    schema:isPartOf :a07ef604-42b9-2b97-8bbb-3b546480a7c5 ;
     :hierarchyLevel "2" .
 
 :a07ef604-42b9-2b97-7777-3b546480a7c5 a dcterms:Collection ;
     rdfs:label "Graslandbasierte Milch- und Fleischproduktion (GMF)"@de,
         "FR: Graslandbasierte Milch- und Fleischproduktion"@fr,
         "Ambito Produzione di latte e carne basata sulla superficie inerbita"@it ;
-    schema:isPartOf :a07ef604-42b9-2b97-8aaa-3b546480a7c5 ;
+    schema:isPartOf :a07ef604-42b9-2b97-8bbb-3b546480a7c5 ;
     :hierarchyLevel "2" .
 
 :a07ef604-42b9-2b97-8aaa-3b546480a7c5 a dcterms:Collection ;
-    rdfs:label "Öffentlich-rechtlich"@de,
-        "FR: Öffentlich-rechtlich"@fr,
-        "IT: Öffentlich-rechtlich"@it ;
+    rdfs:label "Gesetze"@de,
+        "Lois"@fr,
+        "Leggi"@it ;
     :hierarchyLevel "1" .
 
 :a07ef604-42b9-2b97-8bbb-3b546480a7c5 a dcterms:Collection ;
-    rdfs:label "Öffentlich-rechtlich-Kantonal"@de,
-        "FR: Öffentlich-rechtlich-Kantonal"@fr,
-        "It: Öffentlich-rechtlich-Kantonal"@it ;
+    rdfs:label "Direktzahlungen"@de,
+        "Paiements directs"@fr,
+        "Pagamenti diretti"@it ;
     :hierarchyLevel "1" .
 
 :a07ef604-42b9-2b97-8ccc-3b546480a7c5 a dcterms:Collection ;
-    rdfs:label "Privatrechtlich"@de,
-        "FR: Privatrechtlich"@fr,
-        "It: Privatrechtlich"@it ;
+    rdfs:label "Labels"@de,
+        "Labels"@fr,
+        "Labels"@it ;
     :hierarchyLevel "1" .
 
 :a07ef604-42b9-2b97-8eee-3b546480a7c5 a dcterms:Collection ;
@@ -414,7 +414,7 @@
     rdfs:label "Ressourceneffizienz (REB)"@de,
         "FR: Ressourceneffizienz"@fr,
         "Ambito Efficienza delle risorse"@it ;
-    schema:isPartOf :a07ef604-42b9-2b97-8aaa-3b546480a7c5 ;
+    schema:isPartOf :a07ef604-42b9-2b97-8bbb-3b546480a7c5 ;
     :hierarchyLevel "2" .
 
 :a07ef604-42b9-2b97-aaaa-3b546480a7c5 a dcterms:Collection ;
@@ -428,7 +428,7 @@
     rdfs:label "Sömmerung"@de,
         "FR: Sömmerung"@fr,
         "Ambito Estivazione"@it ;
-    schema:isPartOf :a07ef604-42b9-2b97-8aaa-3b546480a7c5 ;
+    schema:isPartOf :a07ef604-42b9-2b97-8bbb-3b546480a7c5 ;
     :hierarchyLevel "2" .
 
 :a3b3ff82-cb61-b616-83e0-3b546480ae08 a dcterms:Collection ;
@@ -506,13 +506,6 @@
         "FR: Ausfüllen bei Silagefütterung"@fr,
         "Ausfüllen bei Silagefütterung"@it ;
     schema:isPartOf :a3b3ff82-d14c-14c6-83e0-3b546480ae08 ;
-    :hierarchyLevel "3" .
-
-:a3b3ff82-ccf3-cf36-83e0-3b546480ae08 a dcterms:Collection ;
-    rdfs:label "GAöL"@de,
-        "FR: GAöL"@fr,
-        "I_GAöL"@it ;
-    schema:isPartOf :a3b3ff82-d14b-14b6-83e0-3b546480ae08 ;
     :hierarchyLevel "3" .
 
 :a3b3ff82-ccf4-cf46-83e0-3b546480ae08 a dcterms:Collection ;
@@ -935,13 +928,6 @@
     schema:isPartOf :a3b3ff82-ce79-e796-83e0-3b546480ae08 ;
     :hierarchyLevel "3" .
 
-:a3b3ff82-d14b-14b6-83e0-3b546480ae08 a dcterms:Collection ;
-    rdfs:label "Naturschutz"@de,
-        "FR: Naturschutz"@fr,
-        "I_Naturschutz"@it ;
-    schema:isPartOf :a07ef604-42b9-2b97-8bbb-3b546480a7c5 ;
-    :hierarchyLevel "2" .
-
 :a3b3ff82-d14c-14c6-83e0-3b546480ae08 a dcterms:Collection ;
     rdfs:label "AOP Emmentaler"@de,
         "FR: AOP Emmentaler"@fr,
@@ -1109,13 +1095,6 @@
         "IPS Polli da ingrasso"@it ;
     schema:isPartOf :a3b3ff82-d4aa-4aa6-83e0-3b546480ae08 ;
     :hierarchyLevel "5" .
-
-:a3b3ff82-d547-5476-83e0-3b546480ae08 a dcterms:Collection ;
-    rdfs:label "Freiberger"@de,
-        "FR: Freiberger"@fr,
-        "Freiberger"@it ;
-    schema:isPartOf :a07ef604-42b9-2b97-8ccc-3b546480a7c5 ;
-    :hierarchyLevel "2" .
 
 :a3b3ff82-d55f-55f6-83e0-3b546480ae08 a dcterms:Collection ;
     rdfs:label "LQ GL"@de,
@@ -3138,7 +3117,7 @@
     rdfs:label "in-situ"@de,
         "FR: in-situ"@fr,
         "in-situ"@it ;
-    schema:isPartOf :a07ef604-42b9-2b97-8aaa-3b546480a7c5 ;
+    schema:isPartOf :a07ef604-42b9-2b97-8bbb-3b546480a7c5 ;
     :hierarchyLevel "2" .
 
 :bc2a4cd9-a017-0175-3ae0-3b546480af5b a dcterms:Collection ;
@@ -3458,76 +3437,6 @@
     schema:isPartOf :a3b3ff82-d453-4536-83e0-3b546480ae08 ;
     :hierarchyLevel "3" .
 
-:bc2a4cd9-a272-2725-3ae0-3b546480af5b a dcterms:Collection ;
-    rdfs:label "Eigene Kontrollen 2"@de,
-        "FR: Eigene Kontrollen 2"@fr,
-        "Autocontrollo 2"@it ;
-    schema:isPartOf :bc2a4cd9-a275-2755-3ae0-3b546480af5b ;
-    :hierarchyLevel "3" .
-
-:bc2a4cd9-a274-2745-3ae0-3b546480af5b a dcterms:Collection ;
-    rdfs:label "Eigene Kontrollen 2"@de,
-        "FR: Eigene Kontrollen 2"@fr,
-        "Autocontrollo 2"@it ;
-    schema:isPartOf :bc2a4cd9-a275-2755-3ae0-3b546480af5b ;
-    :hierarchyLevel "3" .
-
-:bc2a4cd9-a275-2755-3ae0-3b546480af5b a dcterms:Collection ;
-    rdfs:label "Eigene Kontrollen"@de,
-        "FR: Eigene Kontrollen"@fr,
-        "Autocontrollo"@it ;
-    schema:isPartOf :a07ef604-42b9-2b97-8bbb-3b546480a7c5 ;
-    :hierarchyLevel "2" .
-
-:bc2a4cd9-a276-2765-3ae0-3b546480af5b a dcterms:Collection ;
-    rdfs:label "Eigene Kontrollen 1"@de,
-        "FR: Eigene Kontrollen 1"@fr,
-        "Autocontrollo 1"@it ;
-    schema:isPartOf :bc2a4cd9-a275-2755-3ae0-3b546480af5b ;
-    :hierarchyLevel "3" .
-
-:bc38d8e8-4a84-a847-cbe0-3b546480a1fe a dcterms:Collection ;
-    rdfs:label "Tierhaltung"@de,
-        "FR: Tierhaltung"@fr,
-        "Allevamento"@it ;
-    schema:isPartOf :bc38d8e8-4a92-a927-cbe0-3b546480a1fe ;
-    :hierarchyLevel "3" .
-
-:bc38d8e8-4a88-a887-cbe0-3b546480a1fe a dcterms:Collection ;
-    rdfs:label "Dokumentation der Kontrolle"@de,
-        "FR: Dokumentation der Kontrolle"@fr,
-        "Documentazione del controllo"@it ;
-    schema:isPartOf :bc38d8e8-4a92-a927-cbe0-3b546480a1fe ;
-    :hierarchyLevel "3" .
-
-:bc38d8e8-4a92-a927-cbe0-3b546480a1fe a dcterms:Collection ;
-    rdfs:label "Betriebsblatt amtliche Kontrollen"@de,
-        "FR: Betriebsblatt amtliche Kontrollen"@fr,
-        "Foglio aziendale controlli ufficiali"@it ;
-    schema:isPartOf :a07ef604-42b9-2b97-8bbb-3b546480a7c5 ;
-    :hierarchyLevel "2" .
-
-:bc38d8e8-4a93-a937-cbe0-3b546480a1fe a dcterms:Collection ;
-    rdfs:label "Kontrolle angekündigt"@de,
-        "FR: Kontrolle angekündigt"@fr,
-        "Controllo annunciato"@it ;
-    schema:isPartOf :bc38d8e8-4a92-a927-cbe0-3b546480a1fe ;
-    :hierarchyLevel "3" .
-
-:bc38d8e8-4aa0-aa07-cbe0-3b546480a1fe a dcterms:Collection ;
-    rdfs:label "Art der Kontrolle"@de,
-        "FR: Art der Kontrolle"@fr,
-        "Genere del controllo"@it ;
-    schema:isPartOf :bc38d8e8-4a92-a927-cbe0-3b546480a1fe ;
-    :hierarchyLevel "3" .
-
-:bc38d8e8-4aa5-aa57-cbe0-3b546480a1fe a dcterms:Collection ;
-    rdfs:label "Betriebsspezifikationen"@de,
-        "FR: Betriebsspezifikationen"@fr,
-        "Particolarità delL azienda"@it ;
-    schema:isPartOf :bc38d8e8-4a92-a927-cbe0-3b546480a1fe ;
-    :hierarchyLevel "3" .
-
 :bc38d8e8-4aa6-aa67-cbe0-3b546480a1fe a dcterms:Collection ;
     rdfs:label "Produktionsrichtung"@de,
         "FR: Produktionsrichtung"@fr,
@@ -3560,14 +3469,14 @@
     rdfs:label "BTS"@de,
         "FR: BTS"@fr,
         "SSRA"@it ;
-    schema:isPartOf :a07ef604-42b9-2b97-8aaa-3b546480a7c5 ;
+    schema:isPartOf :a07ef604-42b9-2b97-8bbb-3b546480a7c5 ;
     :hierarchyLevel "2" .
 
 :cd483976-90a0-0a00-29e0-3b446480a754 a dcterms:Collection ;
     rdfs:label "RAUS"@de,
         "FR: RAUS"@fr,
         "URA"@it ;
-    schema:isPartOf :a07ef604-42b9-2b97-8aaa-3b546480a7c5 ;
+    schema:isPartOf :a07ef604-42b9-2b97-8bbb-3b546480a7c5 ;
     :hierarchyLevel "2" .
 
 :cd4c74b7-8680-6801-74e0-3b546480a6e4 a dcterms:Collection ;
@@ -3660,21 +3569,21 @@
     rdfs:label "Effizienter Stickstoffeinsatz im Ackerbau"@de,
         "FR: Effizienter Stickstoffeinsatz im Ackerbau"@fr,
         "IT: Effizienter Stickstoffeinsatz im Ackerbau"@it ;
-    schema:isPartOf :a07ef604-42b9-2b97-8aaa-3b546480a7c5 ;
+    schema:isPartOf :a07ef604-42b9-2b97-8bbb-3b546480a7c5 ;
     :hierarchyLevel "2" .
 
 :ed616bc4-2952-9523-a9e0-3b446480ab1a a dcterms:Collection ;
     rdfs:label "Bodenbedeckung/Bodenbearbeitung"@de,
         "FR: Bodenbedeckung/Bodenbearbeitung"@fr,
         "IT: Bodenbedeckung/Bodenbearbeitung"@it ;
-    schema:isPartOf :a07ef604-42b9-2b97-8aaa-3b546480a7c5 ;
+    schema:isPartOf :a07ef604-42b9-2b97-8bbb-3b546480a7c5 ;
     :hierarchyLevel "2" .
 
 :ed616bc4-2953-9533-a9e0-3b446480ab1a a dcterms:Collection ;
     rdfs:label "Produktionssysteme Ackerbau und Dauerkulturen"@de,
         "FR: Produktionssysteme Ackerbau und Dauerkulturen"@fr,
         "IT: Produktionssysteme Ackerbau und Dauerkulturen"@it ;
-    schema:isPartOf :a07ef604-42b9-2b97-8aaa-3b546480a7c5 ;
+    schema:isPartOf :a07ef604-42b9-2b97-8bbb-3b546480a7c5 ;
     :hierarchyLevel "2" .
 
 :f2db99f4-5f4d-447d-96be-002a4c1a0e4f a dcterms:Collection ;
@@ -16471,13 +16380,6 @@
         "Tutti gli animali della categoria hanno accesso in permanenza (ogni giorno* per 24 ore**) a un'area di riposo conforme alle esigenze SSRA e a un'area priva di lettiera * Una deroga  è ammessa nelle situazioni seguenti: a. durante il foraggiamento in stand di foraggiamento; b. di giorno, durante la permanenza su un pascolo; c. in relazione a un intervento praticato sull'animale, per esempio l'inseminazione; d. se la temperatura del porcile supera determinati valori: in tal caso, tranne nei box per il parto, in alternativa la segatura in quantità sufficiente è ammessa come lettiera se la temperatura del porcile supera i seguenti valori: 20° C nel caso di suinetti svezzati, 15° C nel caso di suini da ingrasso e di suini da rimonta fino a 60 kg, 9° C nel caso di animali di peso superiore a 60 kg (compresi i verri riproduttori e le scrofe da allevamento non in lattazione); e. in caso di comportamento aggressivo verso i suinetti o di problemi agli arti; in tali casi la scrofa in questione può essere fissata a partire dall'inizio del comportamento di costruzione del nido fino al massimo alla fine del giorno successivo al parto; f. durante cinque giorni al massimo prima della data probabile del parto fino allo svezzamento; in tali casi è ammessa la stabulazione individuale con accesso in permanenza a un'area di riposo e a un'area priva di lettiera; g. durante la monta; in tali casi le scrofe da allevamento possono essere tenute da sole per al massimo dieci giorni in box con giaciglio e trogolo o in stalli; il primo e l'ultimo giorno della stabulazione individuale occorre documentare la data e il numero di esemplari per ogni gruppo di animali; h. nel caso di animali malati o feriti; in tali casi sono ammesse le deroghe assolutamente necessarie in relazione alla malattia o alla ferita; all'occorrenza gli animali devono essere ricoverati separatamente; sono ammessi box ad area unica con un'area di riposo."@it ;
     :belongsToGroup :a3b3ff82-daa7-aa76-83e0-3b546480ae08 ;
     :hierarchyLevel "5" .
-
-:a3b3ff82-d548-5486-83e0-3b546480ae08 a :InspectionPoint ;
-    rdfs:label "Freiberger"@de,
-        "FR: Freiberger"@fr,
-        "Freiberger"@it ;
-    :belongsToGroup :a3b3ff82-d547-5476-83e0-3b546480ae08 ;
-    :hierarchyLevel "3" .
 
 :a3b3ff82-d54a-54a6-83e0-3b546480ae08 a :InspectionPoint ;
     rdfs:label "Weidefläche erfüllt"@de,
