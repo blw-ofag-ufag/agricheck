@@ -379,9 +379,9 @@
     :hierarchyLevel "2" .
 
 :a07ef604-42b9-2b97-8aaa-3b546480a7c5 a dcterms:Collection ;
-    rdfs:label "Gesetze"@de,
-        "Lois"@fr,
-        "Leggi"@it ;
+    rdfs:label "Gesätzliche Minimalanforderungen"@de,
+        "Exigences légales minimales"@fr,
+        "Requisiti minimi di legge"@it ;
     :hierarchyLevel "1" .
 
 :a07ef604-42b9-2b97-8bbb-3b546480a7c5 a dcterms:Collection ;
