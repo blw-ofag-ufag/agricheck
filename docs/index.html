@@ -3,28 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Agricheck – Navigator</title>
-
-  <!-- Bootstrap & icons -->
+  <title>Agricheck</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-
-  <!-- jsTree -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jstree@3.3.14/dist/themes/default/style.min.css">
-
-  <!-- Highlight colour for search hits (override jsTree’s default red/bold) -->
-  <style>
-    .jstree-search {
-      background: yellow !important;
-      color: inherit  !important;
-      font-weight: normal !important;
-      font-style:  normal !important;
-    }
-  </style>
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <div class="demo-ribbon">DEMO</div>
 
   <!-- Agricheck Navbar -->
   <nav class="navbar navbar-agricheck mb-4">
@@ -36,22 +21,26 @@
         <span class="fs-3 fw-bold">Agricheck</span>
       </a>
 
+
       <!-- Help link -->
-      <a class="nav-link d-flex align-items-center ms-auto" href="https://blw.admin.ch" target="_blank">
-        <i class="bi bi-question-square fs-4"></i>
-      </a>
-    </div>
-	<div class="demo-notice">
-      Dies ist eine Demo-Webseite. Die Daten sind nicht vollständig und die Funktionalität ist eingeschränkt.
+      <div class="d-flex align-items-center ms-auto">
+        <a class="nav-link d-flex align-items-center" href="about.html">
+          <i class="bi bi-question-square fs-4"></i>
+        </a>
+      </div>
     </div>
   </nav>
 
   <div class="container py-4">
 
+    <h1 class="mb-3">
+      Durchsuchen Sie mit Agricheck (fast) alle Schweizer Kontrollpunkte!
+    </h1>
+
     <!-- Search input + action buttons + Generate -->
     <div class="mb-3 input-group">
       <input id="search" class="form-control" type="search"
-            placeholder="Suche (Label oder Kommentar)…">
+            placeholder="Durchsuchen sie die Kontrollpunkte nach einem Stichwort...">
 
       <!-- run search -->
       <button id="searchBtn" class="btn btn-outline-secondary"
@@ -79,6 +68,11 @@
 
     <!-- Tree widget -->
     <div id="tree" class="border rounded p-2"></div>
+
+    <!-- Prototype Warning Panel -->
+    <div class="alert alert-danger mt-3" role="alert">
+      <strong>Wichtiger Hinweis:</strong> Bei dieser Web-Applikation handelt es sich um einen unverbindlichen Prototyp, um die Kontrollpunkte im Schweizer Agri-Food-Sektor besser zugänglich zu machen. Es handelt sich nicht um offizielle Informationen bzw. einen offiziellen Service.
+    </div>
 
   </div>
 
