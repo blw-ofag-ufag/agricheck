@@ -11,6 +11,24 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 2rem;
   margin-bottom: .75rem;
 }
+/* DEMO ribbon */
+.demo-ribbon {
+  width: 120px;
+  background: #d32f2f;
+  color: #fff;
+  text-align: center;
+  line-height: 32px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  position: fixed;
+  top: 24px;
+  right: 60px;
+  z-index: 9999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  font-size: 18px;
+  letter-spacing: 2px;
+  pointer-events: none;
+}
 
 /* Section-number prefix */
 .section-number {
