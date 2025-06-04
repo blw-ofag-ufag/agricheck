@@ -118,7 +118,7 @@ def reason_subclass_and_inverse(ontology_graph: Graph, data_graph: Graph) -> Gra
         g.add(triple)
     # ---
 
-    print(f"File 'graph.ttl': Finished reasoning, added new triples.")
+    print("File 'graph.ttl': Finished reasoning, added new triples.")
     return g
 
 if __name__ == "__main__":
