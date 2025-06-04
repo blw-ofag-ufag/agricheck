@@ -16,13 +16,13 @@ let nodeMap;                 // Map<uri, node>
 let selectedSet = new Set(); // URIs currently ticked
 
 /* -------------------------------------------------------
- *  Build jsTree data & initialise widget
+ *  Build Fancytree data & initialise widget
  * -----------------------------------------------------*/
 (async function initTree () {
   const bindings = await fetchBindings();
   nodeMap = buildNodeMap(bindings);
 
-  /* Build jsTree node for a single Collection */
+  /* Build Fancytree node for a single Collection */
   function buildNode (uri) {
     const n = nodeMap.get(uri);
 
@@ -37,10 +37,10 @@ let selectedSet = new Set(); // URIs currently ticked
     });
 
     return {
-      id:   uri,
-      text: n.label ?? uri.split('/').pop(),
-      icon: 'bi bi-collection',
-      a_attr: { 'data-search': searchParts.join(' ').toLowerCase() },
+      key: uri,
+      title: n.label ?? uri.split('/').pop(),
+      tooltip: n.comment ?? '',
+      data: { search: searchParts.join(' ').toLowerCase() },
       children: (n.subGroups ?? []).map(buildNode)
     };
   }
@@ -51,33 +51,19 @@ let selectedSet = new Set(); // URIs currently ticked
     .map(n => buildNode(n.uri));
 
   treeEl
-    .jstree({
-      plugins: ['search', 'checkbox'],
-      core: { data: roots, themes: { icons: true } },
-      checkbox: {
-        three_state: true,                      // enable half-checked state
-        cascade: 'up+down+undetermined'         // parents & children sync
-      },
-      search: {
-        show_only_matches: false,
-        search_callback(query, node) {
-          const hay = treeEl.jstree(true)
-                            .get_node(node)
-                            .a_attr['data-search'] || '';
-          return hay.includes(query.toLowerCase());
-        }
-      }
+    .fancytree({
+      extensions: ['filter'],
+      checkbox: true,
+      selectMode: 3,
+      source: roots,
+      filter: { highlight: true, autoExpand: true }
     })
-
-    /* --- update local Set whenever selection changes --- */
-    .on('changed.jstree', (_, data) => {
-      selectedSet = new Set(data.selected);
+    .on('fancytree-select', (_, data) => {
+      selectedSet = new Set(data.tree.getSelectedNodes(true).map(n => n.key));
       generateBtn.prop('disabled', selectedSet.size === 0);
     })
-
-    /* --- open node one level when it’s ticked --- */
-    .on('select_node.jstree', (_, data) => {
-      treeEl.jstree(true).open_node(data.node); // open, but no recursion
+    .on('fancytree-select', (_, data) => {
+      if (data.node.isSelected()) data.node.makeVisible();
     });
 })();
 
@@ -85,34 +71,31 @@ let selectedSet = new Set(); // URIs currently ticked
  *  Search helpers
  * -----------------------------------------------------*/
 function performSearch() {
-  const q = searchInput.val().trim();
-  const jsTree = treeEl.jstree(true);
+  const q = searchInput.val().trim().toLowerCase();
+  const tree = $.ui.fancytree.getTree(treeEl);
 
-  jsTree.clear_search();
-  jsTree.close_all();
+  tree.clearFilter();
+  tree.visit(node => node.setExpanded(false));
 
   if (!q) return;
 
-  jsTree.search(q);
+  tree.filterNodes(node => (node.data.search || '').includes(q));
 
-  // open each hit & its ancestors once
-  const { nodes: hits } = jsTree.get_search_result();
-  hits.forEach(id => {
-    const node = jsTree.get_node(id);
-    node.parents.forEach(p => { if (p !== '#') jsTree.open_node(p); });
-    jsTree.open_node(id);
-  });
+  tree.getMatchedNodes().forEach(n => n.makeVisible());
 }
 
 searchInput.on('keydown', e => { if (e.key === 'Enter') performSearch(); });
 searchBtn.on('click', performSearch);
-clearFilterBtn.on('click', () => treeEl.jstree(true).clear_search());
+clearFilterBtn.on('click', () => $.ui.fancytree.getTree(treeEl).clearFilter());
 
 /* Collapse tree & untick everything */
 foldTreeBtn.on('click', () => {
-  const jsTree = treeEl.jstree(true);
-  jsTree.deselect_all();
-  jsTree.close_all();
+  const tree = $.ui.fancytree.getTree(treeEl);
+  tree.clearFilter();
+  tree.visit(node => {
+    node.setSelected(false);
+    node.setExpanded(false);
+  });
   selectedSet.clear();
   generateBtn.prop('disabled', true);
 });

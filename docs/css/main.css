@@ -56,13 +56,6 @@ ul.checklist input[type="checkbox"] {
 }
   
 
-/* JStree search */
-.jstree-search {
-    background: rgb(255, 255, 173) !important;
-    color: inherit  !important;
-    font-weight: normal !important;
-    font-style:  normal !important;
-}
 
 /* Agricheck navbar ------------------------------------------------------ */
 .navbar-agricheck {
@@ -79,43 +72,9 @@ ul.checklist input[type="checkbox"] {
     opacity: .8;
 }
 
-/* ------------------------------------------------------------------
-   jsTree custom checkbox states – blue tick / blue indeterminate bar
-   (selector must dig into the <a> wrapper to reach the <i>)
--------------------------------------------------------------------*/
+/* Fancytree search highlight */
+.fancytree-ext-filter span.fancytree-title.fancytree-match {
+    background: rgb(255, 255, 173);
+}
 
-/* fully-checked node: blue background + white tick */
-#tree li.jstree-checked > .jstree-anchor > .jstree-checkbox {
-    background: #0d6efd;
-    border-color: #0d6efd;
-    position: relative;
-  }
-  #tree li.jstree-checked > .jstree-anchor > .jstree-checkbox::after {
-    content: '';
-    position: absolute;
-    top: 0.15em;
-    left: 0.26em;
-    width: 0.55em;
-    height: 0.3em;
-    border: 2px solid #fff;          /* create the ✓ with borders */
-    border-top: none;
-    border-right: none;
-    transform: rotate(-45deg);
-  }
-  
-  /* half-checked (undetermined) node: blue background + white bar */
-  #tree li.jstree-undetermined > .jstree-anchor > .jstree-checkbox {
-    background: #0d6efd;
-    border-color: #0d6efd;
-    position: relative;
-  }
-  #tree li.jstree-undetermined > .jstree-anchor > .jstree-checkbox::after {
-    content: '';
-    position: absolute;
-    top: 0.44em;
-    left: 0.2em;
-    width: 0.6em;
-    height: 2px;
-    background: #fff;
-  }
   
