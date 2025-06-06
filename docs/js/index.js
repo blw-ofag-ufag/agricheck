@@ -71,7 +71,10 @@ let selectedSet = new Set(); // URIs currently ticked
     /* --- update local Set whenever selection changes --- */
     .on('changed.jstree', (_, data) => {
       selectedSet = new Set(data.selected);
-      generateBtn.prop('disabled', selectedSet.size === 0);
+      const empty = selectedSet.size === 0;
+      generateBtn.prop('disabled', empty);
+      generateBtn.toggleClass('btn-success', !empty);
+      generateBtn.toggleClass('btn-outline-secondary', empty);
     })
 
     /* --- open node one level when it’s ticked --- */
@@ -113,6 +116,8 @@ foldTreeBtn.on('click', () => {
   jsTree.close_all();
   selectedSet.clear();
   generateBtn.prop('disabled', true);
+  generateBtn.removeClass('btn-success');
+  generateBtn.addClass('btn-outline-secondary');
 });
 
 /* -------------------------------------------------------
