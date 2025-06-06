@@ -8,7 +8,6 @@ const BASE_URI = 'https://agriculture.ld.admin.ch/inspection/';
 const treeEl         = $('#tree');
 const searchInput    = $('#search');
 const searchBtn      = $('#searchBtn');
-const clearFilterBtn = $('#clearFilterBtn');
 const foldTreeBtn    = $('#foldTreeBtn');
 const generateBtn    = $('#generate');
 
@@ -106,7 +105,6 @@ function performSearch() {
 
 searchInput.on('keydown', e => { if (e.key === 'Enter') performSearch(); });
 searchBtn.on('click', performSearch);
-clearFilterBtn.on('click', () => treeEl.jstree(true).clear_search());
 
 /* Collapse tree & untick everything */
 foldTreeBtn.on('click', () => {
