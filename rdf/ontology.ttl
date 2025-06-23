@@ -6,24 +6,25 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 dcterms:Collection a owl:Class ;
-    rdfs:label "Kontrollpunkt-Gruppe"@de .
-
-schema:Organization a owl:Class ;
-    rdfs:label "Organisation"@de .
+    rdfs:label "Kontrollpunkt-Gruppe"@de ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty rdfs:label ;
+        owl:someValuesFrom xsd:string
+    ] .
 
 :InspectionPoint a owl:Class ;
     rdfs:label "Kontrollpunkt"@de ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty rdfs:label ;
-            owl:someValuesFrom xsd:string ],
-        [ a owl:Restriction ;
-            owl:onProperty rdfs:comment ;
-            owl:someValuesFrom xsd:string ] .
-
-:Program a owl:Class ;
-    rdfs:label "Programm"@de ;
-    rdfs:comment "Ein Programm ist etwas, zu dem man sich als Landwirt *anmelden* kann."@de ;
-    rdfs:subClassOf dcterms:Collection .
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty rdfs:label ;
+        owl:someValuesFrom xsd:string
+    ],
+    [ 
+        a owl:Restriction ;
+        owl:onProperty rdfs:comment ;
+        owl:someValuesFrom xsd:string
+    ] .
 
 :hierarchyLevel a owl:DatatypeProperty ;
     rdfs:label "Hierarchieebene"@de ;
@@ -53,12 +54,6 @@ schema:isPartOf a owl:ObjectProperty ;
     rdfs:range :InspectionPoint ;
     owl:inverseOf :belongsToGroup .
 
-:isResponsibleFor a owl:ObjectProperty ;
-    rdfs:label "ist verantwortlich für"@de ;
-    rdfs:domain schema:Organization ;
-    rdfs:range dcterms:Collection .
-
 : a owl:Ontology ;
     dcterms:title "Kontrollpunkte-Liste"@de ;
-    owl:versionInfo "0.1.0" .
-
+    owl:versionInfo "0.1.1" .
