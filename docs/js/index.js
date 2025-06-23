@@ -38,7 +38,6 @@ let selectedSet = new Set(); // URIs currently ticked
     return {
       id:   uri,
       text: n.label ?? uri.split('/').pop(),
-      icon: 'bi bi-collection',
       a_attr: { 'data-search': searchParts.join(' ').toLowerCase() },
       children: (n.subGroups ?? []).map(buildNode)
     };
@@ -52,7 +51,7 @@ let selectedSet = new Set(); // URIs currently ticked
   treeEl
     .jstree({
       plugins: ['search', 'checkbox'],
-      core: { data: roots, themes: { icons: true } },
+      core: { data: roots, themes: { icons: false } },
       checkbox: {
         three_state: true,                      // enable half-checked state
         cascade: 'up+down+undetermined'         // parents & children sync
