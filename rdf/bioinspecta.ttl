@@ -134,14 +134,14 @@
 
 :QhmpwjkRFyDjcyibdBVm
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.02" ;
   rdfs:label "Pflanzenbau"@de ;
   rdfs:comment "Pflanzenbau"@de .
 
 :QdFlszpzJCv9wYBz57Ta
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.02.01" ;
   rdfs:label "Bio Suisse Anforderungen Düngung"@de ;
   rdfs:comment "Bio Suisse Anforderungen Düngung"@de .
@@ -176,7 +176,7 @@
 
 :Q23REzRn33t3gadhyxfg
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.02.02" ;
   rdfs:label "Bio Suisse Anforderungen Pflanzenschutz"@de ;
   rdfs:comment "Bio Suisse Anforderungen Pflanzenschutz"@de .
@@ -218,7 +218,7 @@
 
 :QK6poDgHNMCHoC86cCVi
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.02.03" ;
   rdfs:label "Bio Suisse Anforderungen Nährstoffbilanz und Biogasanlagen"@de ;
   rdfs:comment "Bio Suisse Anforderungen Nährstoffbilanz und Biogasanlagen"@de .
@@ -246,7 +246,7 @@
 
 :QaubteZJitXFa87VVSmR
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.02.04" ;
   rdfs:label "Bio Suisse Anforderungen Bodenschutz und Fruchtfolge"@de ;
   rdfs:comment "Bio Suisse Anforderungen Bodenschutz und Fruchtfolge"@de .
@@ -281,7 +281,7 @@
 
 :QbGVeRGfnNXRcXMgQwQO
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.03" ;
   rdfs:label "Saat- und Pflanzgut"@de ;
   rdfs:comment "Saat- und Pflanzgut"@de .
@@ -344,7 +344,7 @@
 
 :Q1C3Jsu4GPpowL9BwTLV
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.04" ;
   rdfs:label "Spezialkulturen, Pilze"@de ;
   rdfs:comment "Spezialkulturen, Pilze"@de .
@@ -393,14 +393,14 @@
 
 :QNNxCAeVli1i7lJgY6Fl
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.07" ;
   rdfs:label "Tierhaltung allgemein"@de ;
   rdfs:comment "Tierhaltung allgemein"@de .
 
 :QICFz7SDqGDzsvR490yj
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.07.01" ;
   rdfs:label "Tiergesundheit"@de ;
   rdfs:comment "Tiergesundheit"@de .
@@ -442,7 +442,7 @@
 
 :QibhZ9jdJ6mRRZtXcWPJ
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.07.02" ;
   rdfs:label "Züchtung, Herkunft"@de ;
   rdfs:comment "Züchtung, Herkunft"@de .
@@ -470,7 +470,7 @@
 
 :QFfidNQalDReO9rxlM9v
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.07.03" ;
   rdfs:label "Fütterung"@de ;
   rdfs:comment "Fütterung"@de .
@@ -575,7 +575,7 @@
 
 :Qkf9glDt023o6raHxH37
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.08" ;
   rdfs:label "Bio Suisse Anforderungen Schweine eingehalten"@de ;
   rdfs:comment "Bio Suisse Anforderungen Schweine eingehalten"@de .
@@ -610,7 +610,7 @@
 
 :QPtENgvURmqqSyHoZISb
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.09" ;
   rdfs:label "Bio Suisse Anforderungen Geflügel eingehalten"@de ;
   rdfs:comment "Bio Suisse Anforderungen Geflügel eingehalten"@de .
@@ -666,7 +666,7 @@
 
 :QurShSV0Yp9tUnkIgGWZ
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.09.01" ;
   rdfs:label "Legehennen / Junghennen sowie Junghähne und Zweinutzungshähne"@de ;
   rdfs:comment "Legehennen / Junghennen sowie Junghähne (ab Tageszuwachs von 17 g/Tag) und Zweinutzungshähne (bis Tageszunahme von max. 23 g/Tag)"@de .
@@ -820,7 +820,7 @@
 
 :QTfz3PpmSmLTK7HYnZ6H
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.09.02" ;
   rdfs:label "Junghähne, Zweinutzungs- und Rassegeflügel, sowie zugelassene Pouletmast-Hybridlinien"@de ;
   rdfs:comment "Junghähne, Zweinutzungs- und Rassegeflügel, sowie zugelassene Pouletmast-Hybridlinien"@de .
@@ -890,7 +890,7 @@
 
 :QhvVA0eUgwen7p2DHQe1
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.09.03" ;
   rdfs:label "Truten"@de ;
   rdfs:comment "Truten"@de .
@@ -939,7 +939,7 @@
 
 :QpanjkR0PdJaKlGRZ6bS
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.09.05" ;
   rdfs:label "Gänse und Enten"@de ;
   rdfs:comment "Gänse und Enten"@de .
@@ -988,7 +988,7 @@
 
 :QyZKwv2L3fU80BgW1ApV
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.09.04" ;
   rdfs:label "Wachteln"@de ;
   rdfs:comment "Wachteln"@de .
@@ -1058,7 +1058,7 @@
 
 :QjcuXc2hqInZZBooIpn4
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.09.06" ;
   rdfs:label "Masttauben"@de ;
   rdfs:comment "Masttauben"@de .
@@ -1114,7 +1114,7 @@
 
 :QQ6JAoxjz9u0xhx888bu
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.09.07" ;
   rdfs:label "Andere Geflügel"@de ;
   rdfs:comment "Andere Geflügel"@de .
@@ -1128,14 +1128,14 @@
 
 :QeRFEfgVxeQrtDnhm6gM
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.10" ;
   rdfs:label "Bio Suisse Anforderungen übrige Tiere"@de ;
   rdfs:comment "Bio Suisse Anforderungen übrige Tiere"@de .
 
 :QDkvmlUpv7TGpiZbxADI
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.10.01" ;
   rdfs:label "Rindvieh"@de ;
   rdfs:comment "Rindvieh"@de .
@@ -1170,7 +1170,7 @@
 
 :Qx49E3HxnQuPquwjcwBN
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.10.03" ;
   rdfs:label "Ziegen"@de ;
   rdfs:comment "Ziegen"@de .
@@ -1184,7 +1184,7 @@
 
 :Qp9lti2OzoNpbbVWO2uP
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.10.04" ;
   rdfs:label "Schafe"@de ;
   rdfs:comment "Schafe"@de .
@@ -1205,7 +1205,7 @@
 
 :QmNptkeeDRc4IAz88ile
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.10.05" ;
   rdfs:label "Kaninchen"@de ;
   rdfs:comment "Kaninchen"@de .
@@ -1240,7 +1240,7 @@
 
 :QNyPZd7UZJCg3b4ZzI4c
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.10.06" ;
   rdfs:label "Insektenproduktion"@de ;
   rdfs:comment "Insektenproduktion"@de .
@@ -1303,7 +1303,7 @@
 
 :QRrVWTzuXkwTi22hWyJZ
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.20" ;
   rdfs:label "Vermarktung / Direktvermarktung / Hofverarbeitung"@de ;
   rdfs:comment "Vermarktung / Direktvermarktung / Hofverarbeitung"@de .
@@ -1394,7 +1394,7 @@
 
 :QluyCqFzXOl7zLZw0kht
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   rdfs:label "Kellerkontrolle"@de ;
   rdfs:comment "Kellerkontrolle"@de .
 
@@ -1435,14 +1435,14 @@
 
 :QsK1t77fwagy7QQvTNPR
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.21" ;
   rdfs:label "Bienen"@de ;
   rdfs:comment "Bienen"@de .
 
 :Qsasr35dtOTkxQhsHT7Y
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.21.01" ;
   rdfs:label "Allgemein"@de ;
   rdfs:comment "Allgemein"@de .
@@ -1456,7 +1456,7 @@
 
 :Q7DEzlooo375H1IsGARe
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.21.02" ;
   rdfs:label "Umstellung, Herkunft Wachs"@de ;
   rdfs:comment "Umstellung, Herkunft Wachs"@de .
@@ -1477,7 +1477,7 @@
 
 :Qhjf8UwpuYWirv8ggHB8
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.21.03" ;
   rdfs:label "Aufzeichnungen, Bienenvolkverzeichnis"@de ;
   rdfs:comment "Aufzeichnungen, Bienenvolkverzeichnis"@de .
@@ -1491,7 +1491,7 @@
 
 :QkKYTqIUjRTfNuRD4kRG
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.21.04" ;
   rdfs:label "Herkunft der Bienen"@de ;
   rdfs:comment "Herkunft der Bienen"@de .
@@ -1505,7 +1505,7 @@
 
 :QQM1SfHLmXBvl08wDI5m
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.21.05" ;
   rdfs:label "Fütterung"@de ;
   rdfs:comment "Fütterung"@de .
@@ -1519,7 +1519,7 @@
 
 :QhjkC5YHkIFfgdQtCXf5
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.21.06" ;
   rdfs:label "Krankheitsvorsorge und tierärztliche Behandlungen"@de ;
   rdfs:comment "Krankheitsvorsorge und tierärztliche Behandlungen"@de .
@@ -1540,7 +1540,7 @@
 
 :QpL9mbqM3U7BLzmEYrlQ
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.21.07" ;
   rdfs:label "Eigenschaften Bienenstöcke und Bienenzuchtmaterial"@de ;
   rdfs:comment "Eigenschaften Bienenstöcke und Bienenzuchtmaterial"@de .
@@ -1561,7 +1561,7 @@
 
 :QyWm7a0m3kfWLB1PhqCX
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.21.08" ;
   rdfs:label "Verarbeitung Honig"@de ;
   rdfs:comment "Verarbeitung Honig"@de .
@@ -1575,7 +1575,7 @@
 
 :Qc5dSfNRo02Tg2fXIc72
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.21.09" ;
   rdfs:label "Bienenhaltungspraktiken"@de ;
   rdfs:comment "Bienenhaltungspraktiken"@de .
@@ -1589,7 +1589,7 @@
 
 :QViBTqavKvjYCgVJFVT9
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.22" ;
   rdfs:label "Fische"@de ;
   rdfs:comment "Fische"@de .
@@ -1862,7 +1862,7 @@
 
 :QzqAVchPdCVPN65nGgYr
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.26" ;
   rdfs:label "Biodiversitätsförderung"@de ;
   rdfs:comment "Biodiversitätsförderung"@de .
@@ -1897,7 +1897,7 @@
 
 :Qo2ctustuZqdOvVxYiqz
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.27" ;
   rdfs:label "Rückstände"@de ;
   rdfs:comment "Rückstände"@de .
@@ -1911,7 +1911,7 @@
 
 :Qn0EVVE9ZgCo9aaFBFs8
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.30" ;
   rdfs:label "Soziale Anforderungen Bio Suisse"@de ;
   rdfs:comment "Soziale Anforderungen Bio Suisse"@de .
@@ -1932,7 +1932,7 @@
 
 :QQTUmsq0WVDuo8wj1Et9
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.35" ;
   rdfs:label "Anforderungen Bio Suisse bzgl. Mitgliedschaft"@de ;
   rdfs:comment "Anforderungen Bio Suisse bzgl. Mitgliedschaft"@de .
@@ -1960,7 +1960,7 @@
 
 :QKUBnxnpWpBgzZR48agO
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.41" ;
   rdfs:label "Checkpunkte für Zertifizierung"@de ;
   rdfs:comment "Checkpunkte für Zertifizierung"@de .
@@ -2009,7 +2009,7 @@
 
 :QF6zAmJahhmw8scc0cFJ
   a dc:Collection ;
-  schema:isPartOf <http://njh.me/QbS4eJtXm3LDNMeF1oil> ;
+  schema:isPartOf :QbS4eJtXm3LDNMeF1oil ;
   schema:identifier "30.42" ;
   rdfs:label "Lohnverarbeitung neue Produkte"@de ;
   rdfs:comment "Lohnverarbeitung neue Produkte"@de .
