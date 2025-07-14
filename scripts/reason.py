@@ -1,144 +1,249 @@
+"""
+reason.py -- Merge, sort, and perform very lightweight reasoning over
+             one ontology and multiple data Turtle files.
+
+Key features
+------------
+* Deterministic sorting of all Turtle output using OrderedTurtleSerializer.
+* Flexible namespace rebinding: define all forced prefixes in CUSTOM_NAMESPACES.
+* Simple RDFS subclass **and sub-property** closure, plus OWL inverseOf expansion.
+* Convenience CLI: `python reason.py ontology.ttl data1.ttl data2.ttl ...`
+  Produces `rdf/graph.ttl` (sorted) with inferred triples added.
+
+Author: Damian Oswald
+Date: April 2025
+"""
+
+import sys
+import os
 import rdflib
-from rdflib import Graph, RDF, RDFS, OWL, URIRef, Namespace
+from rdflib import (
+    Graph,
+    URIRef,
+    Namespace,
+    RDF,
+    RDFS,
+    OWL,
+    DCTERMS,
+)
 from rdflib.namespace import NamespaceManager
+
+# Ordered, deterministic serializer (pip install otsrdflib)
 from otsrdflib import OrderedTurtleSerializer
 
-SCHEMA = Namespace("http://schema.org/") # set schema prefix to the old, outdated http://... prefix because LINDAS works with these
+# ---------------------------------------------------------------------------
+# Configuration
+# ---------------------------------------------------------------------------
 
-def sort_and_overwrite_turtle(graph: Graph, file_path: str):
-    """
-    Sorts the given RDF graph and overwrites the given Turtle file in sorted form.
-    Forcibly rebinds 'schema:' to http://schema.org/ so we don't get schema1:, etc.
-    """
+CUSTOM_NAMESPACES = {
+    "rdf":       "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs":      "http://www.w3.org/2000/01/rdf-schema#",
+    "schema":    "http://schema.org/",
+    "":          "https://agriculture.ld.admin.ch/inspection/",
+    "dcterms":   "http://purl.org/dc/terms/"
+}
 
-    # 1) Create a new, empty namespace manager
+SCHEMA = Namespace(CUSTOM_NAMESPACES["schema"])
+
+OUTPUT_DIR = "rdf"
+OUTPUT_FILE = f"{OUTPUT_DIR}/graph.ttl"
+
+# ---------------------------------------------------------------------------
+# Utility functions
+# ---------------------------------------------------------------------------
+
+
+def _apply_custom_namespaces(graph: Graph) -> None:
+    """Remove any existing bindings for the prefixes/URIs in CUSTOM_NAMESPACES
+    and re-bind them exactly as specified."""
+
     nm = NamespaceManager(Graph())
 
-    # 2) Copy over all *existing* prefixes except those that
-    #    point to http://schema.org/ or start with "schema"
+    # Retain all unrelated prefixes
     for prefix, uri in graph.namespace_manager.namespaces():
-        if str(uri) == str(SCHEMA) or prefix.startswith("schema"):
-            # Skip any existing schema or schema1, schema2, etc.
+        if (
+            prefix in CUSTOM_NAMESPACES
+            or str(uri) in CUSTOM_NAMESPACES.values()
+        ):
             continue
         nm.bind(prefix, uri)
 
-    # 3) Bind "schema" -> "http://schema.org/" exactly once
-    nm.bind("schema", str(SCHEMA), replace=True)
+    # Force-bind the customs
+    for prefix, uri in CUSTOM_NAMESPACES.items():
+        nm.bind(prefix, uri, replace=True)
 
-    # 4) Assign the new namespace manager to the graph
     graph.namespace_manager = nm
 
-    # 5) Serialize with the OrderedTurtleSerializer,
-    #    ensuring it uses this updated namespace manager
-    with open(file_path, "wb") as f:
+
+def sort_and_overwrite_turtle(graph: Graph, file_path: str) -> None:
+    """Deterministically sort `graph` and overwrite `file_path` in Turtle.
+    Also make sure the namespaces in CUSTOM_NAMESPACES are bound as requested."""
+
+    _apply_custom_namespaces(graph)
+
+    with open(file_path, "wb") as fh:
         serializer = OrderedTurtleSerializer(graph)
         serializer.namespace_manager = graph.namespace_manager
-        serializer.serialize(f)
+        serializer.serialize(fh)
 
-    print(f"File '{file_path}': Triples sorted and overwritten.")
+    print(f"File '{file_path}': Triples sorted and namespaces updated.")
 
-def load_and_sort_ttl(file_path: str) -> Graph:
-    """
-    Loads a TTL file into an RDF graph, sorts it, and overwrites the original file.
-    Returns the loaded (and sorted) graph.
-    """
+
+def load_and_sort_ttl(path: str) -> Graph:
     g = Graph()
-    g.parse(file_path, format="turtle")
-    # Sort the file's content, overwriting the original.
-    sort_and_overwrite_turtle(g, file_path)
+    g.parse(path, format="turtle")
+    sort_and_overwrite_turtle(g, path)
     return g
 
-def reason_subclass_and_inverse(ontology_graph: Graph, data_graph: Graph) -> Graph:
+
+def load_and_sort_ttl_list(paths) -> Graph:
+    merged = Graph()
+    for p in paths:
+        print(f"Processing data file: {p}")
+        merged += load_and_sort_ttl(p)
+    return merged
+
+# ---------------------------------------------------------------------------
+# Reasoning
+# ---------------------------------------------------------------------------
+
+
+def reason_subclass_and_inverse(
+    ontology_graph: Graph, data_graph: Graph
+) -> Graph:
+    """Very small forward-chaining reasoner implementing:
+
+    1. Subclass closure for **rdf:type**.
+    2. Sub-property closure for arbitrary predicates.
+    3. InverseOf property expansion.
+
+    It also duplicates rdfs:label → schema:name and
+    rdfs:comment → schema:description.
+
+    Returns a *new* graph with original + inferred triples.
     """
-    Merges ontology_graph and data_graph, then applies:
-      1) Subclass reasoning: If A rdfs:subClassOf B, and x is instance of A -> x is instance of B.
-      2) Inverse reasoning: If p owl:inverseOf q, then (s p o) implies (o q s).
-    Returns the final inferred graph.
-    """
-    # Merge into a single graph
+
+    # -------------------------------------------------------------------
+    # 0) Merge ontology and data (work on a copy to keep originals intact)
+    # -------------------------------------------------------------------
     g = ontology_graph + data_graph
 
-    # Collect direct subclass relationships and inverse-of relationships
-    subclass_of = {}
-    inverse_of = {}
+    # -------------------------------------------------------------------
+    # 1) Collect schema-level relations from the ontology
+    # -------------------------------------------------------------------
+    subclass_of: dict[URIRef, set[URIRef]] = {}
+    subproperty_of: dict[URIRef, set[URIRef]] = {}
+    inverse_of: dict[URIRef, URIRef] = {}
 
     for s, p, o in ontology_graph:
+        # Sub-class axiom: s ⊆ o
         if p == RDFS.subClassOf and isinstance(s, URIRef) and isinstance(o, URIRef):
             subclass_of.setdefault(s, set()).add(o)
-        if p == OWL.inverseOf and isinstance(s, URIRef) and isinstance(o, URIRef):
-            inverse_of[s] = o
-            inverse_of[o] = s
 
-    # Iterative expansion
+        # Sub-property axiom: s ⊑ o
+        elif p == RDFS.subPropertyOf and isinstance(s, URIRef) and isinstance(o, URIRef):
+            subproperty_of.setdefault(s, set()).add(o)
+
+        # Inverse axiom: s ≡ inverse(o)
+        elif p == OWL.inverseOf and isinstance(s, URIRef) and isinstance(o, URIRef):
+            inverse_of[s] = o
+            inverse_of[o] = s  # ensure symmetry
+
+    # -------------------------------------------------------------------
+    # 2) Forward-chaining loop – repeat until fix-point
+    # -------------------------------------------------------------------
     changed = True
     while changed:
         changed = False
-        existing_triples = set(g)
+        existing = set(g)  # snapshot of current edges
 
-        # 1) Inverse property expansions
-        for (s, p, o) in list(existing_triples):
-            p_inv = inverse_of.get(p)
-            if p_inv and (o, p_inv, s) not in g:
-                g.add((o, p_inv, s))
+        # 2.1) InverseOf expansion: if (s p o) and p⁻¹ = q then add (o q s)
+        for s, p, o in existing:
+            inv = inverse_of.get(p)
+            if inv and (o, inv, s) not in g:
+                g.add((o, inv, s))
 
-        # 2) Subclass expansions
-        # If we see (x rdf:type A), and A rdfs:subClassOf B, add (x rdf:type B)
-        for (x, rdf_type, classA) in list(existing_triples):
-            if rdf_type == RDF.type and classA in subclass_of:
-                for classB in subclass_of[classA]:
-                    if (x, RDF.type, classB) not in g:
-                        g.add((x, RDF.type, classB))
+        # 2.2) SubClassOf closure: if (x rdf:type C) and C ⊆ D then add (x rdf:type D)
+        for subj, pred, obj in existing:
+            if pred == RDF.type and obj in subclass_of:
+                for super_c in subclass_of[obj]:
+                    if (subj, RDF.type, super_c) not in g:
+                        g.add((subj, RDF.type, super_c))
 
-        # Optionally remove any triple whose subject is a literal
-        for s, p, o in list(g):
-            if isinstance(s, rdflib.Literal):
-                g.remove((s, p, o))
+        # 2.3) SubPropertyOf closure: if (x P y) and P ⊑ Q then add (x Q y)
+        for subj, pred, obj in existing:
+            supers = subproperty_of.get(pred)
+            if supers:
+                for super_p in supers:
+                    if (subj, super_p, obj) not in g:
+                        g.add((subj, super_p, obj))
 
-        if len(g) > len(existing_triples):
+        # If we added anything new, iterate again to chase longer chains
+        if len(g) > len(existing):
             changed = True
 
-    # --- New part: duplicate langstring labels/comments as schema:name/description ---
-    # We'll do a final pass to copy over rdfs:label => schema:name, rdfs:comment => schema:description
-    # preserving language tags if present.
-    new_triples = []
-    for s, p, o in g.triples((None, None, None)):
-        # Check if it's a label
-        if p == RDFS.label:
-            # (s, schema:name, o) if not already in the graph
-            if (s, SCHEMA.name, o) not in g:
-                new_triples.append((s, SCHEMA.name, o))
+    # -------------------------------------------------------------------
+    # 3) Human-readable term duplication (labels & descriptions)
+    # -------------------------------------------------------------------
+    _duplicate_human_readable_terms(g)
 
-        # Check if it's a comment
-        elif p == RDFS.comment:
-            # (s, schema:description, o) if not already in the graph
-            if (s, SCHEMA.description, o) not in g:
-                new_triples.append((s, SCHEMA.description, o))
-
-    for triple in new_triples:
-        g.add(triple)
-    # ---
-
-    print("File 'graph.ttl': Finished reasoning, added new triples.")
+    print(f"Finished reasoning. Total triples: {len(g)}")
     return g
 
+
+def _duplicate_human_readable_terms(graph: Graph) -> None:
+    """
+    For every rdfs:label or dcterms:title add schema:name,
+    and for every rdfs:comment or dcterms:description add schema:description (if absent).
+    """
+
+    additions = []
+    for s, p, o in graph:
+        # map labels and titles to schema:name
+        if (p == RDFS.label or p == DCTERMS.title) and (s, SCHEMA.name, o) not in graph:
+            additions.append((s, SCHEMA.name, o))
+
+        # map comments and descriptions to schema:description
+        elif (p == RDFS.comment or p == DCTERMS.description) and (s, SCHEMA.description, o) not in graph:
+            additions.append((s, SCHEMA.description, o))
+
+    for triple in additions:
+        graph.add(triple)
+
+
+# ---------------------------------------------------------------------------
+# Main CLI
+# ---------------------------------------------------------------------------
+
+def main(argv: list[str]) -> None:
+    if len(argv) < 3:
+        print(
+            "USAGE: python reason.py <ontology.ttl> <data1.ttl> [data2.ttl ...]",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+
+    ontology_path = argv[1]
+    data_paths = argv[2:]
+
+    print(f"Sorting ontology: {ontology_path}")
+    ontology = load_and_sort_ttl(ontology_path)
+
+    data = load_and_sort_ttl_list(data_paths)
+
+    inferred = reason_subclass_and_inverse(ontology, data)
+
+    # Ensure output dir exists
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+    print(f"Serializing inferred graph to {OUTPUT_FILE}")
+    inferred.serialize(destination=OUTPUT_FILE, format="turtle")
+
+    # Final sort of the aggregated graph
+    sort_and_overwrite_turtle(inferred, OUTPUT_FILE)
+
+    print("All done.")
+
+
 if __name__ == "__main__":
-    # Paths
-    ontology_path = "rdf/ontology.ttl"
-    data_path = "rdf/data.ttl"
-    output_path = "rdf/graph.ttl"
-
-    # 1) Load and sort the individual TTL files
-    #    This step ensures the source TTL files are also "cleanly" sorted
-    ont_graph = load_and_sort_ttl(ontology_path)
-    data_graph = load_and_sort_ttl(data_path)
-
-    # 2) Run custom reasoning
-    reasoned_graph = reason_subclass_and_inverse(ont_graph, data_graph)
-
-    # 3) Save reasoned output
-    reasoned_graph.serialize(destination=output_path, format="turtle")
-
-    # 4) Finally, sort and overwrite the final output file
-    final_graph = Graph()
-    final_graph.parse(output_path, format="turtle")
-    sort_and_overwrite_turtle(final_graph, output_path)
+    main(sys.argv)

@@ -7,24 +7,18 @@
 
 dcterms:Collection a owl:Class ;
     rdfs:label "Kontrollpunkt-Gruppe"@de ;
-    rdfs:subClassOf [
-        a owl:Restriction ;
-        owl:onProperty rdfs:label ;
-        owl:someValuesFrom xsd:string
-    ] .
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty rdfs:label ;
+            owl:someValuesFrom xsd:string ] .
 
 :InspectionPoint a owl:Class ;
     rdfs:label "Kontrollpunkt"@de ;
-    rdfs:subClassOf [
-        a owl:Restriction ;
-        owl:onProperty rdfs:label ;
-        owl:someValuesFrom xsd:string
-    ],
-    [ 
-        a owl:Restriction ;
-        owl:onProperty rdfs:comment ;
-        owl:someValuesFrom xsd:string
-    ] .
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty rdfs:label ;
+            owl:someValuesFrom xsd:string ],
+        [ a owl:Restriction ;
+            owl:onProperty rdfs:comment ;
+            owl:someValuesFrom xsd:string ] .
 
 :hierarchyLevel a owl:DatatypeProperty ;
     rdfs:label "Hierarchieebene"@de ;
@@ -57,3 +51,4 @@ schema:isPartOf a owl:ObjectProperty ;
 : a owl:Ontology ;
     dcterms:title "Kontrollpunkte-Liste"@de ;
     owl:versionInfo "0.1.1" .
+

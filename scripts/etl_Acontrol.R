@@ -6,6 +6,16 @@ library(purrr)
 library(dplyr)
 library(stringr)
 
+# define RDF prefixes, bases etc.
+base <- "https://agriculture.ld.admin.ch/inspection/"
+prefixes <- "
+@prefix : <https://agriculture.ld.admin.ch/inspection/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix schema: <http://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+"
+
 # read Acontrol XML
 url <- "https://backend.blw.admin.ch/fileservice/sdweb-docs-prod-blwch-files/files/2024/09/09/d9cdabc0-2f76-4343-8ec5-5e5bd328dce1.zip"
 temp_zip <- tempfile(fileext = ".zip")
@@ -16,37 +26,87 @@ xml_file_path <- file.path(unzip_dir, "Masterliste 2025.xml")
 XML <- read_xml(xml_file_path)
 rm(xml_file_path, url, temp_zip, unzip_dir)
 
-# convert XML to R list containing all data
-data <- XML |>
-  xml_find_all("//exportRubric") |>
-  as_list()
+# HELPER FUNCTIONS
+# ================
 
-
-# helper that returns NA if the target node is empty or missing
-txt_or_na <- function(node, path) {
-  val <- xml_text(xml_find_first(node, path), trim = TRUE)
-  ifelse(str_length(val) == 0, NA_character_, val)
+# function to convert one [thing] description
+describe <- function(x, class) {
+  subject <- x |> getElement("versionStableId") |> unlist() |> uri(base)
+  triple(subject, "a", class)
+  for (tag in c("elementShortName", "elementName")) {
+    for (lang in c("De", "Fr", "It")) {
+      predicate <- ifelse(tag=="elementShortName", "rdfs:label", "rdfs:comment")
+      x |>
+        getElement(tag) |>
+        getElement(paste0("name",lang)) |>
+        unlist() |>
+        langstring(tolower(lang), multiline = tag=="elementName") |>
+        triple(subject, predicate, object = _)
+    }
+  }
+  x |>
+    getElement("parentVersionStableId") |>
+    unlist() |>
+    uri(prefix = base) |>
+    triple(subject, "schema:isPartOf", object = _)
+  x |>
+    getElement("elementId") |>
+    unlist() |>
+    literal() |>
+    triple(subject, "schema:identifier", object = _)
+  x |>
+    getElement("conjunctElementId") |>
+    unlist() |>
+    literal() |>
+    triple(subject, uri("conjunctIdentifier", base), object = _)
 }
 
-# convert rubrics to table
-rubrics_tbl <- xml_find_all(XML, ".//rubric/description") %>%      # one <description> per rubric
-  map_dfr(~{
-    tibble(
-      versionStableId        = txt_or_na(.x, "./versionStableId"),
-      parentVersionStableId  = txt_or_na(.x, "./parentVersionStableId"),
-      elementId              = txt_or_na(.x, "./elementId"),
-      conjunctElementId      = txt_or_na(.x, "./conjunctElementId"),
-      elementName_de         = txt_or_na(.x, "./elementName/nameDe"),
-      elementName_fr         = txt_or_na(.x, "./elementName/nameFr"),
-      elementName_it         = txt_or_na(.x, "./elementName/nameIt"),
-      elementShortName_de    = txt_or_na(.x, "./elementShortName/nameDe"),
-      elementShortName_fr    = txt_or_na(.x, "./elementShortName/nameFr"),
-      elementShortName_it    = txt_or_na(.x, "./elementShortName/nameIt")
-    )
-  })
+# convert (a part of the XML) to an R list for quicker processing
+xml_to_list <- function(XML, xpath) {
+  XML |>
+    xml_find_all(xpath) |>
+    as_list()
+}
 
-# peek at the result
-print(rubrics_tbl)
+# PARSE RUBRICS
+# =============
 
+sink("rdf/acontrol.ttl")
 
+cat(prefixes)
+
+# convert XML to R list containing all data
+data <- xml_to_list(XML, "//rubric")
+
+# convert all rubrics
+for (i in 1:length(data)) {
+  data[[i]][["description"]] |>
+    describe(class = uri("http://purl.org/dc/terms/Collection"))
+}
+
+# PARSE GROUPS
+# =============
+
+# convert XML to R list containing all data
+data <- xml_to_list(XML, "//group")
+
+# convert all rubrics
+for (i in 1:length(data)) {
+  data[[i]][["description"]] |>
+    describe(class = uri("http://purl.org/dc/terms/Collection"))
+}
+
+# PARSE INSPECTION POINTS
+# =======================
+
+# convert XML to R list containing all data
+data <- xml_to_list(XML, "//point")
+
+# convert all rubrics
+for (i in 1:length(data)) {
+  data[[i]][["description"]] |>
+    describe(class = uri("http://purl.org/dc/terms/Collection"))
+}
+
+sink()
 
