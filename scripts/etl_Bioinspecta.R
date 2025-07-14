@@ -17,39 +17,70 @@ data <- readxl::read_excel("data/data_Bioinspecta.xlsx", skip = 1)
 # subset only two "classes"
 data <- subset(data, subset = data$Art %in% c("Kategorie", "CheckPunkt"))
 
+# create an ID for each row in the data set
+data$URI <- NA
+for (i in 1:nrow(data)) {
+  data[i,"URI"] <- uri(toupper(rlang::hash(data[i,"Code"])), base)
+}
+
+# determine the parent of each point
+data$parent <- NA
+for (i in 1:nrow(data)) {
+  sub("\\.[^.]*$", "", data[i,"Code"])
+  data[i,"parent"] <- as.character(subset(data, Code==sub("\\.[^.]*$", "", data[i,"Code"]), select = URI))
+}
+data[data$parent=="character(0)","parent"] <- uri("00001A0C879D1638CE1B84BD6EA118A7", base)
+
+# determine the hierarchylevel of each point
+data$hierarchyLevel <- NA
+for (i in 1:nrow(data)) {
+  data[i,"hierarchyLevel"] <- length(strsplit(as.character(data[i,"Code"]), "\\.")[[1]]) + 1
+}
+
 # loop trough each row, determine type and handle accordingly
-sink("rdf/raw_bioinspecta.ttl")
+sink("rdf/bioinspecta.ttl")
 cat(prefixes)
+cat("
+:00001A0C879D1638CE1B84BD6EA118A7 a dcterms:Collection ;
+    rdfs:label \"Anforderungen BioSuisse\"@de ;
+    schema:identifier \"30\" ;
+    :hierarchyLevel \"2\" ;
+    rdfs:comment \"\"\"
+    Hier aufgeführt sind die Anforderungen der BioSuisse, welche über die Verordnung über die biologische Landwirtschaft und die Kennzeichnung biologisch produzierter Erzeugnisse und Lebensmittel (Bio-Verordnung) hinausgehen.
+    Die Informationen kommen aus einer Excel-Liste von bio.inspecta.
+    \"\"\"@de .
+")
 for (i in 1:nrow(data))
 {
-  subject <- uri(rdfhelper::nano(l = 20, prefix = "Q"), base)
+  subject <- as.character(data[i,"URI"])
   if (as.character(data[i,"Art"]) == "Kategorie")
   {
     rdfhelper::triple(subject, "a", uri("http://purl.org/dc/terms/Collection"))
-    parent <- subject # assign a new parent for subsequent use
-
-    # TODO: To which overall parent do these groups belong?
-    # (probably something like "BioSuisse inspection points")
-    triple(subject, "schema:isPartOf", uri("QbS4eJtXm3LDNMeF1oil", base))
-
+    collection <- subject # assign a new parent for subsequent use
+    triple(subject, "schema:isPartOf", as.character(data[i,"parent"]))
+    triple(subject, ":hierarchyLevel", literal(as.character(data[i,"hierarchyLevel"])))
   }
   else
   {
     rdfhelper::triple(subject, "a", uri("InspectionPoint", base))
-    rdfhelper::triple(subject, uri("belongsToGroup", base), parent)
+    rdfhelper::triple(subject, uri("belongsToGroup", base), collection)
   }
   rdfhelper::triple(subject, "schema:identifier", literal(as.character(data[i,"Code"])))
+  oldtext <- ""
   for (variable in c("Bezeichnung", "Text", "Beschreibung")) {
     text <- data[i, variable] |>
       as.character() |>
       gsub(pattern = "[\r\n]", replacement = " ", x = _) |> # remove any newline or carriage commands
       gsub(pattern = "\\s+", replacement = " ", x = _) |> # replace any sequence of whitespaces by one single whitespace
       gsub(pattern = "\\s+$", replacement = "", x = _) # remove any trailing whitespaces
-    rdfhelper::triple(
-      subject = subject,
-      predicate = ifelse(variable=="Bezeichnung", "rdfs:label", "rdfs:comment"),
-      object = langstring(text, "de")
+    if(!is.na(text) && text != oldtext) {
+      rdfhelper::triple(
+        subject = subject,
+        predicate = ifelse(variable=="Bezeichnung", "rdfs:label", "rdfs:comment"),
+        object = langstring(text, "de")
       )
+    }
+    oldtext <- text
   }
 }
 sink()

@@ -30,16 +30,17 @@ rm(xml_file_path, url, temp_zip, unzip_dir)
 # ================
 
 # function to convert one [thing] description
-describe <- function(x, class) {
+describe <- function(x, class, hierarchyLevel = NULL) {
   subject <- x |> getElement("versionStableId") |> unlist() |> uri(base)
-  triple(subject, "a", class)
+  triple(subject, "a", uri(class))
   for (tag in c("elementShortName", "elementName")) {
     for (lang in c("De", "Fr", "It")) {
       predicate <- ifelse(tag=="elementShortName", "rdfs:label", "rdfs:comment")
-      x |>
-        getElement(tag) |>
-        getElement(paste0("name",lang)) |>
-        unlist() |>
+      langKey <- paste0("name", lang)
+      text <- x |> getElement(tag) |>
+        getElement(langKey) |>
+        unlist()
+      text |>
         langstring(tolower(lang), multiline = tag=="elementName") |>
         triple(subject, predicate, object = _)
     }
@@ -59,6 +60,10 @@ describe <- function(x, class) {
     unlist() |>
     literal() |>
     triple(subject, uri("conjunctIdentifier", base), object = _)
+
+  if(!is.null(hierarchyLevel)) {
+    triple(subject, ":hierarchyLevel", literal(hierarchyLevel))
+  }
 }
 
 # convert (a part of the XML) to an R list for quicker processing
@@ -81,7 +86,7 @@ data <- xml_to_list(XML, "//rubric")
 # convert all rubrics
 for (i in 1:length(data)) {
   data[[i]][["description"]] |>
-    describe(class = uri("http://purl.org/dc/terms/Collection"))
+    describe(class = "http://purl.org/dc/terms/Collection", hierarchyLevel = 2)
 }
 
 # PARSE GROUPS
@@ -93,7 +98,7 @@ data <- xml_to_list(XML, "//group")
 # convert all rubrics
 for (i in 1:length(data)) {
   data[[i]][["description"]] |>
-    describe(class = uri("http://purl.org/dc/terms/Collection"))
+    describe(class = "http://purl.org/dc/terms/Collection", hierarchyLevel = 3)
 }
 
 # PARSE INSPECTION POINTS
@@ -105,7 +110,7 @@ data <- xml_to_list(XML, "//point")
 # convert all rubrics
 for (i in 1:length(data)) {
   data[[i]][["description"]] |>
-    describe(class = uri("http://purl.org/dc/terms/Collection"))
+    describe(class = "https://agriculture.ld.admin.ch/inspection/InspectionPoint")
 }
 
 sink()

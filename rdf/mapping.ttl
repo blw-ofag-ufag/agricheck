@@ -1,6 +1,7 @@
 @prefix : <https://agriculture.ld.admin.ch/inspection/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
 
 :A07EF60442B92B978AAA3B546480A7C5 a dcterms:Collection ;
     rdfs:label "Gesätzliche Minimalanforderungen"@de,
@@ -18,4 +19,6 @@
     rdfs:label "Labels"@de,
         "Labels"@fr,
         "Labels"@it ;
+    schema:hasPart :00001A0C879D1638CE1B84BD6EA118A7 ;
     :hierarchyLevel "1" .
+
