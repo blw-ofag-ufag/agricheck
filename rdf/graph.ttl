@@ -135636,6 +135636,33 @@ Le condizioni sono soddisfatte quando:
         :QHBrZ6kFH0EB4tFS3eVM,
         :QiIB0LyyDMDhBjB3z7Q7 .
 
+:a07ef604-42b9-2b97-8aaa-3b546480a7c5 a dcterms:Collection ;
+    rdfs:label "Gesätzliche Minimalanforderungen"@de,
+        "Exigences légales minimales"@fr,
+        "Requisiti minimi di legge"@it ;
+    schema:name "Gesätzliche Minimalanforderungen"@de,
+        "Exigences légales minimales"@fr,
+        "Requisiti minimi di legge"@it ;
+    :hierarchyLevel "1" .
+
+:a07ef604-42b9-2b97-8bbb-3b546480a7c5 a dcterms:Collection ;
+    rdfs:label "Direktzahlungen"@de,
+        "Paiements directs"@fr,
+        "Pagamenti diretti"@it ;
+    schema:name "Direktzahlungen"@de,
+        "Paiements directs"@fr,
+        "Pagamenti diretti"@it ;
+    :hierarchyLevel "1" .
+
+:a07ef604-42b9-2b97-8ccc-3b546480a7c5 a dcterms:Collection ;
+    rdfs:label "Labels"@de,
+        "Labels"@fr,
+        "Labels"@it ;
+    schema:name "Labels"@de,
+        "Labels"@fr,
+        "Labels"@it ;
+    :hierarchyLevel "1" .
+
 dcterms:Collection a owl:Class ;
     rdfs:label "Kontrollpunkt-Gruppe"@de ;
     schema:name "Kontrollpunkt-Gruppe"@de ;
