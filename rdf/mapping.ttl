@@ -3,6 +3,118 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
 
+:38EA1020A8794BB0AFB1B7A486619C7F a dcterms:Collection ;
+    rdfs:label "Luftreinhaltung"@de,
+        "Protection de l'air"@fr,
+        "Inquinamento atmosferico"@it ;
+    schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 ;
+    :hierarchyLevel "2" .
+
+:57A74BCEB4BF1D05E0532D0E870A0EAF a dcterms:Collection ;
+    rdfs:label "Gewässerschutz"@de,
+        "FR: Gewässerschutz"@fr,
+        "Ambito Protezione delle acque"@it ;
+    schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 ;
+    :hierarchyLevel "2" .
+
+:A07EF60442B92B9700003B546480A7C5 a dcterms:Collection ;
+    rdfs:label "Umwelt"@de,
+        "FR: Bereich Umwelt"@fr,
+        "Ambito Ambiente"@it ;
+    schema:hasPart :57A74BCEB4C11D05E0532D0E870A0EAF ;
+    schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 ;
+    :hierarchyLevel "2" .
+
+:A07EF60442B92B9711113B546480A7C5 a dcterms:Collection ;
+    rdfs:label "Beitragsvoraussetzungen"@de,
+        "FR: Beitragsvoraussetzungen"@fr,
+        "Ambito Condizioni per i contributi"@it ;
+    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
+    :hierarchyLevel "2" .
+
+:A07EF60442B92B9722223B546480A7C5 a dcterms:Collection ;
+    rdfs:label "Strukturdaten"@de,
+        "FR: Strukturdaten"@fr,
+        "Ambito Dati strutturali"@it ;
+    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
+    :hierarchyLevel "2" .
+
+:A07EF60442B92B9733333B546480A7C5 a dcterms:Collection ;
+    rdfs:label "Ökologischer Leistungsnachweis (ÖLN)"@de,
+        "FR: Ökologischer Leistungsnachweis"@fr,
+        "Ambito Prova che le esigenze ecologiche sono rispettates"@it ;
+    schema:hasPart :1D0B4931DC8C42C1A2DB50F8EB7961D4,
+        :25502ED4E5AC443FB25B7708CFBD797C,
+        :57A74BCEB1981D05E0532D0E870A0EAF,
+        :57A74BCEB82F1D05E0532D0E870A0EAF,
+        :57A74BCEB8371D05E0532D0E870A0EAF,
+        :57A74BCEBD8D1D05E0532D0E870A0EAF,
+        :57A74BCEC0911D05E0532D0E870A0EAF,
+        :57A74BCEC0981D05E0532D0E870A0EAF,
+        :57A74BCEC0A01D05E0532D0E870A0EAF,
+        :57A74BCEC2501D05E0532D0E870A0EAF,
+        :57A74BCEC5661D05E0532D0E870A0EAF,
+        :57A74BCEC5681D05E0532D0E870A0EAF,
+        :57A74BCEC56A1D05E0532D0E870A0EAF ;
+    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
+    :hierarchyLevel "2" .
+
+:A07EF60442B92B9744443B546480A7C5 a dcterms:Collection ;
+    rdfs:label "Biodiversitätsförderflächen (BFF)"@de,
+        "FR: Biodiversitätsförderflächen"@fr,
+        "Ambito Superfici per la promozione della biodiversità"@it ;
+    schema:hasPart :57A74BCEB3AD1D05E0532D0E870A0EAF,
+        :57A74BCEB3B11D05E0532D0E870A0EAF,
+        :57A74BCEB3B51D05E0532D0E870A0EAF,
+        :57A74BCEB3B91D05E0532D0E870A0EAF,
+        :57A74BCEB3BD1D05E0532D0E870A0EAF,
+        :57A74BCEB5321D05E0532D0E870A0EAF,
+        :57A74BCEB5361D05E0532D0E870A0EAF,
+        :57A74BCEBC5F1D05E0532D0E870A0EAF,
+        :57A74BCEBC631D05E0532D0E870A0EAF,
+        :57A74BCEBC671D05E0532D0E870A0EAF,
+        :57A74BCEBD101D05E0532D0E870A0EAF,
+        :57A74BCEBD141D05E0532D0E870A0EAF,
+        :57A74BCEBD191D05E0532D0E870A0EAF,
+        :57A74BCEBD931D05E0532D0E870A0EAF,
+        :57A74BCEBD971D05E0532D0E870A0EAF,
+        :57A74BCEBD9C1D05E0532D0E870A0EAF,
+        :57A74BCEC3F01D05E0532D0E870A0EAF,
+        :57A74BCEC6E71D05E0532D0E870A0EAF,
+        :57A74BCEC6EB1D05E0532D0E870A0EAF,
+        :57A74BCEC6EF1D05E0532D0E870A0EAF,
+        :57A74BCEC6F31D05E0532D0E870A0EAF,
+        :57A74BCEC6F81D05E0532D0E870A0EAF,
+        :57A74BCEC6FC1D05E0532D0E870A0EAF,
+        :57A74BCEC7051D05E0532D0E870A0EAF ;
+    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
+    :hierarchyLevel "2" .
+
+:A07EF60442B92B9755553B546480A7C5 a dcterms:Collection ;
+    rdfs:label "Biologische Landwirtschaft"@de,
+        "FR: Biologische Landwirtschaft"@fr,
+        "Ambito Agricoltura biologica"@it ;
+    schema:hasPart :57A74BCEBCE51D05E0532D0E870A0EAF,
+        :57A74BCEBCED1D05E0532D0E870A0EAF,
+        :57A74BCEBCFE1D05E0532D0E870A0EAF,
+        :57A74BCEBD011D05E0532D0E870A0EAF,
+        :57A74BCEBD041D05E0532D0E870A0EAF,
+        :57A74BCEBD061D05E0532D0E870A0EAF,
+        :57A74BCEBDB51D05E0532D0E870A0EAF,
+        :57A74BCEBDBA1D05E0532D0E870A0EAF,
+        :57A74BCEC0C31D05E0532D0E870A0EAF,
+        :57A74BCEC7111D05E0532D0E870A0EAF,
+        :57A74BCEC7131D05E0532D0E870A0EAF ;
+    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
+    :hierarchyLevel "2" .
+
+:A07EF60442B92B9777773B546480A7C5 a dcterms:Collection ;
+    rdfs:label "Graslandbasierte Milch- und Fleischproduktion (GMF)"@de,
+        "FR: Graslandbasierte Milch- und Fleischproduktion"@fr,
+        "Ambito Produzione di latte e carne basata sulla superficie inerbita"@it ;
+    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
+    :hierarchyLevel "2" .
+
 :A07EF60442B92B978AAA3B546480A7C5 a dcterms:Collection ;
     rdfs:label "Gesätzliche Minimalanforderungen"@de,
         "Exigences légales minimales"@fr,
@@ -19,6 +131,148 @@
     rdfs:label "Labels"@de,
         "Labels"@fr,
         "Labels"@it ;
-    schema:hasPart :00001A0C879D1638CE1B84BD6EA118A7 ;
     :hierarchyLevel "1" .
+
+:A07EF60442B92B978EEE3B546480A7C5 a dcterms:Collection ;
+    rdfs:label "Bereich Tiergesundheit (Nutztiere, Bienen, Fische)"@de,
+        "FR: Bereich Tiergesundheit (Nutztiere, Bienen, Fische)"@fr,
+        "Ambito Salute degli animali (animali da reddito, api, pesci)"@it ;
+    schema:hasPart :52DC821592B2498586EC8ACB0677DC3B,
+        :57A74BCEB0A91D05E0532D0E870A0EAF,
+        :57A74BCEB0D71D05E0532D0E870A0EAF,
+        :57A74BCEB1001D05E0532D0E870A0EAF,
+        :57A74BCEBDD51D05E0532D0E870A0EAF ;
+    schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 ;
+    :hierarchyLevel "2" .
+
+:A07EF60442B92B978FFF3B546480A7C5 a dcterms:Collection ;
+    rdfs:label "Tierschutz (Nutztiere)"@de,
+        "FR: Bereich Tierschutz (Nutztiere)"@fr,
+        "Ambito Protezione degli animali (animali da reddito)"@it ;
+    schema:hasPart :00DB673864714391B5EF1EE5B07D4274,
+        :1A1882BA1BE14BB480673263D608DFC9,
+        :2DA5033E61C6452FBDD77197702098CE,
+        :38234EBF19B24BA79C14948CB183F4DD,
+        :5EE7A5BDD9B549E4B5B219797AA02CA2,
+        :74C45BEBE6E74C65B2CCC4D449A7AC52,
+        :7C3B43BB6CCC4BE7B3A34E5A8A7524A6,
+        :7DB3145612F04733A166802688E2C67D,
+        :A10784CC04E84429B8FDF63C68DAD84F,
+        :BDAE131E2B6E45E9843E06849E70972C,
+        :C35517EED4C645939FAA761A87F35F85,
+        :CB5C473CB3F348FF867610CD77F846AA ;
+    schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 ;
+    :hierarchyLevel "2" .
+
+:A07EF60442B92B9799993B546480A7C5 a dcterms:Collection ;
+    rdfs:label "Ressourceneffizienz (REB)"@de,
+        "FR: Ressourceneffizienz"@fr,
+        "Ambito Efficienza delle risorse"@it ;
+    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
+    :hierarchyLevel "2" .
+
+:A07EF60442B92B97BBBB3B546480A7C5 a dcterms:Collection ;
+    rdfs:label "Sömmerung"@de,
+        "FR: Sömmerung"@fr,
+        "Ambito Estivazione"@it ;
+    schema:hasPart :57A74BCEBD7A1D05E0532D0E870A0EAF,
+        :57A74BCEBE031D05E0532D0E870A0EAF,
+        :57A74BCEBE951D05E0532D0E870A0EAF,
+        :57A74BCEBE9C1D05E0532D0E870A0EAF,
+        :57A74BCEBEAE1D05E0532D0E870A0EAF,
+        :57A74BCEBEBC1D05E0532D0E870A0EAF,
+        :57A74BCEC3EC1D05E0532D0E870A0EAF,
+        :D21C9F2A93694CB48564CE922D20643F ;
+    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
+    :hierarchyLevel "2" .
+
+:A3B3FF82CFC6FC6683E03B546480AE08 a dcterms:Collection ;
+    rdfs:label "Bio Suisse"@de,
+        "FR: Bio Suisse"@fr,
+        "Bio Suisse"@it ;
+    schema:isPartOf :A07EF60442B92B978CCC3B546480A7C5 ;
+    :hierarchyLevel "2" .
+
+:A3B3FF82D326326683E03B546480AE08 a dcterms:Collection ;
+    rdfs:label "Vernetzung"@de,
+        "FR: Vernetzung"@fr,
+        "Vernetzung"@it ;
+    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
+    :hierarchyLevel "2" .
+
+:A3B3FF82D453453683E03B546480AE08 a dcterms:Collection ;
+    rdfs:label "Landschaftsqualität"@de,
+        "FR: Landschaftsqualität"@fr,
+        "Landschaftsqualität"@it ;
+    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
+    :hierarchyLevel "2" .
+
+:BC2A4CD9A00500553AE03B546480AF5B a dcterms:Collection ;
+    rdfs:label "in-situ"@de,
+        "FR: in-situ"@fr,
+        "in-situ"@it ;
+    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
+    :hierarchyLevel "2" .
+
+:CD483976909F09F029E03B446480A754 a dcterms:Collection ;
+    rdfs:label "BTS"@de,
+        "FR: BTS"@fr,
+        "SSRA"@it ;
+    schema:hasPart :57A74BCEBDC31D05E0532D0E870A0EAF,
+        :57A74BCEBE681D05E0532D0E870A0EAF,
+        :57A74BCEBF251D05E0532D0E870A0EAF,
+        :57A74BCEC0D11D05E0532D0E870A0EAF,
+        :57A74BCEC1A71D05E0532D0E870A0EAF,
+        :57A74BCEC2421D05E0532D0E870A0EAF ;
+    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
+    :hierarchyLevel "2" .
+
+:CD48397690A00A0029E03B446480A754 a dcterms:Collection ;
+    rdfs:label "RAUS"@de,
+        "FR: RAUS"@fr,
+        "URA"@it ;
+    schema:hasPart :57A74BCEBF2C1D05E0532D0E870A0EAF,
+        :57A74BCEC3B11D05E0532D0E870A0EAF,
+        :5DC18C61EA4041BB9ED77DA045C42BD0,
+        :72E3C035DA944D22A3A8612824602E3A,
+        :A8249C889C964BA1B97B0633AD25B9B8,
+        :A8D4945497524A4A9871B2BF6FECFA06,
+        :B30B90DFC2CE4DA9B6B2E9CBEC8BA383 ;
+    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
+    :hierarchyLevel "2" .
+
+:CD4C74B78680680174E03B546480A6E4 a dcterms:Collection ;
+    rdfs:label "Pflanzliche Primärproduktion"@de,
+        "FR: Pflanzliche Primärproduktion"@fr,
+        "Pflanzliche Primärproduktion"@it ;
+    schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 ;
+    :hierarchyLevel "2" .
+
+:CD4C74B78681681174E03B546480A6E4 a dcterms:Collection ;
+    rdfs:label "Tierische Primärproduktion"@de,
+        "FR: Tierische Primärproduktion"@fr,
+        "Tierische Primärproduktion"@it ;
+    schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 ;
+    :hierarchyLevel "2" .
+
+:ED616BC429519513A9E03B446480AB1A a dcterms:Collection ;
+    rdfs:label "Effizienter Stickstoffeinsatz im Ackerbau"@de,
+        "FR: Effizienter Stickstoffeinsatz im Ackerbau"@fr,
+        "IT: Effizienter Stickstoffeinsatz im Ackerbau"@it ;
+    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
+    :hierarchyLevel "2" .
+
+:ED616BC429529523A9E03B446480AB1A a dcterms:Collection ;
+    rdfs:label "Bodenbedeckung/Bodenbearbeitung"@de,
+        "FR: Bodenbedeckung/Bodenbearbeitung"@fr,
+        "IT: Bodenbedeckung/Bodenbearbeitung"@it ;
+    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
+    :hierarchyLevel "2" .
+
+:ED616BC429539533A9E03B446480AB1A a dcterms:Collection ;
+    rdfs:label "Produktionssysteme Ackerbau und Dauerkulturen"@de,
+        "FR: Produktionssysteme Ackerbau und Dauerkulturen"@fr,
+        "IT: Produktionssysteme Ackerbau und Dauerkulturen"@it ;
+    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
+    :hierarchyLevel "2" .
 

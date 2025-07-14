@@ -30,7 +30,7 @@ rm(xml_file_path, url, temp_zip, unzip_dir)
 # ================
 
 # function to convert one [thing] description
-describe <- function(x, class, hierarchyLevel = NULL) {
+describe <- function(x, class, hierarchyLevel = NULL, relationPredicate = "schema:isPartOf") {
   subject <- x |> getElement("versionStableId") |> unlist() |> uri(base)
   triple(subject, "a", uri(class))
   for (tag in c("elementShortName", "elementName")) {
@@ -49,7 +49,7 @@ describe <- function(x, class, hierarchyLevel = NULL) {
     getElement("parentVersionStableId") |>
     unlist() |>
     uri(prefix = base) |>
-    triple(subject, "schema:isPartOf", object = _)
+    triple(subject, relationPredicate, object = _)
   x |>
     getElement("elementId") |>
     unlist() |>
@@ -86,7 +86,7 @@ data <- xml_to_list(XML, "//rubric")
 # convert all rubrics
 for (i in 1:length(data)) {
   data[[i]][["description"]] |>
-    describe(class = "http://purl.org/dc/terms/Collection", hierarchyLevel = 2)
+    describe(class = "http://purl.org/dc/terms/Collection", hierarchyLevel = 3)
 }
 
 # PARSE GROUPS
@@ -98,7 +98,7 @@ data <- xml_to_list(XML, "//group")
 # convert all rubrics
 for (i in 1:length(data)) {
   data[[i]][["description"]] |>
-    describe(class = "http://purl.org/dc/terms/Collection", hierarchyLevel = 3)
+    describe(class = "http://purl.org/dc/terms/Collection", hierarchyLevel = 4)
 }
 
 # PARSE INSPECTION POINTS
@@ -110,7 +110,7 @@ data <- xml_to_list(XML, "//point")
 # convert all rubrics
 for (i in 1:length(data)) {
   data[[i]][["description"]] |>
-    describe(class = "https://agriculture.ld.admin.ch/inspection/InspectionPoint")
+    describe(class = "https://agriculture.ld.admin.ch/inspection/InspectionPoint", relationPredicate = ":belongsToGroup")
 }
 
 sink()

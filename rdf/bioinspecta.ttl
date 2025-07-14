@@ -3,31 +3,22 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
 
-:00001A0C879D1638CE1B84BD6EA118A7 a dcterms:Collection ;
-    rdfs:label "Anforderungen BioSuisse"@de ;
-    schema:identifier "30" ;
-    rdfs:comment """
-    Hier aufgeführt sind die Anforderungen der BioSuisse, welche über die Verordnung über die biologische Landwirtschaft und die Kennzeichnung biologisch produzierter Erzeugnisse und Lebensmittel (Bio-Verordnung) hinausgehen.
-    Die Informationen kommen aus einer Excel-Liste von bio.inspecta.
-    """@de ;
-    :hierarchyLevel "2" .
-
 :0554E3B990E374AAA333A7EF8DF379EC a dcterms:Collection ;
     rdfs:label "Soziale Anforderungen Bio Suisse"@de ;
     schema:identifier "30.30" ;
-    schema:isPartOf :00001A0C879D1638CE1B84BD6EA118A7 ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
     :hierarchyLevel "3" .
 
 :0D30241DE81845F45F361B28AC025ADB a dcterms:Collection ;
     rdfs:label "Allgemeines, Gesamtbetrieblichkeit"@de ;
     schema:identifier "30.01" ;
-    schema:isPartOf :00001A0C879D1638CE1B84BD6EA118A7 ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
     :hierarchyLevel "3" .
 
 :103ADE81B18BE139B896972CEB81662B a dcterms:Collection ;
     rdfs:label "Vermarktung / Direktvermarktung / Hofverarbeitung"@de ;
     schema:identifier "30.20" ;
-    schema:isPartOf :00001A0C879D1638CE1B84BD6EA118A7 ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
     :hierarchyLevel "3" .
 
 :14E6B066F2CDD5A89825A261D1B236C1 a dcterms:Collection ;
@@ -45,13 +36,13 @@
 :2D98005C668028E364267D1AEC76E677 a dcterms:Collection ;
     rdfs:label "Lohnverarbeitung neue Produkte"@de ;
     schema:identifier "30.42" ;
-    schema:isPartOf :00001A0C879D1638CE1B84BD6EA118A7 ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
     :hierarchyLevel "3" .
 
 :2FE2011E4C15B768627081991CA0D0C7 a dcterms:Collection ;
     rdfs:label "Biodiversitätsförderung"@de ;
     schema:identifier "30.26" ;
-    schema:isPartOf :00001A0C879D1638CE1B84BD6EA118A7 ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
     :hierarchyLevel "3" .
 
 :318337CE92261EF2DF2AB295D4E5146E a dcterms:Collection ;
@@ -75,7 +66,7 @@
 :3C2398A1F95664E98100C4911AC1346A a dcterms:Collection ;
     rdfs:label "Anforderungen Bio Suisse bzgl. Mitgliedschaft"@de ;
     schema:identifier "30.35" ;
-    schema:isPartOf :00001A0C879D1638CE1B84BD6EA118A7 ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
     :hierarchyLevel "3" .
 
 :4E7E8D7644F81F90EF7A14348797ABC8 a dcterms:Collection ;
@@ -117,13 +108,13 @@
 :6EDCA6B2922C81D6F2D7248BF6DE9F35 a dcterms:Collection ;
     rdfs:label "Bio Suisse Anforderungen Schweine eingehalten"@de ;
     schema:identifier "30.08" ;
-    schema:isPartOf :00001A0C879D1638CE1B84BD6EA118A7 ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
     :hierarchyLevel "3" .
 
 :729FE5417AE7261E0AA69F0748ECE2C7 a dcterms:Collection ;
     rdfs:label "Bio Suisse Anforderungen Geflügel eingehalten"@de ;
     schema:identifier "30.09" ;
-    schema:isPartOf :00001A0C879D1638CE1B84BD6EA118A7 ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
     :hierarchyLevel "3" .
 
 :7CFFFDAB1E42D4095836C5A1305B4B72 a dcterms:Collection ;
@@ -147,7 +138,7 @@
 :8763259E6BBF045D46C9DA21E289848E a dcterms:Collection ;
     rdfs:label "Spezialkulturen, Pilze"@de ;
     schema:identifier "30.04" ;
-    schema:isPartOf :00001A0C879D1638CE1B84BD6EA118A7 ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
     :hierarchyLevel "3" .
 
 :88F16A05DA3010B9142C03BC0C3718F6 a dcterms:Collection ;
@@ -159,7 +150,7 @@
 :8A47573888B2DF2B71C1DD92AA4CAFF9 a dcterms:Collection ;
     rdfs:label "Fische"@de ;
     schema:identifier "30.22" ;
-    schema:isPartOf :00001A0C879D1638CE1B84BD6EA118A7 ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
     :hierarchyLevel "3" .
 
 :8BE730964DD9C9BE239355E6F0D8AC53 a dcterms:Collection ;
@@ -176,7 +167,7 @@
 
 :8E4DB464062EFE47196A119C186D7BFE a dcterms:Collection ;
     rdfs:label "Kellerkontrolle"@de ;
-    schema:isPartOf :00001A0C879D1638CE1B84BD6EA118A7 ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
     :hierarchyLevel "2" .
 
 :9479C271B32ABEC05820E80B3FE227F8 a dcterms:Collection ;
@@ -188,7 +179,7 @@
 :95EB6C3A108DD9F66DDE32EDAB9E8791 a dcterms:Collection ;
     rdfs:label "Checkpunkte für Zertifizierung"@de ;
     schema:identifier "30.41" ;
-    schema:isPartOf :00001A0C879D1638CE1B84BD6EA118A7 ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
     :hierarchyLevel "3" .
 
 :964E275EF01432FAE52DF8FF9A9B73F0 a dcterms:Collection ;
@@ -201,13 +192,13 @@
 :991EA2E82F6F3CB01327074B96F15A8A a dcterms:Collection ;
     rdfs:label "Bio Suisse Anforderungen übrige Tiere"@de ;
     schema:identifier "30.10" ;
-    schema:isPartOf :00001A0C879D1638CE1B84BD6EA118A7 ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
     :hierarchyLevel "3" .
 
 :9A32849BDA69AB28EAC20384ACAFA48D a dcterms:Collection ;
     rdfs:label "Tierhaltung allgemein"@de ;
     schema:identifier "30.07" ;
-    schema:isPartOf :00001A0C879D1638CE1B84BD6EA118A7 ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
     :hierarchyLevel "3" .
 
 :9E199A8A9965B228B6E267937793C55C a dcterms:Collection ;
@@ -215,6 +206,12 @@
     schema:identifier "30.21.09" ;
     schema:isPartOf :E2AF804E6C89F5BFD9A3AAA605EFF6A7 ;
     :hierarchyLevel "4" .
+
+:A3B3FF82CFC6FC6683E03B546480AE08 a dcterms:Collection ;
+    rdfs:comment """
+    Hier aufgeführt sind die Anforderungen der BioSuisse, welche über die Verordnung über die biologische Landwirtschaft und die Kennzeichnung biologisch produzierter Erzeugnisse und Lebensmittel (Bio-Verordnung) hinausgehen.
+    Die Informationen kommen aus einer Excel-Liste von bio.inspecta.
+    """@de .
 
 :A704423CC8A44F8787347E08E93D5A51 a dcterms:Collection ;
     rdfs:label "Eigenschaften Bienenstöcke und Bienenzuchtmaterial"@de ;
@@ -225,13 +222,13 @@
 :AE9F57A46277814F08C3CAC76CB56BE4 a dcterms:Collection ;
     rdfs:label "Pflanzenbau"@de ;
     schema:identifier "30.02" ;
-    schema:isPartOf :00001A0C879D1638CE1B84BD6EA118A7 ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
     :hierarchyLevel "3" .
 
 :B1CC3CB888128888C4D69589BBF895B7 a dcterms:Collection ;
     rdfs:label "Saat- und Pflanzgut"@de ;
     schema:identifier "30.03" ;
-    schema:isPartOf :00001A0C879D1638CE1B84BD6EA118A7 ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
     :hierarchyLevel "3" .
 
 :B468B50BCA672D1D05DDF9A009BF12A8 a dcterms:Collection ;
@@ -261,7 +258,7 @@
 :E2AF804E6C89F5BFD9A3AAA605EFF6A7 a dcterms:Collection ;
     rdfs:label "Bienen"@de ;
     schema:identifier "30.21" ;
-    schema:isPartOf :00001A0C879D1638CE1B84BD6EA118A7 ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
     :hierarchyLevel "3" .
 
 :E4F624120BD0145422E1216DF448FBC0 a dcterms:Collection ;
@@ -273,7 +270,7 @@
 :E694359DD4AF2F6F62261E1383DB6935 a dcterms:Collection ;
     rdfs:label "Rückstände"@de ;
     schema:identifier "30.27" ;
-    schema:isPartOf :00001A0C879D1638CE1B84BD6EA118A7 ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
     :hierarchyLevel "3" .
 
 :F17A4750067E78CF491BCF10F1742B8E a dcterms:Collection ;
