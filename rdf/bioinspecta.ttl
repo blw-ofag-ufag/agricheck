@@ -1,0 +1,1610 @@
+@prefix : <https://agriculture.ld.admin.ch/inspection/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+
+:0554E3B990E374AAA333A7EF8DF379EC a dcterms:Collection ;
+    rdfs:label "Soziale Anforderungen Bio Suisse"@de ;
+    schema:identifier "30.30" ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
+    :hierarchyLevel "3" .
+
+:0D30241DE81845F45F361B28AC025ADB a dcterms:Collection ;
+    rdfs:label "Allgemeines, Gesamtbetrieblichkeit"@de ;
+    schema:identifier "30.01" ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
+    :hierarchyLevel "3" .
+
+:103ADE81B18BE139B896972CEB81662B a dcterms:Collection ;
+    rdfs:label "Vermarktung / Direktvermarktung / Hofverarbeitung"@de ;
+    schema:identifier "30.20" ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
+    :hierarchyLevel "3" .
+
+:14E6B066F2CDD5A89825A261D1B236C1 a dcterms:Collection ;
+    rdfs:label "Züchtung, Herkunft"@de ;
+    schema:identifier "30.07.02" ;
+    schema:isPartOf :9A32849BDA69AB28EAC20384ACAFA48D ;
+    :hierarchyLevel "4" .
+
+:224493757D170B31E1DBDBF99D3EC61F a dcterms:Collection ;
+    rdfs:label "Umstellung, Herkunft Wachs"@de ;
+    schema:identifier "30.21.02" ;
+    schema:isPartOf :E2AF804E6C89F5BFD9A3AAA605EFF6A7 ;
+    :hierarchyLevel "4" .
+
+:2D98005C668028E364267D1AEC76E677 a dcterms:Collection ;
+    rdfs:label "Lohnverarbeitung neue Produkte"@de ;
+    schema:identifier "30.42" ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
+    :hierarchyLevel "3" .
+
+:2FE2011E4C15B768627081991CA0D0C7 a dcterms:Collection ;
+    rdfs:label "Biodiversitätsförderung"@de ;
+    schema:identifier "30.26" ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
+    :hierarchyLevel "3" .
+
+:318337CE92261EF2DF2AB295D4E5146E a dcterms:Collection ;
+    rdfs:label "Allgemein"@de ;
+    schema:identifier "30.21.01" ;
+    schema:isPartOf :E2AF804E6C89F5BFD9A3AAA605EFF6A7 ;
+    :hierarchyLevel "4" .
+
+:36B72F1700FC4BB27079C52FD0450150 a dcterms:Collection ;
+    rdfs:label "Masttauben"@de ;
+    schema:identifier "30.09.06" ;
+    schema:isPartOf :729FE5417AE7261E0AA69F0748ECE2C7 ;
+    :hierarchyLevel "4" .
+
+:3AEF2BCAE468D57256F7BC7A1099FB6B a dcterms:Collection ;
+    rdfs:label "Aufzeichnungen, Bienenvolkverzeichnis"@de ;
+    schema:identifier "30.21.03" ;
+    schema:isPartOf :E2AF804E6C89F5BFD9A3AAA605EFF6A7 ;
+    :hierarchyLevel "4" .
+
+:3C2398A1F95664E98100C4911AC1346A a dcterms:Collection ;
+    rdfs:label "Anforderungen Bio Suisse bzgl. Mitgliedschaft"@de ;
+    schema:identifier "30.35" ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
+    :hierarchyLevel "3" .
+
+:4E7E8D7644F81F90EF7A14348797ABC8 a dcterms:Collection ;
+    rdfs:label "Herkunft der Bienen"@de ;
+    schema:identifier "30.21.04" ;
+    schema:isPartOf :E2AF804E6C89F5BFD9A3AAA605EFF6A7 ;
+    :hierarchyLevel "4" .
+
+:5128468FE5735B5A31490ED676699C0E a dcterms:Collection ;
+    rdfs:label "Bio Suisse Anforderungen Düngung"@de ;
+    schema:identifier "30.02.01" ;
+    schema:isPartOf :AE9F57A46277814F08C3CAC76CB56BE4 ;
+    :hierarchyLevel "4" .
+
+:56B275B28E378DD0EE2D47F105FAE19E a dcterms:Collection ;
+    rdfs:label "Schafe"@de ;
+    schema:identifier "30.10.04" ;
+    schema:isPartOf :991EA2E82F6F3CB01327074B96F15A8A ;
+    :hierarchyLevel "4" .
+
+:58426DD48CB7B5B4CFB1F94042F2169D a dcterms:Collection ;
+    rdfs:label "Verarbeitung Honig"@de ;
+    schema:identifier "30.21.08" ;
+    schema:isPartOf :E2AF804E6C89F5BFD9A3AAA605EFF6A7 ;
+    :hierarchyLevel "4" .
+
+:6460315B408464DD8DD03C03D4CAEEE1 a dcterms:Collection ;
+    rdfs:label "Ziegen"@de ;
+    schema:identifier "30.10.03" ;
+    schema:isPartOf :991EA2E82F6F3CB01327074B96F15A8A ;
+    :hierarchyLevel "4" .
+
+:6A71721990F82EAD281571E5D580B406 a dcterms:Collection ;
+    rdfs:label "Wachteln"@de ;
+    schema:identifier "30.09.04" ;
+    schema:isPartOf :729FE5417AE7261E0AA69F0748ECE2C7 ;
+    :hierarchyLevel "4" .
+
+:6EDCA6B2922C81D6F2D7248BF6DE9F35 a dcterms:Collection ;
+    rdfs:label "Bio Suisse Anforderungen Schweine eingehalten"@de ;
+    schema:identifier "30.08" ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
+    :hierarchyLevel "3" .
+
+:729FE5417AE7261E0AA69F0748ECE2C7 a dcterms:Collection ;
+    rdfs:label "Bio Suisse Anforderungen Geflügel eingehalten"@de ;
+    schema:identifier "30.09" ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
+    :hierarchyLevel "3" .
+
+:7CFFFDAB1E42D4095836C5A1305B4B72 a dcterms:Collection ;
+    rdfs:label "Krankheitsvorsorge und tierärztliche Behandlungen"@de ;
+    schema:identifier "30.21.06" ;
+    schema:isPartOf :E2AF804E6C89F5BFD9A3AAA605EFF6A7 ;
+    :hierarchyLevel "4" .
+
+:7EC7A17DE4E76BEBAC003AE9E0AEEEDC a dcterms:Collection ;
+    rdfs:label "Bio Suisse Anforderungen Nährstoffbilanz und Biogasanlagen"@de ;
+    schema:identifier "30.02.03" ;
+    schema:isPartOf :AE9F57A46277814F08C3CAC76CB56BE4 ;
+    :hierarchyLevel "4" .
+
+:8352D423E081CA29EA0BDE34382861FB a dcterms:Collection ;
+    rdfs:label "Bio Suisse Anforderungen Pflanzenschutz"@de ;
+    schema:identifier "30.02.02" ;
+    schema:isPartOf :AE9F57A46277814F08C3CAC76CB56BE4 ;
+    :hierarchyLevel "4" .
+
+:8763259E6BBF045D46C9DA21E289848E a dcterms:Collection ;
+    rdfs:label "Spezialkulturen, Pilze"@de ;
+    schema:identifier "30.04" ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
+    :hierarchyLevel "3" .
+
+:88F16A05DA3010B9142C03BC0C3718F6 a dcterms:Collection ;
+    rdfs:label "Tiergesundheit"@de ;
+    schema:identifier "30.07.01" ;
+    schema:isPartOf :9A32849BDA69AB28EAC20384ACAFA48D ;
+    :hierarchyLevel "4" .
+
+:8A47573888B2DF2B71C1DD92AA4CAFF9 a dcterms:Collection ;
+    rdfs:label "Fische"@de ;
+    schema:identifier "30.22" ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
+    :hierarchyLevel "3" .
+
+:8BE730964DD9C9BE239355E6F0D8AC53 a dcterms:Collection ;
+    rdfs:label "Fütterung"@de ;
+    schema:identifier "30.21.05" ;
+    schema:isPartOf :E2AF804E6C89F5BFD9A3AAA605EFF6A7 ;
+    :hierarchyLevel "4" .
+
+:8E476792713FCD89DE9A521C412F57AE a dcterms:Collection ;
+    rdfs:label "Insektenproduktion"@de ;
+    schema:identifier "30.10.06" ;
+    schema:isPartOf :991EA2E82F6F3CB01327074B96F15A8A ;
+    :hierarchyLevel "4" .
+
+:8E4DB464062EFE47196A119C186D7BFE a dcterms:Collection ;
+    rdfs:label "Kellerkontrolle"@de ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
+    :hierarchyLevel "2" .
+
+:9479C271B32ABEC05820E80B3FE227F8 a dcterms:Collection ;
+    rdfs:label "Andere Geflügel"@de ;
+    schema:identifier "30.09.07" ;
+    schema:isPartOf :729FE5417AE7261E0AA69F0748ECE2C7 ;
+    :hierarchyLevel "4" .
+
+:95EB6C3A108DD9F66DDE32EDAB9E8791 a dcterms:Collection ;
+    rdfs:label "Checkpunkte für Zertifizierung"@de ;
+    schema:identifier "30.41" ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
+    :hierarchyLevel "3" .
+
+:964E275EF01432FAE52DF8FF9A9B73F0 a dcterms:Collection ;
+    rdfs:label "Legehennen / Junghennen sowie Junghähne und Zweinutzungshähne"@de ;
+    schema:identifier "30.09.01" ;
+    schema:isPartOf :729FE5417AE7261E0AA69F0748ECE2C7 ;
+    rdfs:comment "Legehennen / Junghennen sowie Junghähne (ab Tageszuwachs von 17 g/Tag) und Zweinutzungshähne (bis Tageszunahme von max. 23 g/Tag)"@de ;
+    :hierarchyLevel "4" .
+
+:991EA2E82F6F3CB01327074B96F15A8A a dcterms:Collection ;
+    rdfs:label "Bio Suisse Anforderungen übrige Tiere"@de ;
+    schema:identifier "30.10" ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
+    :hierarchyLevel "3" .
+
+:9A32849BDA69AB28EAC20384ACAFA48D a dcterms:Collection ;
+    rdfs:label "Tierhaltung allgemein"@de ;
+    schema:identifier "30.07" ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
+    :hierarchyLevel "3" .
+
+:9E199A8A9965B228B6E267937793C55C a dcterms:Collection ;
+    rdfs:label "Bienenhaltungspraktiken"@de ;
+    schema:identifier "30.21.09" ;
+    schema:isPartOf :E2AF804E6C89F5BFD9A3AAA605EFF6A7 ;
+    :hierarchyLevel "4" .
+
+:A3B3FF82CFC6FC6683E03B546480AE08 a dcterms:Collection ;
+    rdfs:comment """
+    Hier aufgeführt sind die Anforderungen der BioSuisse, welche über die Verordnung über die biologische Landwirtschaft und die Kennzeichnung biologisch produzierter Erzeugnisse und Lebensmittel (Bio-Verordnung) hinausgehen.
+    Die Informationen kommen aus einer Excel-Liste von bio.inspecta.
+    """@de .
+
+:A704423CC8A44F8787347E08E93D5A51 a dcterms:Collection ;
+    rdfs:label "Eigenschaften Bienenstöcke und Bienenzuchtmaterial"@de ;
+    schema:identifier "30.21.07" ;
+    schema:isPartOf :E2AF804E6C89F5BFD9A3AAA605EFF6A7 ;
+    :hierarchyLevel "4" .
+
+:AE9F57A46277814F08C3CAC76CB56BE4 a dcterms:Collection ;
+    rdfs:label "Pflanzenbau"@de ;
+    schema:identifier "30.02" ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
+    :hierarchyLevel "3" .
+
+:B1CC3CB888128888C4D69589BBF895B7 a dcterms:Collection ;
+    rdfs:label "Saat- und Pflanzgut"@de ;
+    schema:identifier "30.03" ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
+    :hierarchyLevel "3" .
+
+:B468B50BCA672D1D05DDF9A009BF12A8 a dcterms:Collection ;
+    rdfs:label "Fütterung"@de ;
+    schema:identifier "30.07.03" ;
+    schema:isPartOf :9A32849BDA69AB28EAC20384ACAFA48D ;
+    :hierarchyLevel "4" .
+
+:BCAC4C396E82833E0E307A6D4B6B17D7 a dcterms:Collection ;
+    rdfs:label "Gänse und Enten"@de ;
+    schema:identifier "30.09.05" ;
+    schema:isPartOf :729FE5417AE7261E0AA69F0748ECE2C7 ;
+    :hierarchyLevel "4" .
+
+:CFAA4298CFDDBD5D6739E41E50B32F05 a dcterms:Collection ;
+    rdfs:label "Kaninchen"@de ;
+    schema:identifier "30.10.05" ;
+    schema:isPartOf :991EA2E82F6F3CB01327074B96F15A8A ;
+    :hierarchyLevel "4" .
+
+:D08BCD61438F9E445DD8B67BB45CEA52 a dcterms:Collection ;
+    rdfs:label "Junghähne, Zweinutzungs- und Rassegeflügel, sowie zugelassene Pouletmast-Hybridlinien"@de ;
+    schema:identifier "30.09.02" ;
+    schema:isPartOf :729FE5417AE7261E0AA69F0748ECE2C7 ;
+    :hierarchyLevel "4" .
+
+:E2AF804E6C89F5BFD9A3AAA605EFF6A7 a dcterms:Collection ;
+    rdfs:label "Bienen"@de ;
+    schema:identifier "30.21" ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
+    :hierarchyLevel "3" .
+
+:E4F624120BD0145422E1216DF448FBC0 a dcterms:Collection ;
+    rdfs:label "Truten"@de ;
+    schema:identifier "30.09.03" ;
+    schema:isPartOf :729FE5417AE7261E0AA69F0748ECE2C7 ;
+    :hierarchyLevel "4" .
+
+:E694359DD4AF2F6F62261E1383DB6935 a dcterms:Collection ;
+    rdfs:label "Rückstände"@de ;
+    schema:identifier "30.27" ;
+    schema:isPartOf :A3B3FF82CFC6FC6683E03B546480AE08 ;
+    :hierarchyLevel "3" .
+
+:F17A4750067E78CF491BCF10F1742B8E a dcterms:Collection ;
+    rdfs:label "Rindvieh"@de ;
+    schema:identifier "30.10.01" ;
+    schema:isPartOf :991EA2E82F6F3CB01327074B96F15A8A ;
+    :hierarchyLevel "4" .
+
+:F4C96FDF9E77A2BEA2D3ACD651764BD2 a dcterms:Collection ;
+    rdfs:label "Bio Suisse Anforderungen Bodenschutz und Fruchtfolge"@de ;
+    schema:identifier "30.02.04" ;
+    schema:isPartOf :AE9F57A46277814F08C3CAC76CB56BE4 ;
+    :hierarchyLevel "4" .
+
+:0181FB60324024835214CF2969CC5505 a :InspectionPoint ;
+    rdfs:label "Maximal 50% des Gesamtnährstoffbedarfs durch Gärgülle oder Gärgut gedeckt"@de ;
+    schema:identifier "30.02.03.03" ;
+    :belongsToGroup :7EC7A17DE4E76BEBAC003AE9E0AEEEDC .
+
+:02EE2AC5B12BF80D0189595572D44802 a :InspectionPoint ;
+    rdfs:label "Abstand zwischen zwei Stalleinheiten genügend"@de ;
+    schema:identifier "30.09.01.02" ;
+    :belongsToGroup :964E275EF01432FAE52DF8FF9A9B73F0 .
+
+:03FDC6916474EC8F842473C20D80007C a :InspectionPoint ;
+    rdfs:label "Mind. 7% BFF an der LN (Bio Suisse inkl. Spezialkulturen)"@de ;
+    schema:identifier "30.26.01" ;
+    rdfs:comment "Mind. 7 % der LN, sowie der weiteren kultivierten Betriebsfläche (z. B. nicht überbautes Bauland) inkl. der Spezialkulturen, einzelbetrieblich erfüllt. Bei Gärtnereien, Zierpflanzenproduzenten und Baumschulen müssen 7 % der gärtnerischen Nutzfläche Biodiversitätsförderflächen sein."@de ;
+    :belongsToGroup :2FE2011E4C15B768627081991CA0D0C7 .
+
+:0401B0CE6BA77713DA0F55BFD327C03B a :InspectionPoint ;
+    rdfs:label "Unkrautregulierung erfolgt durch Kulturmassnahmen und mechanische Mittel"@de ;
+    schema:identifier "30.02.02.05" ;
+    rdfs:comment "Unkrautregulierung erfolgt durch Kulturmassnahmen und mechanische Mittel. Oberflächliches Abflammen ist erlaubt."@de ;
+    :belongsToGroup :8352D423E081CA29EA0BDE34382861FB .
+
+:053D9B95674F66057695DD247D0AE8C1 a :InspectionPoint ;
+    rdfs:label "Staubbad vorhanden und genügend tief"@de ;
+    schema:identifier "30.09.02.04" ;
+    rdfs:comment "Staubbad ist vorhanden und genügend tief. Gedecktes Staubbad kann ausserhalb AKB sein."@de ;
+    :belongsToGroup :D08BCD61438F9E445DD8B67BB45CEA52 .
+
+:0548B56194931D7BC5140783A6ED13DF a :InspectionPoint ;
+    rdfs:label "Cypriniden: Haltung, Düngung, max. Besatzdichte und Fütterung eingehalten"@de ;
+    schema:identifier "30.22.34" ;
+    rdfs:comment "Haltung: Naturteich inkl. Uferzone (Ausnahme: Brütlinge, Hälterung von Speisefischen). Düngung: nur organischer aus biologischem Landbau, Steinmehl oder kohlensaurer Kalk. Besatzdichte: 3000 K1 / 7000 S1; 600 K2 / 2500 S2; ------- / 1500 S3. Fütterung: >= 50% des Zuwachses aus natürlicher Nahrung; Ergänzungsfutter: in Knospequalität, max. 10% konv. Futteranteil; Brutaufzucht und Konditionsfütterung: max. 10% Fischöl / -mehl"@de ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:066EB35C9A60C7976F787EF28D2D3CBB a :InspectionPoint ;
+    rdfs:label "Wasserwerte entsprechen den Bedürfnissen der Fische"@de ;
+    schema:identifier "30.22.06" ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:06F531CDEE71F42FCA11FE43ECD5E661 a :InspectionPoint ;
+    rdfs:label "Eingestreuter Scharrraum"@de ;
+    schema:identifier "30.09.04.04" ;
+    :belongsToGroup :6A71721990F82EAD281571E5D580B406 .
+
+:0770E4AC086759354F7A758A92125E15 a :InspectionPoint ;
+    rdfs:label "Bei Bachwassernutzung Auflagen eingehalten"@de ;
+    schema:identifier "30.22.09" ;
+    rdfs:comment "Restwassermenge eingehalten; Bach ist fischpassierbar; Zulauf nur gering anthropogen belastet"@de ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:0862D75761029395FE82DF00BB8B0C0F a :InspectionPoint ;
+    rdfs:label "Wiederkäuer: Zugelassene BioV-Futtermittel, Import Futtergetreide, Etikettierung Siloballen"@de ;
+    schema:identifier "30.07.03.01" ;
+    :belongsToGroup :B468B50BCA672D1D05DDF9A009BF12A8 .
+
+:08E545BD7259DD7057959A43754B1E7B a :InspectionPoint ;
+    rdfs:label "PSM-Rückstände"@de ;
+    schema:identifier "30.27.01" ;
+    :belongsToGroup :E694359DD4AF2F6F62261E1383DB6935 .
+
+:0AF224E24184D24517315DAC7E7CCE5A a :InspectionPoint ;
+    rdfs:label "Antrittskontrolle durchgeführt"@de ;
+    schema:identifier "30.09.01.17" ;
+    :belongsToGroup :964E275EF01432FAE52DF8FF9A9B73F0 .
+
+:0CA9505E2D441565945689C734E0A846 a :InspectionPoint ;
+    rdfs:label "Nur auf Betriebsmittelliste aufgeführte Futterkonservierungsmittel gelagert"@de ;
+    schema:identifier "30.07.03.11" ;
+    :belongsToGroup :B468B50BCA672D1D05DDF9A009BF12A8 .
+
+:10C870A14A125124A4309690344FED51 a :InspectionPoint ;
+    rdfs:label "Fischzucht auf Landwirtschaftsbetrieb knospekonform"@de ;
+    schema:identifier "30.41.02" ;
+    rdfs:comment "Beanstandungen aus Kontrolle von Rubrik 30.22 werden für Landwirtschaftsbetriebe mit Fischzucht hier gesamthaft sanktioniert:"@de ;
+    :belongsToGroup :95EB6C3A108DD9F66DDE32EDAB9E8791 .
+
+:10FB6BB27FE7C89F774C2625DC7A4BCE a :InspectionPoint ;
+    rdfs:label "Nichtwiederkäuer: mind. 90% Knospefutter"@de ;
+    schema:identifier "30.07.03.09" ;
+    :belongsToGroup :B468B50BCA672D1D05DDF9A009BF12A8 .
+
+:132A6574B592B3400E5421C52BE59161 a :InspectionPoint ;
+    rdfs:label "Anlage täglich betreut"@de ;
+    schema:identifier "30.22.13" ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:14AEF2CE73B9E2D100A4C964A4528161 a :InspectionPoint ;
+    rdfs:label "Meldung an Zertifizierungsstelle betreffend Parallelvermarktung ist erfolgt"@de ;
+    schema:identifier "30.01.11" ;
+    rdfs:comment "Meldung an Zertifizierungsstelle betreffend Parallelvermarktung von einjährigen oder mehrjährigen Kulturen nach Neulandantritt ist erfolgt und die Auflagen sind eingehalten. (Parallelvermarktung: gleichzeitige Vermarktung von äusserlich nicht unterscheidbaren Kulturen mit unterschiedlichem Anerkennungsstatus der Anbaufläche)"@de ;
+    :belongsToGroup :0D30241DE81845F45F361B28AC025ADB .
+
+:1502EFE0ED057C3A2ED621C893F5FF34 a :InspectionPoint ;
+    rdfs:label "Herdengrösse und Höchstbestand je Stalleinheit"@de ;
+    schema:identifier "30.09.04.02" ;
+    rdfs:comment "Herdengrösse max. 150 Tiere und 33 kg LG Höchstbestand je Stalleinheit 1500 Tiere"@de ;
+    :belongsToGroup :6A71721990F82EAD281571E5D580B406 .
+
+:15542C279D33091B2812C0E8A59DDC50 a :InspectionPoint ;
+    rdfs:label "Die Haltung der verschiedenen Entwicklungsstadien erfolgt getrennt"@de ;
+    schema:identifier "30.10.06.05" ;
+    rdfs:comment "Die Haltung der verschiedenen Entwicklungsstadien erfolgt getrennt oder sie haben genügend Versteckmöglichkeiten"@de ;
+    :belongsToGroup :8E476792713FCD89DE9A521C412F57AE .
+
+:162C958C1259CFE25051EA7D3B5CFC7B a :InspectionPoint ;
+    rdfs:label "Zwischentracht-Fütterung"@de ;
+    schema:identifier "30.21.05.01" ;
+    rdfs:comment "Keine Zwischentracht-Fütterung, Notfütterung nur in Ausnahmefällen und ohne aufgesetzten bzw. leerem Honigraum. Der Grund muss dokumentiert werden."@de ;
+    :belongsToGroup :8BE730964DD9C9BE239355E6F0D8AC53 .
+
+:165D3C77427C91C620BA6CB6E44655EE a :InspectionPoint ;
+    rdfs:label "AB der MKA zu einer unterjährigen Betriebsübernahme liegt vor und Auflagen sind eingehalten"@de ;
+    schema:identifier "30.01.16" ;
+    rdfs:comment "Ausnahmbewilligung der MKA zu einer unterjährigen Betriebsübernahme liegt vor und Auflagen sind eingehalten"@de ;
+    :belongsToGroup :0D30241DE81845F45F361B28AC025ADB .
+
+:1727104B0F5055C8982A15039C6FC4F0 a :InspectionPoint ;
+    rdfs:label "Biologische Herkunft, zur Bestandeserneuerung max. 10% nicht biologische Königinnen oder Schwärme"@de ;
+    schema:identifier "30.21.04.01" ;
+    rdfs:comment "Biologische Herkunft gewährleistet (Kontrollnachweise). Bestandeserneuerung: Maximal jährlich 10% nicht biologische Königinnen und Schwärme eingesetzt (wenn auf Bio-Waben / -Wachsböden gesetzt: ohne Umstellungszeit)."@de ;
+    :belongsToGroup :4E7E8D7644F81F90EF7A14348797ABC8 .
+
+:18484902DB2867E2FDD1A6A86D06A8AA a :InspectionPoint ;
+    rdfs:label "Gruppengrösse in Zucht und Mast"@de ;
+    schema:identifier "30.10.05.02" ;
+    :belongsToGroup :CFAA4298CFDDBD5D6739E41E50B32F05 .
+
+:1953A9D71EC44A2601CD44FB43C93B04 a :InspectionPoint ;
+    rdfs:label "Gesamtbetrieblichkeit Bio Suisse erfüllt für Betriebe mit nicht bodengebundener Produktion"@de ;
+    schema:identifier "30.01.04" ;
+    rdfs:comment "Diese Anforderungen müssen von Knospe-Betrieben mit Insektenzucht, Grünsprossenproduktion, Pilzzucht oder Brüterei erfüllt werden."@de,
+        "Gesamtbetrieblichkeit Bio Suisse erfüllt für Betriebe mit nicht bodengebundener Produktion: a) Der Knospe-Betrieb besteht aus einer Gesamtheit von Land, Gebäuden, Inventar und Arbeitskräften b) Der Knospe-Betrieb ist selbständig c) Der Knospe-Betrieb hat ein räumlich erkennbares Betriebszentrum"@de ;
+    :belongsToGroup :0D30241DE81845F45F361B28AC025ADB .
+
+:199CCE42A5057AF5DE6F739DEB4D6F86 a :InspectionPoint ;
+    rdfs:label "Grenzwerte für Thymol eingehalten"@de ;
+    schema:identifier "30.21.02.02" ;
+    :belongsToGroup :224493757D170B31E1DBDBF99D3EC61F .
+
+:1CA90756B887EA3C0BD98E09A041073A a :InspectionPoint ;
+    rdfs:label "Betrieb ist nicht Mitglied bei Bio Suisse, Produkte werden ohne Knospe vermarktet"@de ;
+    schema:identifier "30.35.01" ;
+    rdfs:comment "Betrieb ist nicht Mitglied bei Bio Suisse, Produkte werden ohne Knospe vermarktet (Labelanerkennung Bio Suisse liegt nicht vor)"@de ;
+    :belongsToGroup :3C2398A1F95664E98100C4911AC1346A .
+
+:1F0FA7DDBE06F0B78EA0DBE01A8023E5 a :InspectionPoint ;
+    rdfs:label "Anforderungen an Weide eingehalten"@de ;
+    schema:identifier "30.09.01.12" ;
+    :belongsToGroup :964E275EF01432FAE52DF8FF9A9B73F0 .
+
+:1F2AB92D7895EE3A48A1DE18DFF04C42 a :InspectionPoint ;
+    rdfs:label "Anforderungen Masse Stall und Voliere"@de ;
+    schema:identifier "30.09.06.02" ;
+    :belongsToGroup :36B72F1700FC4BB27079C52FD0450150 .
+
+:206E166E1F3622DE8BF4F3D3800B7FF7 a :InspectionPoint ;
+    rdfs:label "Betrieb mit familienfremden Angestellten ist Mitglied bei einer Branchenorganisation gemäss EKAS"@de ;
+    schema:identifier "30.30.02" ;
+    rdfs:comment "Betrieb mit familienfremden Angestellten ist Mitglied bei einer Branchenorganisation gemäss EKAS (z. B. Agritop)"@de ;
+    :belongsToGroup :0554E3B990E374AAA333A7EF8DF379EC .
+
+:21B67D99EBED5239DFB4E53DD9955256 a :InspectionPoint ;
+    rdfs:label "Offene Wasserfläche"@de ;
+    schema:identifier "30.09.05.03" ;
+    :belongsToGroup :BCAC4C396E82833E0E307A6D4B6B17D7 .
+
+:24127A76194982939B97D831A44AAFD4 a :InspectionPoint ;
+    rdfs:label "keine leere Gebinde von nicht zugelassenen PSM oder Düngemittel gelagert"@de ;
+    schema:identifier "30.02.02.02" ;
+    rdfs:comment "Leere Gebinde von nicht zugelassenen PSM oder Düngemittel aus der Zeit vor der Umstellung wurden entsorgt"@de ;
+    :belongsToGroup :8352D423E081CA29EA0BDE34382861FB .
+
+:245834C0C343EEAD353DA0AFBCBB0A6B a :InspectionPoint ;
+    rdfs:label "Belegungspausen für Auslauf eingehalten"@de ;
+    schema:identifier "30.09.03.03" ;
+    :belongsToGroup :E4F624120BD0145422E1216DF448FBC0 .
+
+:24A2A89B67406AC3C5E045143C10BB31 a :InspectionPoint ;
+    rdfs:label "Sortierung: Einrichtungen und Geräte werden feucht gehalten"@de ;
+    schema:identifier "30.22.17" ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:255A30E83E02718E3502A6BE6B6D67DE a :InspectionPoint ;
+    rdfs:label "Anforderungen Bio Suisse Tierzucht eingehalten"@de ;
+    schema:identifier "30.07.02.02" ;
+    rdfs:comment "Anforderungen Bio Suisse Tierzucht eingehalten (ET-Stiere, Spermasexing)"@de ;
+    :belongsToGroup :14E6B066F2CDD5A89825A261D1B236C1 .
+
+:2613396234DAA235DE8D466EE9AFFA39 a :InspectionPoint ;
+    rdfs:label "Gibt es weitere Geflügel auf dem Betrieb?"@de ;
+    schema:identifier "30.09.0c" ;
+    :belongsToGroup :729FE5417AE7261E0AA69F0748ECE2C7 .
+
+:26987400D3509B7138AB900F86344D69 a :InspectionPoint ;
+    rdfs:label "Fütterungs- und Tränkeeinrichtungen und Raumklima"@de ;
+    schema:identifier "30.09.04.07" ;
+    rdfs:comment "Fütterungs- und Tränkeeinrichtungen sind ausreichend Das Raumklima entspricht den Anforderungen"@de ;
+    :belongsToGroup :6A71721990F82EAD281571E5D580B406 .
+
+:27ACBDB24DDB90B68032D6D604FE3B53 a :InspectionPoint ;
+    rdfs:label "Kein Einsatz von QAV-haltigen Reinigungsmitteln bei Melkgerätschaften"@de ;
+    schema:identifier "30.07.01.04" ;
+    :belongsToGroup :88F16A05DA3010B9142C03BC0C3718F6 .
+
+:28F5866A9DA72943465481B9C4E1D8D6 a :InspectionPoint ;
+    rdfs:label "Privater Sömmerungsbetrieb wird biologisch bewirtschaftet"@de ;
+    schema:identifier "30.01.05" ;
+    :belongsToGroup :0D30241DE81845F45F361B28AC025ADB .
+
+:2AC1C4AC49A5641B99C0D38E9A6D986D a :InspectionPoint ;
+    rdfs:label "Gibt es Legehennen, Junghennen, Junghähne oder Zweinutzungshähne auf dem Betrieb?"@de ;
+    schema:identifier "30.09.0a" ;
+    rdfs:comment "Gibt es Legehennen, Junghennen, Junghähne (ab Tageszuwachs von 17 g/Tag) oder Zweinutzungshähne (bis Tageszunahme von max. 23 g/Tag) auf dem Betrieb?"@de ;
+    :belongsToGroup :729FE5417AE7261E0AA69F0748ECE2C7 .
+
+:2B506DBDBFE0C4E8ACFD8A499EA3E142 a :InspectionPoint ;
+    rdfs:label "Andere Geflügel Bio Suisse Anforderungen eingehalten"@de ;
+    schema:identifier "30.09.07.01" ;
+    :belongsToGroup :9479C271B32ABEC05820E80B3FE227F8 .
+
+:2D4955E207F361EAF87C60FFD7C5B6AD a :InspectionPoint ;
+    rdfs:label "Junghähne und Zweinutzungshähne nach den Richtlinien der Junghennenaufzucht aufziehen"@de ;
+    schema:identifier "30.09.01.04" ;
+    rdfs:comment "Junghähne ab einem Tageszuwachs von 17 g/ Tag und Zweinutzungshähne bis zu einem Tageszuwachs von 23 g/ Tag nach den Richtlinien der Junghennenaufzucht aufziehen"@de ;
+    :belongsToGroup :964E275EF01432FAE52DF8FF9A9B73F0 .
+
+:2ECAC4015F5E6B229B7619B3EB431C43 a :InspectionPoint ;
+    rdfs:label "Die Eigenschaften entsprechen den Richtlinien"@de ;
+    schema:identifier "30.10.06.03" ;
+    rdfs:comment "Die Eigenschaften der Zuchteinheiten und Materialien, die Struktur und Beleuchtung entsprechen den Richtlinien"@de ;
+    :belongsToGroup :8E476792713FCD89DE9A521C412F57AE .
+
+:3453160D96BC290A78AF0528577B7B3C a :InspectionPoint ;
+    rdfs:label "Erlaubte Verfahren (gemäss Bio Suisse) zur Verarbeitung der Produkte angewendet"@de ;
+    schema:identifier "30.20.05" ;
+    rdfs:comment "BS: Nur Verarbeitungsverfahren gemäss Richtlinien BS."@de ;
+    :belongsToGroup :103ADE81B18BE139B896972CEB81662B .
+
+:34D5B1DCCEA6B02C2E4669591ACEA192 a :InspectionPoint ;
+    rdfs:label "Keine BioSuisse-Punkte aus anderen Kontrollen im gleichen Kontrolljahr"@de ;
+    schema:identifier "30.41.06" ;
+    :belongsToGroup :95EB6C3A108DD9F66DDE32EDAB9E8791 .
+
+:3575E1FD328F93BE898555D30F1CC681 a :InspectionPoint ;
+    rdfs:label "Hofdüngerzufuhr/-wegfuhr Anforderungen Bio Suisse eingehalten"@de ;
+    schema:identifier "30.02.01.02" ;
+    :belongsToGroup :5128468FE5735B5A31490ED676699C0E .
+
+:35A95D2A859D42E7CE0C1FE0929B1137 a :InspectionPoint ;
+    rdfs:label "Zutaten gemäss Bio Suisse eingesetzt"@de ;
+    schema:identifier "30.20.04" ;
+    :belongsToGroup :103ADE81B18BE139B896972CEB81662B .
+
+:37C0E6805D17269BD858963A555AD1EA a :InspectionPoint ;
+    rdfs:label "Staubbad vorhanden und konform eingerichtet"@de ;
+    schema:identifier "30.09.01.08" ;
+    :belongsToGroup :964E275EF01432FAE52DF8FF9A9B73F0 .
+
+:3A4DF42E64CD9B751B04D4C050B767A0 a :InspectionPoint ;
+    rdfs:label "Belegungspausen für Weide eingehalten"@de ;
+    schema:identifier "30.09.02.03" ;
+    :belongsToGroup :D08BCD61438F9E445DD8B67BB45CEA52 .
+
+:3D948BB45775A941513EE20A90B16F9B a :InspectionPoint ;
+    rdfs:label "Herkunft der Tiere gemäss Bio Suisse"@de ;
+    schema:identifier "30.07.02.01" ;
+    rdfs:comment "Herkunft der Tiere gemäss Bio-Suisse"@de ;
+    :belongsToGroup :14E6B066F2CDD5A89825A261D1B236C1 .
+
+:3DB6B3D87B5797ECF4CB93990A7D783C a :InspectionPoint ;
+    rdfs:label "Anforderungen Bio Suisse Spezialkulturen (Gemüse, Kräuter, Zierpflanzen) eingehalten"@de ;
+    schema:identifier "30.04.01" ;
+    rdfs:comment "Keine Tiefendämpfung im Gewächshaus oder in der Setzlingsproduktion oder mit Ausnahmebewilligung der Zert.stelle. Max. 5°C im Gewächshaus im Winter (1.12.-28.2.) (Ausnahmen: Zierpflanzen/Jungpflanzen) Definition Jungpflanzenstadium für Topfkultur: Maximal die Hälfte der Zeitdauer von der Saat bis zum Verkauf und nicht mehr als 5 Wochen. Keine bodenunabhängige Produktion/ Topfkulturen nur bei Non-Food-Produkten und Kräutern (Balkonkräuter) Wassertreiberei bei Chicorée ohne Düngerzusatz Keimlingstreiberei gilt als Verarbeitung"@de ;
+    :belongsToGroup :8763259E6BBF045D46C9DA21E289848E .
+
+:3E70BD488753EC3C01070B170D1B243A a :InspectionPoint ;
+    rdfs:label "Die angewendete thermische Behandlung entspricht der Bio-Verordnung"@de ;
+    schema:identifier "30.20:KE.05.04" ;
+    rdfs:comment "Bio Suisse: max. Maische-Erwärmung 65 Grad C."@de ;
+    :belongsToGroup :8E4DB464062EFE47196A119C186D7BFE .
+
+:3F3C5A0FB7E6D8BF7D515CC1A8789F2E a :InspectionPoint ;
+    rdfs:label "Ab 14. Woche: Cuptränken vorhanden"@de ;
+    schema:identifier "30.09.01.14" ;
+    :belongsToGroup :964E275EF01432FAE52DF8FF9A9B73F0 .
+
+:409EF245BD46251C17276B4F23661531 a :InspectionPoint ;
+    rdfs:label "Anforderungen Schweine eingehalten"@de ;
+    schema:identifier "30.08.01" ;
+    :belongsToGroup :6EDCA6B2922C81D6F2D7248BF6DE9F35 .
+
+:4196B03EBCB76D97B650B00F30B1A7F2 a :InspectionPoint ;
+    rdfs:label "Keine Behandlung während der Zwischentrachtzeit oder mit aufgesetztem Honigraum"@de ;
+    schema:identifier "30.21.06.02" ;
+    rdfs:comment "Keine Behandlung mit zulässigen Mitteln mit organischen Säuren während der Zwischentrachtzeit oder mit aufgesetztem Honigraum. Notbehandlungen sind nur bei dokumentiertem und übermässigem Varroadruck erlaubt."@de ;
+    :belongsToGroup :7CFFFDAB1E42D4095836C5A1305B4B72 .
+
+:437E2CC7396E5DFFD7C46BF4FBFCB227 a :InspectionPoint ;
+    rdfs:label "Gesamtbetrieblichkeit erfüllt oder Vertrag vorhanden , alle Standorte erfüllen Anforderungen"@de ;
+    schema:identifier "30.21.01.01" ;
+    rdfs:comment "Gesamtbetrieblichkeit erfüllt oder Vertrag mit Bio Suisse vorhanden , alle Standorte erfüllen Anforderungen"@de ;
+    :belongsToGroup :318337CE92261EF2DF2AB295D4E5146E .
+
+:43FD82928276E1771E9E7743B689A4AC a :InspectionPoint ;
+    rdfs:label "Anforderung Bio Suisse Stroh zum Schutz der Früchte, Bodenabdeckung/Abdeckmaterialien aus Kunststoff"@de ;
+    schema:identifier "30.04.03" ;
+    rdfs:comment "Stroh zum Schutz der Früchte und für die Bodenabdeckung hat Bio-Qualität und Abdeckmaterialien aus Kunststoff werden eingearbeitet oder nach der Kulturführung weggeführt, wiederverwendet oder entsorgt. Mulchfolien, welche eingearbeitet werden müssen in der FiBL-Betriebsmittelliste gelistet sein (nach dem 31.12.2024 zugekauft)."@de ;
+    :belongsToGroup :8763259E6BBF045D46C9DA21E289848E .
+
+:44317A25AFD35C2373EB67334D069F50 a :InspectionPoint ;
+    rdfs:label "Überschreitung Stalleinheiten"@de ;
+    schema:identifier "30.09.01.18" ;
+    :belongsToGroup :964E275EF01432FAE52DF8FF9A9B73F0 .
+
+:44827E1218BEC6C362E6BADC4BE90E18 a :InspectionPoint ;
+    rdfs:label "Anforderungen Bio Suisse Obst-/Beerenbau eingehalten"@de ;
+    schema:identifier "30.04.04" ;
+    rdfs:comment "Obstbau: Boden ganzjährig begrünt Ausnahme: Baumstreifen darf offen sein."@de ;
+    :belongsToGroup :8763259E6BBF045D46C9DA21E289848E .
+
+:45FE65A005BB0D70213588C3F420F0A7 a :InspectionPoint ;
+    rdfs:label "ÖLN Anforderungen: Wiesen-, Pufferstreifen"@de ;
+    schema:identifier "30.41.03" ;
+    rdfs:comment "Hier werden Mängel im ÖLN bzgl. Bio Suisse-Anerkennung beurteilt. Checkpunkte sind: - 07.04.01 Wiesenstreifen - 07.04.02 Pufferstreifen - 07.04.03 Keine Lagerung auf Pufferstreifen maximal 30 Punkte"@de ;
+    :belongsToGroup :95EB6C3A108DD9F66DDE32EDAB9E8791 .
+
+:4844608A35CCA8341199C9514782C587 a :InspectionPoint ;
+    rdfs:label "Verpackungsmaterial entspricht den Anforderungen"@de ;
+    schema:identifier "30.20.06" ;
+    :belongsToGroup :103ADE81B18BE139B896972CEB81662B .
+
+:485C974DFED27EBA3503816756C432A7 a :InspectionPoint ;
+    rdfs:label "Nur Pflanzenschutzmittel und Schädlingsbekämpfungsmittel aus FiBL-Betriebsmittelliste eingesetzt"@de ;
+    schema:identifier "30.02.02.03" ;
+    :belongsToGroup :8352D423E081CA29EA0BDE34382861FB .
+
+:490E614C95B4E5A5B5D37F255F24F898 a :InspectionPoint ;
+    rdfs:label "Entnahme Fäkalien und Futterreste und Abgabe an Knospe-Betrieb"@de ;
+    schema:identifier "30.22.18" ;
+    rdfs:comment "Umkreis 20 km"@de ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:495AB79A7803698ED5F6C3FFFADC1A1E a :InspectionPoint ;
+    rdfs:label "Umsetzung von mind. 12 Massnahmen Biodiversität kontrolliert"@de ;
+    schema:identifier "30.26.04" ;
+    rdfs:comment "Auf der Kontrolle wird geprüft ob 12 deklarierte Massnahmen umgesetzt sind. Die detaillierte Beschreibung der Massnahmen zur Förderung der Biodiversität von Bio Suisse ist im SharePoint im Dokument 'Glossar Biodiversität' abgelegt."@de ;
+    :belongsToGroup :2FE2011E4C15B768627081991CA0D0C7 .
+
+:4C1ACC5D714E67A7FCB19438259EE5C5 a :InspectionPoint ;
+    rdfs:label "Kein Einsatz von Hybridsaatgut bei Raps und Getreide"@de ;
+    schema:identifier "30.03.06" ;
+    rdfs:comment "Kein Einsatz von Hybridsaatgut bei Raps (ausser Holl-Raps) und Getreide (Ausnahme: Mais)"@de ;
+    :belongsToGroup :B1CC3CB888128888C4D69589BBF895B7 .
+
+:4C40CDC79FBC47617898D26241034D01 a :InspectionPoint ;
+    rdfs:label "Alle Zutaten, Zusatztstoffe und Verarbeitungshilfsstoffe sind gemäss Bio Suisse Richtlinien konform."@de ;
+    schema:identifier "30.20:KE.05.03" ;
+    rdfs:comment "11.2.2 Zutaten << Alle landwirtschaftlichen Zutaten, die nicht gem. Art. 10.2.3 oder gem. Art. 10.2.4 aufgeführt sind, müssen in Knospe-Qualität eingesetzt werden. << Traubensaft, Traubenmostkonzentrat, Rektifiziertes Traubenmostkonzentrat, Zucker (Inland: Knospe- Qualität; Ausland: Bio-Qualität) dürfen zugegeben werden. 11.2.3 Biologische Zutaten, Zusatzstoffe und Verarbeitungshilfsstoffe (CH-Bio, EU-Bio oder gleichwertige Qualität) << Albumin << Chitosan rein aus Aspergillus niger (wenn verf.: Bio) << Hühnereiweiss (Inland: Knospe-Qualität; Ausland: Bio-Qualität) << Kartoffel Eiweiss (wenn verfügbar bio) << Kasein << Magermilch (Inland: Knospe-Qualität; Ausland: Bio Qualität) << Speisegelatine << Weinhefe als Schönungsmittel (Inland: Knospe-Qualität; Ausland: aus Bio Suisse zertifizierten Betrieben) 11.2.4 Nicht biologische landwirtschaftliche Zutaten, Zusatzstoffe und Verarbeitungshilfsstoffe (max. 5 %) << Inaktivierte Hefet: wenn Formolzahl < 14 << Erbsenprotein (falls verfügbar aus biologischen Ausgangsstoffen gewonnen) 10.2.5 Nicht landwirtschaftliche Zutaten, Zusatzstoffe und Kulturen sowie Verarbeitungshilfsstoffe <<Mikroorganismen: –– Bakterien-Starterkulturent (falls verfügbar, aus biologischen Ausgangsstoffen gewonnen) –– Reinzuchthefe (falls verfügbar, aus biologischen Ausgangsstoffen gewonnen) << Zusatz- und Verarbeitungshilfsstoffe: –– Pektinasent –– Aktivkohle (nur für Most) –– Ammoniumphosphat (Diammoniumhydrogenphosphat): wenn Formolzahl < 14, max. Dosierung 0,5 g/l –– Ammoniumphosphat (Diammoniumhydrogenphosphat) für Schaumwein max. 0,3 g/l –– Calciumcarbonat –– Kaliumbicarbonat –– Kaliumbisulfit (E228) –– Kaliumhydrogentartrat (Reinweinstein) –– L(+)-Weinsäure [E 334]t: nur rein mikrobiologisch hergestellte Form oder aus Trauben gewonnen –– Kupfersulfat (bis 31. Juli 2015) –– Siliziumdioxid in Form von Gel oder kolloidaler Lösung (Kieselsol) –– Schwefel: nur für Fassbehandlung –– Technische Gase: N2, CO2, O2, Ar << Konservierungsstoffe: –– Kaliummetabisulfit [E 224] –– SO2 [E 220] rein und als wässrige Lösung << Filtrationshilfsmittel: –– Zellulosefilter, textile Filter, Membranen: asbest- und chlorfrei –– Kieselgur –– Bentonite –– Perlit << Bei Spezialweinen gilt die BioV/EU-BioV Nicht zugelassen: betriebsfremde, zugekaufte Tannine"@de ;
+    :belongsToGroup :8E4DB464062EFE47196A119C186D7BFE .
+
+:4E5AD5A04E20664280E2B3F3552E3D0B a :InspectionPoint ;
+    rdfs:label "Verschreibung und AB von nicht zugelassenen Futtermitteln vorhanden"@de ;
+    schema:identifier "30.07.03.13" ;
+    :belongsToGroup :B468B50BCA672D1D05DDF9A009BF12A8 .
+
+:4FBA9E5613EC2F4A1EE7E61AB54D3F8B a :InspectionPoint ;
+    rdfs:label "Nur Pflanzenschutzmittel aus FiBL-Betriebsmittelliste gelagert"@de ;
+    schema:identifier "30.02.02.01" ;
+    :belongsToGroup :8352D423E081CA29EA0BDE34382861FB .
+
+:520E556FE2AAA07080FAD1CD1C862FD5 a :InspectionPoint ;
+    rdfs:label "Rückzugsmöglichkeiten + mind. 10% beschattete Zone vorhanden"@de ;
+    schema:identifier "30.22.16" ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:5467882910146832DD3450A9BD2D2F41 a :InspectionPoint ;
+    rdfs:label "Transport"@de ;
+    schema:identifier "30.22.20" ;
+    rdfs:comment "Lebende Fische müssen bei Transporten mit ausreichend Sauerstoff versorgt werden. Sie müssen vor dem Transport genüchtert werden. Die maximale Transportdauer beträgt 10 Stunden. Eine Transportdichte von 1 kg Fisch auf 5 Liter Wasser bzw. bei einer Transportdauer von über zwei Stunden von 1 kg Fisch auf 8 Liter Wasser darf nicht überschritten werden."@de ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:56F7D6456C7565F5ADA81B06A11D03E0 a :InspectionPoint ;
+    rdfs:label "Karnivore Seefische: Netzgehege, max. Besatzdichte und Mindesthaltedauer eingehalten"@de ;
+    schema:identifier "30.22.31" ;
+    rdfs:comment "Netzgehege: nur Arten des betreffenden Gewässers; Netz nicht mit chemisch-synthetischen Mitteln behandelt; Keine Beeinträchtigungen der Umgebungs-Makrofauna (Untersuchungsergebnisse). Besatzdichte: 20 kg/m3. Mindesthaltedauer: Egli: 6 Monate; Salmoniden: 18 Monate"@de ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:5889BD507124C2742CF1ADB8D66F3C72 a :InspectionPoint ;
+    rdfs:label "Anforderungen Bio Suisse an Speisepilzproduktion eingehalten"@de ;
+    schema:identifier "30.04.06" ;
+    rdfs:comment "Pilze: nur thermische Hygienisierung, keine chemisch-synthetische Pflanzenschutzmittel Pilze: nur zugelassene Desinfektionsmittel eingesetzt / Pilze: Verwendung von Knospenstroh oder BIO SUISSE anerkanntem Biostroh aus dem Ausland Pilze: Biomist oder Ausnahmebewilligung der MKA / Bioanteil im Pilzsubstrat mind. 80%"@de ;
+    :belongsToGroup :8763259E6BBF045D46C9DA21E289848E .
+
+:5A98C3AE232C1C4A45A58B36D89D7386 a :InspectionPoint ;
+    rdfs:label "Anforderungen Bio Suisse Rebbau eingehalten"@de ;
+    schema:identifier "30.04.05" ;
+    rdfs:comment "Rebbau: Boden ganzjährig begrünt Ausnahme: Baumstreifen darf offen sein. Mulchdecke oder Einsaat bei Reben sowie alternierendes Hacken erlaubt."@de ;
+    :belongsToGroup :8763259E6BBF045D46C9DA21E289848E .
+
+:5AAFCA5DCB6DE231B58874C133D0CF81 a :InspectionPoint ;
+    rdfs:label "Anreicherung mit Zucker (Chaptalisation) und/oder Konzentrierung ist gemäss Bio Suisse konform"@de ;
+    schema:identifier "30.20.KE.05.01" ;
+    rdfs:comment "Anreicherung mit Zucker (Chaptalisation) und/oder Konzentrierung ist gemäss Bio Suisse Richtlinien konform. Die Zucker ist im Bio-Qualität (Inland: Knospe ; Ausland: Bio) verwendet."@de,
+        "BIO SUISSE: Der natürliche Alkoholgehalt darf durch die Zugabe von Zucker (Inland: Knospe-Qualität; Ausland: Bio-Qualität), Traubenmostkonzentrat (Knospe) oder rektifiziertem Traubenmostkonzentrat (Knospe) um maximal 1,25 Volumenprozent (entspricht 2,5 kg Saccharose pro hl Traubenmost) erhöht werden. Ausgenommen davon sind Weine aus Labrusca-Trauben, deren natürlicher Alkoholgehalt um maximal 2 Volumenprozent (entspricht 4 kg/hl) erhöht werden darf."@de ;
+    :belongsToGroup :8E4DB464062EFE47196A119C186D7BFE .
+
+:5F3A6F739E271C647AF93654989C8CC8 a :InspectionPoint ;
+    rdfs:label "Genügend Sitzstangen in korrekter Dimension vorhanden"@de ;
+    schema:identifier "30.09.01.10" ;
+    :belongsToGroup :964E275EF01432FAE52DF8FF9A9B73F0 .
+
+:635BC053826FEA4CF99938487B32508A a :InspectionPoint ;
+    rdfs:label "Ferkel frühestens nach sechs Wochen abgesetzt"@de ;
+    schema:identifier "30.07.03.05" ;
+    :belongsToGroup :B468B50BCA672D1D05DDF9A009BF12A8 .
+
+:63B6CEAA881F99231AC7BE79B4139D98 a :InspectionPoint ;
+    rdfs:label "Verschiedene Rohstoffqualitäten (BioV und Knospe) werden korrekt separiert und gekennzeichnet"@de ;
+    schema:identifier "30.20.03" ;
+    :belongsToGroup :103ADE81B18BE139B896972CEB81662B .
+
+:65457259829F63F0179EA6E6E7DC13D7 a :InspectionPoint ;
+    rdfs:label "Beleuchtung mit Tageslicht"@de ;
+    schema:identifier "30.09.06.04" ;
+    :belongsToGroup :36B72F1700FC4BB27079C52FD0450150 .
+
+:6778E7190B8FFD32C1F6FEB87F0690EE a :InspectionPoint ;
+    rdfs:label "Ausnahmebewilligung für Nicht-CH-Knospe Saatkartoffeln notwendig"@de ;
+    schema:identifier "30.03.08" ;
+    rdfs:comment "AB für Nicht-CH-Knospe Saatkartoffeln vor Bestellung bzw. vor Pflanzung eingeholt"@de ;
+    :belongsToGroup :B1CC3CB888128888C4D69589BBF895B7 .
+
+:68F0A957387BCB24C5ACE06595FA0ABC a :InspectionPoint ;
+    rdfs:label "Maximal 5% des Gesamtfutterverzehrs auf nicht biologischen Weiden aufgenommen"@de ;
+    schema:identifier "30.07.03.03" ;
+    :belongsToGroup :B468B50BCA672D1D05DDF9A009BF12A8 .
+
+:69CF9FF7A369ADA067299BAF9E0B5B04 a :InspectionPoint ;
+    rdfs:label "Aufzuchtkälber mindestens 3 Monate, Mastkälber mit mindestens 1000 Liter Vollmilch getränkt"@de ;
+    schema:identifier "30.07.03.08" ;
+    :belongsToGroup :B468B50BCA672D1D05DDF9A009BF12A8 .
+
+:69E3F82E701C50B66B9E8FD53713B6D0 a :InspectionPoint ;
+    rdfs:label "Gesamtbetrieblichkeit Bio Suisse erfüllt für Betriebe mit bodengebundener Produktion"@de ;
+    schema:identifier "30.01.03" ;
+    rdfs:comment "Gesamtbetrieblichkeit Bio Suisse erfüllt für Betriebe mit bodengebundener Produktion: a) Der Knospe-Betrieb besteht aus einer Gesamtheit von Land, Gebäuden, Inventar und Arbeitskräften b) Der Knospe-Betrieb ist selbständig c) Der Knospe-Betrieb hat ein räumlich erkennbares Betriebszentrum"@de ;
+    :belongsToGroup :0D30241DE81845F45F361B28AC025ADB .
+
+:6A0C8C0AB94FE0944895099001E86C0D a :InspectionPoint ;
+    rdfs:label "Fische nicht triploid / gentechnisch verändert"@de ;
+    schema:identifier "30.22.39" ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:6A83D5CE808DFB7693B6A1063C16F207 a :InspectionPoint ;
+    rdfs:label "Lizenzverträge vorhanden/ Weinkelterung: Kellerkontrolle durchgeführt"@de ;
+    schema:identifier "30.20.01" ;
+    rdfs:comment "Lizenzverträge vorhanden ab Zukauf von Knospe-Produkten (nicht vorverpackt) > 150'000.-"@de ;
+    :belongsToGroup :103ADE81B18BE139B896972CEB81662B .
+
+:6ADE7BEED22DE56B9974428B9B7EB00C a :InspectionPoint ;
+    rdfs:label "Wartefrist nach Tierzukauf aus BioV-Betrieb eingehalten (3 Monate)"@de ;
+    schema:identifier "30.07.02.03" ;
+    rdfs:comment "Bei Zukauf von Tieren aus BioV-Betrieb Hinweis für nächste Kontrolle zur Überprüfung der Wartefrist machen: Notiz erstellen Überprüfung Wartefristen: Überprüfung der Wartefristen folgender Tiere von BioV-Betrieb überprüfen: TVD-Nr.: Zugekauft am: ------------------------------------------------------------------ Häkchen setzen bei 'Kontrollworkflow'"@de ;
+    :belongsToGroup :14E6B066F2CDD5A89825A261D1B236C1 .
+
+:6B2B413100DC45CA9A43B82A8B8BF2A1 a :InspectionPoint ;
+    rdfs:label "Flüssig-O2 nur in zugelassenen Fällen"@de ;
+    schema:identifier "30.22.14" ;
+    rdfs:comment "Transportzwecke, Bruthaus, extreme Witterung; Meldung an MKA"@de ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:6C5013DEA9CC6B4AE9349529460F5BD6 a :InspectionPoint ;
+    rdfs:label "Die Einstreu landwirtschaftlichen Ursprungs hat Bio-Qualität"@de ;
+    schema:identifier "30.09.01.20" ;
+    :belongsToGroup :964E275EF01432FAE52DF8FF9A9B73F0 .
+
+:6F068BA2DE7EF4FB897D85EAB40964C6 a :InspectionPoint ;
+    rdfs:label "Nur Bio Suisse konforme Hilfsstoffe eingesetzt oder gelagert"@de ;
+    schema:identifier "30.07.01.03" ;
+    rdfs:comment "Nur Bio Suisse konforme Hilfsstoffel eingesetzt oder gelagert"@de ;
+    :belongsToGroup :88F16A05DA3010B9142C03BC0C3718F6 .
+
+:71D827E010140FBC8FEA6F946AD8A30D a :InspectionPoint ;
+    rdfs:label "Anforderungen an Aussenklimabereich eingehalten"@de ;
+    schema:identifier "30.09.01.06" ;
+    rdfs:comment "Anforderungen an Aussenklimabereich eingehalten (gilt für integrierte und nicht integrierte AKB)"@de ;
+    :belongsToGroup :964E275EF01432FAE52DF8FF9A9B73F0 .
+
+:72D611752A8ECDC7E4785A7FED8A24D2 a :InspectionPoint ;
+    rdfs:label "Gibt es auf dem Betrieb Wachteln?"@de ;
+    schema:identifier "30.09.0f" ;
+    :belongsToGroup :729FE5417AE7261E0AA69F0748ECE2C7 .
+
+:73CB228B322FB8A35F786DB588B986B7 a :InspectionPoint ;
+    rdfs:label "Fütterung von Körnern in der Endmast"@de ;
+    schema:identifier "30.09.02.06" ;
+    :belongsToGroup :D08BCD61438F9E445DD8B67BB45CEA52 .
+
+:76A34FDFF18D298D93B12A431A7D00F6 a :InspectionPoint ;
+    rdfs:label "Zusätzliche Anforderungen an Mobilställe eingehalten"@de ;
+    schema:identifier "30.09.01.21" ;
+    :belongsToGroup :964E275EF01432FAE52DF8FF9A9B73F0 .
+
+:76C44B92C737463120ED15F7A0D16C1A a :InspectionPoint ;
+    rdfs:label "Beleuchtung mit Tageslicht"@de ;
+    schema:identifier "30.09.04.06" ;
+    rdfs:comment "Beleuchtung mit Tageslicht ist ausreichend. Die Lichtphase wird nicht künstlich auf > 16 h/Tag verlängert"@de ;
+    :belongsToGroup :6A71721990F82EAD281571E5D580B406 .
+
+:76EC828F73CA5B316D7026E539EF8C07 a :InspectionPoint ;
+    rdfs:label "12 Massnahmen Biodiversität eingehalten"@de ;
+    schema:identifier "30.26.03" ;
+    :belongsToGroup :2FE2011E4C15B768627081991CA0D0C7 .
+
+:781FF9254CDE39205AD25AADCAD9A900 a :InspectionPoint ;
+    rdfs:label "Staubbad vorhanden und konform eingerichtet"@de ;
+    schema:identifier "30.09.04.03" ;
+    :belongsToGroup :6A71721990F82EAD281571E5D580B406 .
+
+:7BD18B0DDD63780424086861753FC0C9 a :InspectionPoint ;
+    rdfs:label "Lagerung/Einsatz von Dünger inkl. Recyclingdünger und Substraten"@de ;
+    schema:identifier "30.02.01.01" ;
+    rdfs:comment "Lagerung/Einsatz von Dünger inkl. Recyclingdünger und Substraten (auch Eigenmischungen)"@de,
+        "Nur Dünger (inkl. Recyclingdünger) und Substrate gemäss FiBL-Betriebsmittelliste eingesetzt/auf dem Hof gelagert bzw. bei Eigenmischungen von Substraten ist das Mischrezept vorhanden und in Ordnung (Mischungskomponenten müssen biokonform aber nicht in der FiBL-Betriebsmittelliste enthalten sein)"@de ;
+    :belongsToGroup :5128468FE5735B5A31490ED676699C0E .
+
+:7C53D73772A1A6F0DCF282A923194D81 a :InspectionPoint ;
+    rdfs:label "Jede Parzelle ist mind. einmal in 10 Jahren ganzjährig begrünt."@de ;
+    schema:identifier "30.02.04.03" ;
+    :belongsToGroup :F4C96FDF9E77A2BEA2D3ACD651764BD2 .
+
+:7C7BE1C22A8899134B74AD5E6FCBF68E a :InspectionPoint ;
+    rdfs:label "Eier / Jungfische stammen aus der Schweiz oder einem direkten Nachbarland"@de ;
+    schema:identifier "30.22.01" ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:7CA0E65D0F8A1EB986BB104BAC3B6E17 a :InspectionPoint ;
+    rdfs:label "Abgabe des Substrat-Kot-Gemisches nur an Bio-Betriebe"@de ;
+    schema:identifier "30.10.06.08" ;
+    :belongsToGroup :8E476792713FCD89DE9A521C412F57AE .
+
+:7D502BB5F30B0374D2EDB89AC1EE1019 a :InspectionPoint ;
+    rdfs:label "Biogasanlage auf Knospebetrieben: nur zugelassene Substrate eingesetzt"@de ;
+    schema:identifier "30.02.03.02" ;
+    :belongsToGroup :7EC7A17DE4E76BEBAC003AE9E0AEEEDC .
+
+:7DDCA75DB315A18E1640A75CF8C9BF19 a :InspectionPoint ;
+    rdfs:label "Soziale Richtlinien der Bio Suisse eingehalten"@de ;
+    schema:identifier "30.30.01" ;
+    rdfs:comment "Selbstdeklaration ausgefüllt Arbeitsverträge vorhanden"@de ;
+    :belongsToGroup :0554E3B990E374AAA333A7EF8DF379EC .
+
+:7FD52C95535C495535A0988C675A5157 a :InspectionPoint ;
+    rdfs:label "Karnivore Fliessgewässerfische: Haltung, max. Besatzdichte und Mindesthaltedauer eingehalten"@de ;
+    schema:identifier "30.22.32" ;
+    rdfs:comment "Haltung: mind. 50% der Lebenszeit in Becken / Teichen mit Naturboden; Becken mit Habitatmassnahmen. Besatzdichte: '20 kg/m3; Fliesswasserteich: 30 kg /m3 (max. 100 kg Fisch pro l/sec. Zufluss). Mindesthaltedauer: Salmoniden: 18 Monate"@de ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:80032F37DDE60697658AF151D31168F0 a :InspectionPoint ;
+    rdfs:label "Komposte und Kompost-Rohstoffe entsprechen den Bio Suisse Anforderungen"@de ;
+    schema:identifier "30.02.01.04" ;
+    :belongsToGroup :5128468FE5735B5A31490ED676699C0E .
+
+:80587E0224846D18FDA0C3D55A4735A4 a :InspectionPoint ;
+    rdfs:label "Anforderungen an Mehrklimazonenstall mit Stall und Aussenbereich eingehalten"@de ;
+    schema:identifier "30.09.04.01" ;
+    :belongsToGroup :6A71721990F82EAD281571E5D580B406 .
+
+:82E8D21521AF0FDE9F28DB728E9EC95F a :InspectionPoint ;
+    rdfs:label "Wassergüte am Auslauf entspricht der Gewässerschutzverordnung"@de ;
+    schema:identifier "30.22.08" ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:8398A62B7D39D2D257A2B5E224D2AF89 a :InspectionPoint ;
+    rdfs:label "Warmbruthaus: Energiekonzept liegt vor"@de ;
+    schema:identifier "30.22.03" ;
+    rdfs:comment "Sparmöglichkeiten ausgeschöpft, erneuerbare Energien eingesetzt, geschlossene Wasserzyklen"@de ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:83CDBF7BCE209E304B64710749EA25DB a :InspectionPoint ;
+    rdfs:label "Mind. 95% Grundfutteranteil bei Wiederkäuern"@de ;
+    schema:identifier "30.07.03.02" ;
+    :belongsToGroup :B468B50BCA672D1D05DDF9A009BF12A8 .
+
+:85D042E11DA54A6BB252AD035DECF8B6 a :InspectionPoint ;
+    rdfs:label "Produktionsstätte hat Bewilligung der MKA"@de ;
+    schema:identifier "30.01.08" ;
+    rdfs:comment "Produktionsstätte von Bio Suisse anerkannt Hinweis: Ab 1.1.2023 werden keine Produktionsstätten mehr anerkannt. Beim Inkrafttreten (1.1.2023) dieser neuen Regelung bestehende und von Bio Suisse anerkannte Produktionsstätten von nicht biologischen Betrieben als Knospe-Betrieb, bleiben bis zum 31.12.2037 anerkannt."@de ;
+    :belongsToGroup :0D30241DE81845F45F361B28AC025ADB .
+
+:85FCC96CAEBA9D3F6A1592F442226111 a :InspectionPoint ;
+    rdfs:label "Strukturen und Unterschlupfmöglichkeiten im Stall und Aussenbereich"@de ;
+    schema:identifier "30.09.04.08" ;
+    rdfs:comment "Strukturen und Unterschlupfmöglichkeiten im Stall und Aussenbereich sind vorhanden und ausreichend"@de ;
+    :belongsToGroup :6A71721990F82EAD281571E5D580B406 .
+
+:861DAD26A387CF2BB15638B29843A26F a :InspectionPoint ;
+    rdfs:label "Die Einstreu landwirtschaftlichen Ursprungs hat Bio-Qualität"@de ;
+    schema:identifier "30.09.04.09" ;
+    :belongsToGroup :6A71721990F82EAD281571E5D580B406 .
+
+:864DDBE2D4601C732469A4576DE97DDF a :InspectionPoint ;
+    rdfs:label "Bekämpfung/Reinigung/Desinfektion nur mit Mitteln aus der FiBL-Betriebsmittelliste"@de ;
+    schema:identifier "30.21.07.01" ;
+    :belongsToGroup :A704423CC8A44F8787347E08E93D5A51 .
+
+:870DD6E68110EAB8E9B00950B7D1B93E a :InspectionPoint ;
+    rdfs:label "Die Einstreu landwirtschaftlichen Ursprungs hat Bio-Qualität"@de ;
+    schema:identifier "30.09.02.08" ;
+    :belongsToGroup :D08BCD61438F9E445DD8B67BB45CEA52 .
+
+:87440D73F765FC5682D6BC7B2391ADF6 a :InspectionPoint ;
+    rdfs:label "Einzeliglus, Gruppengrösse bei Kälberhaltung/Verstellen von Tränkekälbern"@de ;
+    schema:identifier "30.10.01.03" ;
+    :belongsToGroup :F17A4750067E78CF491BCF10F1742B8E .
+
+:87512E587E7B8D6019D0C915F52A764E a :InspectionPoint ;
+    rdfs:label "Die Einstreu landwirtschaftlichen Ursprungs hat Bio-Qualität"@de ;
+    schema:identifier "30.09.03.06" ;
+    :belongsToGroup :E4F624120BD0145422E1216DF448FBC0 .
+
+:879995BC743EC0AED71D3B1D732B6D77 a :InspectionPoint ;
+    rdfs:label "Fische mind. 2/3 der Lebensdauer auf dem Betrieb"@de ;
+    schema:identifier "30.22.29" ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:88F052CE4A12D102E148C6A04111A9D6 a :InspectionPoint ;
+    rdfs:label "Anforderungen Bio Suisse Tiergesundheit eingehalten"@de ;
+    schema:identifier "30.07.01.01" ;
+    :belongsToGroup :88F16A05DA3010B9142C03BC0C3718F6 .
+
+:896165176B7266689695E66171984276 a :InspectionPoint ;
+    rdfs:label "Keine Systeme aus Kunststoff zur Gewinnung von Wabenhonig"@de ;
+    schema:identifier "30.21.07.02" ;
+    :belongsToGroup :A704423CC8A44F8787347E08E93D5A51 .
+
+:898BEB71136AA31F55DA66713C1E17DD a :InspectionPoint ;
+    rdfs:label "Gibt es auf dem Betrieb Masttauben?"@de ;
+    schema:identifier "30.09.0g" ;
+    :belongsToGroup :729FE5417AE7261E0AA69F0748ECE2C7 .
+
+:89991341CA6F31754120E96AC7695508 a :InspectionPoint ;
+    rdfs:label "Erst die 3. Generationen nach Zukauf oder Umstellung darf mit der Knospe vermarktet werden"@de ;
+    schema:identifier "30.10.06.01" ;
+    :belongsToGroup :8E476792713FCD89DE9A521C412F57AE .
+
+:89B3A9E382EF9A3EBEEA2C840CD9EA81 a :InspectionPoint ;
+    rdfs:label "Nicht bodengebundene Produktion: Bedingungen zur Pacht und Miete von Gebäude bzw. Räumlichkeiten"@de ;
+    schema:identifier "30.01.15" ;
+    rdfs:comment "Bedingungen zur Pacht und Miete von Gebäude bzw. Räumlichkeiten für die nicht bodengebundene Produktion sind eingehalten (Pilzproduktion, Insektenzucht, Grünsprossenproduktion)."@de ;
+    :belongsToGroup :0D30241DE81845F45F361B28AC025ADB .
+
+:89B50DE593885A62DF8827A3ECE3B712 a :InspectionPoint ;
+    rdfs:label "Wasseraufnahme von offener Wasserfläche"@de ;
+    schema:identifier "30.09.04.05" ;
+    :belongsToGroup :6A71721990F82EAD281571E5D580B406 .
+
+:8A2822578DD714A63B25137B6141EA4A a :InspectionPoint ;
+    rdfs:label "Futteraufnahme auf Weide"@de ;
+    schema:identifier "30.09.05.05" ;
+    :belongsToGroup :BCAC4C396E82833E0E307A6D4B6B17D7 .
+
+:8A4E747A751224AA4E6EB8528E79543D a :InspectionPoint ;
+    rdfs:label "Maximale Herdengrössen eingehalten"@de ;
+    schema:identifier "30.09.02.02" ;
+    :belongsToGroup :D08BCD61438F9E445DD8B67BB45CEA52 .
+
+:8A50F762F672AEF55893F87AA0C232D6 a :InspectionPoint ;
+    rdfs:label "Unverzügliches Ausnehmen oder Verarbeiten der getöteten Tiere"@de ;
+    schema:identifier "30.22.28" ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:8BF3593FD2A27051965197AC6A1DBD33 a :InspectionPoint ;
+    rdfs:label "Anforderungen der Richtlinien für Imkereierzeugnisse (Teil 3) eingehalten"@de ;
+    schema:identifier "30.21.08.01" ;
+    :belongsToGroup :58426DD48CB7B5B4CFB1F94042F2169D .
+
+:8C1FFB71E8B6836E34E7216FFD856822 a :InspectionPoint ;
+    rdfs:label "Färbende Futterzusatzstoffe werden deklariert"@de ;
+    schema:identifier "30.22.30" ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:8C84248930AB9260A9E9EB73B495B6F6 a :InspectionPoint ;
+    rdfs:label "Nur zugelassene Desinfektionsmittel /Reinigungsmittel eingesetzt"@de ;
+    schema:identifier "30.22.24" ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:8D04BD1D1ECE7089DFEE631269D8D879 a :InspectionPoint ;
+    rdfs:label "Vermarktung Schweine, Bestätigung Mitgliedschaft"@de ;
+    schema:identifier "30.35.03" ;
+    rdfs:comment "Ab 01.04.2021: Der Knospe-Betrieb hält Schweine, die als Bio-Tiere in den lizenzierten Handel bzw. an lizenzierte Verarbeiter vermarktet werden und ist Mitglied bei einer branchenanerkannten Plus-Gesundheitsprogramm** *IG Bio Schweine Schweiz/IG BSS) ** Schweinegesundheitsdienst SGD ** Qualiporc"@de ;
+    :belongsToGroup :3C2398A1F95664E98100C4911AC1346A .
+
+:8F50077F1266E093A1589CF6854C93B4 a :InspectionPoint ;
+    rdfs:label "Schafe Bio Suisse Anforderungen eingehalten"@de ;
+    schema:identifier "30.10.04.01" ;
+    :belongsToGroup :56B275B28E378DD0EE2D47F105FAE19E .
+
+:90C79D1FFDADC957A22D7139522D1F01 a :InspectionPoint ;
+    rdfs:label "Bio Suisse | Distanzlimite Recyclingdüngerzufuhr"@de ;
+    schema:identifier "30.02.01.03" ;
+    rdfs:comment "Recyclingdüngerzufuhr Distanzlimite Bio Suisse eingehalten"@de ;
+    :belongsToGroup :5128468FE5735B5A31490ED676699C0E .
+
+:926E2C3842F075FE84C5ADC605E97F19 a :InspectionPoint ;
+    rdfs:label "Selbstdeklaration Massnahmenkatalog Biodiversität ausgefüllt"@de ;
+    schema:identifier "30.26.02" ;
+    :belongsToGroup :2FE2011E4C15B768627081991CA0D0C7 .
+
+:92980628A2E2B6A7C59510692B6ED2E7 a :InspectionPoint ;
+    rdfs:label "Anforderungen Bio Suisse bezüglich Nährstoffbilanz, Wegfuhr, N-Intensität, Biogasanlagen eingehalten"@de ;
+    schema:identifier "30.02.03.01" ;
+    rdfs:comment "Anforderungen Bio Suisse: - Keine Geltendmachung Düngerabgabe in Suisse Bilanz bei Abgabe an Nichtbiobetrieb - N-Versorgung laut Suisse Bilanz unter 100% - Mind. 50% des eigenen Hofdüngers können auf dem Betrieb ausgebracht werden - Bei Abgabe von Hofdünger an Biogasanlage, Vertrag mit Biobetrieb (Endabnehmer) abgeschlossen"@de ;
+    :belongsToGroup :7EC7A17DE4E76BEBAC003AE9E0AEEEDC .
+
+:94B55EB71D539164DFB0F75FE3A233B6 a :InspectionPoint ;
+    rdfs:label "Krankheitsvorsorge entspricht den Richtlinien"@de ;
+    schema:identifier "30.10.06.02" ;
+    :belongsToGroup :8E476792713FCD89DE9A521C412F57AE .
+
+:952DA6D7C3E669EF035D7B6144B56AD8 a :InspectionPoint ;
+    rdfs:label "Die Wärmedämmung der Zuchträume entspricht den Anforderungen"@de ;
+    schema:identifier "30.10.06.06" ;
+    :belongsToGroup :8E476792713FCD89DE9A521C412F57AE .
+
+:96B329ABC9F3FEA8F431C0BFD827F552 a :InspectionPoint ;
+    rdfs:label "Gibt es Junghähne, Zweinutzungs- und Rassegeflügel oder Pouletmast-Hybridlinien auf dem Betrieb?"@de ;
+    schema:identifier "30.09.0b" ;
+    :belongsToGroup :729FE5417AE7261E0AA69F0748ECE2C7 .
+
+:96C0959DD6A27C8BBA08B9727DCD79FE a :InspectionPoint ;
+    rdfs:label "Antrittskontrolle angemeldet oder durchgeführt"@de ;
+    schema:identifier "30.09.02.11" ;
+    rdfs:comment "Antrittskontrolle anmeldet oder durchgeführt"@de ;
+    :belongsToGroup :D08BCD61438F9E445DD8B67BB45CEA52 .
+
+:974B36078D60537EAF2723D43661D847 a :InspectionPoint ;
+    rdfs:label "Weitere oenologische Verfahren sind gemäss Bio Suisse Richtlinien erlaubt."@de ;
+    schema:identifier "30.20:KE.05.05" ;
+    rdfs:comment "Erlaubte Verarbeitungsverfahren gemäss Bio Suisse: <<Traditionelle Weinbereitungsverfahren << Maischeerhitzung bis 65 °C <<Schönung << Klärung <<Filtration (einschliesslich Mikrofiltration, Porengrösse mind. 0,2 Mikrometer) << Vakuumverdampfung, Umkehrosmose (beim Einsatz dieser beiden Verfahren zur Aufkonzentrierung des Traubenmostes ist die Zugabe von Zucker, Traubenmostkonzentrat oder rektifiziertem Traubenmostkonzentrat nicht zulässig). <<Kühlung zur Weinsteinentfernung Nicht zugelassen: Nano- und Ultrafiltration"@de ;
+    :belongsToGroup :8E4DB464062EFE47196A119C186D7BFE .
+
+:977E5FD0A286D90FB6FAD5DFE83884CF a :InspectionPoint ;
+    rdfs:label "Nur knospekonforme Futtermittel gelagert"@de ;
+    schema:identifier "30.07.03.07" ;
+    :belongsToGroup :B468B50BCA672D1D05DDF9A009BF12A8 .
+
+:986DC926EB82E8B0972C42149BC784B7 a :InspectionPoint ;
+    rdfs:label "Anforderungen an Stallmasse / Aussenklimabereich / Weide eingehalten"@de ;
+    schema:identifier "30.09.05.01" ;
+    :belongsToGroup :BCAC4C396E82833E0E307A6D4B6B17D7 .
+
+:9C62BBBE155E6B7F54D50B52CDDB0327 a :InspectionPoint ;
+    rdfs:label "Ziegen: Anforderungen Bio Suissse"@de ;
+    schema:identifier "30.10.03.01" ;
+    rdfs:comment "Ziegen: Anforderungen Bio Suisse"@de ;
+    :belongsToGroup :6460315B408464DD8DD03C03D4CAEEE1 .
+
+:A0B1AE52186583DE573F0280B7C3983E a :InspectionPoint ;
+    rdfs:label "Netzgehege vorschriftsmässig imprägniert"@de ;
+    schema:identifier "30.22.35" ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:A1733E16F73FEBEF01AF399F0B508DA0 a :InspectionPoint ;
+    rdfs:label "Die Schädlingsbekämpfung und Desinfektion entsprechen den Richtlinien"@de ;
+    schema:identifier "30.10.06.04" ;
+    :belongsToGroup :8E476792713FCD89DE9A521C412F57AE .
+
+:A29239539ACFB751B88B6B9ACCD6B45C a :InspectionPoint ;
+    rdfs:label "Bewilligung der MKA betreffend Betriebsdefinition"@de ;
+    schema:identifier "30.01.10" ;
+    rdfs:comment "Bewilligung der MKA betreffend Betriebsdefinition (Betriebsteilung, Verbindungen zu nicht biologischen Betrieben) ist vorhanden und die Auflagen sind eingehalten"@de ;
+    :belongsToGroup :0D30241DE81845F45F361B28AC025ADB .
+
+:A297935E0B1C01C6182196E63277DDFC a :InspectionPoint ;
+    rdfs:label "Anforderungen BioV: Behandlungs-, Saatgutjournal, Tierbestandesverz., Abdrift, Gewässerschutz, Hydro"@de ;
+    schema:identifier "30.41.04" ;
+    rdfs:comment "Anforderungen BioV: Behandlungs-, Saatgutjournal, Tierbestandesverz., Abdrift, Gewässerschutz, Hydrokultur"@de,
+        "Hier werden Verstösse gegen die BioV beurteilt, für welche im Sanktionsreglement eine zusätzliche oder unterschiedliche Sanktionierung für Bio Suisse definiert ist: 09.01.06 Abdrift 09.03.01 Saat- und Pflanzgutjournal 09.04.01 Hydrokultur 09.07.01.01 Tierbestandesjournal 09.07.01.02 Behandlungsjournal"@de ;
+    :belongsToGroup :95EB6C3A108DD9F66DDE32EDAB9E8791 .
+
+:A463B5DDC7BEF0BB8E0FEFB05565E0DB a :InspectionPoint ;
+    rdfs:label "Junghennen, Jung- und Zweinutzungshähne (ab 500 Tiere): Aufstallungssystem"@de ;
+    schema:identifier "30.09.01.03" ;
+    rdfs:comment "Junghennen, Jung- und Zweinutzungshähne (ab 500 Tiere): Aufstallungssystem mit mehreren Etagen und Entmistung"@de ;
+    :belongsToGroup :964E275EF01432FAE52DF8FF9A9B73F0 .
+
+:A495EEF0914B8DA70566746A23050A0A a :InspectionPoint ;
+    rdfs:label "Ernteaufzeichnungen vorhanden: Datum, Menge, Anzahl Völker"@de ;
+    schema:identifier "30.21.03.01" ;
+    :belongsToGroup :3AEF2BCAE468D57256F7BC7A1099FB6B .
+
+:A52314443C1C4A206D5D97CE58A51B33 a :InspectionPoint ;
+    rdfs:label "Dokumentation"@de ;
+    schema:identifier "30.22.12" ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:A67E2596571000F84ABC43F510F838D6 a :InspectionPoint ;
+    rdfs:label "Einstreu der begehbaren Fläche im Innenbereich"@de ;
+    schema:identifier "30.09.06.05" ;
+    rdfs:comment "Mind. 50 % der Stallgrundfläche ist ausreichend eingestreut."@de ;
+    :belongsToGroup :36B72F1700FC4BB27079C52FD0450150 .
+
+:A6DDDD3461FA6B80BBE28B8559AC1D42 a :InspectionPoint ;
+    rdfs:label "Keine Gemüsesorten aus Zellfusionszüchtung verwendet"@de ;
+    schema:identifier "30.03.09" ;
+    rdfs:comment "Keine Gemüsesorten aus Zellfusionszüchtung verwendet (Ausnahmen: Blumenkohl alle Typen, Broccoli, Weisskohl, Wirz, Chicorée)"@de ;
+    :belongsToGroup :B1CC3CB888128888C4D69589BBF895B7 .
+
+:A764F88EA4AA2017F5C5648DCFF70D7F a :InspectionPoint ;
+    rdfs:label "Imkerei auf Landwirtschaftsbetrieb knospekonform"@de ;
+    schema:identifier "30.41.01" ;
+    rdfs:comment "Beanstandungen aus Kontrolle von Rubrik 30.21 werden für Landwirtschaftsbetriebe mit Imkerei hier gesamthaft sanktioniert"@de ;
+    :belongsToGroup :95EB6C3A108DD9F66DDE32EDAB9E8791 .
+
+:A82DF6F52192AA718CCF0E62574ED89C a :InspectionPoint ;
+    rdfs:label "U1/neue Betriebsleitung: 5 Einführungs- und Weiterbildungstage besucht"@de ;
+    schema:identifier "30.01.02" ;
+    rdfs:comment "Dispensationsgründe siehe BS RL Teil II 3.3.3 Übergangsregelung: Familienfremde Mitarbeitende in leitender Funktion, die am 01.01.2023 in den letzten fünf Jahren Erwerbsarbeit mit Verantwortungsbereich auf einem Knospe-Betrieb nachweisen können, sind von dem Besuch der Einführungs- und Weiterbildungskurse befreit. Auszug aus Begriffsdefinition (der BS RL Teil II 1.1): Als Mitarbeitende mit leitender Funktion gelten Personen, die Entscheidungskompetenzen in betrieblichen und finanziellen Bereichen oder Teilbereichen haben (z.B. Betriebsleiter oder Betriebszweigleiter)."@de,
+        "U1/neue Betriebsleitung: fünf Einführungs- bzw. Weiterbildungstage von Bewirtschafter und familienfremden Mitarbeitenden mit leitender Funktion besucht."@de ;
+    :belongsToGroup :0D30241DE81845F45F361B28AC025ADB .
+
+:A840D786ADB72973920872FB24C575ED a :InspectionPoint ;
+    rdfs:label "Alle Lohnverarbeitungsverträge mit nicht zertifizierten Lohnverarbeitern aktuell und vollständig"@de ;
+    schema:identifier "30.42.03" ;
+    :belongsToGroup :2D98005C668028E364267D1AEC76E677 .
+
+:A956475E70781D15A8C3E821ABA4E088 a :InspectionPoint ;
+    rdfs:label "Chemotherapeutische Behandlungen nur in Absprache mit einem spezialisierten Veterinär oder dem FIWI"@de ;
+    schema:identifier "30.22.22" ;
+    rdfs:comment "Chemotherapeutische Behandlungen und Teichdesinfektion nur in Absprache mit einem spezialisierten Veterinär oder dem FIWI"@de ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:A96768503D032E54F90D80CD3CAB0A42 a :InspectionPoint ;
+    rdfs:label "Werte Wassergüte: (pH, Sauerstoff, Ammoniak; Proben >= 1 mal pro Monat)"@de ;
+    schema:identifier "30.22.05" ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:AB0D090000FC36574A9C64431505FD11 a :InspectionPoint ;
+    rdfs:label "Strukturen, Sitzgelegenheiten/Sitzstangen und Bademöglichkeiten"@de ;
+    schema:identifier "30.09.06.03" ;
+    :belongsToGroup :36B72F1700FC4BB27079C52FD0450150 .
+
+:AB7D7EA71A31782192E73336BA4AD02B a :InspectionPoint ;
+    rdfs:label "Richtlinien AFP-Ringe eingehalten"@de ;
+    schema:identifier "30.08.03" ;
+    rdfs:comment "AFP: Arbeitsteilige Ferkelproduktion"@de,
+        "Anforderungen bezüglich arbeitsteiliger Ferkelproduktion, sog. AFP-Ringe, werden eingehalten (Transportdistanzen, beteiligte Stufen)"@de ;
+    :belongsToGroup :6EDCA6B2922C81D6F2D7248BF6DE9F35 .
+
+:AB9F206F0F3B353E099258D00CDD92C5 a :InspectionPoint ;
+    rdfs:label "Die Einstreu landwirtschaftlichen Ursprungs hat Bio-Qualität"@de ;
+    schema:identifier "30.09.06.07" ;
+    :belongsToGroup :36B72F1700FC4BB27079C52FD0450150 .
+
+:AC6E3C103F97FAD238364468795A53CB a :InspectionPoint ;
+    rdfs:label "Anforderungen Bio Suisse an Hausgarten eingehalten"@de ;
+    schema:identifier "30.04.02" ;
+    rdfs:comment "Richtlinien im Hausgarten eingehalten (Bei ausschliesslicher Selbstversorgung ist die Verwendung von nicht biologischem Pflanz- und Saatgut toleriert)"@de ;
+    :belongsToGroup :8763259E6BBF045D46C9DA21E289848E .
+
+:AE3FC4674814B1FF9EE97BEDAB4CC12E a :InspectionPoint ;
+    rdfs:label "Nicht biologisches betriebseigenes Futter"@de ;
+    schema:identifier "30.07.03.14" ;
+    :belongsToGroup :B468B50BCA672D1D05DDF9A009BF12A8 .
+
+:B022EBC7849EB0BB9C1905044200D22D a :InspectionPoint ;
+    rdfs:label "Zeitlicher Zugang zur Weide i.O. / an 50% der Lebenstage Zugang zur Weide"@de ;
+    schema:identifier "30.09.01.13" ;
+    :belongsToGroup :964E275EF01432FAE52DF8FF9A9B73F0 .
+
+:B0CA9B64FBCDCAD179B51207E8A7E0BE a :InspectionPoint ;
+    rdfs:label "Kein Landabtausch mit nicht-biologischen Betrieben"@de ;
+    schema:identifier "30.01.06" ;
+    rdfs:comment "Eigenes Land darf nur langfristig (d. h. in der Regel mindestens für 6 Jahre) an nicht biologische Betriebe verpachtet werden. Kürzere Verträge werden akzeptiert, wenn sie vom Kanton anerkannt sind. Eine nur kurzfristige Verpachtung oder eine Verpachtung zwecks «chemischer Sanierung» ist unzulässig."@de,
+        "Kein Landabtausch, also keine Zupacht und Nutzung von bisher nicht biologisch genutzten Flächen, die nicht über mindestens 3 Jahre vom Knospe-Betrieb bewirtschaftet werden sowie keine Abgabe von eigenem Land an nicht biologische Betriebe, die nicht mindestens 3 Jahre lang vom nicht biologischen Betrieb bewirtschaftet werden und vertraglich Richtlinien-konform geregelt sind."@de ;
+    :belongsToGroup :0D30241DE81845F45F361B28AC025ADB .
+
+:B14B3611D49F57DD386E723B259361DF a :InspectionPoint ;
+    rdfs:label "Höchstbestand pro Stalleinheit eingehalten"@de ;
+    schema:identifier "30.09.01.01" ;
+    :belongsToGroup :964E275EF01432FAE52DF8FF9A9B73F0 .
+
+:B3A0FEC580AF58E13D7BC9FBB3CA0C65 a :InspectionPoint ;
+    rdfs:label "Keine Altlasten"@de ;
+    schema:identifier "30.01.12" ;
+    :belongsToGroup :0D30241DE81845F45F361B28AC025ADB .
+
+:B5CC7275EA03DA906AD2698CBDA0CE2A a :InspectionPoint ;
+    rdfs:label "Schlechtwetterauslauf ab 500 Legehennen"@de ;
+    schema:identifier "30.09.01.19" ;
+    :belongsToGroup :964E275EF01432FAE52DF8FF9A9B73F0 .
+
+:B693A83286C26A51AD344E0E722E0F3E a :InspectionPoint ;
+    rdfs:label "Anforderungen der Bio Suisse Richtlinien vollumfänglich eingehalten"@de ;
+    schema:identifier "30.01.01" ;
+    rdfs:comment "Anforderungen in den Richtlinien von Bio Suisse, die nicht als Checkpunkt im Sanktionsreglement aufgeführt sind, werden dennoch vollumfänglich eingehalten"@de ;
+    :belongsToGroup :0D30241DE81845F45F361B28AC025ADB .
+
+:B6DB4CDADB2E163721EE4AF2EEC690DF a :InspectionPoint ;
+    rdfs:label "Alle Zertifikate der beauftragten und zertifizierten Lohnverarbeiter sind aktuell und vollständig"@de ;
+    schema:identifier "30.42.02" ;
+    :belongsToGroup :2D98005C668028E364267D1AEC76E677 .
+
+:B8DD6A67697749659B29816DD8491FEA a :InspectionPoint ;
+    rdfs:label "Schrittweise Umstellung mit Bewilligung der MKA"@de ;
+    schema:identifier "30.01.07" ;
+    :belongsToGroup :0D30241DE81845F45F361B28AC025ADB .
+
+:B93E8057F10BC76A37B55D1EA39E2DF0 a :InspectionPoint ;
+    rdfs:label "Fütterung: Raufutter, Nageobjekte"@de ;
+    schema:identifier "30.10.05.03" ;
+    :belongsToGroup :CFAA4298CFDDBD5D6739E41E50B32F05 .
+
+:B96332D79DFD4ADB75D7F02600CC57E5 a :InspectionPoint ;
+    rdfs:label "Keine Verwendung von Bio an Stelle von Knospe-Pflanzgut"@de ;
+    schema:identifier "30.03.01" ;
+    rdfs:comment "Pflanzgut aus Knospe-Anbau, max. 5% EU-Biojungpflanzen mit Nachweis erlaubt, über 5% EU-Biojungpfl. nur mit AB der Saatgutstelle"@de ;
+    :belongsToGroup :B1CC3CB888128888C4D69589BBF895B7 .
+
+:B9820BB9CB99D37C2697C1E60F79C04E a :InspectionPoint ;
+    rdfs:label "Kastration Mastkaninchen"@de ;
+    schema:identifier "30.10.05.04" ;
+    :belongsToGroup :CFAA4298CFDDBD5D6739E41E50B32F05 .
+
+:B9C40812821451C9FFF223FC8A237966 a :InspectionPoint ;
+    rdfs:label "Vegetatives Vermehrungsmaterial ist knospekonform"@de ;
+    schema:identifier "30.03.03" ;
+    :belongsToGroup :B1CC3CB888128888C4D69589BBF895B7 .
+
+:BA004FC00C5C64200A5D52A11E4650CA a :InspectionPoint ;
+    rdfs:label "Winterkulturen vor Umstellungsbeginn knospekonform angelegt"@de ;
+    schema:identifier "30.03.07" ;
+    rdfs:comment "Winterkulturen vor Umstellungsbeginn Betrieb/Parzelle knospekonform angelegt"@de ;
+    :belongsToGroup :B1CC3CB888128888C4D69589BBF895B7 .
+
+:BC7A6879F092685CC738D60370F4AB68 a :InspectionPoint ;
+    rdfs:label "Herdengrösse max. 250 Tiere"@de ;
+    schema:identifier "30.09.05.02" ;
+    :belongsToGroup :BCAC4C396E82833E0E307A6D4B6B17D7 .
+
+:BC9D34A1900C10787A51F629E3FADF85 a :InspectionPoint ;
+    rdfs:label "Tierschutzvorschriften: Beurteilung Bio Suisse"@de ;
+    schema:identifier "30.41.05" ;
+    :belongsToGroup :95EB6C3A108DD9F66DDE32EDAB9E8791 .
+
+:BF01BB5598F4408EC99CD0E3F0E294A7 a :InspectionPoint ;
+    rdfs:label "Selbstdeklaration Hygienevorschriften"@de ;
+    schema:identifier "30.20.10" ;
+    :belongsToGroup :103ADE81B18BE139B896972CEB81662B .
+
+:C141A9AC9ADAA6E4C64E8AFFB9462D59 a :InspectionPoint ;
+    rdfs:label "Weidegang bei Mastrindern und Mastochsen eingehalten"@de ;
+    schema:identifier "30.10.01.02" ;
+    rdfs:comment "Permanenter Zugang zum Laufhof (Auslauf-Variante RAUS) nicht zulässig ACHTUNG: Übergangsfrist für am 31.12.2011 bestehende Betriebe ist 31.12.2014. Neue Betriebe ab 1.1.2012"@de ;
+    :belongsToGroup :F17A4750067E78CF491BCF10F1742B8E .
+
+:C17840E53CCA39ADE790BD85AD34219F a :InspectionPoint ;
+    rdfs:label "Die durchschnittliche Tageszunahme beträgt bis zum 63. Alterstag maximal 27,5 g."@de ;
+    schema:identifier "30.09.02.07" ;
+    :belongsToGroup :D08BCD61438F9E445DD8B67BB45CEA52 .
+
+:C57CFA7ED42AEEA0640A63659D7BB6B1 a :InspectionPoint ;
+    rdfs:label "Ist Mitglied bei einer Biomilchorganisation oder bei Bio Suisse registriert"@de ;
+    schema:identifier "30.35.02" ;
+    rdfs:comment "Betrieb ist Mitglied bei einer Biomilchorganisation oder bei Bio Suisse registriert (Pflichtmitgliedschaft)"@de,
+        "anerkannte Biomilchorganisationen: - Biomilchpool GmbH - BMR ZMP - IG Biomilch MIBA - PMO Züger/Forster - PROGANA - Verein Biolieferanten Emmi-Biedermann"@de ;
+    :belongsToGroup :3C2398A1F95664E98100C4911AC1346A .
+
+:C6863DD97A644E43241BEE696EBFE229 a :InspectionPoint ;
+    rdfs:label "Minimaler Grasanteil (frisch, siliert oder getrocknet)"@de ;
+    schema:identifier "30.07.03.12" ;
+    :belongsToGroup :B468B50BCA672D1D05DDF9A009BF12A8 .
+
+:C6A5145F2E4E639DB7074E7C919B0ED2 a :InspectionPoint ;
+    rdfs:label "Einheimische Art, Regenbogenforelle oder Ausnahmebewilligung der MKA vorhanden"@de ;
+    schema:identifier "30.22.33" ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:C79ACA326F5C3EEC73CEEF74F17804FC a :InspectionPoint ;
+    rdfs:label "Nur knospekonforme Futtermittel eingesetzt"@de ;
+    schema:identifier "30.07.03.06" ;
+    :belongsToGroup :B468B50BCA672D1D05DDF9A009BF12A8 .
+
+:C8984ECD055F33DEDE7BBD53E713750C a :InspectionPoint ;
+    rdfs:label "Einstreu hat Bio-Qualität"@de ;
+    schema:identifier "30.08.04" ;
+    rdfs:comment "Die Einstreu landwirtschaftlichen Ursprungs hat Bio-Qualität"@de ;
+    :belongsToGroup :6EDCA6B2922C81D6F2D7248BF6DE9F35 .
+
+:C8F82DA30B3C7A54761642C462699BB9 a :InspectionPoint ;
+    rdfs:label "Bei Nichtwiederkäuern nur zugelassene Futtermittel eingesetzt"@de ;
+    schema:identifier "30.07.03.04" ;
+    rdfs:comment "Bio-Mastschweine ab 2022 100% Bio Fütterung"@de ;
+    :belongsToGroup :B468B50BCA672D1D05DDF9A009BF12A8 .
+
+:CAB2E221A7F740A3E9C52A6F36DB814D a :InspectionPoint ;
+    rdfs:label "Eingestreuter Scharrraum"@de ;
+    schema:identifier "30.09.05.04" ;
+    rdfs:comment "Die ganze Bodenfläche im Stall ist ausreichend eingestreut"@de ;
+    :belongsToGroup :BCAC4C396E82833E0E307A6D4B6B17D7 .
+
+:CC320E8EA716B8907F1EC536108410F3 a :InspectionPoint ;
+    rdfs:label "Gattungsspezifische Haltungsanforderungen Kaninchen"@de ;
+    schema:identifier "30.10.05.01" ;
+    rdfs:comment "Gattungsspezifische Haltungsanforderungen Kaninchen erfüllt: Stallflächen, Stallklima, Stallstrukturen entsprechen den Richtlinien"@de ;
+    :belongsToGroup :CFAA4298CFDDBD5D6739E41E50B32F05 .
+
+:CD8FECC441C5FC2B2B612DF85EA98173 a :InspectionPoint ;
+    rdfs:label "Gibt es Truten auf dem Betrieb?"@de ;
+    schema:identifier "30.09.0d" ;
+    :belongsToGroup :729FE5417AE7261E0AA69F0748ECE2C7 .
+
+:CE92ED98D778D8FC5A20AB62BFAA55B1 a :InspectionPoint ;
+    rdfs:label "Einsatz von Tierarzneimittel mit dem Wirkstoff Fluralaner auf tierärztliche Verordnung + AB der MKA"@de ;
+    schema:identifier "30.07.01.02" ;
+    rdfs:comment "Einsatz von chemisch-synthetischen Tierarzneimitteln mit dem Wirkstoff Fluralaner (z. B. Exzolt) gegen Vogelmilben auf tierärztliche Verordnung und mit AB der MKA eingesetzt"@de ;
+    :belongsToGroup :88F16A05DA3010B9142C03BC0C3718F6 .
+
+:D1E823ED0AAA233494DE133E982A587D a :InspectionPoint ;
+    rdfs:label "Eingestreuter Scharrraum"@de ;
+    schema:identifier "30.09.01.09" ;
+    :belongsToGroup :964E275EF01432FAE52DF8FF9A9B73F0 .
+
+:D42D3A3820301E357BDEFEC022F06EDE a :InspectionPoint ;
+    rdfs:label "Sitzstangen im AKB"@de ;
+    schema:identifier "30.09.01.07" ;
+    :belongsToGroup :964E275EF01432FAE52DF8FF9A9B73F0 .
+
+:D734E7A256601D6B2E6CBFAE1340925F a :InspectionPoint ;
+    rdfs:label "Alle Produktelisten der beauftragten zertifizierten Lohnverarbeiter sind aktuell und vollständig"@de ;
+    schema:identifier "30.42.01" ;
+    :belongsToGroup :2D98005C668028E364267D1AEC76E677 .
+
+:DA4FF04398D8719E22D5C00F8BAEC9C2 a :InspectionPoint ;
+    rdfs:label "Keine unerlaubten Zucht- und Vermehrungspraktiken vorgenommen"@de ;
+    schema:identifier "30.21.09.01" ;
+    rdfs:comment "Keine unerlaubten Zucht- und Vermehrungspraktiken vorgenommen (instrumentelle Besamung)"@de ;
+    :belongsToGroup :9E199A8A9965B228B6E267937793C55C .
+
+:DA8B5C637574E024AD58F7249AA059C8 a :InspectionPoint ;
+    rdfs:label "Eier/Jungfische stammen von Knospebetrieben oder mit Nachweis bei konv. Herkunft"@de ;
+    schema:identifier "30.22.02" ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:DB28288188FB253E6D438EF854F9264D a :InspectionPoint ;
+    rdfs:label "Tiere aus Wanderschäferei korrekt vermarktet"@de ;
+    schema:identifier "30.20.11" ;
+    :belongsToGroup :103ADE81B18BE139B896972CEB81662B .
+
+:DB3D3F9E99CB0EE3E00609B0F3D02F0E a :InspectionPoint ;
+    rdfs:label "Nelkenöl ist von kant. Vetrinäramt bewilligt. Einsatz ist dokumentiert."@de ;
+    schema:identifier "30.22.04" ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:DB656AEBA23ABC42BEDE04A85A4EDA9A a :InspectionPoint ;
+    rdfs:label "Künstliche Beleuchtung nur zur Fortpflanzung und max. 16 Stunden pro Tag"@de ;
+    schema:identifier "30.22.38" ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:DBFE1FFB1EBA100687DC0266DFA21C43 a :InspectionPoint ;
+    rdfs:label "Von sämtlichem Bienenwachs für neue Rahmen liegen Wachsanalysen vor"@de ;
+    schema:identifier "30.21.02.01" ;
+    :belongsToGroup :224493757D170B31E1DBDBF99D3EC61F .
+
+:DD14148517555D5001F42DD53D988F97 a :InspectionPoint ;
+    rdfs:label "Zulauf nicht oder nur gering anthropogen belastet"@de ;
+    schema:identifier "30.22.07" ;
+    rdfs:comment "Im Zweifelsfall Wasseranalyse vorweisen, z.B. wenn der Zulauf aus landwirtschaftlich intensiv genutzten Gebieten stammt. Parameter der Wasserprobe gemäss GSchV (SR 814.201 Anh. 2, Anforderungen an die Wasserqualität)"@de ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:DD498EF08CF4EBB1E65034AB9FC5D68F a :InspectionPoint ;
+    rdfs:label "Fische Produktionsmenge erfasst"@de ;
+    schema:identifier "30.22.40" ;
+    rdfs:comment "Menge Fische in kg eingeben, welche im letzten Kalenderjahr vermarktet wurden, alle Qualitäten berücksichtigen (konv., Bio, Bio Suisse)"@de ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:DDB103109D4DF70C47ED1AC3369CF2E3 a :InspectionPoint ;
+    rdfs:label "Gibt es auf dem Betrieb Gänse oder Enten?"@de ;
+    schema:identifier "30.09.0e" ;
+    :belongsToGroup :729FE5417AE7261E0AA69F0748ECE2C7 .
+
+:DDC7D53CE48337A1FDC866DACE47F3D6 a :InspectionPoint ;
+    rdfs:label "Maximale Herdengrössen eingehalten"@de ;
+    schema:identifier "30.09.03.02" ;
+    :belongsToGroup :E4F624120BD0145422E1216DF448FBC0 .
+
+:DE72B41AF4103B5A580D07CABC01E5D0 a :InspectionPoint ;
+    rdfs:label "Herden im Stall unterteilt"@de ;
+    schema:identifier "30.09.01.15" ;
+    :belongsToGroup :964E275EF01432FAE52DF8FF9A9B73F0 .
+
+:DEACE26AFBE353C01F55048A1001083A a :InspectionPoint ;
+    rdfs:label "Bekämpfung der Bienenkrankheiten mit erlaubten Mitteln"@de ;
+    schema:identifier "30.21.06.01" ;
+    rdfs:comment "Bekämpfung der Bienenkrankheiten mit erlaubten Mitteln gemäss FiBL-Betriebsmittelliste"@de ;
+    :belongsToGroup :7CFFFDAB1E42D4095836C5A1305B4B72 .
+
+:E01EA360550564F887D2E7D2F6558A04 a :InspectionPoint ;
+    rdfs:label "Schlaggrösse und Gesamtbestand"@de ;
+    schema:identifier "30.09.06.01" ;
+    rdfs:comment "Schlaggrösse max. 25 Brutpaare Gesamtbestand max. 500 Brutpaare"@de ;
+    :belongsToGroup :36B72F1700FC4BB27079C52FD0450150 .
+
+:E16EC6661E189E6CF66B2B22473FEE6F a :InspectionPoint ;
+    rdfs:label "Maximalmenge Kupfer pro Hektar eingehalten"@de ;
+    schema:identifier "30.02.02.04" ;
+    :belongsToGroup :8352D423E081CA29EA0BDE34382861FB .
+
+:E2B2020E0C5CCC3038E6042E84B50D67 a :InspectionPoint ;
+    rdfs:label "Mind. 50 % der offenen Ackerfläche ist im Winter begrünt"@de ;
+    schema:identifier "30.02.04.04" ;
+    :belongsToGroup :F4C96FDF9E77A2BEA2D3ACD651764BD2 .
+
+:E39BAE1E8E2D0CD64D939C1AB4CEB8AC a :InspectionPoint ;
+    rdfs:label "Schutz gegen Ein- und Auswanderung vorhanden"@de ;
+    schema:identifier "30.22.15" ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:E3F4241F2404E6DF4072064364BDA6E9 a :InspectionPoint ;
+    rdfs:label "Nur auf Betriebsmittelliste aufgeführte Futterkonservierungsmittel eingesetzt"@de ;
+    schema:identifier "30.07.03.10" ;
+    :belongsToGroup :B468B50BCA672D1D05DDF9A009BF12A8 .
+
+:E612588DDA8AF2216D87DC8B3F06785F a :InspectionPoint ;
+    rdfs:label "Deklarationsvorschriften Bio Suisse eingehalten"@de ;
+    schema:identifier "30.20.07" ;
+    :belongsToGroup :103ADE81B18BE139B896972CEB81662B .
+
+:E6201326EBE4E977C0A2391B5CF2A242 a :InspectionPoint ;
+    rdfs:label "Rindvieh Anforderungen Bio Suisse eingehalten"@de ;
+    schema:identifier "30.10.01.01" ;
+    :belongsToGroup :F17A4750067E78CF491BCF10F1742B8E .
+
+:E69E6A3558914DC4F73B1A45B1FEEA71 a :InspectionPoint ;
+    rdfs:label "Ausnahmebewilligung für nicht Knospe Ausgangsmaterial"@de ;
+    schema:identifier "30.03.05" ;
+    rdfs:comment "Ausnahmebewilligung für nicht Knospe Ausgangsmaterial vor Bestellung bzw. Saat/Pflanzung eingeholt"@de ;
+    :belongsToGroup :B1CC3CB888128888C4D69589BBF895B7 .
+
+:E6A9D14099A44327943CB09ADF2C7AA0 a :InspectionPoint ;
+    rdfs:label "Volumen und Beschaffenheit der Teiche / Becken bestimmt, Dokumentation vorhanden"@de ;
+    schema:identifier "30.22.10" ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:E73242996D3B93A8418C2A142A7722C1 a :InspectionPoint ;
+    rdfs:label "Bio Suisse Anforderungen bei Hobbytierhaltung eingehalten"@de ;
+    schema:identifier "30.07.01.05" ;
+    :belongsToGroup :88F16A05DA3010B9142C03BC0C3718F6 .
+
+:E899C3ED33E92708295E027B3F4B8EE2 a :InspectionPoint ;
+    rdfs:label "Kupieren der Schwänze"@de ;
+    schema:identifier "30.10.04.02" ;
+    rdfs:comment "Kupieren der Schwänze von Lämmern nur mit tierärztlicher Verordnung, medizinischer Notwendigkeit und mit Schmerzausschaltung"@de ;
+    :belongsToGroup :56B275B28E378DD0EE2D47F105FAE19E .
+
+:E938A39B8807D04607EE410F6EA1260B a :InspectionPoint ;
+    rdfs:label "Hygienemassnahmen, Behandlungsmassnahmen Dokumentation vollständig"@de ;
+    schema:identifier "30.22.21" ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:E950A12500AA92019F63EA9F8B8BA9CB a :InspectionPoint ;
+    rdfs:label "Futter für karnivore Fische mit Hilfsstoffknospe ausgezeichnet"@de ;
+    schema:identifier "30.22.19" ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:EA3DA8974CF84F14869925967505CEE3 a :InspectionPoint ;
+    rdfs:label "Körnergemisch in Einstreu/ Körneranteil"@de ;
+    schema:identifier "30.09.01.16" ;
+    :belongsToGroup :964E275EF01432FAE52DF8FF9A9B73F0 .
+
+:EAEC7914894B32AE73746D17923EF22B a :InspectionPoint ;
+    rdfs:label "Kennzeichnung und Anpreisung von nicht biologischen Produkten entspricht den Richtlinien"@de ;
+    schema:identifier "30.20.13" ;
+    :belongsToGroup :103ADE81B18BE139B896972CEB81662B .
+
+:EAF6743178442858891FC94AAF54F9E4 a :InspectionPoint ;
+    rdfs:label "Ernährung der Insekten entspricht den Richtlinien"@de ;
+    schema:identifier "30.10.06.07" ;
+    :belongsToGroup :8E476792713FCD89DE9A521C412F57AE .
+
+:ED83C3B21E5EE601BE331F6E34BD4C32 a :InspectionPoint ;
+    rdfs:label "Offene Kreislaufanlage"@de ;
+    schema:identifier "30.22.36" ;
+    rdfs:comment "Keine Kreislaufanlage (Indooranlage mit weniger als 10 % Wasseraustausch pro Tag) oder Anlage in geschlossenen Räumen (Ausnahmen: Brut- und Jungtierstationen, Erzeugung von Futterorganismen)"@de ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:EF0E85E3C67A07956A222BF12B938C05 a :InspectionPoint ;
+    rdfs:label "Unverzügliche Entnahme toter Fische"@de ;
+    schema:identifier "30.22.26" ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:EF39DEE682894D93BCC37B9F2483F0E8 a :InspectionPoint ;
+    rdfs:label "Verwendung von nicht Knospe Saatgut/Saatkartoffeln/Futterbau Eigenmischungen"@de ;
+    schema:identifier "30.03.02" ;
+    :belongsToGroup :B1CC3CB888128888C4D69589BBF895B7 .
+
+:F009E181534E3EBE2EEE42A9F8594007 a :InspectionPoint ;
+    rdfs:label "Anforderungen Bio Suisse Stallmasse eingehalten"@de ;
+    schema:identifier "30.09.01.05" ;
+    :belongsToGroup :964E275EF01432FAE52DF8FF9A9B73F0 .
+
+:F04EA3FCE309E39DE8A8749E32267F4D a :InspectionPoint ;
+    rdfs:label "Die Betäubungs- und Tötungsmethoden entsprechen der TSchV"@de ;
+    schema:identifier "30.22.27" ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:F16682D0383858EFC9041BD231EE617B a :InspectionPoint ;
+    rdfs:label "Staubbad vorhanden und genügend"@de ;
+    schema:identifier "30.09.03.04" ;
+    :belongsToGroup :E4F624120BD0145422E1216DF448FBC0 .
+
+:F186C4E0CC4FADDC5358A8144989C0BC a :InspectionPoint ;
+    rdfs:label "Belege für Zukauf Rohstoffe (Bio Suisse) vorhanden"@de ;
+    schema:identifier "30.20.02" ;
+    rdfs:comment "Auf Lieferscheinen und Rechnungen der Lieferanten muss der Hinweis auf die Bioqualität (CH/ EU-Bio, Knospe, Demeter ...) vermerkt sein. Ein Lieferschein ist nur korrekt, wenn die Angabe der Bioqualität vollständig ist. Dies gilt auch für Lieferungen von Landwirtschaftsbetrieben."@de ;
+    :belongsToGroup :103ADE81B18BE139B896972CEB81662B .
+
+:F1E7938BDE4D5ED40C21C0251F979F37 a :InspectionPoint ;
+    rdfs:label "Einstreu und Einstreufläche"@de ;
+    schema:identifier "30.09.02.05" ;
+    :belongsToGroup :D08BCD61438F9E445DD8B67BB45CEA52 .
+
+:F1E7B6F07C216C3555C0AAD78D183B4B a :InspectionPoint ;
+    rdfs:label "Konservierung mit Schwefel ist gemäss Bio Suisse Richtlinien konform."@de ;
+    schema:identifier "30.20:KE.05.02" ;
+    rdfs:comment "Gesamt-SO2-Gehalt : Höchstgehalte gemäss Bio Suisse: • Rotwein : Restzuckergehalt < 2 g/l = max. 100 mg/l - Restzuckergehalt 2-5 g/l = max. 120 mg/l - Restzuckergehalt > 5g/l = max. 170 mg/l • Weisswein/Roséwein : Restzuckergehalt < 2-5g/l = max. 120 mg/l - Restzuckergehalt > 5g/l = max. 170 mg/l"@de ;
+    :belongsToGroup :8E4DB464062EFE47196A119C186D7BFE .
+
+:F1EAF47B23C079B632E33AF494D8F717 a :InspectionPoint ;
+    rdfs:label "An Weidetagen 25% des Tagesbedarfs durch Weidefutter gedeckt"@de ;
+    schema:identifier "30.10.01.04" ;
+    :belongsToGroup :F17A4750067E78CF491BCF10F1742B8E .
+
+:F4E358B4ECFB14A3CAFE943C965B0FBD a :InspectionPoint ;
+    rdfs:label "Keine Lohnarbeit mit unerlaubten Hilfsstoffen auf Drittbetrieben"@de ;
+    schema:identifier "30.01.09" ;
+    :belongsToGroup :0D30241DE81845F45F361B28AC025ADB .
+
+:F52C4C2692A98A2AC69DDBFC142C9CB0 a :InspectionPoint ;
+    rdfs:label "Handel auf Anbaubetrieben mit zusätzlicher Kontrolle nach Massstäben von Verarbeitung und Handel"@de ;
+    schema:identifier "30.20.09" ;
+    rdfs:comment "Handel auf Anbaubetrieben (Handel= Zukauf und Weiterverkauf von Produkten an den Detail- und Grosshandel): Knospe-Gemüse-/Früchteproduzent handelt mit nicht biologischen Früchten/Gemüse und hat eine zusätzliche Kontrolle nach den Massstäben von Verarbeitung und Handel."@de ;
+    :belongsToGroup :103ADE81B18BE139B896972CEB81662B .
+
+:F537731B5A07E912326AB50CE432175F a :InspectionPoint ;
+    rdfs:label "Auslaufvorschriften Ferkel eingehalten"@de ;
+    schema:identifier "30.08.02" ;
+    :belongsToGroup :6EDCA6B2922C81D6F2D7248BF6DE9F35 .
+
+:F5DE144F382CF10C4CEA17E0149D06EE a :InspectionPoint ;
+    rdfs:label "Die Einstreu landwirtschaftlichen Ursprungs hat Bio-Qualität"@de ;
+    schema:identifier "30.09.05.06" ;
+    rdfs:comment "Die Einstreu landwirtschaftlichen Ursprungs hat Bio- Qualität"@de ;
+    :belongsToGroup :BCAC4C396E82833E0E307A6D4B6B17D7 .
+
+:F73A24668C66A8B0313C1B4B2723BC40 a :InspectionPoint ;
+    rdfs:label "Anforderungen an Stallmasse / Aussenklimabereich eingehalten"@de ;
+    schema:identifier "30.09.02.01" ;
+    :belongsToGroup :D08BCD61438F9E445DD8B67BB45CEA52 .
+
+:F7E16EB3D0DD8C7080D7FB11EECBF364 a :InspectionPoint ;
+    rdfs:label "Bedingungen zur Pacht und Miete von Gebäude für die bodengebundene Produktion sind eingehalten"@de ;
+    schema:identifier "30.01.14" ;
+    rdfs:comment "Bedingungen zur Pacht und Miete von Gebäude für die bodengebundene Produktion sind eingehalten. Für per 1.1.2023 bestehende Pacht- oder Mietverträge von Gebäuden, die nicht den Anforderungen entsprechen, gilt eine Übergangsfrist bis 31.12.2028."@de,
+        "Diese Anforderungen an die Miete und Pacht von Gebäuden gelten nicht für Wohneinheiten und nicht landwirtschaftlich genutzte Gebäude."@de ;
+    :belongsToGroup :0D30241DE81845F45F361B28AC025ADB .
+
+:F80C05340CFC132E89D67841EC9659C0 a :InspectionPoint ;
+    rdfs:label "Bienenhaus an Dritte vermietet"@de ;
+    schema:identifier "30.01.13" ;
+    rdfs:comment "Das vorhandene Bienenhaus auf einem Knospe-Betrieb ist an eine Drittperson vermietet zur nicht biologischen Bewirtschaftung"@de ;
+    :belongsToGroup :0D30241DE81845F45F361B28AC025ADB .
+
+:F93A49FEA77BAAB7043D79F33836D44A a :InspectionPoint ;
+    rdfs:label "Fütterungs- und Tränkeeinrichtungen und Raumklima"@de ;
+    schema:identifier "30.09.06.06" ;
+    rdfs:comment "Fütterungs- und Tränkeeinrichtungen sind ausreichend Das Raumklima entspricht den Anforderungen"@de ;
+    :belongsToGroup :36B72F1700FC4BB27079C52FD0450150 .
+
+:F9E4C79699BADB6A5434983443B964C1 a :InspectionPoint ;
+    rdfs:label "Einstreu und Einstreufläche"@de ;
+    schema:identifier "30.09.03.05" ;
+    :belongsToGroup :E4F624120BD0145422E1216DF448FBC0 .
+
+:FA4B11F48874A483A608611C2A688B98 a :InspectionPoint ;
+    rdfs:label "Anforderungen an Stallmasse/ AKB/ Weide/ Sitzstangen eingehalten, max. Besatzdichte eingehalten"@de ;
+    schema:identifier "30.09.03.01" ;
+    rdfs:comment "Anforderungen an Stallmasse/ AKB/ Weide/ Sitzstangen und Podeste eingehalten, max. Besatzdichte eingehalten"@de ;
+    :belongsToGroup :E4F624120BD0145422E1216DF448FBC0 .
+
+:FB922159BF4A2AD145BCE88E990E40F1 a :InspectionPoint ;
+    rdfs:label "Anbaupausen eingehalten"@de ;
+    schema:identifier "30.02.04.01" ;
+    :belongsToGroup :F4C96FDF9E77A2BEA2D3ACD651764BD2 .
+
+:FC8778696F4FC0EB9A3746A87C1F2FBE a :InspectionPoint ;
+    rdfs:label "Salmonellenuntersuchung vorhanden"@de ;
+    schema:identifier "30.20.12" ;
+    rdfs:comment "bei Eiervermarktung und wenn Hühnerbestand kleiner 1000 Tiere. wenn > als 1000 Hühner BioV Checkpunkt verwenden."@de ;
+    :belongsToGroup :103ADE81B18BE139B896972CEB81662B .
+
+:FCA5E06051507F8635AE231A68AD5A2B a :InspectionPoint ;
+    rdfs:label "Maximale Besatzdichte der Teiche / Becken"@de ;
+    schema:identifier "30.22.11" ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:FCD0908F5F9E3BD5BA5E156AD1066923 a :InspectionPoint ;
+    rdfs:label "Nur zugelassene Heilmittel eingesetzt bei Selbstbehandlung"@de ;
+    schema:identifier "30.22.23" ;
+    :belongsToGroup :8A47573888B2DF2B71C1DD92AA4CAFF9 .
+
+:FCFFCAC7D5FE1B43921A194444E63400 a :InspectionPoint ;
+    rdfs:label "Fruchtfolge, Anteil ganzjähriger Begrünung eingehalten"@de ;
+    schema:identifier "30.02.04.02" ;
+    rdfs:comment "Mindestens 20 % der Fruchtfolgefläche sind mit Kunstwiese, Saum auf Ackerflächen, Rotations- oder Buntbrache ganzjährig begrünt."@de ;
+    :belongsToGroup :F4C96FDF9E77A2BEA2D3ACD651764BD2 .
+
+:FF29B375305DE2FD6C30DAA261E98197 a :InspectionPoint ;
+    rdfs:label "Kotgrube abgetrennt / alle 14 Tage entmistet"@de ;
+    schema:identifier "30.09.01.11" ;
+    :belongsToGroup :964E275EF01432FAE52DF8FF9A9B73F0 .
+
