@@ -8,15 +8,6 @@
         "Prot.anim. - oies domestiques-canards"@fr,
         "Prot.anim. - oche domestiche-anatre"@it ;
     schema:identifier "03.41_v1" ;
-    rdfs:comment """
-Tierschutz - Hausgänse-Enten
-"""@de,
-        """
-Prot.anim. - oies domestiques-canards
-"""@fr,
-        """
-Prot.anim. - oche domestiche-anatre
-"""@it ;
     :conjunctIdentifier "03.41_v1" ;
     :hierarchyLevel "3" .
 
@@ -149,15 +140,6 @@ Lo studio veterinario svolge correttamente il compito di sorveglianza MVet?
         "Prot.anim. - bovins, avec buffles et yacks"@fr,
         "Prot.anim. - bovini, con fufali e yak"@it ;
     schema:identifier "03.30_v1" ;
-    rdfs:comment """
-Tierschutz - Rinder, mit Wasserbüffeln und Yaks
-"""@de,
-        """
-Prot.anim. - bovins, avec buffles et yacks
-"""@fr,
-        """
-Prot.anim. - bovini, con fufali e yak
-"""@it ;
     :conjunctIdentifier "03.30_v1" ;
     :hierarchyLevel "3" .
 
@@ -167,15 +149,6 @@ Prot.anim. - bovini, con fufali e yak
         "animali da ingrasso e animali giovani"@it ;
     schema:identifier "31" ;
     schema:isPartOf :38234EBF19B24BA79C14948CB183F4DD ;
-    rdfs:comment """
-Masttiere und Jungtiere
-"""@de,
-        """
-animaux d'engraissement et jeunes animaux
-"""@fr,
-        """
-animali da ingrasso e animali giovani
-"""@it ;
     :conjunctIdentifier "03.43_v1, 31" ;
     :hierarchyLevel "4" .
 
@@ -280,15 +253,6 @@ I documenti necessari dello studio veterinario sono disponibili?
         "Prot.anim. - moutons"@fr,
         "Prot.anim. - ovini"@it ;
     schema:identifier "03.33_v1" ;
-    rdfs:comment """
-Tierschutz - Schafe
-"""@de,
-        """
-Prot.anim. - moutons
-"""@fr,
-        """
-Prot.anim. - ovini
-"""@it ;
     :conjunctIdentifier "03.33_v1" ;
     :hierarchyLevel "3" .
 
@@ -324,15 +288,6 @@ Prot.anim. - ovini
         "Prot.anim. - Autruches"@fr,
         "Prot.anim. - Struzzi"@it ;
     schema:identifier "03.43_v1" ;
-    rdfs:comment """
-Tierschutz - Strausse
-"""@de,
-        """
-Prot.anim. - Autruches
-"""@fr,
-        """
-Prot.anim. - Struzzi
-"""@it ;
     :conjunctIdentifier "03.43_v1" ;
     :hierarchyLevel "3" .
 
@@ -501,9 +456,6 @@ La produzione animale nell'azienda avviene in modo igienico e senza segni sospet
         "Detenzione di animali da compagnia"@it ;
     schema:identifier "03.3_v1" ;
     rdfs:comment """
-Haltung Heimtiere
-"""@de,
-        """
 Haltung Heimtiere
 """@fr,
         """
@@ -1518,15 +1470,6 @@ Api: Traffico di animali: L'azienda di apicoltura è regolarmente registrata e i
         "Abattoir - Autocontrôle"@fr,
         "Macelli - Controllo autonomo"@it ;
     schema:identifier "01.53_v2" ;
-    rdfs:comment """
-Schlachtbetrieb - Selbstkontrolle
-"""@de,
-        """
-Abattoir - Autocontrôle
-"""@fr,
-        """
-Macelli - Controllo autonomo
-"""@it ;
     :conjunctIdentifier "01.53_v2" ;
     :hierarchyLevel "3" .
 
@@ -1665,15 +1608,6 @@ Macelli - Controllo autonomo
         "Pharmacie vétérinaire privée - Cabinet pour animaux de compagnie"@fr,
         "Farmacia veterinaria privata - Studio per animali da compagnia"@it ;
     schema:identifier "02.42_v5" ;
-    rdfs:comment """
-Tierärztliche Privatapotheke - Heimtierpraxis
-"""@de,
-        """
-Pharmacie vétérinaire privée - Cabinet pour animaux de compagnie
-"""@fr,
-        """
-Farmacia veterinaria privata - Studio per animali da compagnia
-"""@it ;
     :conjunctIdentifier "02.42_v5" ;
     :hierarchyLevel "3" .
 
@@ -1746,12 +1680,6 @@ Farmacia veterinaria privata - Studio per animali da compagnia
         "Farmacia veterinaria privata - Studio per animali da reddito e da compagnia"@it ;
     schema:identifier "02.41_v5" ;
     rdfs:comment """
-Tierärztliche Privatapotheke - Nutztier- und Heimtierpraxis
-"""@de,
-        """
-Pharmacie vétérinaire privée - Cabinet pour animaux de rente et de compagnie
-"""@fr,
-        """
 Farmacia veterinaria privata - Studio per animali da compagnia
 """@it ;
     :conjunctIdentifier "02.41_v5" ;
@@ -2102,12 +2030,6 @@ Traffico di animali: La tracciabilità del traffico di animali è garantita.
         "MAccelli - Processi"@it ;
     schema:identifier "01.52_v2" ;
     rdfs:comment """
-Schlachtbetrieb - Prozesse
-"""@de,
-        """
-Abattoir - Processus
-"""@fr,
-        """
 Macelli - Processi
 """@it ;
     :conjunctIdentifier "01.52_v2" ;
@@ -3067,15 +2989,6 @@ Medicamenti veterinari: È garantito un impiego a regola d'arte, corretto e veri
         "Autres autorisations sanitaires "@fr,
         "Ulteriori autorizzazioni - salute degli animali"@it ;
     schema:identifier "01.6_v1" ;
-    rdfs:comment """
-Weitere Bewilligungen Tiergesundheit
-"""@de,
-        """
-Autres autorisations sanitaires 
-"""@fr,
-        """
-Ulteriori autorizzazioni - salute degli animali
-"""@it ;
     :conjunctIdentifier "01.6_v1" ;
     :hierarchyLevel "3" .
 
@@ -3085,15 +2998,6 @@ Ulteriori autorizzazioni - salute degli animali
         "Requisiti edili"@it ;
     schema:identifier "01" ;
     schema:isPartOf :57A74BCEBDD51D05E0532D0E870A0EAF ;
-    rdfs:comment """
- Bauliche Anforderungen
-"""@de,
-        """
-Exigences quant aux infrastructures
-"""@fr,
-        """
-Requisiti edili
-"""@it ;
     :conjunctIdentifier "01.6_v1, 01" ;
     :hierarchyLevel "4" .
 
@@ -3121,15 +3025,6 @@ Requisiti aziendali (piani stabiliti per garantire la separazione tra pulito e s
         "Controllo autonomo / piani di emergenza / altra documentazione"@it ;
     schema:identifier "03" ;
     schema:isPartOf :57A74BCEBDD51D05E0532D0E870A0EAF ;
-    rdfs:comment """
-Selbstkontrolle / Notfallkonzepte / weitere Dokumentation
-"""@de,
-        """
-Autocontrôle / plan d'intervention en cas d'urgence / autre documentation
-"""@fr,
-        """
-Controllo autonomo / piani di emergenza / altra documentazione
-"""@it ;
     :conjunctIdentifier "01.6_v1, 03" ;
     :hierarchyLevel "4" .
 
@@ -3681,15 +3576,6 @@ Api:  Medicamenti veterinari: È garantito un impiego corretto e a regola d'arte
         "Requisiti edilizi"@it ;
     schema:identifier "A" ;
     schema:isPartOf :589ABB3484764AACAE2E1A7316F93953 ;
-    rdfs:comment """
-Bauliche Anforderungen
-"""@de,
-        """
-Exigences relatives à la construction
-"""@fr,
-        """
-Requisiti edilizi
-"""@it ;
     :conjunctIdentifier "02.1-TNP_v2, 1 -, A" ;
     :hierarchyLevel "4" .
 
@@ -3699,15 +3585,6 @@ Requisiti edilizi
         "Requisiti aziendali"@it ;
     schema:identifier "B" ;
     schema:isPartOf :589ABB3484764AACAE2E1A7316F93953 ;
-    rdfs:comment """
-Betriebliche Anforderungen
-"""@de,
-        """
-Exigences relatives à l'exploitation
-"""@fr,
-        """
-Requisiti aziendali
-"""@it ;
     :conjunctIdentifier "02.1-TNP_v2, 1 -, B" ;
     :hierarchyLevel "4" .
 
@@ -3717,15 +3594,6 @@ Requisiti aziendali
         "Controllo autonomo, controllo del flusso di merci"@it ;
     schema:identifier "C" ;
     schema:isPartOf :589ABB3484764AACAE2E1A7316F93953 ;
-    rdfs:comment """
-Selbst-, Warenflusskontrolle
-"""@de,
-        """
-Autocontrôle, contrôle du flux des marchandises
-"""@fr,
-        """
-Controllo autonomo, controllo del flusso di merci
-"""@it ;
     :conjunctIdentifier "02.1-TNP_v2, 1 -, C" ;
     :hierarchyLevel "4" .
 
@@ -3903,15 +3771,6 @@ Controllo autonomo, controllo del flusso di merci
         "Abattoir - Infrastructure"@fr,
         "Abattoir - Infrastructure"@it ;
     schema:identifier "01.51_v2" ;
-    rdfs:comment """
-Schlachtbetrieb - Infrastruktur
-"""@de,
-        """
-Abattoir - Infrastructure
-"""@fr,
-        """
-Abattoir - Infrastructure
-"""@it ;
     :conjunctIdentifier "01.51_v2" ;
     :hierarchyLevel "3" .
 
@@ -4116,15 +3975,6 @@ TNP - K1
         "Prot.anim. - équidés"@fr,
         "Prot.anim. - equidi"@it ;
     schema:identifier "03.31_v1" ;
-    rdfs:comment """
-Tierschutz - Equiden
-"""@de,
-        """
-Prot.anim. - équidés
-"""@fr,
-        """
-Prot.anim. - equidi
-"""@it ;
     :conjunctIdentifier "03.31_v1" ;
     :hierarchyLevel "3" .
 
@@ -4177,15 +4027,6 @@ Prot.anim. - equidi
         "Pharmacie vétérinaire privée - commerces zoologiques et apicoles"@fr,
         "Farmacia veterinaria privata - commerci zoologici e di apicoltura"@it ;
     schema:identifier "02.43_v1" ;
-    rdfs:comment """
-Tierärztliche Privatapotheke - Zoo- und Imkerfachgeschäfte
-"""@de,
-        """
-Pharmacie vétérinaire privée - commerces zoologiques et apicoles
-"""@fr,
-        """
-Farmacia veterinaria privata - commerci zoologici e di apicoltura
-"""@it ;
     :conjunctIdentifier "02.43_v1" ;
     :hierarchyLevel "3" .
 
@@ -4238,15 +4079,6 @@ TNP - K2
         "Prot.anim. - lamas et alpagas"@fr,
         "Prot.anim. - lama e Alpaca"@it ;
     schema:identifier "03.38_v1" ;
-    rdfs:comment """
-Tierschutz - Lamas und Alpakas
-"""@de,
-        """
-Prot.anim. - lamas et alpagas
-"""@fr,
-        """
-Prot.anim. - lama e Alpaca
-"""@it ;
     :conjunctIdentifier "03.38_v1" ;
     :hierarchyLevel "3" .
 
@@ -4264,15 +4096,6 @@ Prot.anim. - lama e Alpaca
         "Prot.anim. - lapins"@fr,
         "Prot.anim. - conigli"@it ;
     schema:identifier "03.35_v1" ;
-    rdfs:comment """
-Tierschutz - Kaninchen
-"""@de,
-        """
-Prot.anim. - lapins
-"""@fr,
-        """
-Prot.anim. - conigli
-"""@it ;
     :conjunctIdentifier "03.35_v1" ;
     :hierarchyLevel "3" .
 
@@ -4282,15 +4105,6 @@ Prot.anim. - conigli
         "MAGAZZINO MEDICAMENTI"@it ;
     schema:identifier "B" ;
     schema:isPartOf :69186F6ECF984CF79B567FC343EBE531 ;
-    rdfs:comment """
-ARZNEIMITTELLAGER
-"""@de,
-        """
-Stock de médicaments
-"""@fr,
-        """
-MAGAZZINO MEDICAMENTI
-"""@it ;
     :conjunctIdentifier "02.43_v1, B" ;
     :hierarchyLevel "4" .
 
@@ -4299,15 +4113,6 @@ MAGAZZINO MEDICAMENTI
         "Prot.anim - poules pondeuses"@fr,
         "Prot.anim. - galline ovaiole"@it ;
     schema:identifier "03.36_v1" ;
-    rdfs:comment """
-Tierschutz - Legehennen
-"""@de,
-        """
-Prot.anim - poules pondeuses
-"""@fr,
-        """
-Prot.anim. - galline ovaiole
-"""@it ;
     :conjunctIdentifier "03.36_v1" ;
     :hierarchyLevel "3" .
 
@@ -4317,15 +4122,6 @@ Prot.anim. - galline ovaiole
         "Cervi nobili"@it ;
     schema:identifier "21" ;
     schema:isPartOf :C35517EED4C645939FAA761A87F35F85 ;
-    rdfs:comment """
-Rothirsche
-"""@de,
-        """
-Cerfs élaphes
-"""@fr,
-        """
-Cervi nobili
-"""@it ;
     :conjunctIdentifier "03.42_v1, 21" ;
     :hierarchyLevel "4" .
 
@@ -4451,15 +4247,6 @@ TNP - Transport K1
         "oche domestiche"@it ;
     schema:identifier "11" ;
     schema:isPartOf :00DB673864714391B5EF1EE5B07D4274 ;
-    rdfs:comment """
-Hausgänse
-"""@de,
-        """
-oies domestiques
-"""@fr,
-        """
-oche domestiche
-"""@it ;
     :conjunctIdentifier "03.41_v1, 11" ;
     :hierarchyLevel "4" .
 
@@ -4548,15 +4335,6 @@ Angaben zum Nutztierbetrieb, auf dem die Kontrolle durchgeführt wurde
         "Prot.anim. - chèvres"@fr,
         "Prot.anim. - caprini"@it ;
     schema:identifier "03.32_v1" ;
-    rdfs:comment """
-Tierschutz - Ziegen
-"""@de,
-        """
-Prot.anim. - chèvres
-"""@fr,
-        """
-Prot.anim. - caprini
-"""@it ;
     :conjunctIdentifier "03.32_v1" ;
     :hierarchyLevel "3" .
 
@@ -4764,15 +4542,6 @@ TNP - Sammelstellen
         "animali da allevamento"@it ;
     schema:identifier "32" ;
     schema:isPartOf :38234EBF19B24BA79C14948CB183F4DD ;
-    rdfs:comment """
-Zuchttiere
-"""@de,
-        """
-animaux reproducteurs
-"""@fr,
-        """
-animali da allevamento
-"""@it ;
     :conjunctIdentifier "03.43_v1, 32" ;
     :hierarchyLevel "4" .
 
@@ -4808,15 +4577,6 @@ animali da allevamento
         "Prot.anim. - volaille à l'engrais"@fr,
         "Prot.anim. - pollame da ingrasso"@it ;
     schema:identifier "03.37_v1" ;
-    rdfs:comment """
-Tierschutz - Mastpoulet
-"""@de,
-        """
-Prot.anim. - volaille à l'engrais
-"""@fr,
-        """
-Prot.anim. - pollame da ingrasso
-"""@it ;
     :conjunctIdentifier "03.37_v1" ;
     :hierarchyLevel "3" .
 
@@ -4825,15 +4585,6 @@ Prot.anim. - pollame da ingrasso
         "Prot.anim. - cerfs"@fr,
         "Prot.anim. - cervi"@it ;
     schema:identifier "03.42_v1" ;
-    rdfs:comment """
-Tierschutz - Hirsche
-"""@de,
-        """
-Prot.anim. - cerfs
-"""@fr,
-        """
-Prot.anim. - cervi
-"""@it ;
     :conjunctIdentifier "03.42_v1" ;
     :hierarchyLevel "3" .
 
@@ -4914,15 +4665,6 @@ La sicurezza dei prodotti di insetti destinati all'uso come alimentazione umana 
         "Prot.anim. - porcs"@fr,
         "Prot.anim. - suini"@it ;
     schema:identifier "03.34_v1" ;
-    rdfs:comment """
-Tierschutz - Schweine
-"""@de,
-        """
-Prot.anim. - porcs
-"""@fr,
-        """
-Prot.anim. - suini
-"""@it ;
     :conjunctIdentifier "03.34_v1" ;
     :hierarchyLevel "3" .
 
@@ -4992,15 +4734,6 @@ TNP - K3
         "DISPENSAZIONE"@it ;
     schema:identifier "C" ;
     schema:isPartOf :69186F6ECF984CF79B567FC343EBE531 ;
-    rdfs:comment """
-ABGABE
-"""@de,
-        """
-Remise
-"""@fr,
-        """
-DISPENSAZIONE
-"""@it ;
     :conjunctIdentifier "02.43_v1, C" ;
     :hierarchyLevel "4" .
 
@@ -5010,15 +4743,6 @@ DISPENSAZIONE
         "Daini / cervi sika"@it ;
     schema:identifier "22" ;
     schema:isPartOf :C35517EED4C645939FAA761A87F35F85 ;
-    rdfs:comment """
-Dam- / Sikahirsche
-"""@de,
-        """
-Daims / cerfs sikas
-"""@fr,
-        """
-Daini / cervi sika
-"""@it ;
     :conjunctIdentifier "03.42_v1, 22" ;
     :hierarchyLevel "4" .
 
@@ -5028,15 +4752,6 @@ Daini / cervi sika
         "anatre domestiche"@it ;
     schema:identifier "12" ;
     schema:isPartOf :00DB673864714391B5EF1EE5B07D4274 ;
-    rdfs:comment """
-Hausenten
-"""@de,
-        """
-canards domestiques
-"""@fr,
-        """
-anatre domestiche
-"""@it ;
     :conjunctIdentifier "03.41_v1, 12" ;
     :hierarchyLevel "4" .
 
@@ -5064,15 +4779,6 @@ anatre domestiche
         "ORGANIZZAZIONE, AUTORIZZAZIONI, GARANZIA QUALITÀ"@it ;
     schema:identifier "A" ;
     schema:isPartOf :69186F6ECF984CF79B567FC343EBE531 ;
-    rdfs:comment """
-ORGANISATION, BEWILLIGUNGEN, QUALITÄTSSICHERUNG
-"""@de,
-        """
-Organisation, autorisations et assurance qualité
-"""@fr,
-        """
-ORGANIZZAZIONE, AUTORIZZAZIONI, GARANZIA QUALITÀ
-"""@it ;
     :conjunctIdentifier "02.43_v1, A" ;
     :hierarchyLevel "4" .
 
@@ -5161,15 +4867,6 @@ L'utilisation correcte et appropriée des médicaments vétérinaires est assur�
         "PUBBLICITÂ AL PUBBLICO"@it ;
     schema:identifier "D" ;
     schema:isPartOf :69186F6ECF984CF79B567FC343EBE531 ;
-    rdfs:comment """
-PUBLIKUMSWERBUNG
-"""@de,
-        """
-Publicité destinée au public
-"""@fr,
-        """
-PUBBLICITÂ AL PUBBLICO
-"""@it ;
     :conjunctIdentifier "02.43_v1, D" ;
     :hierarchyLevel "4" .
 
@@ -16288,15 +15985,6 @@ Osservazioni
         "Manquements zootechniques à l'égard des animaux"@fr,
         "Inadempimenti zootecnici nei confronti degli animali"@it ;
     schema:identifier "02.11" ;
-    rdfs:comment """
-Zuchtbedingte Mängel an den Tieren
-"""@de,
-        """
-Manquements zootechniques à l'égard des animaux
-"""@fr,
-        """
-Inadempimenti zootecnici nei confronti degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAB681D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 07, 02.11" .
 
@@ -16305,15 +15993,6 @@ Inadempimenti zootecnici nei confronti degli animali
         "Gestion de l'élevage"@fr,
         "Gestione dell'allevamento "@it ;
     schema:identifier "02.12" ;
-    rdfs:comment """
-Zuchtmanagement
-"""@de,
-        """
-Gestion de l'élevage
-"""@fr,
-        """
-Gestione dell'allevamento 
-"""@it ;
     :belongsToGroup :57A74BCEAB681D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 07, 02.12" .
 
@@ -16356,15 +16035,6 @@ Altre lacune (ad es. lesione della dignità)
         "Exigences applicables au personnel"@fr,
         "Requisiti relativi al personale"@it ;
     schema:identifier "03.1" ;
-    rdfs:comment """
-Personelle Voraussetzungen
-"""@de,
-        """
-Exigences applicables au personnel
-"""@fr,
-        """
-Requisiti relativi al personale
-"""@it ;
     :belongsToGroup :57A74BCEAB681D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 07, 03.1" .
 
@@ -16390,15 +16060,6 @@ Documentazione/registrazioni/ requisiti amministrativi (controllo dell'effettivo
         "Unité d'élevage: dimensions"@fr,
         "Unità di detenzione: dimensioni"@it ;
     schema:identifier "01.1" ;
-    rdfs:comment """
-Haltungseinheit: Abmessungen
-"""@de,
-        """
-Unité d'élevage: dimensions
-"""@fr,
-        """
-Unità di detenzione: dimensioni
-"""@it ;
     :belongsToGroup :57A74BCEA86B1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 08, 01.1" .
 
@@ -16424,15 +16085,6 @@ Unità di detenzione: occupazione (densità, compatibilità, detenzione individu
         "Partenaire social, contact social avec l'homme et socialisation"@fr,
         "Partner sociale, contatto sociale con l'uomo e socializzazione"@it ;
     schema:identifier "02.1" ;
-    rdfs:comment """
-Sozialpartner, Sozialkontakt Mensch und Sozialisierung
-"""@de,
-        """
-Partenaire social, contact social avec l'homme et socialisation
-"""@fr,
-        """
-Partner sociale, contatto sociale con l'uomo e socializzazione
-"""@it ;
     :belongsToGroup :57A74BCEA86B1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 08, 02.1" .
 
@@ -16441,15 +16093,6 @@ Partner sociale, contatto sociale con l'uomo e socializzazione
         "Enrichissement: sortie"@fr,
         "Miglioramento: uscita"@it ;
     schema:identifier "02.2" ;
-    rdfs:comment """
-Enrichment: Auslauf
-"""@de,
-        """
-Enrichissement: sortie
-"""@fr,
-        """
-Miglioramento: uscita
-"""@it ;
     :belongsToGroup :57A74BCEA86B1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 08, 02.2" .
 
@@ -16458,15 +16101,6 @@ Miglioramento: uscita
         "Enrichissement: occupation"@fr,
         "Miglioramento: occupazione"@it ;
     schema:identifier "02.3" ;
-    rdfs:comment """
-Enrichment: Beschäftigung
-"""@de,
-        """
-Enrichissement: occupation
-"""@fr,
-        """
-Miglioramento: occupazione
-"""@it ;
     :belongsToGroup :57A74BCEA86B1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 08, 02.3" .
 
@@ -16475,15 +16109,6 @@ Miglioramento: occupazione
         "Alimentation et eau de boisson"@fr,
         "Foraggiamento e acqua potabile"@it ;
     schema:identifier "02.5" ;
-    rdfs:comment """
-Fütterung und Trinkwasser
-"""@de,
-        """
-Alimentation et eau de boisson
-"""@fr,
-        """
-Foraggiamento e acqua potabile
-"""@it ;
     :belongsToGroup :57A74BCEA86B1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 08, 02.5" .
 
@@ -16509,15 +16134,6 @@ Igiene e manutenzione della gabbia (containment)
         "Interventions sur l'animal"@fr,
         "Interventi sull'animale "@it ;
     schema:identifier "02.7" ;
-    rdfs:comment """
-Eingriffe am Tier
-"""@de,
-        """
-Interventions sur l'animal
-"""@fr,
-        """
-Interventi sull'animale 
-"""@it ;
     :belongsToGroup :57A74BCEA86B1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 08, 02.7" .
 
@@ -16560,15 +16176,6 @@ Aspetti riguardanti il trasporto (durata, documenti, etichettatura, scarico)
         "Manquements zootechniques à l'égard des animaux"@fr,
         "Inadempimenti zootecnici nei confronti degli animali"@it ;
     schema:identifier "02.11" ;
-    rdfs:comment """
-Zuchtbedingte Mängel an den Tieren
-"""@de,
-        """
-Manquements zootechniques à l'égard des animaux
-"""@fr,
-        """
-Inadempimenti zootecnici nei confronti degli animali
-"""@it ;
     :belongsToGroup :57A74BCEA86B1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 08, 02.11" .
 
@@ -16577,15 +16184,6 @@ Inadempimenti zootecnici nei confronti degli animali
         "Gestion de l'élevage"@fr,
         "Gestione dell'allevamento "@it ;
     schema:identifier "02.12" ;
-    rdfs:comment """
-Zuchtmanagement
-"""@de,
-        """
-Gestion de l'élevage
-"""@fr,
-        """
-Gestione dell'allevamento 
-"""@it ;
     :belongsToGroup :57A74BCEA86B1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 08, 02.12" .
 
@@ -16611,15 +16209,6 @@ Altre lacune (ad es. lesione della dignità)
         "Exigences applicables au personnel"@fr,
         "Requisiti relativi al personale"@it ;
     schema:identifier "03.1" ;
-    rdfs:comment """
-Personelle Voraussetzungen
-"""@de,
-        """
-Exigences applicables au personnel
-"""@fr,
-        """
-Requisiti relativi al personale
-"""@it ;
     :belongsToGroup :57A74BCEA86B1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 08, 03.1" .
 
@@ -16645,15 +16234,6 @@ Documentazione/registrazioni/ requisiti amministrativi (controllo dell'effettivo
         "Unité d'élevage: dimensions"@fr,
         "Unità di detenzione: dimensioni"@it ;
     schema:identifier "01.1" ;
-    rdfs:comment """
-Haltungseinheit: Abmessungen
-"""@de,
-        """
-Unité d'élevage: dimensions
-"""@fr,
-        """
-Unità di detenzione: dimensioni
-"""@it ;
     :belongsToGroup :57A74BCEA87B1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 10, 01.1" .
 
@@ -16679,15 +16259,6 @@ Unità di detenzione: occupazione (densità, compatibilità, detenzione individu
         "Partenaire social, contact social avec l'homme et socialisation"@fr,
         "Partner sociale, contatto sociale con l'uomo e socializzazione"@it ;
     schema:identifier "02.1" ;
-    rdfs:comment """
-Sozialpartner, Sozialkontakt Mensch und Sozialisierung
-"""@de,
-        """
-Partenaire social, contact social avec l'homme et socialisation
-"""@fr,
-        """
-Partner sociale, contatto sociale con l'uomo e socializzazione
-"""@it ;
     :belongsToGroup :57A74BCEA87B1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 10, 02.1" .
 
@@ -16696,15 +16267,6 @@ Partner sociale, contatto sociale con l'uomo e socializzazione
         "Enrichissement: sortie"@fr,
         "Miglioramento: uscita"@it ;
     schema:identifier "02.2" ;
-    rdfs:comment """
-Enrichment: Auslauf
-"""@de,
-        """
-Enrichissement: sortie
-"""@fr,
-        """
-Miglioramento: uscita
-"""@it ;
     :belongsToGroup :57A74BCEA87B1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 10, 02.2" .
 
@@ -16730,15 +16292,6 @@ Clima/luce (qualità dell'acqua)
         "Alimentation et eau de boisson"@fr,
         "Foraggiamento e acqua potabile"@it ;
     schema:identifier "02.5" ;
-    rdfs:comment """
-Fütterung und Trinkwasser
-"""@de,
-        """
-Alimentation et eau de boisson
-"""@fr,
-        """
-Foraggiamento e acqua potabile
-"""@it ;
     :belongsToGroup :57A74BCEA87B1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 10, 02.5" .
 
@@ -16764,15 +16317,6 @@ Igiene e manutenzione della gabbia (containment)
         "Interventions sur l'animal"@fr,
         "Interventi sull'animale "@it ;
     schema:identifier "02.7" ;
-    rdfs:comment """
-Eingriffe am Tier
-"""@de,
-        """
-Interventions sur l'animal
-"""@fr,
-        """
-Interventi sull'animale 
-"""@it ;
     :belongsToGroup :57A74BCEA87B1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 10, 02.7" .
 
@@ -16815,15 +16359,6 @@ Aspetti riguardanti il trasporto (durata, documenti, etichettatura, scarico)
         "Manquements zootechniques à l'égard des animaux"@fr,
         "Inadempimenti zootecnici nei confronti degli animali"@it ;
     schema:identifier "02.11" ;
-    rdfs:comment """
-Zuchtbedingte Mängel an den Tieren
-"""@de,
-        """
-Manquements zootechniques à l'égard des animaux
-"""@fr,
-        """
-Inadempimenti zootecnici nei confronti degli animali
-"""@it ;
     :belongsToGroup :57A74BCEA87B1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 10, 02.11" .
 
@@ -16832,15 +16367,6 @@ Inadempimenti zootecnici nei confronti degli animali
         "Gestion de l'élevage"@fr,
         "Gestione dell'allevamento "@it ;
     schema:identifier "02.12" ;
-    rdfs:comment """
-Zuchtmanagement
-"""@de,
-        """
-Gestion de l'élevage
-"""@fr,
-        """
-Gestione dell'allevamento 
-"""@it ;
     :belongsToGroup :57A74BCEA87B1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 10, 02.12" .
 
@@ -16883,15 +16409,6 @@ Altre lacune (ad es. lesione della dignità)
         "Exigences applicables au personnel"@fr,
         "Requisiti relativi al personale"@it ;
     schema:identifier "03.1" ;
-    rdfs:comment """
-Personelle Voraussetzungen
-"""@de,
-        """
-Exigences applicables au personnel
-"""@fr,
-        """
-Requisiti relativi al personale
-"""@it ;
     :belongsToGroup :57A74BCEA87B1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 10, 03.1" .
 
@@ -16917,15 +16434,6 @@ Documentazione/registrazioni/ requisiti amministrativi (controllo dell'effettivo
         "Unité d'élevage: dimensions"@fr,
         "Unità di detenzione: dimensioni"@it ;
     schema:identifier "01.1" ;
-    rdfs:comment """
-Haltungseinheit: Abmessungen
-"""@de,
-        """
-Unité d'élevage: dimensions
-"""@fr,
-        """
-Unità di detenzione: dimensioni
-"""@it ;
     :belongsToGroup :57A74BCEA88C1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 20, 01.1" .
 
@@ -16968,15 +16476,6 @@ Unità di detenzione: occupazione (densità, compatibilità, detenzione individu
         "Partenaire social, contact social avec l'homme et socialisation"@fr,
         "Partner sociale, contatto sociale con l'uomo e socializzazione"@it ;
     schema:identifier "02.1" ;
-    rdfs:comment """
-Sozialpartner, Sozialkontakt Mensch und Sozialisierung
-"""@de,
-        """
-Partenaire social, contact social avec l'homme et socialisation
-"""@fr,
-        """
-Partner sociale, contatto sociale con l'uomo e socializzazione
-"""@it ;
     :belongsToGroup :57A74BCEA88C1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 20, 02.1" .
 
@@ -16985,15 +16484,6 @@ Partner sociale, contatto sociale con l'uomo e socializzazione
         "Enrichissement: sortie"@fr,
         "Miglioramento: uscita"@it ;
     schema:identifier "02.2" ;
-    rdfs:comment """
-Enrichment: Auslauf
-"""@de,
-        """
-Enrichissement: sortie
-"""@fr,
-        """
-Miglioramento: uscita
-"""@it ;
     :belongsToGroup :57A74BCEA88C1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 20, 02.2" .
 
@@ -17002,15 +16492,6 @@ Miglioramento: uscita
         "Enrichissement: occupation"@fr,
         "Miglioramento: occupazione"@it ;
     schema:identifier "02.3" ;
-    rdfs:comment """
-Enrichment: Beschäftigung
-"""@de,
-        """
-Enrichissement: occupation
-"""@fr,
-        """
-Miglioramento: occupazione
-"""@it ;
     :belongsToGroup :57A74BCEA88C1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 20, 02.3" .
 
@@ -17036,15 +16517,6 @@ Clima/luce (qualità dell'acqua)
         "Alimentation et eau de boisson"@fr,
         "Foraggiamento e acqua potabile"@it ;
     schema:identifier "02.5" ;
-    rdfs:comment """
-Fütterung und Trinkwasser
-"""@de,
-        """
-Alimentation et eau de boisson
-"""@fr,
-        """
-Foraggiamento e acqua potabile
-"""@it ;
     :belongsToGroup :57A74BCEA88C1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 20, 02.5" .
 
@@ -17070,15 +16542,6 @@ Igiene e manutenzione della gabbia (containment)
         "Interventions sur l'animal"@fr,
         "Interventi sull'animale "@it ;
     schema:identifier "02.7" ;
-    rdfs:comment """
-Eingriffe am Tier
-"""@de,
-        """
-Interventions sur l'animal
-"""@fr,
-        """
-Interventi sull'animale 
-"""@it ;
     :belongsToGroup :57A74BCEA88C1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 20, 02.7" .
 
@@ -17087,15 +16550,6 @@ Interventi sull'animale
         "Santé et soins des animaux"@fr,
         "Salute e cura degli animali"@it ;
     schema:identifier "02.8" ;
-    rdfs:comment """
-Gesundheit und Pflege Tiere
-"""@de,
-        """
-Santé et soins des animaux
-"""@fr,
-        """
-Salute e cura degli animali
-"""@it ;
     :belongsToGroup :57A74BCEA88C1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 20, 02.8" .
 
@@ -17138,15 +16592,6 @@ Aspetti riguardanti il trasporto (durata, documenti, etichettatura, scarico)
         "Manquements zootechniques à l'égard des animaux"@fr,
         "Inadempimenti zootecnici nei confronti degli animali"@it ;
     schema:identifier "02.11" ;
-    rdfs:comment """
-Zuchtbedingte Mängel an den Tieren
-"""@de,
-        """
-Manquements zootechniques à l'égard des animaux
-"""@fr,
-        """
-Inadempimenti zootecnici nei confronti degli animali
-"""@it ;
     :belongsToGroup :57A74BCEA88C1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 20, 02.11" .
 
@@ -17155,15 +16600,6 @@ Inadempimenti zootecnici nei confronti degli animali
         "Gestion de l'élevage"@fr,
         "Gestione dell'allevamento "@it ;
     schema:identifier "02.12" ;
-    rdfs:comment """
-Zuchtmanagement
-"""@de,
-        """
-Gestion de l'élevage
-"""@fr,
-        """
-Gestione dell'allevamento 
-"""@it ;
     :belongsToGroup :57A74BCEA88C1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 20, 02.12" .
 
@@ -17206,15 +16642,6 @@ Altre lacune (ad es. lesione della dignità)
         "Exigences applicables au personnel"@fr,
         "Requisiti relativi al personale"@it ;
     schema:identifier "03.1" ;
-    rdfs:comment """
-Personelle Voraussetzungen
-"""@de,
-        """
-Exigences applicables au personnel
-"""@fr,
-        """
-Requisiti relativi al personale
-"""@it ;
     :belongsToGroup :57A74BCEA88C1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 20, 03.1" .
 
@@ -17240,15 +16667,6 @@ Documentazione/registrazioni/ requisiti amministrativi (controllo dell'effettivo
         "Unité d'élevage: dimensions"@fr,
         "Unità di detenzione: dimensioni"@it ;
     schema:identifier "01.1" ;
-    rdfs:comment """
-Haltungseinheit: Abmessungen
-"""@de,
-        """
-Unité d'élevage: dimensions
-"""@fr,
-        """
-Unità di detenzione: dimensioni
-"""@it ;
     :belongsToGroup :57A74BCEA8A01D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 30, 01.1" .
 
@@ -17291,15 +16709,6 @@ Unità di detenzione: occupazione (densità, compatibilità, detenzione individu
         "Partenaire social, contact social avec l'homme et socialisation"@fr,
         "Partner sociale, contatto sociale con l'uomo e socializzazione"@it ;
     schema:identifier "02.1" ;
-    rdfs:comment """
-Sozialpartner, Sozialkontakt Mensch und Sozialisierung
-"""@de,
-        """
-Partenaire social, contact social avec l'homme et socialisation
-"""@fr,
-        """
-Partner sociale, contatto sociale con l'uomo e socializzazione
-"""@it ;
     :belongsToGroup :57A74BCEA8A01D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 30, 02.1" .
 
@@ -17308,15 +16717,6 @@ Partner sociale, contatto sociale con l'uomo e socializzazione
         "Enrichissement: occupation"@fr,
         "Miglioramento: occupazione"@it ;
     schema:identifier "02.3" ;
-    rdfs:comment """
-Enrichment: Beschäftigung
-"""@de,
-        """
-Enrichissement: occupation
-"""@fr,
-        """
-Miglioramento: occupazione
-"""@it ;
     :belongsToGroup :57A74BCEA8A01D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 30, 02.3" .
 
@@ -17342,15 +16742,6 @@ Clima/luce (qualità dell'acqua)
         "Alimentation et eau de boisson"@fr,
         "Foraggiamento e acqua potabile"@it ;
     schema:identifier "02.5" ;
-    rdfs:comment """
-Fütterung und Trinkwasser
-"""@de,
-        """
-Alimentation et eau de boisson
-"""@fr,
-        """
-Foraggiamento e acqua potabile
-"""@it ;
     :belongsToGroup :57A74BCEA8A01D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 30, 02.5" .
 
@@ -17359,15 +16750,6 @@ Foraggiamento e acqua potabile
         "Interventions sur l'animal"@fr,
         "Interventi sull'animale "@it ;
     schema:identifier "02.7" ;
-    rdfs:comment """
-Eingriffe am Tier
-"""@de,
-        """
-Interventions sur l'animal
-"""@fr,
-        """
-Interventi sull'animale 
-"""@it ;
     :belongsToGroup :57A74BCEA8A01D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 30, 02.7" .
 
@@ -17376,15 +16758,6 @@ Interventi sull'animale
         "Santé et soins des animaux"@fr,
         "Salute e cura degli animali"@it ;
     schema:identifier "02.8" ;
-    rdfs:comment """
-Gesundheit und Pflege Tiere
-"""@de,
-        """
-Santé et soins des animaux
-"""@fr,
-        """
-Salute e cura degli animali
-"""@it ;
     :belongsToGroup :57A74BCEA8A01D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 30, 02.8" .
 
@@ -17427,15 +16800,6 @@ Aspetti riguardanti il trasporto (durata, documenti, etichettatura, scarico)
         "Gestion de l'élevage"@fr,
         "Gestione dell'allevamento "@it ;
     schema:identifier "02.12" ;
-    rdfs:comment """
-Zuchtmanagement
-"""@de,
-        """
-Gestion de l'élevage
-"""@fr,
-        """
-Gestione dell'allevamento 
-"""@it ;
     :belongsToGroup :57A74BCEA8A01D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 30, 02.12" .
 
@@ -17478,15 +16842,6 @@ Altre lacune (ad es. lesione della dignità)
         "Exigences applicables au personnel"@fr,
         "Requisiti relativi al personale"@it ;
     schema:identifier "03.1" ;
-    rdfs:comment """
-Personelle Voraussetzungen
-"""@de,
-        """
-Exigences applicables au personnel
-"""@fr,
-        """
-Requisiti relativi al personale
-"""@it ;
     :belongsToGroup :57A74BCEA8A01D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 30, 03.1" .
 
@@ -17495,15 +16850,6 @@ Requisiti relativi al personale
         "Unité d'élevage: dimensions"@fr,
         "Unità di detenzione: dimensioni"@it ;
     schema:identifier "01.1" ;
-    rdfs:comment """
-Haltungseinheit: Abmessungen
-"""@de,
-        """
-Unité d'élevage: dimensions
-"""@fr,
-        """
-Unità di detenzione: dimensioni
-"""@it ;
     :belongsToGroup :57A74BCEA8B01D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 40, 01.1" .
 
@@ -17546,15 +16892,6 @@ Unità di detenzione: occupazione (densità, compatibilità, detenzione individu
         "Enrichissement: sortie"@fr,
         "Miglioramento: uscita"@it ;
     schema:identifier "02.2" ;
-    rdfs:comment """
-Enrichment: Auslauf
-"""@de,
-        """
-Enrichissement: sortie
-"""@fr,
-        """
-Miglioramento: uscita
-"""@it ;
     :belongsToGroup :57A74BCEA8B01D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 40, 02.2" .
 
@@ -17563,15 +16900,6 @@ Miglioramento: uscita
         "Enrichissement: occupation"@fr,
         "Miglioramento: occupazione"@it ;
     schema:identifier "02.3" ;
-    rdfs:comment """
-Enrichment: Beschäftigung
-"""@de,
-        """
-Enrichissement: occupation
-"""@fr,
-        """
-Miglioramento: occupazione
-"""@it ;
     :belongsToGroup :57A74BCEA8B01D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 40, 02.3" .
 
@@ -17597,15 +16925,6 @@ Clima/luce (qualità dell'acqua)
         "Alimentation et eau de boisson"@fr,
         "Foraggiamento e acqua potabile"@it ;
     schema:identifier "02.5" ;
-    rdfs:comment """
-Fütterung und Trinkwasser
-"""@de,
-        """
-Alimentation et eau de boisson
-"""@fr,
-        """
-Foraggiamento e acqua potabile
-"""@it ;
     :belongsToGroup :57A74BCEA8B01D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 40, 02.5" .
 
@@ -17614,15 +16933,6 @@ Foraggiamento e acqua potabile
         "Interventions sur l'animal"@fr,
         "Interventi sull'animale "@it ;
     schema:identifier "02.7" ;
-    rdfs:comment """
-Eingriffe am Tier
-"""@de,
-        """
-Interventions sur l'animal
-"""@fr,
-        """
-Interventi sull'animale 
-"""@it ;
     :belongsToGroup :57A74BCEA8B01D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 40, 02.7" .
 
@@ -17631,15 +16941,6 @@ Interventi sull'animale
         "Santé et soins des animaux"@fr,
         "Salute e cura degli animali"@it ;
     schema:identifier "02.8" ;
-    rdfs:comment """
-Gesundheit und Pflege Tiere
-"""@de,
-        """
-Santé et soins des animaux
-"""@fr,
-        """
-Salute e cura degli animali
-"""@it ;
     :belongsToGroup :57A74BCEA8B01D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 40, 02.8" .
 
@@ -17682,15 +16983,6 @@ Aspetti riguardanti il trasporto (durata, documenti, etichettatura, scarico)
         "Gestion de l'élevage"@fr,
         "Gestione dell'allevamento "@it ;
     schema:identifier "02.12" ;
-    rdfs:comment """
-Zuchtmanagement
-"""@de,
-        """
-Gestion de l'élevage
-"""@fr,
-        """
-Gestione dell'allevamento 
-"""@it ;
     :belongsToGroup :57A74BCEA8B01D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 40, 02.12" .
 
@@ -17733,15 +17025,6 @@ Altre lacune (ad es. lesione della dignità)
         "Exigences applicables au personnel"@fr,
         "Requisiti relativi al personale"@it ;
     schema:identifier "03.1" ;
-    rdfs:comment """
-Personelle Voraussetzungen
-"""@de,
-        """
-Exigences applicables au personnel
-"""@fr,
-        """
-Requisiti relativi al personale
-"""@it ;
     :belongsToGroup :57A74BCEA8B01D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 40, 03.1" .
 
@@ -17767,15 +17050,6 @@ Documentazione/registrazioni/ requisiti amministrativi (controllo dell'effettivo
         "Unité d'élevage: dimensions"@fr,
         "Unità di detenzione: dimensioni"@it ;
     schema:identifier "01.1" ;
-    rdfs:comment """
-Haltungseinheit: Abmessungen
-"""@de,
-        """
-Unité d'élevage: dimensions
-"""@fr,
-        """
-Unità di detenzione: dimensioni
-"""@it ;
     :belongsToGroup :57A74BCEA8C11D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 50, 01.1" .
 
@@ -17818,15 +17092,6 @@ Unità di detenzione: occupazione (densità, compatibilità, detenzione individu
         "Partenaire social, contact social avec l'homme et socialisation"@fr,
         "Partner sociale, contatto sociale con l'uomo e socializzazione"@it ;
     schema:identifier "02.1" ;
-    rdfs:comment """
-Sozialpartner, Sozialkontakt Mensch und Sozialisierung
-"""@de,
-        """
-Partenaire social, contact social avec l'homme et socialisation
-"""@fr,
-        """
-Partner sociale, contatto sociale con l'uomo e socializzazione
-"""@it ;
     :belongsToGroup :57A74BCEA8C11D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 50, 02.1" .
 
@@ -17835,15 +17100,6 @@ Partner sociale, contatto sociale con l'uomo e socializzazione
         "Enrichissement: sortie"@fr,
         "Miglioramento: uscita"@it ;
     schema:identifier "02.2" ;
-    rdfs:comment """
-Enrichment: Auslauf
-"""@de,
-        """
-Enrichissement: sortie
-"""@fr,
-        """
-Miglioramento: uscita
-"""@it ;
     :belongsToGroup :57A74BCEA8C11D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 50, 02.2" .
 
@@ -17852,15 +17108,6 @@ Miglioramento: uscita
         "Enrichissement: occupation"@fr,
         "Miglioramento: occupazione"@it ;
     schema:identifier "02.3" ;
-    rdfs:comment """
-Enrichment: Beschäftigung
-"""@de,
-        """
-Enrichissement: occupation
-"""@fr,
-        """
-Miglioramento: occupazione
-"""@it ;
     :belongsToGroup :57A74BCEA8C11D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 50, 02.3" .
 
@@ -17886,15 +17133,6 @@ Clima/luce (qualità dell'acqua)
         "Alimentation et eau de boisson"@fr,
         "Foraggiamento e acqua potabile"@it ;
     schema:identifier "02.5" ;
-    rdfs:comment """
-Fütterung und Trinkwasser
-"""@de,
-        """
-Alimentation et eau de boisson
-"""@fr,
-        """
-Foraggiamento e acqua potabile
-"""@it ;
     :belongsToGroup :57A74BCEA8C11D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 50, 02.5" .
 
@@ -17920,15 +17158,6 @@ Igiene e manutenzione della gabbia (containment)
         "Interventions sur l'animal"@fr,
         "Interventi sull'animale "@it ;
     schema:identifier "02.7" ;
-    rdfs:comment """
-Eingriffe am Tier
-"""@de,
-        """
-Interventions sur l'animal
-"""@fr,
-        """
-Interventi sull'animale 
-"""@it ;
     :belongsToGroup :57A74BCEA8C11D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 50, 02.7" .
 
@@ -17937,15 +17166,6 @@ Interventi sull'animale
         "Santé et soins des animaux"@fr,
         "Salute e cura degli animali"@it ;
     schema:identifier "02.8" ;
-    rdfs:comment """
-Gesundheit und Pflege Tiere
-"""@de,
-        """
-Santé et soins des animaux
-"""@fr,
-        """
-Salute e cura degli animali
-"""@it ;
     :belongsToGroup :57A74BCEA8C11D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 50, 02.8" .
 
@@ -20500,15 +19720,6 @@ Aspetti riguardanti il trasporto (durata, documenti, etichettatura, scarico)
         "Unité d'élevage: dimensions"@fr,
         "Unità di detenzione: dimensioni"@it ;
     schema:identifier "01.1" ;
-    rdfs:comment """
-Haltungseinheit: Abmessungen
-"""@de,
-        """
-Unité d'élevage: dimensions
-"""@fr,
-        """
-Unità di detenzione: dimensioni
-"""@it ;
     :belongsToGroup :57A74BCEAA941D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 01, 01.1" .
 
@@ -20551,15 +19762,6 @@ Unità di detenzione: occupazione (densità, compatibilità, detenzione individu
         "Partenaire social, contact social avec l'homme et socialisation"@fr,
         "Partner sociale, contatto sociale con l'uomo e socializzazione"@it ;
     schema:identifier "02.1" ;
-    rdfs:comment """
-Sozialpartner, Sozialkontakt Mensch und Sozialisierung
-"""@de,
-        """
-Partenaire social, contact social avec l'homme et socialisation
-"""@fr,
-        """
-Partner sociale, contatto sociale con l'uomo e socializzazione
-"""@it ;
     :belongsToGroup :57A74BCEAA941D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 01, 02.1" .
 
@@ -20568,15 +19770,6 @@ Partner sociale, contatto sociale con l'uomo e socializzazione
         "Enrichissement: sortie"@fr,
         "Miglioramento: uscita"@it ;
     schema:identifier "02.2" ;
-    rdfs:comment """
-Enrichment: Auslauf
-"""@de,
-        """
-Enrichissement: sortie
-"""@fr,
-        """
-Miglioramento: uscita
-"""@it ;
     :belongsToGroup :57A74BCEAA941D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 01, 02.2" .
 
@@ -20585,15 +19778,6 @@ Miglioramento: uscita
         "Enrichissement: occupation"@fr,
         "Miglioramento: occupazione"@it ;
     schema:identifier "02.3" ;
-    rdfs:comment """
-Enrichment: Beschäftigung
-"""@de,
-        """
-Enrichissement: occupation
-"""@fr,
-        """
-Miglioramento: occupazione
-"""@it ;
     :belongsToGroup :57A74BCEAA941D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 01, 02.3" .
 
@@ -20619,15 +19803,6 @@ Clima/luce (qualità dell'acqua)
         "Alimentation et eau de boisson"@fr,
         "Foraggiamento e acqua potabile"@it ;
     schema:identifier "02.5" ;
-    rdfs:comment """
-Fütterung und Trinkwasser
-"""@de,
-        """
-Alimentation et eau de boisson
-"""@fr,
-        """
-Foraggiamento e acqua potabile
-"""@it ;
     :belongsToGroup :57A74BCEAA941D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 01, 02.5" .
 
@@ -20653,15 +19828,6 @@ Igiene e manutenzione della gabbia (containment)
         "Interventions sur l'animal"@fr,
         "Interventi sull'animale "@it ;
     schema:identifier "02.7" ;
-    rdfs:comment """
-Eingriffe am Tier
-"""@de,
-        """
-Interventions sur l'animal
-"""@fr,
-        """
-Interventi sull'animale 
-"""@it ;
     :belongsToGroup :57A74BCEAA941D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 01, 02.7" .
 
@@ -20670,15 +19836,6 @@ Interventi sull'animale
         "Santé et soins des animaux"@fr,
         "Salute e cura degli animali"@it ;
     schema:identifier "02.8" ;
-    rdfs:comment """
-Gesundheit und Pflege Tiere
-"""@de,
-        """
-Santé et soins des animaux
-"""@fr,
-        """
-Salute e cura degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAA941D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 01, 02.8" .
 
@@ -20721,15 +19878,6 @@ Aspetti riguardanti il trasporto (durata, documenti, etichettatura, scarico)
         "Manquements zootechniques à l'égard des animaux"@fr,
         "Inadempimenti zootecnici nei confronti degli animali"@it ;
     schema:identifier "02.11" ;
-    rdfs:comment """
-Zuchtbedingte Mängel an den Tieren
-"""@de,
-        """
-Manquements zootechniques à l'égard des animaux
-"""@fr,
-        """
-Inadempimenti zootecnici nei confronti degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAA941D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 01, 02.11" .
 
@@ -20738,15 +19886,6 @@ Inadempimenti zootecnici nei confronti degli animali
         "Unité d'élevage: dimensions"@fr,
         "Unità di detenzione: dimensioni"@it ;
     schema:identifier "01.1" ;
-    rdfs:comment """
-Haltungseinheit: Abmessungen
-"""@de,
-        """
-Unité d'élevage: dimensions
-"""@fr,
-        """
-Unità di detenzione: dimensioni
-"""@it ;
     :belongsToGroup :57A74BCEAAA41D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 00, 01.1" .
 
@@ -20789,15 +19928,6 @@ Unità di detenzione: occupazione (densità, compatibilità, detenzione individu
         "Partenaire social, contact social avec l'homme et socialisation"@fr,
         "Partner sociale, contatto sociale con l'uomo e socializzazione"@it ;
     schema:identifier "02.1" ;
-    rdfs:comment """
-Sozialpartner, Sozialkontakt Mensch und Sozialisierung
-"""@de,
-        """
-Partenaire social, contact social avec l'homme et socialisation
-"""@fr,
-        """
-Partner sociale, contatto sociale con l'uomo e socializzazione
-"""@it ;
     :belongsToGroup :57A74BCEAAA41D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 00, 02.1" .
 
@@ -20806,15 +19936,6 @@ Partner sociale, contatto sociale con l'uomo e socializzazione
         "Enrichissement: sortie"@fr,
         "Miglioramento: uscita"@it ;
     schema:identifier "02.2" ;
-    rdfs:comment """
-Enrichment: Auslauf
-"""@de,
-        """
-Enrichissement: sortie
-"""@fr,
-        """
-Miglioramento: uscita
-"""@it ;
     :belongsToGroup :57A74BCEAAA41D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 00, 02.2" .
 
@@ -20823,15 +19944,6 @@ Miglioramento: uscita
         "Enrichissement: occupation"@fr,
         "Miglioramento: occupazione"@it ;
     schema:identifier "02.3" ;
-    rdfs:comment """
-Enrichment: Beschäftigung
-"""@de,
-        """
-Enrichissement: occupation
-"""@fr,
-        """
-Miglioramento: occupazione
-"""@it ;
     :belongsToGroup :57A74BCEAAA41D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 00, 02.3" .
 
@@ -20840,15 +19952,6 @@ Miglioramento: occupazione
         "Alimentation et eau de boisson"@fr,
         "Foraggiamento e acqua potabile"@it ;
     schema:identifier "02.5" ;
-    rdfs:comment """
-Fütterung und Trinkwasser
-"""@de,
-        """
-Alimentation et eau de boisson
-"""@fr,
-        """
-Foraggiamento e acqua potabile
-"""@it ;
     :belongsToGroup :57A74BCEAAA41D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 00, 02.5" .
 
@@ -20874,15 +19977,6 @@ Igiene e manutenzione della gabbia (containment)
         "Interventions sur l'animal"@fr,
         "Interventi sull'animale "@it ;
     schema:identifier "02.7" ;
-    rdfs:comment """
-Eingriffe am Tier
-"""@de,
-        """
-Interventions sur l'animal
-"""@fr,
-        """
-Interventi sull'animale 
-"""@it ;
     :belongsToGroup :57A74BCEAAA41D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 00, 02.7" .
 
@@ -20891,15 +19985,6 @@ Interventi sull'animale
         "Santé et soins des animaux"@fr,
         "Salute e cura degli animali"@it ;
     schema:identifier "02.8" ;
-    rdfs:comment """
-Gesundheit und Pflege Tiere
-"""@de,
-        """
-Santé et soins des animaux
-"""@fr,
-        """
-Salute e cura degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAAA41D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 00, 02.8" .
 
@@ -20925,15 +20010,6 @@ Aspetti riguardanti il trasporto (durata, documenti, etichettatura, scarico)
         "Manquements zootechniques à l'égard des animaux"@fr,
         "Inadempimenti zootecnici nei confronti degli animali"@it ;
     schema:identifier "02.11" ;
-    rdfs:comment """
-Zuchtbedingte Mängel an den Tieren
-"""@de,
-        """
-Manquements zootechniques à l'égard des animaux
-"""@fr,
-        """
-Inadempimenti zootecnici nei confronti degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAAA41D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 00, 02.11" .
 
@@ -20942,15 +20018,6 @@ Inadempimenti zootecnici nei confronti degli animali
         "Gestion de l'élevage"@fr,
         "Gestione dell'allevamento "@it ;
     schema:identifier "02.12" ;
-    rdfs:comment """
-Zuchtmanagement
-"""@de,
-        """
-Gestion de l'élevage
-"""@fr,
-        """
-Gestione dell'allevamento 
-"""@it ;
     :belongsToGroup :57A74BCEAAA41D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 00, 02.12" .
 
@@ -20976,15 +20043,6 @@ Altre lacune (ad es. lesione della dignità)
         "Exigences applicables au personnel"@fr,
         "Requisiti relativi al personale"@it ;
     schema:identifier "03.1" ;
-    rdfs:comment """
-Personelle Voraussetzungen
-"""@de,
-        """
-Exigences applicables au personnel
-"""@fr,
-        """
-Requisiti relativi al personale
-"""@it ;
     :belongsToGroup :57A74BCEAAA41D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 00, 03.1" .
 
@@ -21010,15 +20068,6 @@ Documentazione/registrazioni/ requisiti amministrativi (controllo dell'effettivo
         "Unité d'élevage: dimensions"@fr,
         "Unità di detenzione: dimensioni"@it ;
     schema:identifier "01.1" ;
-    rdfs:comment """
-Haltungseinheit: Abmessungen
-"""@de,
-        """
-Unité d'élevage: dimensions
-"""@fr,
-        """
-Unità di detenzione: dimensioni
-"""@it ;
     :belongsToGroup :57A74BCEAAB51D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 10, 01.1" .
 
@@ -21044,15 +20093,6 @@ Unità di detenzione: occupazione (densità, compatibilità, detenzione individu
         "Partenaire social, contact social avec l'homme et socialisation"@fr,
         "Partner sociale, contatto sociale con l'uomo e socializzazione"@it ;
     schema:identifier "02.1" ;
-    rdfs:comment """
-Sozialpartner, Sozialkontakt Mensch und Sozialisierung
-"""@de,
-        """
-Partenaire social, contact social avec l'homme et socialisation
-"""@fr,
-        """
-Partner sociale, contatto sociale con l'uomo e socializzazione
-"""@it ;
     :belongsToGroup :57A74BCEAAB51D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 10, 02.1" .
 
@@ -21061,15 +20101,6 @@ Partner sociale, contatto sociale con l'uomo e socializzazione
         "Enrichissement: sortie"@fr,
         "Miglioramento: uscita"@it ;
     schema:identifier "02.2" ;
-    rdfs:comment """
-Enrichment: Auslauf
-"""@de,
-        """
-Enrichissement: sortie
-"""@fr,
-        """
-Miglioramento: uscita
-"""@it ;
     :belongsToGroup :57A74BCEAAB51D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 10, 02.2" .
 
@@ -21078,15 +20109,6 @@ Miglioramento: uscita
         "Enrichissement: occupation"@fr,
         "Miglioramento: occupazione"@it ;
     schema:identifier "02.3" ;
-    rdfs:comment """
-Enrichment: Beschäftigung
-"""@de,
-        """
-Enrichissement: occupation
-"""@fr,
-        """
-Miglioramento: occupazione
-"""@it ;
     :belongsToGroup :57A74BCEAAB51D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 10, 02.3" .
 
@@ -21095,15 +20117,6 @@ Miglioramento: occupazione
         "Alimentation et eau de boisson"@fr,
         "Foraggiamento e acqua potabile"@it ;
     schema:identifier "02.5" ;
-    rdfs:comment """
-Fütterung und Trinkwasser
-"""@de,
-        """
-Alimentation et eau de boisson
-"""@fr,
-        """
-Foraggiamento e acqua potabile
-"""@it ;
     :belongsToGroup :57A74BCEAAB51D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 10, 02.5" .
 
@@ -21129,15 +20142,6 @@ Igiene e manutenzione della gabbia (containment)
         "Interventions sur l'animal"@fr,
         "Interventi sull'animale "@it ;
     schema:identifier "02.7" ;
-    rdfs:comment """
-Eingriffe am Tier
-"""@de,
-        """
-Interventions sur l'animal
-"""@fr,
-        """
-Interventi sull'animale 
-"""@it ;
     :belongsToGroup :57A74BCEAAB51D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 10, 02.7" .
 
@@ -21180,15 +20184,6 @@ Aspetti riguardanti il trasporto (durata, documenti, etichettatura, scarico)
         "Manquements zootechniques à l'égard des animaux"@fr,
         "Inadempimenti zootecnici nei confronti degli animali"@it ;
     schema:identifier "02.11" ;
-    rdfs:comment """
-Zuchtbedingte Mängel an den Tieren
-"""@de,
-        """
-Manquements zootechniques à l'égard des animaux
-"""@fr,
-        """
-Inadempimenti zootecnici nei confronti degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAAB51D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 10, 02.11" .
 
@@ -21197,15 +20192,6 @@ Inadempimenti zootecnici nei confronti degli animali
         "Gestion de l'élevage"@fr,
         "Gestione dell'allevamento "@it ;
     schema:identifier "02.12" ;
-    rdfs:comment """
-Zuchtmanagement
-"""@de,
-        """
-Gestion de l'élevage
-"""@fr,
-        """
-Gestione dell'allevamento 
-"""@it ;
     :belongsToGroup :57A74BCEAAB51D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 10, 02.12" .
 
@@ -21231,15 +20217,6 @@ Altre lacune (ad es. lesione della dignità)
         "Exigences applicables au personnel"@fr,
         "Requisiti relativi al personale"@it ;
     schema:identifier "03.1" ;
-    rdfs:comment """
-Personelle Voraussetzungen
-"""@de,
-        """
-Exigences applicables au personnel
-"""@fr,
-        """
-Requisiti relativi al personale
-"""@it ;
     :belongsToGroup :57A74BCEAAB51D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 10, 03.1" .
 
@@ -21265,15 +20242,6 @@ Documentazione/registrazioni/ requisiti amministrativi (controllo dell'effettivo
         "Unité d'élevage: dimensions"@fr,
         "Unità di detenzione: dimensioni"@it ;
     schema:identifier "01.1" ;
-    rdfs:comment """
-Haltungseinheit: Abmessungen
-"""@de,
-        """
-Unité d'élevage: dimensions
-"""@fr,
-        """
-Unità di detenzione: dimensioni
-"""@it ;
     :belongsToGroup :57A74BCEAAC51D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 20, 01.1" .
 
@@ -21316,15 +20284,6 @@ Unità di detenzione: occupazione (densità, compatibilità, detenzione individu
         "Partenaire social, contact social avec l'homme et socialisation"@fr,
         "Partner sociale, contatto sociale con l'uomo e socializzazione"@it ;
     schema:identifier "02.1" ;
-    rdfs:comment """
-Sozialpartner, Sozialkontakt Mensch und Sozialisierung
-"""@de,
-        """
-Partenaire social, contact social avec l'homme et socialisation
-"""@fr,
-        """
-Partner sociale, contatto sociale con l'uomo e socializzazione
-"""@it ;
     :belongsToGroup :57A74BCEAAC51D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 20, 02.1" .
 
@@ -21333,15 +20292,6 @@ Partner sociale, contatto sociale con l'uomo e socializzazione
         "Enrichissement: sortie"@fr,
         "Miglioramento: uscita"@it ;
     schema:identifier "02.2" ;
-    rdfs:comment """
-Enrichment: Auslauf
-"""@de,
-        """
-Enrichissement: sortie
-"""@fr,
-        """
-Miglioramento: uscita
-"""@it ;
     :belongsToGroup :57A74BCEAAC51D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 20, 02.2" .
 
@@ -21350,15 +20300,6 @@ Miglioramento: uscita
         "Enrichissement: occupation"@fr,
         "Miglioramento: occupazione"@it ;
     schema:identifier "02.3" ;
-    rdfs:comment """
-Enrichment: Beschäftigung
-"""@de,
-        """
-Enrichissement: occupation
-"""@fr,
-        """
-Miglioramento: occupazione
-"""@it ;
     :belongsToGroup :57A74BCEAAC51D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 20, 02.3" .
 
@@ -21384,15 +20325,6 @@ Clima/luce (qualità dell'acqua)
         "Alimentation et eau de boisson"@fr,
         "Foraggiamento e acqua potabile"@it ;
     schema:identifier "02.5" ;
-    rdfs:comment """
-Fütterung und Trinkwasser
-"""@de,
-        """
-Alimentation et eau de boisson
-"""@fr,
-        """
-Foraggiamento e acqua potabile
-"""@it ;
     :belongsToGroup :57A74BCEAAC51D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 20, 02.5" .
 
@@ -21418,15 +20350,6 @@ Igiene e manutenzione della gabbia (containment)
         "Interventions sur l'animal"@fr,
         "Interventi sull'animale "@it ;
     schema:identifier "02.7" ;
-    rdfs:comment """
-Eingriffe am Tier
-"""@de,
-        """
-Interventions sur l'animal
-"""@fr,
-        """
-Interventi sull'animale 
-"""@it ;
     :belongsToGroup :57A74BCEAAC51D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 20, 02.7" .
 
@@ -21435,15 +20358,6 @@ Interventi sull'animale
         "Santé et soins des animaux"@fr,
         "Salute e cura degli animali"@it ;
     schema:identifier "02.8" ;
-    rdfs:comment """
-Gesundheit und Pflege Tiere
-"""@de,
-        """
-Santé et soins des animaux
-"""@fr,
-        """
-Salute e cura degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAAC51D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 20, 02.8" .
 
@@ -21486,15 +20400,6 @@ Aspetti riguardanti il trasporto (durata, documenti, etichettatura, scarico)
         "Manquements zootechniques à l'égard des animaux"@fr,
         "Inadempimenti zootecnici nei confronti degli animali"@it ;
     schema:identifier "02.11" ;
-    rdfs:comment """
-Zuchtbedingte Mängel an den Tieren
-"""@de,
-        """
-Manquements zootechniques à l'égard des animaux
-"""@fr,
-        """
-Inadempimenti zootecnici nei confronti degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAAC51D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 20, 02.11" .
 
@@ -21503,15 +20408,6 @@ Inadempimenti zootecnici nei confronti degli animali
         "Gestion de l'élevage"@fr,
         "Gestione dell'allevamento "@it ;
     schema:identifier "02.12" ;
-    rdfs:comment """
-Zuchtmanagement
-"""@de,
-        """
-Gestion de l'élevage
-"""@fr,
-        """
-Gestione dell'allevamento 
-"""@it ;
     :belongsToGroup :57A74BCEAAC51D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 20, 02.12" .
 
@@ -21554,15 +20450,6 @@ Altre lacune (ad es. lesione della dignità)
         "Exigences applicables au personnel"@fr,
         "Requisiti relativi al personale"@it ;
     schema:identifier "03.1" ;
-    rdfs:comment """
-Personelle Voraussetzungen
-"""@de,
-        """
-Exigences applicables au personnel
-"""@fr,
-        """
-Requisiti relativi al personale
-"""@it ;
     :belongsToGroup :57A74BCEAAC51D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 20, 03.1" .
 
@@ -21588,15 +20475,6 @@ Documentazione/registrazioni/ requisiti amministrativi (controllo dell'effettivo
         "Unité d'élevage: dimensions"@fr,
         "Unità di detenzione: dimensioni"@it ;
     schema:identifier "01.1" ;
-    rdfs:comment """
-Haltungseinheit: Abmessungen
-"""@de,
-        """
-Unité d'élevage: dimensions
-"""@fr,
-        """
-Unità di detenzione: dimensioni
-"""@it ;
     :belongsToGroup :57A74BCEAAD91D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 30, 01.1" .
 
@@ -21639,15 +20517,6 @@ Unità di detenzione: occupazione (densità, compatibilità, detenzione individu
         "Partenaire social, contact social avec l'homme et socialisation"@fr,
         "Partner sociale, contatto sociale con l'uomo e socializzazione"@it ;
     schema:identifier "02.1" ;
-    rdfs:comment """
-Sozialpartner, Sozialkontakt Mensch und Sozialisierung
-"""@de,
-        """
-Partenaire social, contact social avec l'homme et socialisation
-"""@fr,
-        """
-Partner sociale, contatto sociale con l'uomo e socializzazione
-"""@it ;
     :belongsToGroup :57A74BCEAAD91D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 30, 02.1" .
 
@@ -21656,15 +20525,6 @@ Partner sociale, contatto sociale con l'uomo e socializzazione
         "Enrichissement: sortie"@fr,
         "Miglioramento: uscita"@it ;
     schema:identifier "02.2" ;
-    rdfs:comment """
-Enrichment: Auslauf
-"""@de,
-        """
-Enrichissement: sortie
-"""@fr,
-        """
-Miglioramento: uscita
-"""@it ;
     :belongsToGroup :57A74BCEAAD91D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 30, 02.2" .
 
@@ -21673,15 +20533,6 @@ Miglioramento: uscita
         "Enrichissement: occupation"@fr,
         "Miglioramento: occupazione"@it ;
     schema:identifier "02.3" ;
-    rdfs:comment """
-Enrichment: Beschäftigung
-"""@de,
-        """
-Enrichissement: occupation
-"""@fr,
-        """
-Miglioramento: occupazione
-"""@it ;
     :belongsToGroup :57A74BCEAAD91D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 30, 02.3" .
 
@@ -21690,15 +20541,6 @@ Miglioramento: occupazione
         "Alimentation et eau de boisson"@fr,
         "Foraggiamento e acqua potabile"@it ;
     schema:identifier "02.5" ;
-    rdfs:comment """
-Fütterung und Trinkwasser
-"""@de,
-        """
-Alimentation et eau de boisson
-"""@fr,
-        """
-Foraggiamento e acqua potabile
-"""@it ;
     :belongsToGroup :57A74BCEAAD91D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 30, 02.5" .
 
@@ -21724,15 +20566,6 @@ Igiene e manutenzione della gabbia (containment)
         "Interventions sur l'animal"@fr,
         "Interventi sull'animale "@it ;
     schema:identifier "02.7" ;
-    rdfs:comment """
-Eingriffe am Tier
-"""@de,
-        """
-Interventions sur l'animal
-"""@fr,
-        """
-Interventi sull'animale 
-"""@it ;
     :belongsToGroup :57A74BCEAAD91D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 30, 02.7" .
 
@@ -21775,15 +20608,6 @@ Aspetti riguardanti il trasporto (durata, documenti, etichettatura, scarico)
         "Manquements zootechniques à l'égard des animaux"@fr,
         "Inadempimenti zootecnici nei confronti degli animali"@it ;
     schema:identifier "02.11" ;
-    rdfs:comment """
-Zuchtbedingte Mängel an den Tieren
-"""@de,
-        """
-Manquements zootechniques à l'égard des animaux
-"""@fr,
-        """
-Inadempimenti zootecnici nei confronti degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAAD91D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 30, 02.11" .
 
@@ -21792,15 +20616,6 @@ Inadempimenti zootecnici nei confronti degli animali
         "Gestion de l'élevage"@fr,
         "Gestione dell'allevamento "@it ;
     schema:identifier "02.12" ;
-    rdfs:comment """
-Zuchtmanagement
-"""@de,
-        """
-Gestion de l'élevage
-"""@fr,
-        """
-Gestione dell'allevamento 
-"""@it ;
     :belongsToGroup :57A74BCEAAD91D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 30, 02.12" .
 
@@ -21826,15 +20641,6 @@ Altre lacune (ad es. lesione della dignità)
         "Exigences applicables au personnel"@fr,
         "Requisiti relativi al personale"@it ;
     schema:identifier "03.1" ;
-    rdfs:comment """
-Personelle Voraussetzungen
-"""@de,
-        """
-Exigences applicables au personnel
-"""@fr,
-        """
-Requisiti relativi al personale
-"""@it ;
     :belongsToGroup :57A74BCEAAD91D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 30, 03.1" .
 
@@ -21860,15 +20666,6 @@ Documentazione/registrazioni/ requisiti amministrativi (controllo dell'effettivo
         "Unité d'élevage: dimensions"@fr,
         "Unità di detenzione: dimensioni"@it ;
     schema:identifier "01.1" ;
-    rdfs:comment """
-Haltungseinheit: Abmessungen
-"""@de,
-        """
-Unité d'élevage: dimensions
-"""@fr,
-        """
-Unità di detenzione: dimensioni
-"""@it ;
     :belongsToGroup :57A74BCEAAEA1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 40, 01.1" .
 
@@ -21894,15 +20691,6 @@ Unità di detenzione: occupazione (densità, compatibilità, detenzione individu
         "Partenaire social, contact social avec l'homme et socialisation"@fr,
         "Partner sociale, contatto sociale con l'uomo e socializzazione"@it ;
     schema:identifier "02.1" ;
-    rdfs:comment """
-Sozialpartner, Sozialkontakt Mensch und Sozialisierung
-"""@de,
-        """
-Partenaire social, contact social avec l'homme et socialisation
-"""@fr,
-        """
-Partner sociale, contatto sociale con l'uomo e socializzazione
-"""@it ;
     :belongsToGroup :57A74BCEAAEA1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 40, 02.1" .
 
@@ -21911,15 +20699,6 @@ Partner sociale, contatto sociale con l'uomo e socializzazione
         "Enrichissement: sortie"@fr,
         "Miglioramento: uscita"@it ;
     schema:identifier "02.2" ;
-    rdfs:comment """
-Enrichment: Auslauf
-"""@de,
-        """
-Enrichissement: sortie
-"""@fr,
-        """
-Miglioramento: uscita
-"""@it ;
     :belongsToGroup :57A74BCEAAEA1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 40, 02.2" .
 
@@ -21945,15 +20724,6 @@ Clima/luce (qualità dell'acqua)
         "Alimentation et eau de boisson"@fr,
         "Foraggiamento e acqua potabile"@it ;
     schema:identifier "02.5" ;
-    rdfs:comment """
-Fütterung und Trinkwasser
-"""@de,
-        """
-Alimentation et eau de boisson
-"""@fr,
-        """
-Foraggiamento e acqua potabile
-"""@it ;
     :belongsToGroup :57A74BCEAAEA1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 40, 02.5" .
 
@@ -21979,15 +20749,6 @@ Igiene e manutenzione della gabbia (containment)
         "Interventions sur l'animal"@fr,
         "Interventi sull'animale "@it ;
     schema:identifier "02.7" ;
-    rdfs:comment """
-Eingriffe am Tier
-"""@de,
-        """
-Interventions sur l'animal
-"""@fr,
-        """
-Interventi sull'animale 
-"""@it ;
     :belongsToGroup :57A74BCEAAEA1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 40, 02.7" .
 
@@ -22030,15 +20791,6 @@ Aspetti riguardanti il trasporto (durata, documenti, etichettatura, scarico)
         "Manquements zootechniques à l'égard des animaux"@fr,
         "Inadempimenti zootecnici nei confronti degli animali"@it ;
     schema:identifier "02.11" ;
-    rdfs:comment """
-Zuchtbedingte Mängel an den Tieren
-"""@de,
-        """
-Manquements zootechniques à l'égard des animaux
-"""@fr,
-        """
-Inadempimenti zootecnici nei confronti degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAAEA1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 40, 02.11" .
 
@@ -22081,15 +20833,6 @@ Altre lacune (ad es. lesione della dignità)
         "Exigences applicables au personnel"@fr,
         "Requisiti relativi al personale"@it ;
     schema:identifier "03.1" ;
-    rdfs:comment """
-Personelle Voraussetzungen
-"""@de,
-        """
-Exigences applicables au personnel
-"""@fr,
-        """
-Requisiti relativi al personale
-"""@it ;
     :belongsToGroup :57A74BCEAAEA1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 40, 03.1" .
 
@@ -22115,15 +20858,6 @@ Documentazione/registrazioni/ requisiti amministrativi (controllo dell'effettivo
         "Unité d'élevage: dimensions"@fr,
         "Unità di detenzione: dimensioni"@it ;
     schema:identifier "01.1" ;
-    rdfs:comment """
-Haltungseinheit: Abmessungen
-"""@de,
-        """
-Unité d'élevage: dimensions
-"""@fr,
-        """
-Unità di detenzione: dimensioni
-"""@it ;
     :belongsToGroup :57A74BCEAAFA1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 50, 01.1" .
 
@@ -22166,15 +20900,6 @@ Unità di detenzione: occupazione (densità, compatibilità, detenzione individu
         "Partenaire social, contact social avec l'homme et socialisation"@fr,
         "Partner sociale, contatto sociale con l'uomo e socializzazione"@it ;
     schema:identifier "02.1" ;
-    rdfs:comment """
-Sozialpartner, Sozialkontakt Mensch und Sozialisierung
-"""@de,
-        """
-Partenaire social, contact social avec l'homme et socialisation
-"""@fr,
-        """
-Partner sociale, contatto sociale con l'uomo e socializzazione
-"""@it ;
     :belongsToGroup :57A74BCEAAFA1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 50, 02.1" .
 
@@ -22183,15 +20908,6 @@ Partner sociale, contatto sociale con l'uomo e socializzazione
         "Enrichissement: sortie"@fr,
         "Miglioramento: uscita"@it ;
     schema:identifier "02.2" ;
-    rdfs:comment """
-Enrichment: Auslauf
-"""@de,
-        """
-Enrichissement: sortie
-"""@fr,
-        """
-Miglioramento: uscita
-"""@it ;
     :belongsToGroup :57A74BCEAAFA1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 50, 02.2" .
 
@@ -22200,15 +20916,6 @@ Miglioramento: uscita
         "Enrichissement: occupation"@fr,
         "Miglioramento: occupazione"@it ;
     schema:identifier "02.3" ;
-    rdfs:comment """
-Enrichment: Beschäftigung
-"""@de,
-        """
-Enrichissement: occupation
-"""@fr,
-        """
-Miglioramento: occupazione
-"""@it ;
     :belongsToGroup :57A74BCEAAFA1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 50, 02.3" .
 
@@ -22234,15 +20941,6 @@ Clima/luce (qualità dell'acqua)
         "Alimentation et eau de boisson"@fr,
         "Foraggiamento e acqua potabile"@it ;
     schema:identifier "02.5" ;
-    rdfs:comment """
-Fütterung und Trinkwasser
-"""@de,
-        """
-Alimentation et eau de boisson
-"""@fr,
-        """
-Foraggiamento e acqua potabile
-"""@it ;
     :belongsToGroup :57A74BCEAAFA1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 50, 02.5" .
 
@@ -22268,15 +20966,6 @@ Igiene e manutenzione della gabbia (containment)
         "Interventions sur l'animal"@fr,
         "Interventi sull'animale "@it ;
     schema:identifier "02.7" ;
-    rdfs:comment """
-Eingriffe am Tier
-"""@de,
-        """
-Interventions sur l'animal
-"""@fr,
-        """
-Interventi sull'animale 
-"""@it ;
     :belongsToGroup :57A74BCEAAFA1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 50, 02.7" .
 
@@ -22285,15 +20974,6 @@ Interventi sull'animale
         "Santé et soins des animaux"@fr,
         "Salute e cura degli animali"@it ;
     schema:identifier "02.8" ;
-    rdfs:comment """
-Gesundheit und Pflege Tiere
-"""@de,
-        """
-Santé et soins des animaux
-"""@fr,
-        """
-Salute e cura degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAAFA1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 50, 02.8" .
 
@@ -22336,15 +21016,6 @@ Aspetti riguardanti il trasporto (durata, documenti, etichettatura, scarico)
         "Manquements zootechniques à l'égard des animaux"@fr,
         "Inadempimenti zootecnici nei confronti degli animali"@it ;
     schema:identifier "02.11" ;
-    rdfs:comment """
-Zuchtbedingte Mängel an den Tieren
-"""@de,
-        """
-Manquements zootechniques à l'égard des animaux
-"""@fr,
-        """
-Inadempimenti zootecnici nei confronti degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAAFA1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 50, 02.11" .
 
@@ -22353,15 +21024,6 @@ Inadempimenti zootecnici nei confronti degli animali
         "Gestion de l'élevage"@fr,
         "Gestione dell'allevamento "@it ;
     schema:identifier "02.12" ;
-    rdfs:comment """
-Zuchtmanagement
-"""@de,
-        """
-Gestion de l'élevage
-"""@fr,
-        """
-Gestione dell'allevamento 
-"""@it ;
     :belongsToGroup :57A74BCEAAFA1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 50, 02.12" .
 
@@ -22404,15 +21066,6 @@ Altre lacune (ad es. lesione della dignità)
         "Exigences applicables au personnel"@fr,
         "Requisiti relativi al personale"@it ;
     schema:identifier "03.1" ;
-    rdfs:comment """
-Personelle Voraussetzungen
-"""@de,
-        """
-Exigences applicables au personnel
-"""@fr,
-        """
-Requisiti relativi al personale
-"""@it ;
     :belongsToGroup :57A74BCEAAFA1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 50, 03.1" .
 
@@ -22438,15 +21091,6 @@ Documentazione/registrazioni/ requisiti amministrativi (controllo dell'effettivo
         "Gestion de l'élevage"@fr,
         "Gestione dell'allevamento "@it ;
     schema:identifier "02.12" ;
-    rdfs:comment """
-Zuchtmanagement
-"""@de,
-        """
-Gestion de l'élevage
-"""@fr,
-        """
-Gestione dell'allevamento 
-"""@it ;
     :belongsToGroup :57A74BCEAA941D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 01, 02.12" .
 
@@ -22489,15 +21133,6 @@ Altre lacune (ad es. lesione della dignità)
         "Exigences applicables au personnel"@fr,
         "Requisiti relativi al personale"@it ;
     schema:identifier "03.1" ;
-    rdfs:comment """
-Personelle Voraussetzungen
-"""@de,
-        """
-Exigences applicables au personnel
-"""@fr,
-        """
-Requisiti relativi al personale
-"""@it ;
     :belongsToGroup :57A74BCEAA941D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 01, 03.1" .
 
@@ -22557,15 +21192,6 @@ Unità di detenzione: occupazione (densità, compatibilità, detenzione individu
         "Partenaire social, contact social avec l'homme et socialisation"@fr,
         "Partner sociale, contatto sociale con l'uomo e socializzazione"@it ;
     schema:identifier "02.1" ;
-    rdfs:comment """
-Sozialpartner, Sozialkontakt Mensch und Sozialisierung
-"""@de,
-        """
-Partenaire social, contact social avec l'homme et socialisation
-"""@fr,
-        """
-Partner sociale, contatto sociale con l'uomo e socializzazione
-"""@it ;
     :belongsToGroup :57A74BCEAB131D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 02, 02.1" .
 
@@ -22574,15 +21200,6 @@ Partner sociale, contatto sociale con l'uomo e socializzazione
         "Enrichissement: sortie"@fr,
         "Miglioramento: uscita"@it ;
     schema:identifier "02.2" ;
-    rdfs:comment """
-Enrichment: Auslauf
-"""@de,
-        """
-Enrichissement: sortie
-"""@fr,
-        """
-Miglioramento: uscita
-"""@it ;
     :belongsToGroup :57A74BCEAB131D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 02, 02.2" .
 
@@ -22608,15 +21225,6 @@ Clima/luce (qualità dell'acqua)
         "Alimentation et eau de boisson"@fr,
         "Foraggiamento e acqua potabile"@it ;
     schema:identifier "02.5" ;
-    rdfs:comment """
-Fütterung und Trinkwasser
-"""@de,
-        """
-Alimentation et eau de boisson
-"""@fr,
-        """
-Foraggiamento e acqua potabile
-"""@it ;
     :belongsToGroup :57A74BCEAB131D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 02, 02.5" .
 
@@ -22642,15 +21250,6 @@ Igiene e manutenzione della gabbia (containment)
         "Santé et soins des animaux"@fr,
         "Salute e cura degli animali"@it ;
     schema:identifier "02.8" ;
-    rdfs:comment """
-Gesundheit und Pflege Tiere
-"""@de,
-        """
-Santé et soins des animaux
-"""@fr,
-        """
-Salute e cura degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAB131D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 02, 02.8" .
 
@@ -22693,15 +21292,6 @@ Aspetti riguardanti il trasporto (durata, documenti, etichettatura, scarico)
         "Manquements zootechniques à l'égard des animaux"@fr,
         "Inadempimenti zootecnici nei confronti degli animali"@it ;
     schema:identifier "02.11" ;
-    rdfs:comment """
-Zuchtbedingte Mängel an den Tieren
-"""@de,
-        """
-Manquements zootechniques à l'égard des animaux
-"""@fr,
-        """
-Inadempimenti zootecnici nei confronti degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAB131D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 02, 02.11" .
 
@@ -22744,15 +21334,6 @@ Altre lacune (ad es. lesione della dignità)
         "Exigences applicables au personnel"@fr,
         "Requisiti relativi al personale"@it ;
     schema:identifier "03.1" ;
-    rdfs:comment """
-Personelle Voraussetzungen
-"""@de,
-        """
-Exigences applicables au personnel
-"""@fr,
-        """
-Requisiti relativi al personale
-"""@it ;
     :belongsToGroup :57A74BCEAB131D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 02, 03.1" .
 
@@ -22812,15 +21393,6 @@ Unità di detenzione: occupazione (densità, compatibilità, detenzione individu
         "Partenaire social, contact social avec l'homme et socialisation"@fr,
         "Partner sociale, contatto sociale con l'uomo e socializzazione"@it ;
     schema:identifier "02.1" ;
-    rdfs:comment """
-Sozialpartner, Sozialkontakt Mensch und Sozialisierung
-"""@de,
-        """
-Partenaire social, contact social avec l'homme et socialisation
-"""@fr,
-        """
-Partner sociale, contatto sociale con l'uomo e socializzazione
-"""@it ;
     :belongsToGroup :57A74BCEAB231D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 03, 02.1" .
 
@@ -22829,15 +21401,6 @@ Partner sociale, contatto sociale con l'uomo e socializzazione
         "Enrichissement: occupation"@fr,
         "Miglioramento: occupazione"@it ;
     schema:identifier "02.3" ;
-    rdfs:comment """
-Enrichment: Beschäftigung
-"""@de,
-        """
-Enrichissement: occupation
-"""@fr,
-        """
-Miglioramento: occupazione
-"""@it ;
     :belongsToGroup :57A74BCEAB231D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 03, 02.3" .
 
@@ -22863,15 +21426,6 @@ Clima/luce (qualità dell'acqua)
         "Alimentation et eau de boisson"@fr,
         "Foraggiamento e acqua potabile"@it ;
     schema:identifier "02.5" ;
-    rdfs:comment """
-Fütterung und Trinkwasser
-"""@de,
-        """
-Alimentation et eau de boisson
-"""@fr,
-        """
-Foraggiamento e acqua potabile
-"""@it ;
     :belongsToGroup :57A74BCEAB231D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 03, 02.5" .
 
@@ -22897,15 +21451,6 @@ Igiene e manutenzione della gabbia (containment)
         "Santé et soins des animaux"@fr,
         "Salute e cura degli animali"@it ;
     schema:identifier "02.8" ;
-    rdfs:comment """
-Gesundheit und Pflege Tiere
-"""@de,
-        """
-Santé et soins des animaux
-"""@fr,
-        """
-Salute e cura degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAB231D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 03, 02.8" .
 
@@ -22948,15 +21493,6 @@ Aspetti riguardanti il trasporto (durata, documenti, etichettatura, scarico)
         "Gestion de l'élevage"@fr,
         "Gestione dell'allevamento "@it ;
     schema:identifier "02.12" ;
-    rdfs:comment """
-Zuchtmanagement
-"""@de,
-        """
-Gestion de l'élevage
-"""@fr,
-        """
-Gestione dell'allevamento 
-"""@it ;
     :belongsToGroup :57A74BCEAB231D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 03, 02.12" .
 
@@ -22999,15 +21535,6 @@ Altre lacune (ad es. lesione della dignità)
         "Exigences applicables au personnel"@fr,
         "Requisiti relativi al personale"@it ;
     schema:identifier "03.1" ;
-    rdfs:comment """
-Personelle Voraussetzungen
-"""@de,
-        """
-Exigences applicables au personnel
-"""@fr,
-        """
-Requisiti relativi al personale
-"""@it ;
     :belongsToGroup :57A74BCEAB231D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 03, 03.1" .
 
@@ -23033,15 +21560,6 @@ Documentazione/registrazioni/ requisiti amministrativi (controllo dell'effettivo
         "Unité d'élevage: dimensions"@fr,
         "Unità di detenzione: dimensioni"@it ;
     schema:identifier "01.1" ;
-    rdfs:comment """
-Haltungseinheit: Abmessungen
-"""@de,
-        """
-Unité d'élevage: dimensions
-"""@fr,
-        """
-Unità di detenzione: dimensioni
-"""@it ;
     :belongsToGroup :57A74BCEAB331D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 04, 01.1" .
 
@@ -23084,15 +21602,6 @@ Unità di detenzione: occupazione (densità, compatibilità, detenzione individu
         "Partenaire social, contact social avec l'homme et socialisation"@fr,
         "Partner sociale, contatto sociale con l'uomo e socializzazione"@it ;
     schema:identifier "02.1" ;
-    rdfs:comment """
-Sozialpartner, Sozialkontakt Mensch und Sozialisierung
-"""@de,
-        """
-Partenaire social, contact social avec l'homme et socialisation
-"""@fr,
-        """
-Partner sociale, contatto sociale con l'uomo e socializzazione
-"""@it ;
     :belongsToGroup :57A74BCEAB331D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 04, 02.1" .
 
@@ -23101,15 +21610,6 @@ Partner sociale, contatto sociale con l'uomo e socializzazione
         "Enrichissement: sortie"@fr,
         "Miglioramento: uscita"@it ;
     schema:identifier "02.2" ;
-    rdfs:comment """
-Enrichment: Auslauf
-"""@de,
-        """
-Enrichissement: sortie
-"""@fr,
-        """
-Miglioramento: uscita
-"""@it ;
     :belongsToGroup :57A74BCEAB331D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 04, 02.2" .
 
@@ -23118,15 +21618,6 @@ Miglioramento: uscita
         "Enrichissement: occupation"@fr,
         "Miglioramento: occupazione"@it ;
     schema:identifier "02.3" ;
-    rdfs:comment """
-Enrichment: Beschäftigung
-"""@de,
-        """
-Enrichissement: occupation
-"""@fr,
-        """
-Miglioramento: occupazione
-"""@it ;
     :belongsToGroup :57A74BCEAB331D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 04, 02.3" .
 
@@ -23152,15 +21643,6 @@ Clima/luce (qualità dell'acqua)
         "Alimentation et eau de boisson"@fr,
         "Foraggiamento e acqua potabile"@it ;
     schema:identifier "02.5" ;
-    rdfs:comment """
-Fütterung und Trinkwasser
-"""@de,
-        """
-Alimentation et eau de boisson
-"""@fr,
-        """
-Foraggiamento e acqua potabile
-"""@it ;
     :belongsToGroup :57A74BCEAB331D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 04, 02.5" .
 
@@ -23186,15 +21668,6 @@ Igiene e manutenzione della gabbia (containment)
         "Interventions sur l'animal"@fr,
         "Interventi sull'animale "@it ;
     schema:identifier "02.7" ;
-    rdfs:comment """
-Eingriffe am Tier
-"""@de,
-        """
-Interventions sur l'animal
-"""@fr,
-        """
-Interventi sull'animale 
-"""@it ;
     :belongsToGroup :57A74BCEAB331D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 04, 02.7" .
 
@@ -23203,15 +21676,6 @@ Interventi sull'animale
         "Santé et soins des animaux"@fr,
         "Salute e cura degli animali"@it ;
     schema:identifier "02.8" ;
-    rdfs:comment """
-Gesundheit und Pflege Tiere
-"""@de,
-        """
-Santé et soins des animaux
-"""@fr,
-        """
-Salute e cura degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAB331D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 04, 02.8" .
 
@@ -23254,15 +21718,6 @@ Aspetti riguardanti il trasporto (durata, documenti, etichettatura, scarico)
         "Manquements zootechniques à l'égard des animaux"@fr,
         "Inadempimenti zootecnici nei confronti degli animali"@it ;
     schema:identifier "02.11" ;
-    rdfs:comment """
-Zuchtbedingte Mängel an den Tieren
-"""@de,
-        """
-Manquements zootechniques à l'égard des animaux
-"""@fr,
-        """
-Inadempimenti zootecnici nei confronti degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAB331D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 04, 02.11" .
 
@@ -23271,15 +21726,6 @@ Inadempimenti zootecnici nei confronti degli animali
         "Gestion de l'élevage"@fr,
         "Gestione dell'allevamento "@it ;
     schema:identifier "02.12" ;
-    rdfs:comment """
-Zuchtmanagement
-"""@de,
-        """
-Gestion de l'élevage
-"""@fr,
-        """
-Gestione dell'allevamento 
-"""@it ;
     :belongsToGroup :57A74BCEAB331D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 04, 02.12" .
 
@@ -23322,15 +21768,6 @@ Altre lacune (ad es. lesione della dignità)
         "Exigences applicables au personnel"@fr,
         "Requisiti relativi al personale"@it ;
     schema:identifier "03.1" ;
-    rdfs:comment """
-Personelle Voraussetzungen
-"""@de,
-        """
-Exigences applicables au personnel
-"""@fr,
-        """
-Requisiti relativi al personale
-"""@it ;
     :belongsToGroup :57A74BCEAB331D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 04, 03.1" .
 
@@ -23390,15 +21827,6 @@ Unità di detenzione: occupazione (densità, compatibilità, detenzione individu
         "Partenaire social, contact social avec l'homme et socialisation"@fr,
         "Partner sociale, contatto sociale con l'uomo e socializzazione"@it ;
     schema:identifier "02.1" ;
-    rdfs:comment """
-Sozialpartner, Sozialkontakt Mensch und Sozialisierung
-"""@de,
-        """
-Partenaire social, contact social avec l'homme et socialisation
-"""@fr,
-        """
-Partner sociale, contatto sociale con l'uomo e socializzazione
-"""@it ;
     :belongsToGroup :57A74BCEAB471D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 05, 02.1" .
 
@@ -23407,15 +21835,6 @@ Partner sociale, contatto sociale con l'uomo e socializzazione
         "Enrichissement: sortie"@fr,
         "Miglioramento: uscita"@it ;
     schema:identifier "02.2" ;
-    rdfs:comment """
-Enrichment: Auslauf
-"""@de,
-        """
-Enrichissement: sortie
-"""@fr,
-        """
-Miglioramento: uscita
-"""@it ;
     :belongsToGroup :57A74BCEAB471D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 05, 02.2" .
 
@@ -23441,15 +21860,6 @@ Clima/luce (qualità dell'acqua)
         "Alimentation et eau de boisson"@fr,
         "Foraggiamento e acqua potabile"@it ;
     schema:identifier "02.5" ;
-    rdfs:comment """
-Fütterung und Trinkwasser
-"""@de,
-        """
-Alimentation et eau de boisson
-"""@fr,
-        """
-Foraggiamento e acqua potabile
-"""@it ;
     :belongsToGroup :57A74BCEAB471D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 05, 02.5" .
 
@@ -23475,15 +21885,6 @@ Igiene e manutenzione della gabbia (containment)
         "Santé et soins des animaux"@fr,
         "Salute e cura degli animali"@it ;
     schema:identifier "02.8" ;
-    rdfs:comment """
-Gesundheit und Pflege Tiere
-"""@de,
-        """
-Santé et soins des animaux
-"""@fr,
-        """
-Salute e cura degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAB471D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 05, 02.8" .
 
@@ -23526,15 +21927,6 @@ Aspetti riguardanti il trasporto (durata, documenti, etichettatura, scarico)
         "Manquements zootechniques à l'égard des animaux"@fr,
         "Inadempimenti zootecnici nei confronti degli animali"@it ;
     schema:identifier "02.11" ;
-    rdfs:comment """
-Zuchtbedingte Mängel an den Tieren
-"""@de,
-        """
-Manquements zootechniques à l'égard des animaux
-"""@fr,
-        """
-Inadempimenti zootecnici nei confronti degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAB471D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 05, 02.11" .
 
@@ -23577,15 +21969,6 @@ Altre lacune (ad es. lesione della dignità)
         "Exigences applicables au personnel"@fr,
         "Requisiti relativi al personale"@it ;
     schema:identifier "03.1" ;
-    rdfs:comment """
-Personelle Voraussetzungen
-"""@de,
-        """
-Exigences applicables au personnel
-"""@fr,
-        """
-Requisiti relativi al personale
-"""@it ;
     :belongsToGroup :57A74BCEAB471D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 05, 03.1" .
 
@@ -23645,15 +22028,6 @@ Unità di detenzione: occupazione (densità, compatibilità, detenzione individu
         "Partenaire social, contact social avec l'homme et socialisation"@fr,
         "Partner sociale, contatto sociale con l'uomo e socializzazione"@it ;
     schema:identifier "02.1" ;
-    rdfs:comment """
-Sozialpartner, Sozialkontakt Mensch und Sozialisierung
-"""@de,
-        """
-Partenaire social, contact social avec l'homme et socialisation
-"""@fr,
-        """
-Partner sociale, contatto sociale con l'uomo e socializzazione
-"""@it ;
     :belongsToGroup :57A74BCEAB571D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 06, 02.1" .
 
@@ -23662,15 +22036,6 @@ Partner sociale, contatto sociale con l'uomo e socializzazione
         "Enrichissement: occupation"@fr,
         "Miglioramento: occupazione"@it ;
     schema:identifier "02.3" ;
-    rdfs:comment """
-Enrichment: Beschäftigung
-"""@de,
-        """
-Enrichissement: occupation
-"""@fr,
-        """
-Miglioramento: occupazione
-"""@it ;
     :belongsToGroup :57A74BCEAB571D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 06, 02.3" .
 
@@ -23696,15 +22061,6 @@ Clima/luce (qualità dell'acqua)
         "Alimentation et eau de boisson"@fr,
         "Foraggiamento e acqua potabile"@it ;
     schema:identifier "02.5" ;
-    rdfs:comment """
-Fütterung und Trinkwasser
-"""@de,
-        """
-Alimentation et eau de boisson
-"""@fr,
-        """
-Foraggiamento e acqua potabile
-"""@it ;
     :belongsToGroup :57A74BCEAB571D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 06, 02.5" .
 
@@ -23730,15 +22086,6 @@ Igiene e manutenzione della gabbia (containment)
         "Santé et soins des animaux"@fr,
         "Salute e cura degli animali"@it ;
     schema:identifier "02.8" ;
-    rdfs:comment """
-Gesundheit und Pflege Tiere
-"""@de,
-        """
-Santé et soins des animaux
-"""@fr,
-        """
-Salute e cura degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAB571D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 06, 02.8" .
 
@@ -23781,15 +22128,6 @@ Aspetti riguardanti il trasporto (durata, documenti, etichettatura, scarico)
         "Manquements zootechniques à l'égard des animaux"@fr,
         "Inadempimenti zootecnici nei confronti degli animali"@it ;
     schema:identifier "02.11" ;
-    rdfs:comment """
-Zuchtbedingte Mängel an den Tieren
-"""@de,
-        """
-Manquements zootechniques à l'égard des animaux
-"""@fr,
-        """
-Inadempimenti zootecnici nei confronti degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAB571D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 06, 02.11" .
 
@@ -23798,15 +22136,6 @@ Inadempimenti zootecnici nei confronti degli animali
         "Gestion de l'élevage"@fr,
         "Gestione dell'allevamento "@it ;
     schema:identifier "02.12" ;
-    rdfs:comment """
-Zuchtmanagement
-"""@de,
-        """
-Gestion de l'élevage
-"""@fr,
-        """
-Gestione dell'allevamento 
-"""@it ;
     :belongsToGroup :57A74BCEAB571D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 06, 02.12" .
 
@@ -23849,15 +22178,6 @@ Altre lacune (ad es. lesione della dignità)
         "Exigences applicables au personnel"@fr,
         "Requisiti relativi al personale"@it ;
     schema:identifier "03.1" ;
-    rdfs:comment """
-Personelle Voraussetzungen
-"""@de,
-        """
-Exigences applicables au personnel
-"""@fr,
-        """
-Requisiti relativi al personale
-"""@it ;
     :belongsToGroup :57A74BCEAB571D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 06, 03.1" .
 
@@ -23883,15 +22203,6 @@ Documentazione/registrazioni/ requisiti amministrativi (controllo dell'effettivo
         "Unité d'élevage: dimensions"@fr,
         "Unità di detenzione: dimensioni"@it ;
     schema:identifier "01.1" ;
-    rdfs:comment """
-Haltungseinheit: Abmessungen
-"""@de,
-        """
-Unité d'élevage: dimensions
-"""@fr,
-        """
-Unità di detenzione: dimensioni
-"""@it ;
     :belongsToGroup :57A74BCEAB681D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 07, 01.1" .
 
@@ -23934,15 +22245,6 @@ Unità di detenzione: occupazione (densità, compatibilità, detenzione individu
         "Partenaire social, contact social avec l'homme et socialisation"@fr,
         "Partner sociale, contatto sociale con l'uomo e socializzazione"@it ;
     schema:identifier "02.1" ;
-    rdfs:comment """
-Sozialpartner, Sozialkontakt Mensch und Sozialisierung
-"""@de,
-        """
-Partenaire social, contact social avec l'homme et socialisation
-"""@fr,
-        """
-Partner sociale, contatto sociale con l'uomo e socializzazione
-"""@it ;
     :belongsToGroup :57A74BCEAB681D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 07, 02.1" .
 
@@ -23951,15 +22253,6 @@ Partner sociale, contatto sociale con l'uomo e socializzazione
         "Enrichissement: sortie"@fr,
         "Miglioramento: uscita"@it ;
     schema:identifier "02.2" ;
-    rdfs:comment """
-Enrichment: Auslauf
-"""@de,
-        """
-Enrichissement: sortie
-"""@fr,
-        """
-Miglioramento: uscita
-"""@it ;
     :belongsToGroup :57A74BCEAB681D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 07, 02.2" .
 
@@ -23968,15 +22261,6 @@ Miglioramento: uscita
         "Enrichissement: occupation"@fr,
         "Miglioramento: occupazione"@it ;
     schema:identifier "02.3" ;
-    rdfs:comment """
-Enrichment: Beschäftigung
-"""@de,
-        """
-Enrichissement: occupation
-"""@fr,
-        """
-Miglioramento: occupazione
-"""@it ;
     :belongsToGroup :57A74BCEAB681D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 07, 02.3" .
 
@@ -24002,15 +22286,6 @@ Clima/luce (qualità dell'acqua)
         "Alimentation et eau de boisson"@fr,
         "Foraggiamento e acqua potabile"@it ;
     schema:identifier "02.5" ;
-    rdfs:comment """
-Fütterung und Trinkwasser
-"""@de,
-        """
-Alimentation et eau de boisson
-"""@fr,
-        """
-Foraggiamento e acqua potabile
-"""@it ;
     :belongsToGroup :57A74BCEAB681D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 07, 02.5" .
 
@@ -24036,15 +22311,6 @@ Igiene e manutenzione della gabbia (containment)
         "Interventions sur l'animal"@fr,
         "Interventi sull'animale "@it ;
     schema:identifier "02.7" ;
-    rdfs:comment """
-Eingriffe am Tier
-"""@de,
-        """
-Interventions sur l'animal
-"""@fr,
-        """
-Interventi sull'animale 
-"""@it ;
     :belongsToGroup :57A74BCEAB681D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 07, 02.7" .
 
@@ -24053,15 +22319,6 @@ Interventi sull'animale
         "Santé et soins des animaux"@fr,
         "Salute e cura degli animali"@it ;
     schema:identifier "02.8" ;
-    rdfs:comment """
-Gesundheit und Pflege Tiere
-"""@de,
-        """
-Santé et soins des animaux
-"""@fr,
-        """
-Salute e cura degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAB681D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 07, 02.8" .
 
@@ -24087,15 +22344,6 @@ Aspetti riguardanti il trasporto (durata, documenti, etichettatura, scarico)
         "Manquements zootechniques à l'égard des animaux"@fr,
         "Inadempimenti zootecnici nei confronti degli animali"@it ;
     schema:identifier "02.11" ;
-    rdfs:comment """
-Zuchtbedingte Mängel an den Tieren
-"""@de,
-        """
-Manquements zootechniques à l'égard des animaux
-"""@fr,
-        """
-Inadempimenti zootecnici nei confronti degli animali
-"""@it ;
     :belongsToGroup :57A74BCEA8C11D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 50, 02.11" .
 
@@ -24104,15 +22352,6 @@ Inadempimenti zootecnici nei confronti degli animali
         "Gestion de l'élevage"@fr,
         "Gestione dell'allevamento "@it ;
     schema:identifier "02.12" ;
-    rdfs:comment """
-Zuchtmanagement
-"""@de,
-        """
-Gestion de l'élevage
-"""@fr,
-        """
-Gestione dell'allevamento 
-"""@it ;
     :belongsToGroup :57A74BCEA8C11D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 50, 02.12" .
 
@@ -24155,15 +22394,6 @@ Altre lacune (ad es. lesione della dignità)
         "Exigences applicables au personnel"@fr,
         "Requisiti relativi al personale"@it ;
     schema:identifier "03.1" ;
-    rdfs:comment """
-Personelle Voraussetzungen
-"""@de,
-        """
-Exigences applicables au personnel
-"""@fr,
-        """
-Requisiti relativi al personale
-"""@it ;
     :belongsToGroup :57A74BCEA8C11D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 50, 03.1" .
 
@@ -24189,15 +22419,6 @@ Documentazione/registrazioni/ requisiti amministrativi (controllo dell'effettivo
         "Unité d'élevage: dimensions"@fr,
         "Unità di detenzione: dimensioni"@it ;
     schema:identifier "01.1" ;
-    rdfs:comment """
-Haltungseinheit: Abmessungen
-"""@de,
-        """
-Unité d'élevage: dimensions
-"""@fr,
-        """
-Unità di detenzione: dimensioni
-"""@it ;
     :belongsToGroup :57A74BCEABAE1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 01, 01.1" .
 
@@ -24240,15 +22461,6 @@ Unità di detenzione: occupazione (densità, compatibilità, detenzione individu
         "Enrichissement: sortie"@fr,
         "Miglioramento: uscita"@it ;
     schema:identifier "02.2" ;
-    rdfs:comment """
-Enrichment: Auslauf
-"""@de,
-        """
-Enrichissement: sortie
-"""@fr,
-        """
-Miglioramento: uscita
-"""@it ;
     :belongsToGroup :57A74BCEABAE1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 01, 02.2" .
 
@@ -24257,15 +22469,6 @@ Miglioramento: uscita
         "Enrichissement: occupation"@fr,
         "Miglioramento: occupazione"@it ;
     schema:identifier "02.3" ;
-    rdfs:comment """
-Enrichment: Beschäftigung
-"""@de,
-        """
-Enrichissement: occupation
-"""@fr,
-        """
-Miglioramento: occupazione
-"""@it ;
     :belongsToGroup :57A74BCEABAE1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 01, 02.3" .
 
@@ -24308,15 +22511,6 @@ Igiene e manutenzione della gabbia (containment)
         "Interventions sur l'animal"@fr,
         "Interventi sull'animale "@it ;
     schema:identifier "02.7" ;
-    rdfs:comment """
-Eingriffe am Tier
-"""@de,
-        """
-Interventions sur l'animal
-"""@fr,
-        """
-Interventi sull'animale 
-"""@it ;
     :belongsToGroup :57A74BCEABAE1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 01, 02.7" .
 
@@ -24325,15 +22519,6 @@ Interventi sull'animale
         "Santé et soins des animaux"@fr,
         "Salute e cura degli animali"@it ;
     schema:identifier "02.8" ;
-    rdfs:comment """
-Gesundheit und Pflege Tiere
-"""@de,
-        """
-Santé et soins des animaux
-"""@fr,
-        """
-Salute e cura degli animali
-"""@it ;
     :belongsToGroup :57A74BCEABAE1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 01, 02.8" .
 
@@ -24359,15 +22544,6 @@ Trattamento (eccessivo rigore, maltrattamento, conduzione senza riguardo ecc.)
         "Manquements zootechniques à l'égard des animaux"@fr,
         "Inadempimenti zootecnici nei confronti degli animali"@it ;
     schema:identifier "02.11" ;
-    rdfs:comment """
-Zuchtbedingte Mängel an den Tieren
-"""@de,
-        """
-Manquements zootechniques à l'égard des animaux
-"""@fr,
-        """
-Inadempimenti zootecnici nei confronti degli animali
-"""@it ;
     :belongsToGroup :57A74BCEABAE1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 01, 02.11" .
 
@@ -24376,15 +22552,6 @@ Inadempimenti zootecnici nei confronti degli animali
         "Gestion de l'élevage"@fr,
         "Gestione dell'allevamento "@it ;
     schema:identifier "02.12" ;
-    rdfs:comment """
-Zuchtmanagement
-"""@de,
-        """
-Gestion de l'élevage
-"""@fr,
-        """
-Gestione dell'allevamento 
-"""@it ;
     :belongsToGroup :57A74BCEABAE1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 01, 02.12" .
 
@@ -24444,15 +22611,6 @@ Documentazione/registrazioni/ requisiti amministrativi (controllo dell'effettivo
         "Unité d'élevage: dimensions"@fr,
         "Unità di detenzione: dimensioni"@it ;
     schema:identifier "01.1" ;
-    rdfs:comment """
-Haltungseinheit: Abmessungen
-"""@de,
-        """
-Unité d'élevage: dimensions
-"""@fr,
-        """
-Unità di detenzione: dimensioni
-"""@it ;
     :belongsToGroup :57A74BCEABBE1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 02, 01.1" .
 
@@ -24478,15 +22636,6 @@ Unità di detenzione: installazioni (struttura, possibilità di ritiro, suolo, p
         "Partenaire social, contact social avec l'homme et socialisation"@fr,
         "Partner sociale, contatto sociale con l'uomo e socializzazione"@it ;
     schema:identifier "02.1" ;
-    rdfs:comment """
-Sozialpartner, Sozialkontakt Mensch und Sozialisierung
-"""@de,
-        """
-Partenaire social, contact social avec l'homme et socialisation
-"""@fr,
-        """
-Partner sociale, contatto sociale con l'uomo e socializzazione
-"""@it ;
     :belongsToGroup :57A74BCEABBE1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 02, 02.1" .
 
@@ -24495,15 +22644,6 @@ Partner sociale, contatto sociale con l'uomo e socializzazione
         "Enrichissement: sortie"@fr,
         "Miglioramento: uscita"@it ;
     schema:identifier "02.2" ;
-    rdfs:comment """
-Enrichment: Auslauf
-"""@de,
-        """
-Enrichissement: sortie
-"""@fr,
-        """
-Miglioramento: uscita
-"""@it ;
     :belongsToGroup :57A74BCEABBE1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 02, 02.2" .
 
@@ -24512,15 +22652,6 @@ Miglioramento: uscita
         "Enrichissement: occupation"@fr,
         "Miglioramento: occupazione"@it ;
     schema:identifier "02.3" ;
-    rdfs:comment """
-Enrichment: Beschäftigung
-"""@de,
-        """
-Enrichissement: occupation
-"""@fr,
-        """
-Miglioramento: occupazione
-"""@it ;
     :belongsToGroup :57A74BCEABBE1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 02, 02.3" .
 
@@ -24563,15 +22694,6 @@ Igiene e manutenzione della gabbia (containment)
         "Interventions sur l'animal"@fr,
         "Interventi sull'animale "@it ;
     schema:identifier "02.7" ;
-    rdfs:comment """
-Eingriffe am Tier
-"""@de,
-        """
-Interventions sur l'animal
-"""@fr,
-        """
-Interventi sull'animale 
-"""@it ;
     :belongsToGroup :57A74BCEABBE1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 02, 02.7" .
 
@@ -24580,15 +22702,6 @@ Interventi sull'animale
         "Santé et soins des animaux"@fr,
         "Salute e cura degli animali"@it ;
     schema:identifier "02.8" ;
-    rdfs:comment """
-Gesundheit und Pflege Tiere
-"""@de,
-        """
-Santé et soins des animaux
-"""@fr,
-        """
-Salute e cura degli animali
-"""@it ;
     :belongsToGroup :57A74BCEABBE1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 02, 02.8" .
 
@@ -24614,15 +22727,6 @@ Aspetti riguardanti il trasporto (durata, documenti, etichettatura, scarico)
         "Manquements zootechniques à l'égard des animaux"@fr,
         "Inadempimenti zootecnici nei confronti degli animali"@it ;
     schema:identifier "02.11" ;
-    rdfs:comment """
-Zuchtbedingte Mängel an den Tieren
-"""@de,
-        """
-Manquements zootechniques à l'égard des animaux
-"""@fr,
-        """
-Inadempimenti zootecnici nei confronti degli animali
-"""@it ;
     :belongsToGroup :57A74BCEABBE1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 02, 02.11" .
 
@@ -24631,15 +22735,6 @@ Inadempimenti zootecnici nei confronti degli animali
         "Gestion de l'élevage"@fr,
         "Gestione dell'allevamento "@it ;
     schema:identifier "02.12" ;
-    rdfs:comment """
-Zuchtmanagement
-"""@de,
-        """
-Gestion de l'élevage
-"""@fr,
-        """
-Gestione dell'allevamento 
-"""@it ;
     :belongsToGroup :57A74BCEABBE1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 02, 02.12" .
 
@@ -24682,15 +22777,6 @@ Altre lacune (ad es. lesione della dignità)
         "Exigences applicables au personnel"@fr,
         "Requisiti relativi al personale"@it ;
     schema:identifier "03.1" ;
-    rdfs:comment """
-Personelle Voraussetzungen
-"""@de,
-        """
-Exigences applicables au personnel
-"""@fr,
-        """
-Requisiti relativi al personale
-"""@it ;
     :belongsToGroup :57A74BCEABBE1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 02, 03.1" .
 
@@ -24716,15 +22802,6 @@ Documentazione/registrazioni/ requisiti amministrativi (controllo dell'effettivo
         "Unité d'élevage: dimensions"@fr,
         "Unità di detenzione: dimensioni"@it ;
     schema:identifier "01.1" ;
-    rdfs:comment """
-Haltungseinheit: Abmessungen
-"""@de,
-        """
-Unité d'élevage: dimensions
-"""@fr,
-        """
-Unità di detenzione: dimensioni
-"""@it ;
     :belongsToGroup :57A74BCEABCF1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 03, 01.1" .
 
@@ -24767,15 +22844,6 @@ Unità di detenzione: occupazione (densità, compatibilità, detenzione individu
         "Partenaire social, contact social avec l'homme et socialisation"@fr,
         "Partner sociale, contatto sociale con l'uomo e socializzazione"@it ;
     schema:identifier "02.1" ;
-    rdfs:comment """
-Sozialpartner, Sozialkontakt Mensch und Sozialisierung
-"""@de,
-        """
-Partenaire social, contact social avec l'homme et socialisation
-"""@fr,
-        """
-Partner sociale, contatto sociale con l'uomo e socializzazione
-"""@it ;
     :belongsToGroup :57A74BCEABCF1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 03, 02.1" .
 
@@ -24784,15 +22852,6 @@ Partner sociale, contatto sociale con l'uomo e socializzazione
         "Enrichissement: sortie"@fr,
         "Miglioramento: uscita"@it ;
     schema:identifier "02.2" ;
-    rdfs:comment """
-Enrichment: Auslauf
-"""@de,
-        """
-Enrichissement: sortie
-"""@fr,
-        """
-Miglioramento: uscita
-"""@it ;
     :belongsToGroup :57A74BCEABCF1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 03, 02.2" .
 
@@ -24801,15 +22860,6 @@ Miglioramento: uscita
         "Enrichissement: occupation"@fr,
         "Miglioramento: occupazione"@it ;
     schema:identifier "02.3" ;
-    rdfs:comment """
-Enrichment: Beschäftigung
-"""@de,
-        """
-Enrichissement: occupation
-"""@fr,
-        """
-Miglioramento: occupazione
-"""@it ;
     :belongsToGroup :57A74BCEABCF1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 03, 02.3" .
 
@@ -24835,15 +22885,6 @@ Clima/luce (qualità dell'acqua)
         "Alimentation et eau de boisson"@fr,
         "Foraggiamento e acqua potabile"@it ;
     schema:identifier "02.5" ;
-    rdfs:comment """
-Fütterung und Trinkwasser
-"""@de,
-        """
-Alimentation et eau de boisson
-"""@fr,
-        """
-Foraggiamento e acqua potabile
-"""@it ;
     :belongsToGroup :57A74BCEABCF1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 03, 02.5" .
 
@@ -24869,15 +22910,6 @@ Igiene e manutenzione della gabbia (containment)
         "Interventions sur l'animal"@fr,
         "Interventi sull'animale "@it ;
     schema:identifier "02.7" ;
-    rdfs:comment """
-Eingriffe am Tier
-"""@de,
-        """
-Interventions sur l'animal
-"""@fr,
-        """
-Interventi sull'animale 
-"""@it ;
     :belongsToGroup :57A74BCEABCF1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 03, 02.7" .
 
@@ -24886,15 +22918,6 @@ Interventi sull'animale
         "Santé et soins des animaux"@fr,
         "Salute e cura degli animali"@it ;
     schema:identifier "02.8" ;
-    rdfs:comment """
-Gesundheit und Pflege Tiere
-"""@de,
-        """
-Santé et soins des animaux
-"""@fr,
-        """
-Salute e cura degli animali
-"""@it ;
     :belongsToGroup :57A74BCEABCF1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 03, 02.8" .
 
@@ -24937,15 +22960,6 @@ Aspetti riguardanti il trasporto (durata, documenti, etichettatura, scarico)
         "Manquements zootechniques à l'égard des animaux"@fr,
         "Inadempimenti zootecnici nei confronti degli animali"@it ;
     schema:identifier "02.11" ;
-    rdfs:comment """
-Zuchtbedingte Mängel an den Tieren
-"""@de,
-        """
-Manquements zootechniques à l'égard des animaux
-"""@fr,
-        """
-Inadempimenti zootecnici nei confronti degli animali
-"""@it ;
     :belongsToGroup :57A74BCEABCF1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 03, 02.11" .
 
@@ -24954,15 +22968,6 @@ Inadempimenti zootecnici nei confronti degli animali
         "Gestion de l'élevage"@fr,
         "Gestione dell'allevamento "@it ;
     schema:identifier "02.12" ;
-    rdfs:comment """
-Zuchtmanagement
-"""@de,
-        """
-Gestion de l'élevage
-"""@fr,
-        """
-Gestione dell'allevamento 
-"""@it ;
     :belongsToGroup :57A74BCEABCF1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 03, 02.12" .
 
@@ -25005,15 +23010,6 @@ Altre lacune (ad es. lesione della dignità)
         "Exigences applicables au personnel"@fr,
         "Requisiti relativi al personale"@it ;
     schema:identifier "03.1" ;
-    rdfs:comment """
-Personelle Voraussetzungen
-"""@de,
-        """
-Exigences applicables au personnel
-"""@fr,
-        """
-Requisiti relativi al personale
-"""@it ;
     :belongsToGroup :57A74BCEABCF1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 03, 03.1" .
 
@@ -25039,15 +23035,6 @@ Documentazione/registrazioni/ requisiti amministrativi (controllo dell'effettivo
         "Unité d'élevage: dimensions"@fr,
         "Unità di detenzione: dimensioni"@it ;
     schema:identifier "01.1" ;
-    rdfs:comment """
-Haltungseinheit: Abmessungen
-"""@de,
-        """
-Unité d'élevage: dimensions
-"""@fr,
-        """
-Unità di detenzione: dimensioni
-"""@it ;
     :belongsToGroup :57A74BCEABE31D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 04, 01.1" .
 
@@ -25073,15 +23060,6 @@ Unità di detenzione: installazioni (struttura, possibilità di ritiro, suolo, p
         "Partenaire social, contact social avec l'homme et socialisation"@fr,
         "Partner sociale, contatto sociale con l'uomo e socializzazione"@it ;
     schema:identifier "02.1" ;
-    rdfs:comment """
-Sozialpartner, Sozialkontakt Mensch und Sozialisierung
-"""@de,
-        """
-Partenaire social, contact social avec l'homme et socialisation
-"""@fr,
-        """
-Partner sociale, contatto sociale con l'uomo e socializzazione
-"""@it ;
     :belongsToGroup :57A74BCEABE31D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 04, 02.1" .
 
@@ -25090,15 +23068,6 @@ Partner sociale, contatto sociale con l'uomo e socializzazione
         "Enrichissement: sortie"@fr,
         "Miglioramento: uscita"@it ;
     schema:identifier "02.2" ;
-    rdfs:comment """
-Enrichment: Auslauf
-"""@de,
-        """
-Enrichissement: sortie
-"""@fr,
-        """
-Miglioramento: uscita
-"""@it ;
     :belongsToGroup :57A74BCEABE31D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 04, 02.2" .
 
@@ -25107,15 +23076,6 @@ Miglioramento: uscita
         "Enrichissement: occupation"@fr,
         "Miglioramento: occupazione"@it ;
     schema:identifier "02.3" ;
-    rdfs:comment """
-Enrichment: Beschäftigung
-"""@de,
-        """
-Enrichissement: occupation
-"""@fr,
-        """
-Miglioramento: occupazione
-"""@it ;
     :belongsToGroup :57A74BCEABE31D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 04, 02.3" .
 
@@ -25124,15 +23084,6 @@ Miglioramento: occupazione
         "Alimentation et eau de boisson"@fr,
         "Foraggiamento e acqua potabile"@it ;
     schema:identifier "02.5" ;
-    rdfs:comment """
-Fütterung und Trinkwasser
-"""@de,
-        """
-Alimentation et eau de boisson
-"""@fr,
-        """
-Foraggiamento e acqua potabile
-"""@it ;
     :belongsToGroup :57A74BCEABE31D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 04, 02.5" .
 
@@ -25158,15 +23109,6 @@ Igiene e manutenzione della gabbia (containment)
         "Interventions sur l'animal"@fr,
         "Interventi sull'animale "@it ;
     schema:identifier "02.7" ;
-    rdfs:comment """
-Eingriffe am Tier
-"""@de,
-        """
-Interventions sur l'animal
-"""@fr,
-        """
-Interventi sull'animale 
-"""@it ;
     :belongsToGroup :57A74BCEABE31D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 04, 02.7" .
 
@@ -25175,15 +23117,6 @@ Interventi sull'animale
         "Santé et soins des animaux"@fr,
         "Salute e cura degli animali"@it ;
     schema:identifier "02.8" ;
-    rdfs:comment """
-Gesundheit und Pflege Tiere
-"""@de,
-        """
-Santé et soins des animaux
-"""@fr,
-        """
-Salute e cura degli animali
-"""@it ;
     :belongsToGroup :57A74BCEABE31D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 04, 02.8" .
 
@@ -25209,15 +23142,6 @@ Aspetti riguardanti il trasporto (durata, documenti, etichettatura, scarico)
         "Manquements zootechniques à l'égard des animaux"@fr,
         "Inadempimenti zootecnici nei confronti degli animali"@it ;
     schema:identifier "02.11" ;
-    rdfs:comment """
-Zuchtbedingte Mängel an den Tieren
-"""@de,
-        """
-Manquements zootechniques à l'égard des animaux
-"""@fr,
-        """
-Inadempimenti zootecnici nei confronti degli animali
-"""@it ;
     :belongsToGroup :57A74BCEABE31D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 04, 02.11" .
 
@@ -25226,15 +23150,6 @@ Inadempimenti zootecnici nei confronti degli animali
         "Gestion de l'élevage"@fr,
         "Gestione dell'allevamento "@it ;
     schema:identifier "02.12" ;
-    rdfs:comment """
-Zuchtmanagement
-"""@de,
-        """
-Gestion de l'élevage
-"""@fr,
-        """
-Gestione dell'allevamento 
-"""@it ;
     :belongsToGroup :57A74BCEABE31D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 04, 02.12" .
 
@@ -25260,15 +23175,6 @@ Aspetti di sicurezza (per l'uomo e per l'animale)
         "Exigences applicables au personnel"@fr,
         "Requisiti relativi al personale"@it ;
     schema:identifier "03.1" ;
-    rdfs:comment """
-Personelle Voraussetzungen
-"""@de,
-        """
-Exigences applicables au personnel
-"""@fr,
-        """
-Requisiti relativi al personale
-"""@it ;
     :belongsToGroup :57A74BCEABE31D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 04, 03.1" .
 
@@ -25294,15 +23200,6 @@ Documentazione/registrazioni/ requisiti amministrativi (controllo dell'effettivo
         "Unité d'élevage: dimensions"@fr,
         "Unità di detenzione: dimensioni"@it ;
     schema:identifier "01.1" ;
-    rdfs:comment """
-Haltungseinheit: Abmessungen
-"""@de,
-        """
-Unité d'élevage: dimensions
-"""@fr,
-        """
-Unità di detenzione: dimensioni
-"""@it ;
     :belongsToGroup :57A74BCEABF31D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 05, 01.1" .
 
@@ -25328,15 +23225,6 @@ Unità di detenzione: occupazione (densità, compatibilità, detenzione individu
         "Partenaire social, contact social avec l'homme et socialisation"@fr,
         "Partner sociale, contatto sociale con l'uomo e socializzazione"@it ;
     schema:identifier "02.1" ;
-    rdfs:comment """
-Sozialpartner, Sozialkontakt Mensch und Sozialisierung
-"""@de,
-        """
-Partenaire social, contact social avec l'homme et socialisation
-"""@fr,
-        """
-Partner sociale, contatto sociale con l'uomo e socializzazione
-"""@it ;
     :belongsToGroup :57A74BCEABF31D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 05, 02.1" .
 
@@ -25345,15 +23233,6 @@ Partner sociale, contatto sociale con l'uomo e socializzazione
         "Enrichissement: sortie"@fr,
         "Miglioramento: uscita"@it ;
     schema:identifier "02.2" ;
-    rdfs:comment """
-Enrichment: Auslauf
-"""@de,
-        """
-Enrichissement: sortie
-"""@fr,
-        """
-Miglioramento: uscita
-"""@it ;
     :belongsToGroup :57A74BCEABF31D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 05, 02.2" .
 
@@ -25362,15 +23241,6 @@ Miglioramento: uscita
         "Enrichissement: occupation"@fr,
         "Miglioramento: occupazione"@it ;
     schema:identifier "02.3" ;
-    rdfs:comment """
-Enrichment: Beschäftigung
-"""@de,
-        """
-Enrichissement: occupation
-"""@fr,
-        """
-Miglioramento: occupazione
-"""@it ;
     :belongsToGroup :57A74BCEABF31D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 05, 02.3" .
 
@@ -25379,15 +23249,6 @@ Miglioramento: occupazione
         "Alimentation et eau de boisson"@fr,
         "Foraggiamento e acqua potabile"@it ;
     schema:identifier "02.5" ;
-    rdfs:comment """
-Fütterung und Trinkwasser
-"""@de,
-        """
-Alimentation et eau de boisson
-"""@fr,
-        """
-Foraggiamento e acqua potabile
-"""@it ;
     :belongsToGroup :57A74BCEABF31D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 05, 02.5" .
 
@@ -25413,15 +23274,6 @@ Igiene e manutenzione della gabbia (containment)
         "Interventions sur l'animal"@fr,
         "Interventi sull'animale "@it ;
     schema:identifier "02.7" ;
-    rdfs:comment """
-Eingriffe am Tier
-"""@de,
-        """
-Interventions sur l'animal
-"""@fr,
-        """
-Interventi sull'animale 
-"""@it ;
     :belongsToGroup :57A74BCEABF31D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 05, 02.7" .
 
@@ -25464,15 +23316,6 @@ Aspetti riguardanti il trasporto (durata, documenti, etichettatura, scarico)
         "Manquements zootechniques à l'égard des animaux"@fr,
         "Inadempimenti zootecnici nei confronti degli animali"@it ;
     schema:identifier "02.11" ;
-    rdfs:comment """
-Zuchtbedingte Mängel an den Tieren
-"""@de,
-        """
-Manquements zootechniques à l'égard des animaux
-"""@fr,
-        """
-Inadempimenti zootecnici nei confronti degli animali
-"""@it ;
     :belongsToGroup :57A74BCEABF31D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 05, 02.11" .
 
@@ -25481,15 +23324,6 @@ Inadempimenti zootecnici nei confronti degli animali
         "Gestion de l'élevage"@fr,
         "Gestione dell'allevamento "@it ;
     schema:identifier "02.12" ;
-    rdfs:comment """
-Zuchtmanagement
-"""@de,
-        """
-Gestion de l'élevage
-"""@fr,
-        """
-Gestione dell'allevamento 
-"""@it ;
     :belongsToGroup :57A74BCEABF31D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 05, 02.12" .
 
@@ -25532,15 +23366,6 @@ Altre lacune (ad es. lesione della dignità)
         "Exigences applicables au personnel"@fr,
         "Requisiti relativi al personale"@it ;
     schema:identifier "03.1" ;
-    rdfs:comment """
-Personelle Voraussetzungen
-"""@de,
-        """
-Exigences applicables au personnel
-"""@fr,
-        """
-Requisiti relativi al personale
-"""@it ;
     :belongsToGroup :57A74BCEABF31D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 05, 03.1" .
 
@@ -25566,15 +23391,6 @@ Documentazione/registrazioni/ requisiti amministrativi (controllo dell'effettivo
         "Unité d'élevage: dimensions"@fr,
         "Unità di detenzione: dimensioni"@it ;
     schema:identifier "01.1" ;
-    rdfs:comment """
-Haltungseinheit: Abmessungen
-"""@de,
-        """
-Unité d'élevage: dimensions
-"""@fr,
-        """
-Unità di detenzione: dimensioni
-"""@it ;
     :belongsToGroup :57A74BCEAC041D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 06, 01.1" .
 
@@ -25617,15 +23433,6 @@ Unità di detenzione: occupazione (densità, compatibilità, detenzione individu
         "Partenaire social, contact social avec l'homme et socialisation"@fr,
         "Partner sociale, contatto sociale con l'uomo e socializzazione"@it ;
     schema:identifier "02.1" ;
-    rdfs:comment """
-Sozialpartner, Sozialkontakt Mensch und Sozialisierung
-"""@de,
-        """
-Partenaire social, contact social avec l'homme et socialisation
-"""@fr,
-        """
-Partner sociale, contatto sociale con l'uomo e socializzazione
-"""@it ;
     :belongsToGroup :57A74BCEAC041D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 06, 02.1" .
 
@@ -25634,15 +23441,6 @@ Partner sociale, contatto sociale con l'uomo e socializzazione
         "Enrichissement: sortie"@fr,
         "Miglioramento: uscita"@it ;
     schema:identifier "02.2" ;
-    rdfs:comment """
-Enrichment: Auslauf
-"""@de,
-        """
-Enrichissement: sortie
-"""@fr,
-        """
-Miglioramento: uscita
-"""@it ;
     :belongsToGroup :57A74BCEAC041D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 06, 02.2" .
 
@@ -25651,15 +23449,6 @@ Miglioramento: uscita
         "Enrichissement: occupation"@fr,
         "Miglioramento: occupazione"@it ;
     schema:identifier "02.3" ;
-    rdfs:comment """
-Enrichment: Beschäftigung
-"""@de,
-        """
-Enrichissement: occupation
-"""@fr,
-        """
-Miglioramento: occupazione
-"""@it ;
     :belongsToGroup :57A74BCEAC041D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 06, 02.3" .
 
@@ -25685,15 +23474,6 @@ Clima/luce (qualità dell'acqua)
         "Alimentation et eau de boisson"@fr,
         "Foraggiamento e acqua potabile"@it ;
     schema:identifier "02.5" ;
-    rdfs:comment """
-Fütterung und Trinkwasser
-"""@de,
-        """
-Alimentation et eau de boisson
-"""@fr,
-        """
-Foraggiamento e acqua potabile
-"""@it ;
     :belongsToGroup :57A74BCEAC041D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 06, 02.5" .
 
@@ -25719,15 +23499,6 @@ Igiene e manutenzione della gabbia (containment)
         "Interventions sur l'animal"@fr,
         "Interventi sull'animale "@it ;
     schema:identifier "02.7" ;
-    rdfs:comment """
-Eingriffe am Tier
-"""@de,
-        """
-Interventions sur l'animal
-"""@fr,
-        """
-Interventi sull'animale 
-"""@it ;
     :belongsToGroup :57A74BCEAC041D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 06, 02.7" .
 
@@ -25736,15 +23507,6 @@ Interventi sull'animale
         "Santé et soins des animaux"@fr,
         "Salute e cura degli animali"@it ;
     schema:identifier "02.8" ;
-    rdfs:comment """
-Gesundheit und Pflege Tiere
-"""@de,
-        """
-Santé et soins des animaux
-"""@fr,
-        """
-Salute e cura degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAC041D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 06, 02.8" .
 
@@ -25787,15 +23549,6 @@ Aspetti riguardanti il trasporto (durata, documenti, etichettatura, scarico)
         "Manquements zootechniques à l'égard des animaux"@fr,
         "Inadempimenti zootecnici nei confronti degli animali"@it ;
     schema:identifier "02.11" ;
-    rdfs:comment """
-Zuchtbedingte Mängel an den Tieren
-"""@de,
-        """
-Manquements zootechniques à l'égard des animaux
-"""@fr,
-        """
-Inadempimenti zootecnici nei confronti degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAC041D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 06, 02.11" .
 
@@ -25804,15 +23557,6 @@ Inadempimenti zootecnici nei confronti degli animali
         "Gestion de l'élevage"@fr,
         "Gestione dell'allevamento "@it ;
     schema:identifier "02.12" ;
-    rdfs:comment """
-Zuchtmanagement
-"""@de,
-        """
-Gestion de l'élevage
-"""@fr,
-        """
-Gestione dell'allevamento 
-"""@it ;
     :belongsToGroup :57A74BCEAC041D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 06, 02.12" .
 
@@ -25855,15 +23599,6 @@ Altre lacune (ad es. lesione della dignità)
         "Exigences applicables au personnel"@fr,
         "Requisiti relativi al personale"@it ;
     schema:identifier "03.1" ;
-    rdfs:comment """
-Personelle Voraussetzungen
-"""@de,
-        """
-Exigences applicables au personnel
-"""@fr,
-        """
-Requisiti relativi al personale
-"""@it ;
     :belongsToGroup :57A74BCEAC041D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 06, 03.1" .
 
@@ -25889,15 +23624,6 @@ Documentazione/registrazioni/ requisiti amministrativi (controllo dell'effettivo
         "Unité d'élevage: dimensions"@fr,
         "Unità di detenzione: dimensioni"@it ;
     schema:identifier "01.1" ;
-    rdfs:comment """
-Haltungseinheit: Abmessungen
-"""@de,
-        """
-Unité d'élevage: dimensions
-"""@fr,
-        """
-Unità di detenzione: dimensioni
-"""@it ;
     :belongsToGroup :57A74BCEAC181D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 07, 01.1" .
 
@@ -25940,15 +23666,6 @@ Unità di detenzione: occupazione (densità, compatibilità, detenzione individu
         "Partenaire social, contact social avec l'homme et socialisation"@fr,
         "Partner sociale, contatto sociale con l'uomo e socializzazione"@it ;
     schema:identifier "02.1" ;
-    rdfs:comment """
-Sozialpartner, Sozialkontakt Mensch und Sozialisierung
-"""@de,
-        """
-Partenaire social, contact social avec l'homme et socialisation
-"""@fr,
-        """
-Partner sociale, contatto sociale con l'uomo e socializzazione
-"""@it ;
     :belongsToGroup :57A74BCEAC181D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 07, 02.1" .
 
@@ -25957,15 +23674,6 @@ Partner sociale, contatto sociale con l'uomo e socializzazione
         "Enrichissement: occupation"@fr,
         "Miglioramento: occupazione"@it ;
     schema:identifier "02.3" ;
-    rdfs:comment """
-Enrichment: Beschäftigung
-"""@de,
-        """
-Enrichissement: occupation
-"""@fr,
-        """
-Miglioramento: occupazione
-"""@it ;
     :belongsToGroup :57A74BCEAC181D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 07, 02.3" .
 
@@ -25991,15 +23699,6 @@ Clima/luce (qualità dell'acqua)
         "Alimentation et eau de boisson"@fr,
         "Foraggiamento e acqua potabile"@it ;
     schema:identifier "02.5" ;
-    rdfs:comment """
-Fütterung und Trinkwasser
-"""@de,
-        """
-Alimentation et eau de boisson
-"""@fr,
-        """
-Foraggiamento e acqua potabile
-"""@it ;
     :belongsToGroup :57A74BCEAC181D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 07, 02.5" .
 
@@ -26008,15 +23707,6 @@ Foraggiamento e acqua potabile
         "Interventions sur l'animal"@fr,
         "Interventi sull'animale "@it ;
     schema:identifier "02.7" ;
-    rdfs:comment """
-Eingriffe am Tier
-"""@de,
-        """
-Interventions sur l'animal
-"""@fr,
-        """
-Interventi sull'animale 
-"""@it ;
     :belongsToGroup :57A74BCEAC181D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 07, 02.7" .
 
@@ -26025,15 +23715,6 @@ Interventi sull'animale
         "Santé et soins des animaux"@fr,
         "Salute e cura degli animali"@it ;
     schema:identifier "02.8" ;
-    rdfs:comment """
-Gesundheit und Pflege Tiere
-"""@de,
-        """
-Santé et soins des animaux
-"""@fr,
-        """
-Salute e cura degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAC181D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 07, 02.8" .
 
@@ -26076,15 +23757,6 @@ Aspetti riguardanti il trasporto (durata, documenti, etichettatura, scarico)
         "Gestion de l'élevage"@fr,
         "Gestione dell'allevamento "@it ;
     schema:identifier "02.12" ;
-    rdfs:comment """
-Zuchtmanagement
-"""@de,
-        """
-Gestion de l'élevage
-"""@fr,
-        """
-Gestione dell'allevamento 
-"""@it ;
     :belongsToGroup :57A74BCEAC181D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 07, 02.12" .
 
@@ -26127,15 +23799,6 @@ Altre lacune (ad es. lesione della dignità)
         "Exigences applicables au personnel"@fr,
         "Requisiti relativi al personale"@it ;
     schema:identifier "03.1" ;
-    rdfs:comment """
-Personelle Voraussetzungen
-"""@de,
-        """
-Exigences applicables au personnel
-"""@fr,
-        """
-Requisiti relativi al personale
-"""@it ;
     :belongsToGroup :57A74BCEAC181D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 07, 03.1" .
 
@@ -26144,15 +23807,6 @@ Requisiti relativi al personale
         "Unité d'élevage: dimensions"@fr,
         "Unità di detenzione: dimensioni"@it ;
     schema:identifier "01.1" ;
-    rdfs:comment """
-Haltungseinheit: Abmessungen
-"""@de,
-        """
-Unité d'élevage: dimensions
-"""@fr,
-        """
-Unità di detenzione: dimensioni
-"""@it ;
     :belongsToGroup :57A74BCEAC281D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 08, 01.1" .
 
@@ -26195,15 +23849,6 @@ Unità di detenzione: occupazione (densità, compatibilità, detenzione individu
         "Enrichissement: sortie"@fr,
         "Miglioramento: uscita"@it ;
     schema:identifier "02.2" ;
-    rdfs:comment """
-Enrichment: Auslauf
-"""@de,
-        """
-Enrichissement: sortie
-"""@fr,
-        """
-Miglioramento: uscita
-"""@it ;
     :belongsToGroup :57A74BCEAC281D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 08, 02.2" .
 
@@ -26212,15 +23857,6 @@ Miglioramento: uscita
         "Enrichissement: occupation"@fr,
         "Miglioramento: occupazione"@it ;
     schema:identifier "02.3" ;
-    rdfs:comment """
-Enrichment: Beschäftigung
-"""@de,
-        """
-Enrichissement: occupation
-"""@fr,
-        """
-Miglioramento: occupazione
-"""@it ;
     :belongsToGroup :57A74BCEAC281D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 08, 02.3" .
 
@@ -26246,15 +23882,6 @@ Clima/luce (qualità dell'acqua)
         "Alimentation et eau de boisson"@fr,
         "Foraggiamento e acqua potabile"@it ;
     schema:identifier "02.5" ;
-    rdfs:comment """
-Fütterung und Trinkwasser
-"""@de,
-        """
-Alimentation et eau de boisson
-"""@fr,
-        """
-Foraggiamento e acqua potabile
-"""@it ;
     :belongsToGroup :57A74BCEAC281D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 08, 02.5" .
 
@@ -26263,15 +23890,6 @@ Foraggiamento e acqua potabile
         "Interventions sur l'animal"@fr,
         "Interventi sull'animale "@it ;
     schema:identifier "02.7" ;
-    rdfs:comment """
-Eingriffe am Tier
-"""@de,
-        """
-Interventions sur l'animal
-"""@fr,
-        """
-Interventi sull'animale 
-"""@it ;
     :belongsToGroup :57A74BCEAC281D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 08, 02.7" .
 
@@ -26280,15 +23898,6 @@ Interventi sull'animale
         "Santé et soins des animaux"@fr,
         "Salute e cura degli animali"@it ;
     schema:identifier "02.8" ;
-    rdfs:comment """
-Gesundheit und Pflege Tiere
-"""@de,
-        """
-Santé et soins des animaux
-"""@fr,
-        """
-Salute e cura degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAC281D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 08, 02.8" .
 
@@ -26331,15 +23940,6 @@ Aspetti riguardanti il trasporto (durata, documenti, etichettatura, scarico)
         "Gestion de l'élevage"@fr,
         "Gestione dell'allevamento "@it ;
     schema:identifier "02.12" ;
-    rdfs:comment """
-Zuchtmanagement
-"""@de,
-        """
-Gestion de l'élevage
-"""@fr,
-        """
-Gestione dell'allevamento 
-"""@it ;
     :belongsToGroup :57A74BCEAC281D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 08, 02.12" .
 
@@ -26382,15 +23982,6 @@ Altre lacune (ad es. lesione della dignità)
         "Exigences applicables au personnel"@fr,
         "Requisiti relativi al personale"@it ;
     schema:identifier "03.1" ;
-    rdfs:comment """
-Personelle Voraussetzungen
-"""@de,
-        """
-Exigences applicables au personnel
-"""@fr,
-        """
-Requisiti relativi al personale
-"""@it ;
     :belongsToGroup :57A74BCEAC281D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 08, 03.1" .
 
@@ -26416,15 +24007,6 @@ Documentazione/registrazioni/ requisiti amministrativi (controllo dell'effettivo
         "Unité d'élevage: dimensions"@fr,
         "Unità di detenzione: dimensioni"@it ;
     schema:identifier "01.1" ;
-    rdfs:comment """
-Haltungseinheit: Abmessungen
-"""@de,
-        """
-Unité d'élevage: dimensions
-"""@fr,
-        """
-Unità di detenzione: dimensioni
-"""@it ;
     :belongsToGroup :57A74BCEAC391D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 10, 01.1" .
 
@@ -26467,15 +24049,6 @@ Unità di detenzione: occupazione (densità, compatibilità, detenzione individu
         "Partenaire social, contact social avec l'homme et socialisation"@fr,
         "Partner sociale, contatto sociale con l'uomo e socializzazione"@it ;
     schema:identifier "02.1" ;
-    rdfs:comment """
-Sozialpartner, Sozialkontakt Mensch und Sozialisierung
-"""@de,
-        """
-Partenaire social, contact social avec l'homme et socialisation
-"""@fr,
-        """
-Partner sociale, contatto sociale con l'uomo e socializzazione
-"""@it ;
     :belongsToGroup :57A74BCEAC391D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 10, 02.1" .
 
@@ -26484,15 +24057,6 @@ Partner sociale, contatto sociale con l'uomo e socializzazione
         "Enrichissement: sortie"@fr,
         "Miglioramento: uscita"@it ;
     schema:identifier "02.2" ;
-    rdfs:comment """
-Enrichment: Auslauf
-"""@de,
-        """
-Enrichissement: sortie
-"""@fr,
-        """
-Miglioramento: uscita
-"""@it ;
     :belongsToGroup :57A74BCEAC391D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 10, 02.2" .
 
@@ -26501,15 +24065,6 @@ Miglioramento: uscita
         "Enrichissement: occupation"@fr,
         "Miglioramento: occupazione"@it ;
     schema:identifier "02.3" ;
-    rdfs:comment """
-Enrichment: Beschäftigung
-"""@de,
-        """
-Enrichissement: occupation
-"""@fr,
-        """
-Miglioramento: occupazione
-"""@it ;
     :belongsToGroup :57A74BCEAC391D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 10, 02.3" .
 
@@ -26535,15 +24090,6 @@ Clima/luce (qualità dell'acqua)
         "Alimentation et eau de boisson"@fr,
         "Foraggiamento e acqua potabile"@it ;
     schema:identifier "02.5" ;
-    rdfs:comment """
-Fütterung und Trinkwasser
-"""@de,
-        """
-Alimentation et eau de boisson
-"""@fr,
-        """
-Foraggiamento e acqua potabile
-"""@it ;
     :belongsToGroup :57A74BCEAC391D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 10, 02.5" .
 
@@ -26569,15 +24115,6 @@ Igiene e manutenzione della gabbia (containment)
         "Interventions sur l'animal"@fr,
         "Interventi sull'animale "@it ;
     schema:identifier "02.7" ;
-    rdfs:comment """
-Eingriffe am Tier
-"""@de,
-        """
-Interventions sur l'animal
-"""@fr,
-        """
-Interventi sull'animale 
-"""@it ;
     :belongsToGroup :57A74BCEAC391D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 10, 02.7" .
 
@@ -26586,15 +24123,6 @@ Interventi sull'animale
         "Santé et soins des animaux"@fr,
         "Salute e cura degli animali"@it ;
     schema:identifier "02.8" ;
-    rdfs:comment """
-Gesundheit und Pflege Tiere
-"""@de,
-        """
-Santé et soins des animaux
-"""@fr,
-        """
-Salute e cura degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAC391D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 10, 02.8" .
 
@@ -26637,15 +24165,6 @@ Aspetti riguardanti il trasporto (durata, documenti, etichettatura, scarico)
         "Manquements zootechniques à l'égard des animaux"@fr,
         "Inadempimenti zootecnici nei confronti degli animali"@it ;
     schema:identifier "02.11" ;
-    rdfs:comment """
-Zuchtbedingte Mängel an den Tieren
-"""@de,
-        """
-Manquements zootechniques à l'égard des animaux
-"""@fr,
-        """
-Inadempimenti zootecnici nei confronti degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAC391D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 10, 02.11" .
 
@@ -26654,15 +24173,6 @@ Inadempimenti zootecnici nei confronti degli animali
         "Gestion de l'élevage"@fr,
         "Gestione dell'allevamento "@it ;
     schema:identifier "02.12" ;
-    rdfs:comment """
-Zuchtmanagement
-"""@de,
-        """
-Gestion de l'élevage
-"""@fr,
-        """
-Gestione dell'allevamento 
-"""@it ;
     :belongsToGroup :57A74BCEAC391D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 10, 02.12" .
 
@@ -26705,15 +24215,6 @@ Altre lacune (ad es. lesione della dignità)
         "Exigences applicables au personnel"@fr,
         "Requisiti relativi al personale"@it ;
     schema:identifier "03.1" ;
-    rdfs:comment """
-Personelle Voraussetzungen
-"""@de,
-        """
-Exigences applicables au personnel
-"""@fr,
-        """
-Requisiti relativi al personale
-"""@it ;
     :belongsToGroup :57A74BCEAC391D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 10, 03.1" .
 
@@ -26739,15 +24240,6 @@ Documentazione/registrazioni/ requisiti amministrativi (controllo dell'effettivo
         "Unité d'élevage: dimensions"@fr,
         "Unità di detenzione: dimensioni"@it ;
     schema:identifier "01.1" ;
-    rdfs:comment """
-Haltungseinheit: Abmessungen
-"""@de,
-        """
-Unité d'élevage: dimensions
-"""@fr,
-        """
-Unità di detenzione: dimensioni
-"""@it ;
     :belongsToGroup :57A74BCEAC4D1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 20, 01.1" .
 
@@ -26790,15 +24282,6 @@ Unità di detenzione: occupazione (densità, compatibilità, detenzione individu
         "Enrichissement: sortie"@fr,
         "Miglioramento: uscita"@it ;
     schema:identifier "02.2" ;
-    rdfs:comment """
-Enrichment: Auslauf
-"""@de,
-        """
-Enrichissement: sortie
-"""@fr,
-        """
-Miglioramento: uscita
-"""@it ;
     :belongsToGroup :57A74BCEAC4D1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 20, 02.2" .
 
@@ -26807,15 +24290,6 @@ Miglioramento: uscita
         "Enrichissement: occupation"@fr,
         "Miglioramento: occupazione"@it ;
     schema:identifier "02.3" ;
-    rdfs:comment """
-Enrichment: Beschäftigung
-"""@de,
-        """
-Enrichissement: occupation
-"""@fr,
-        """
-Miglioramento: occupazione
-"""@it ;
     :belongsToGroup :57A74BCEAC4D1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 20, 02.3" .
 
@@ -26858,15 +24332,6 @@ Igiene e manutenzione della gabbia (containment)
         "Interventions sur l'animal"@fr,
         "Interventi sull'animale "@it ;
     schema:identifier "02.7" ;
-    rdfs:comment """
-Eingriffe am Tier
-"""@de,
-        """
-Interventions sur l'animal
-"""@fr,
-        """
-Interventi sull'animale 
-"""@it ;
     :belongsToGroup :57A74BCEAC4D1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 20, 02.7" .
 
@@ -26875,15 +24340,6 @@ Interventi sull'animale
         "Santé et soins des animaux"@fr,
         "Salute e cura degli animali"@it ;
     schema:identifier "02.8" ;
-    rdfs:comment """
-Gesundheit und Pflege Tiere
-"""@de,
-        """
-Santé et soins des animaux
-"""@fr,
-        """
-Salute e cura degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAC4D1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 20, 02.8" .
 
@@ -26909,15 +24365,6 @@ Trattamento (eccessivo rigore, maltrattamento, conduzione senza riguardo ecc.)
         "Manquements zootechniques à l'égard des animaux"@fr,
         "Inadempimenti zootecnici nei confronti degli animali"@it ;
     schema:identifier "02.11" ;
-    rdfs:comment """
-Zuchtbedingte Mängel an den Tieren
-"""@de,
-        """
-Manquements zootechniques à l'égard des animaux
-"""@fr,
-        """
-Inadempimenti zootecnici nei confronti degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAC4D1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 20, 02.11" .
 
@@ -26926,15 +24373,6 @@ Inadempimenti zootecnici nei confronti degli animali
         "Gestion de l'élevage"@fr,
         "Gestione dell'allevamento "@it ;
     schema:identifier "02.12" ;
-    rdfs:comment """
-Zuchtmanagement
-"""@de,
-        """
-Gestion de l'élevage
-"""@fr,
-        """
-Gestione dell'allevamento 
-"""@it ;
     :belongsToGroup :57A74BCEAC4D1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 20, 02.12" .
 
@@ -26994,15 +24432,6 @@ Documentazione/registrazioni/ requisiti amministrativi (controllo dell'effettivo
         "Unité d'élevage: dimensions"@fr,
         "Unità di detenzione: dimensioni"@it ;
     schema:identifier "01.1" ;
-    rdfs:comment """
-Haltungseinheit: Abmessungen
-"""@de,
-        """
-Unité d'élevage: dimensions
-"""@fr,
-        """
-Unità di detenzione: dimensioni
-"""@it ;
     :belongsToGroup :57A74BCEAC5D1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 30, 01.1" .
 
@@ -27028,15 +24457,6 @@ Unità di detenzione: installazioni (struttura, possibilità di ritiro, suolo, p
         "Partenaire social, contact social avec l'homme et socialisation"@fr,
         "Partner sociale, contatto sociale con l'uomo e socializzazione"@it ;
     schema:identifier "02.1" ;
-    rdfs:comment """
-Sozialpartner, Sozialkontakt Mensch und Sozialisierung
-"""@de,
-        """
-Partenaire social, contact social avec l'homme et socialisation
-"""@fr,
-        """
-Partner sociale, contatto sociale con l'uomo e socializzazione
-"""@it ;
     :belongsToGroup :57A74BCEAC5D1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 30, 02.1" .
 
@@ -27045,15 +24465,6 @@ Partner sociale, contatto sociale con l'uomo e socializzazione
         "Enrichissement: sortie"@fr,
         "Miglioramento: uscita"@it ;
     schema:identifier "02.2" ;
-    rdfs:comment """
-Enrichment: Auslauf
-"""@de,
-        """
-Enrichissement: sortie
-"""@fr,
-        """
-Miglioramento: uscita
-"""@it ;
     :belongsToGroup :57A74BCEAC5D1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 30, 02.2" .
 
@@ -27062,15 +24473,6 @@ Miglioramento: uscita
         "Enrichissement: occupation"@fr,
         "Miglioramento: occupazione"@it ;
     schema:identifier "02.3" ;
-    rdfs:comment """
-Enrichment: Beschäftigung
-"""@de,
-        """
-Enrichissement: occupation
-"""@fr,
-        """
-Miglioramento: occupazione
-"""@it ;
     :belongsToGroup :57A74BCEAC5D1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 30, 02.3" .
 
@@ -27113,15 +24515,6 @@ Igiene e manutenzione della gabbia (containment)
         "Interventions sur l'animal"@fr,
         "Interventi sull'animale "@it ;
     schema:identifier "02.7" ;
-    rdfs:comment """
-Eingriffe am Tier
-"""@de,
-        """
-Interventions sur l'animal
-"""@fr,
-        """
-Interventi sull'animale 
-"""@it ;
     :belongsToGroup :57A74BCEAC5D1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 30, 02.7" .
 
@@ -27130,15 +24523,6 @@ Interventi sull'animale
         "Santé et soins des animaux"@fr,
         "Salute e cura degli animali"@it ;
     schema:identifier "02.8" ;
-    rdfs:comment """
-Gesundheit und Pflege Tiere
-"""@de,
-        """
-Santé et soins des animaux
-"""@fr,
-        """
-Salute e cura degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAC5D1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 30, 02.8" .
 
@@ -27164,15 +24548,6 @@ Trattamento (eccessivo rigore, maltrattamento, conduzione senza riguardo ecc.)
         "Manquements zootechniques à l'égard des animaux"@fr,
         "Inadempimenti zootecnici nei confronti degli animali"@it ;
     schema:identifier "02.11" ;
-    rdfs:comment """
-Zuchtbedingte Mängel an den Tieren
-"""@de,
-        """
-Manquements zootechniques à l'égard des animaux
-"""@fr,
-        """
-Inadempimenti zootecnici nei confronti degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAC5D1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 30, 02.11" .
 
@@ -27181,15 +24556,6 @@ Inadempimenti zootecnici nei confronti degli animali
         "Gestion de l'élevage"@fr,
         "Gestione dell'allevamento "@it ;
     schema:identifier "02.12" ;
-    rdfs:comment """
-Zuchtmanagement
-"""@de,
-        """
-Gestion de l'élevage
-"""@fr,
-        """
-Gestione dell'allevamento 
-"""@it ;
     :belongsToGroup :57A74BCEAC5D1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 30, 02.12" .
 
@@ -27232,15 +24598,6 @@ Altre lacune (ad es. lesione della dignità)
         "Exigences applicables au personnel"@fr,
         "Requisiti relativi al personale"@it ;
     schema:identifier "03.1" ;
-    rdfs:comment """
-Personelle Voraussetzungen
-"""@de,
-        """
-Exigences applicables au personnel
-"""@fr,
-        """
-Requisiti relativi al personale
-"""@it ;
     :belongsToGroup :57A74BCEAC5D1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 30, 03.1" .
 
@@ -27266,15 +24623,6 @@ Documentazione/registrazioni/ requisiti amministrativi (controllo dell'effettivo
         "Unité d'élevage: dimensions"@fr,
         "Unità di detenzione: dimensioni"@it ;
     schema:identifier "01.1" ;
-    rdfs:comment """
-Haltungseinheit: Abmessungen
-"""@de,
-        """
-Unité d'élevage: dimensions
-"""@fr,
-        """
-Unità di detenzione: dimensioni
-"""@it ;
     :belongsToGroup :57A74BCEAC6E1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 40, 01.1" .
 
@@ -27317,15 +24665,6 @@ Unità di detenzione: occupazione (densità, compatibilità, detenzione individu
         "Partenaire social, contact social avec l'homme et socialisation"@fr,
         "Partner sociale, contatto sociale con l'uomo e socializzazione"@it ;
     schema:identifier "02.1" ;
-    rdfs:comment """
-Sozialpartner, Sozialkontakt Mensch und Sozialisierung
-"""@de,
-        """
-Partenaire social, contact social avec l'homme et socialisation
-"""@fr,
-        """
-Partner sociale, contatto sociale con l'uomo e socializzazione
-"""@it ;
     :belongsToGroup :57A74BCEAC6E1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 40, 02.1" .
 
@@ -27334,15 +24673,6 @@ Partner sociale, contatto sociale con l'uomo e socializzazione
         "Enrichissement: sortie"@fr,
         "Miglioramento: uscita"@it ;
     schema:identifier "02.2" ;
-    rdfs:comment """
-Enrichment: Auslauf
-"""@de,
-        """
-Enrichissement: sortie
-"""@fr,
-        """
-Miglioramento: uscita
-"""@it ;
     :belongsToGroup :57A74BCEAC6E1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 40, 02.2" .
 
@@ -27351,15 +24681,6 @@ Miglioramento: uscita
         "Enrichissement: occupation"@fr,
         "Miglioramento: occupazione"@it ;
     schema:identifier "02.3" ;
-    rdfs:comment """
-Enrichment: Beschäftigung
-"""@de,
-        """
-Enrichissement: occupation
-"""@fr,
-        """
-Miglioramento: occupazione
-"""@it ;
     :belongsToGroup :57A74BCEAC6E1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 40, 02.3" .
 
@@ -27385,15 +24706,6 @@ Clima/luce (qualità dell'acqua)
         "Alimentation et eau de boisson"@fr,
         "Foraggiamento e acqua potabile"@it ;
     schema:identifier "02.5" ;
-    rdfs:comment """
-Fütterung und Trinkwasser
-"""@de,
-        """
-Alimentation et eau de boisson
-"""@fr,
-        """
-Foraggiamento e acqua potabile
-"""@it ;
     :belongsToGroup :57A74BCEAC6E1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 40, 02.5" .
 
@@ -27419,15 +24731,6 @@ Igiene e manutenzione della gabbia (containment)
         "Interventions sur l'animal"@fr,
         "Interventi sull'animale "@it ;
     schema:identifier "02.7" ;
-    rdfs:comment """
-Eingriffe am Tier
-"""@de,
-        """
-Interventions sur l'animal
-"""@fr,
-        """
-Interventi sull'animale 
-"""@it ;
     :belongsToGroup :57A74BCEAC6E1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 40, 02.7" .
 
@@ -27436,15 +24739,6 @@ Interventi sull'animale
         "Santé et soins des animaux"@fr,
         "Salute e cura degli animali"@it ;
     schema:identifier "02.8" ;
-    rdfs:comment """
-Gesundheit und Pflege Tiere
-"""@de,
-        """
-Santé et soins des animaux
-"""@fr,
-        """
-Salute e cura degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAC6E1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 40, 02.8" .
 
@@ -27487,15 +24781,6 @@ Aspetti riguardanti il trasporto (durata, documenti, etichettatura, scarico)
         "Gestion de l'élevage"@fr,
         "Gestione dell'allevamento "@it ;
     schema:identifier "02.12" ;
-    rdfs:comment """
-Zuchtmanagement
-"""@de,
-        """
-Gestion de l'élevage
-"""@fr,
-        """
-Gestione dell'allevamento 
-"""@it ;
     :belongsToGroup :57A74BCEAC6E1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 40, 02.12" .
 
@@ -27538,15 +24823,6 @@ Altre lacune (ad es. lesione della dignità)
         "Exigences applicables au personnel"@fr,
         "Requisiti relativi al personale"@it ;
     schema:identifier "03.1" ;
-    rdfs:comment """
-Personelle Voraussetzungen
-"""@de,
-        """
-Exigences applicables au personnel
-"""@fr,
-        """
-Requisiti relativi al personale
-"""@it ;
     :belongsToGroup :57A74BCEAC6E1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 40, 03.1" .
 
@@ -27555,15 +24831,6 @@ Requisiti relativi al personale
         "Unité d'élevage: dimensions"@fr,
         "Unità di detenzione: dimensioni"@it ;
     schema:identifier "01.1" ;
-    rdfs:comment """
-Haltungseinheit: Abmessungen
-"""@de,
-        """
-Unité d'élevage: dimensions
-"""@fr,
-        """
-Unità di detenzione: dimensioni
-"""@it ;
     :belongsToGroup :57A74BCEAC801D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 50, 01.1" .
 
@@ -27606,15 +24873,6 @@ Unità di detenzione: occupazione (densità, compatibilità, detenzione individu
         "Enrichissement: sortie"@fr,
         "Miglioramento: uscita"@it ;
     schema:identifier "02.2" ;
-    rdfs:comment """
-Enrichment: Auslauf
-"""@de,
-        """
-Enrichissement: sortie
-"""@fr,
-        """
-Miglioramento: uscita
-"""@it ;
     :belongsToGroup :57A74BCEAC801D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 50, 02.2" .
 
@@ -27623,15 +24881,6 @@ Miglioramento: uscita
         "Enrichissement: occupation"@fr,
         "Miglioramento: occupazione"@it ;
     schema:identifier "02.3" ;
-    rdfs:comment """
-Enrichment: Beschäftigung
-"""@de,
-        """
-Enrichissement: occupation
-"""@fr,
-        """
-Miglioramento: occupazione
-"""@it ;
     :belongsToGroup :57A74BCEAC801D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 50, 02.3" .
 
@@ -27657,15 +24906,6 @@ Clima/luce (qualità dell'acqua)
         "Alimentation et eau de boisson"@fr,
         "Foraggiamento e acqua potabile"@it ;
     schema:identifier "02.5" ;
-    rdfs:comment """
-Fütterung und Trinkwasser
-"""@de,
-        """
-Alimentation et eau de boisson
-"""@fr,
-        """
-Foraggiamento e acqua potabile
-"""@it ;
     :belongsToGroup :57A74BCEAC801D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 50, 02.5" .
 
@@ -27674,15 +24914,6 @@ Foraggiamento e acqua potabile
         "Interventions sur l'animal"@fr,
         "Interventi sull'animale "@it ;
     schema:identifier "02.7" ;
-    rdfs:comment """
-Eingriffe am Tier
-"""@de,
-        """
-Interventions sur l'animal
-"""@fr,
-        """
-Interventi sull'animale 
-"""@it ;
     :belongsToGroup :57A74BCEAC801D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 50, 02.7" .
 
@@ -27691,15 +24922,6 @@ Interventi sull'animale
         "Santé et soins des animaux"@fr,
         "Salute e cura degli animali"@it ;
     schema:identifier "02.8" ;
-    rdfs:comment """
-Gesundheit und Pflege Tiere
-"""@de,
-        """
-Santé et soins des animaux
-"""@fr,
-        """
-Salute e cura degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAC801D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 50, 02.8" .
 
@@ -27742,15 +24964,6 @@ Aspetti riguardanti il trasporto (durata, documenti, etichettatura, scarico)
         "Gestion de l'élevage"@fr,
         "Gestione dell'allevamento "@it ;
     schema:identifier "02.12" ;
-    rdfs:comment """
-Zuchtmanagement
-"""@de,
-        """
-Gestion de l'élevage
-"""@fr,
-        """
-Gestione dell'allevamento 
-"""@it ;
     :belongsToGroup :57A74BCEAC801D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 50, 02.12" .
 
@@ -29365,15 +26578,6 @@ Gli animali che hanno subito un trattamento veterinario e il cui latte rischia d
         "Autres aspects concernant le trafic des animaux"@fr,
         "Altri aspetti concernenti il traffico di animali"@it ;
     schema:identifier "+" ;
-    rdfs:comment """
-Weitere Aspekte Tierverkehr
-"""@de,
-        """
-Autres aspects concernant le trafic des animaux
-"""@fr,
-        """
-Altri aspetti concernenti il traffico di animali
-"""@it ;
     :belongsToGroup :57A74BCEB0391D05E0532D0E870A0EAF ;
     :conjunctIdentifier "02.2_82_v2, +" .
 
@@ -29605,15 +26809,6 @@ La documentazione relativa al trasferimento di animali acquatici vivi in un ambi
         "Autres aspects concernant la protection des animaux"@fr,
         "Altri aspetti concernenti la protezione degli animali"@it ;
     schema:identifier "+" ;
-    rdfs:comment """
-Weitere Aspekte Tierschutz
-"""@de,
-        """
-Autres aspects concernant la protection des animaux
-"""@fr,
-        """
-Altri aspetti concernenti la protezione degli animali
-"""@it ;
     :belongsToGroup :57A74BCEB03E1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.1_82_v2, +" .
 
@@ -30086,15 +27281,6 @@ I pesci appena immessi negli impianti possono essere pescati soltanto dopo un te
         "Autres aspects concernant la biosécurité"@fr,
         "Altri aspetti concernenti la biosicurezza"@it ;
     schema:identifier "+" ;
-    rdfs:comment """
-Weitere Aspekte Biosicherheit
-"""@de,
-        """
-Autres aspects concernant la biosécurité
-"""@fr,
-        """
-Altri aspetti concernenti la biosicurezza
-"""@it ;
     :belongsToGroup :57A74BCEB06A1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "02.3_82_v2, +" .
 
@@ -30704,15 +27890,6 @@ Le persone affette da una malattia acuta di origine alimentare o che espellono a
         "Autres aspects concernant les médicaments vétérinaires"@fr,
         "Altri aspetti concernenti i medicamenti veterinari"@it ;
     schema:identifier "+" ;
-    rdfs:comment """
-Weitere Aspekte Tierarzneimittel
-"""@de,
-        """
-Autres aspects concernant les médicaments vétérinaires
-"""@fr,
-        """
-Altri aspetti concernenti i medicamenti veterinari
-"""@it ;
     :belongsToGroup :57A74BCEB09F1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "01.4_82_v2, +" .
 
@@ -31235,15 +28412,6 @@ d) secondo l'informazione sul medicamento (foglietto informativo)
         "Autres aspects concernant la santé animale"@fr,
         "Altri aspetti concernenti la salute degli animali"@it ;
     schema:identifier "+" ;
-    rdfs:comment """
-Weitere Aspekte Tiergesundheit
-"""@de,
-        """
-Autres aspects concernant la santé animale
-"""@fr,
-        """
-Altri aspetti concernenti la salute degli animali
-"""@it ;
     :belongsToGroup :57A74BCEB0A91D05E0532D0E870A0EAF ;
     :conjunctIdentifier "02.1_82_v3, +" .
 
@@ -32055,15 +29223,6 @@ I detentori di animali devono prendersi cura correttamente degli animali e adott
         "Autres aspects concernant l'hygiène dans la production primaire"@fr,
         "Altri aspetti concernenti l'igiene nella produzione primaria"@it ;
     schema:identifier "+" ;
-    rdfs:comment """
-Weitere Aspekte Hygiene in der Primärproduktion
-"""@de,
-        """
-Autres aspects concernant l'hygiène dans la production primaire
-"""@fr,
-        """
-Altri aspetti concernenti l'igiene nella produzione primaria
-"""@it ;
     :belongsToGroup :57A74BCEB0F81D05E0532D0E870A0EAF ;
     :conjunctIdentifier "01.2_83_v2, +" .
 
@@ -32206,15 +29365,6 @@ c) Non si applica alle forniture dirette ai consumatori o agli esercizi di comme
         "Autres aspects concernant la santé animale"@fr,
         "Altri aspetti concernenti la salute degli animali"@it ;
     schema:identifier "+" ;
-    rdfs:comment """
-Weitere Aspekte Tiergesundheit
-"""@de,
-        """
-Autres aspects concernant la santé animale
-"""@fr,
-        """
-Altri aspetti concernenti la salute degli animali
-"""@it ;
     :belongsToGroup :57A74BCEB1001D05E0532D0E870A0EAF ;
     :conjunctIdentifier "02.1_83_v2, +" .
 
@@ -32383,15 +29533,6 @@ c)	Conoscenza dei principali sintomi della peste americana e di quella europea
         "Autres aspects concernant le trafic des animaux"@fr,
         "Altri aspetti concernenti il traffico di animali"@it ;
     schema:identifier "+" ;
-    rdfs:comment """
-Weitere Aspekte Tierverkehr
-"""@de,
-        """
-Autres aspects concernant le trafic des animaux
-"""@fr,
-        """
-Altri aspetti concernenti il traffico di animali
-"""@it ;
     :belongsToGroup :57A74BCEB1581D05E0532D0E870A0EAF ;
     :conjunctIdentifier "02.2_83_v2, +" .
 
@@ -32573,15 +29714,6 @@ Igiene e manutenzione della gabbia (containment)
         "Manquements zootechniques à l'égard des animaux"@fr,
         "Inadempimenti zootecnici nei confronti degli animali"@it ;
     schema:identifier "02.11" ;
-    rdfs:comment """
-Zuchtbedingte Mängel an den Tieren
-"""@de,
-        """
-Manquements zootechniques à l'égard des animaux
-"""@fr,
-        """
-Inadempimenti zootecnici nei confronti degli animali
-"""@it ;
     :belongsToGroup :57A74BCEA8A01D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 30, 02.11" .
 
@@ -32607,15 +29739,6 @@ Documentazione/registrazioni/ requisiti amministrativi (controllo dell'effettivo
         "Partenaire social, contact social avec l'homme et socialisation"@fr,
         "Partner sociale, contatto sociale con l'uomo e socializzazione"@it ;
     schema:identifier "02.1" ;
-    rdfs:comment """
-Sozialpartner, Sozialkontakt Mensch und Sozialisierung
-"""@de,
-        """
-Partenaire social, contact social avec l'homme et socialisation
-"""@fr,
-        """
-Partner sociale, contatto sociale con l'uomo e socializzazione
-"""@it ;
     :belongsToGroup :57A74BCEA8B01D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 40, 02.1" .
 
@@ -32641,15 +29764,6 @@ Igiene e manutenzione della gabbia (containment)
         "Manquements zootechniques à l'égard des animaux"@fr,
         "Inadempimenti zootecnici nei confronti degli animali"@it ;
     schema:identifier "02.11" ;
-    rdfs:comment """
-Zuchtbedingte Mängel an den Tieren
-"""@de,
-        """
-Manquements zootechniques à l'égard des animaux
-"""@fr,
-        """
-Inadempimenti zootecnici nei confronti degli animali
-"""@it ;
     :belongsToGroup :57A74BCEA8B01D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 40, 02.11" .
 
@@ -33050,15 +30164,6 @@ Anforderungen
         "Autres aspects Autocontrôle"@fr,
         "Altri aspetti coltrollo autonomo"@it ;
     schema:identifier "+" ;
-    rdfs:comment """
-Weitere Aspekte Selbstkontrolle
-"""@de,
-        """
-Autres aspects Autocontrôle
-"""@fr,
-        """
-Altri aspetti coltrollo autonomo
-"""@it ;
     :belongsToGroup :57A74BCEB34B1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "01.53_v2, +" .
 
@@ -35956,15 +33061,6 @@ Gli ovini e i caprini nati dopo il 01.01.2020 devono essere registrati nella BDT
         "Autres aspects Processus"@fr,
         "Altri aspetti Processi"@it ;
     schema:identifier "+" ;
-    rdfs:comment """
-Weitere Aspekte Prozesse
-"""@de,
-        """
-Autres aspects Processus
-"""@fr,
-        """
-Altri aspetti Processi
-"""@it ;
     :belongsToGroup :57A74BCEB4CD1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "01.52_v2, +" .
 
@@ -42503,15 +39599,6 @@ Clima/luce (qualità dell'acqua)
         "Santé et soins des animaux"@fr,
         "Salute e cura degli animali"@it ;
     schema:identifier "02.8" ;
-    rdfs:comment """
-Gesundheit und Pflege Tiere
-"""@de,
-        """
-Santé et soins des animaux
-"""@fr,
-        """
-Salute e cura degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAAB51D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 10, 02.8" .
 
@@ -42554,15 +39641,6 @@ Clima/luce (qualità dell'acqua)
         "Santé et soins des animaux"@fr,
         "Salute e cura degli animali"@it ;
     schema:identifier "02.8" ;
-    rdfs:comment """
-Gesundheit und Pflege Tiere
-"""@de,
-        """
-Santé et soins des animaux
-"""@fr,
-        """
-Salute e cura degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAAD91D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 30, 02.8" .
 
@@ -42605,15 +39683,6 @@ Unità di detenzione: installazioni (struttura, possibilità di ritiro, suolo, p
         "Enrichissement: occupation"@fr,
         "Miglioramento: occupazione"@it ;
     schema:identifier "02.3" ;
-    rdfs:comment """
-Enrichment: Beschäftigung
-"""@de,
-        """
-Enrichissement: occupation
-"""@fr,
-        """
-Miglioramento: occupazione
-"""@it ;
     :belongsToGroup :57A74BCEAAEA1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 40, 02.3" .
 
@@ -42622,15 +39691,6 @@ Miglioramento: occupazione
         "Santé et soins des animaux"@fr,
         "Salute e cura degli animali"@it ;
     schema:identifier "02.8" ;
-    rdfs:comment """
-Gesundheit und Pflege Tiere
-"""@de,
-        """
-Santé et soins des animaux
-"""@fr,
-        """
-Salute e cura degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAAEA1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 40, 02.8" .
 
@@ -42639,15 +39699,6 @@ Salute e cura degli animali
         "Gestion de l'élevage"@fr,
         "Gestione dell'allevamento "@it ;
     schema:identifier "02.12" ;
-    rdfs:comment """
-Zuchtmanagement
-"""@de,
-        """
-Gestion de l'élevage
-"""@fr,
-        """
-Gestione dell'allevamento 
-"""@it ;
     :belongsToGroup :57A74BCEAAEA1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.4_v1, 40, 02.12" .
 
@@ -42656,15 +39707,6 @@ Gestione dell'allevamento
         "Unité d'élevage: dimensions"@fr,
         "Unità di detenzione: dimensioni"@it ;
     schema:identifier "01.1" ;
-    rdfs:comment """
-Haltungseinheit: Abmessungen
-"""@de,
-        """
-Unité d'élevage: dimensions
-"""@fr,
-        """
-Unità di detenzione: dimensioni
-"""@it ;
     :belongsToGroup :57A74BCEAB131D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 02, 01.1" .
 
@@ -42673,15 +39715,6 @@ Unità di detenzione: dimensioni
         "Enrichissement: occupation"@fr,
         "Miglioramento: occupazione"@it ;
     schema:identifier "02.3" ;
-    rdfs:comment """
-Enrichment: Beschäftigung
-"""@de,
-        """
-Enrichissement: occupation
-"""@fr,
-        """
-Miglioramento: occupazione
-"""@it ;
     :belongsToGroup :57A74BCEAB131D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 02, 02.3" .
 
@@ -43270,15 +40303,6 @@ d)	Il sistema di documentazione dell’impianto deve essere completamente presen
         "Interventions sur l'animal"@fr,
         "Interventi sull'animale "@it ;
     schema:identifier "02.7" ;
-    rdfs:comment """
-Eingriffe am Tier
-"""@de,
-        """
-Interventions sur l'animal
-"""@fr,
-        """
-Interventi sull'animale 
-"""@it ;
     :belongsToGroup :57A74BCEAB131D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 02, 02.7" .
 
@@ -43287,15 +40311,6 @@ Interventi sull'animale
         "Gestion de l'élevage"@fr,
         "Gestione dell'allevamento "@it ;
     schema:identifier "02.12" ;
-    rdfs:comment """
-Zuchtmanagement
-"""@de,
-        """
-Gestion de l'élevage
-"""@fr,
-        """
-Gestione dell'allevamento 
-"""@it ;
     :belongsToGroup :57A74BCEAB131D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 02, 02.12" .
 
@@ -43304,15 +40319,6 @@ Gestione dell'allevamento
         "Unité d'élevage: dimensions"@fr,
         "Unità di detenzione: dimensioni"@it ;
     schema:identifier "01.1" ;
-    rdfs:comment """
-Haltungseinheit: Abmessungen
-"""@de,
-        """
-Unité d'élevage: dimensions
-"""@fr,
-        """
-Unità di detenzione: dimensioni
-"""@it ;
     :belongsToGroup :57A74BCEAB231D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 03, 01.1" .
 
@@ -43321,15 +40327,6 @@ Unità di detenzione: dimensioni
         "Enrichissement: sortie"@fr,
         "Miglioramento: uscita"@it ;
     schema:identifier "02.2" ;
-    rdfs:comment """
-Enrichment: Auslauf
-"""@de,
-        """
-Enrichissement: sortie
-"""@fr,
-        """
-Miglioramento: uscita
-"""@it ;
     :belongsToGroup :57A74BCEAB231D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 03, 02.2" .
 
@@ -43338,15 +40335,6 @@ Miglioramento: uscita
         "Interventions sur l'animal"@fr,
         "Interventi sull'animale "@it ;
     schema:identifier "02.7" ;
-    rdfs:comment """
-Eingriffe am Tier
-"""@de,
-        """
-Interventions sur l'animal
-"""@fr,
-        """
-Interventi sull'animale 
-"""@it ;
     :belongsToGroup :57A74BCEAB231D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 03, 02.7" .
 
@@ -43355,15 +40343,6 @@ Interventi sull'animale
         "Manquements zootechniques à l'égard des animaux"@fr,
         "Inadempimenti zootecnici nei confronti degli animali"@it ;
     schema:identifier "02.11" ;
-    rdfs:comment """
-Zuchtbedingte Mängel an den Tieren
-"""@de,
-        """
-Manquements zootechniques à l'égard des animaux
-"""@fr,
-        """
-Inadempimenti zootecnici nei confronti degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAB231D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 03, 02.11" .
 
@@ -43372,15 +40351,6 @@ Inadempimenti zootecnici nei confronti degli animali
         "Unité d'élevage: dimensions"@fr,
         "Unità di detenzione: dimensioni"@it ;
     schema:identifier "01.1" ;
-    rdfs:comment """
-Haltungseinheit: Abmessungen
-"""@de,
-        """
-Unité d'élevage: dimensions
-"""@fr,
-        """
-Unità di detenzione: dimensioni
-"""@it ;
     :belongsToGroup :57A74BCEAB471D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 05, 01.1" .
 
@@ -43389,15 +40359,6 @@ Unità di detenzione: dimensioni
         "Enrichissement: occupation"@fr,
         "Miglioramento: occupazione"@it ;
     schema:identifier "02.3" ;
-    rdfs:comment """
-Enrichment: Beschäftigung
-"""@de,
-        """
-Enrichissement: occupation
-"""@fr,
-        """
-Miglioramento: occupazione
-"""@it ;
     :belongsToGroup :57A74BCEAB471D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 05, 02.3" .
 
@@ -43406,15 +40367,6 @@ Miglioramento: occupazione
         "Interventions sur l'animal"@fr,
         "Interventi sull'animale "@it ;
     schema:identifier "02.7" ;
-    rdfs:comment """
-Eingriffe am Tier
-"""@de,
-        """
-Interventions sur l'animal
-"""@fr,
-        """
-Interventi sull'animale 
-"""@it ;
     :belongsToGroup :57A74BCEAB471D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 05, 02.7" .
 
@@ -43423,15 +40375,6 @@ Interventi sull'animale
         "Gestion de l'élevage"@fr,
         "Gestione dell'allevamento "@it ;
     schema:identifier "02.12" ;
-    rdfs:comment """
-Zuchtmanagement
-"""@de,
-        """
-Gestion de l'élevage
-"""@fr,
-        """
-Gestione dell'allevamento 
-"""@it ;
     :belongsToGroup :57A74BCEAB471D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 05, 02.12" .
 
@@ -43440,15 +40383,6 @@ Gestione dell'allevamento
         "Unité d'élevage: dimensions"@fr,
         "Unità di detenzione: dimensioni"@it ;
     schema:identifier "01.1" ;
-    rdfs:comment """
-Haltungseinheit: Abmessungen
-"""@de,
-        """
-Unité d'élevage: dimensions
-"""@fr,
-        """
-Unità di detenzione: dimensioni
-"""@it ;
     :belongsToGroup :57A74BCEAB571D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 06, 01.1" .
 
@@ -43457,15 +40391,6 @@ Unità di detenzione: dimensioni
         "Enrichissement: sortie"@fr,
         "Miglioramento: uscita"@it ;
     schema:identifier "02.2" ;
-    rdfs:comment """
-Enrichment: Auslauf
-"""@de,
-        """
-Enrichissement: sortie
-"""@fr,
-        """
-Miglioramento: uscita
-"""@it ;
     :belongsToGroup :57A74BCEAB571D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 06, 02.2" .
 
@@ -43474,15 +40399,6 @@ Miglioramento: uscita
         "Interventions sur l'animal"@fr,
         "Interventi sull'animale "@it ;
     schema:identifier "02.7" ;
-    rdfs:comment """
-Eingriffe am Tier
-"""@de,
-        """
-Interventions sur l'animal
-"""@fr,
-        """
-Interventi sull'animale 
-"""@it ;
     :belongsToGroup :57A74BCEAB571D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 06, 02.7" .
 
@@ -43508,15 +40424,6 @@ Trattamento (eccessivo rigore, maltrattamento, conduzione senza riguardo ecc.)
         "Partenaire social, contact social avec l'homme et socialisation"@fr,
         "Partner sociale, contatto sociale con l'uomo e socializzazione"@it ;
     schema:identifier "02.1" ;
-    rdfs:comment """
-Sozialpartner, Sozialkontakt Mensch und Sozialisierung
-"""@de,
-        """
-Partenaire social, contact social avec l'homme et socialisation
-"""@fr,
-        """
-Partner sociale, contatto sociale con l'uomo e socializzazione
-"""@it ;
     :belongsToGroup :57A74BCEABAE1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 01, 02.1" .
 
@@ -43525,15 +40432,6 @@ Partner sociale, contatto sociale con l'uomo e socializzazione
         "Alimentation et eau de boisson"@fr,
         "Foraggiamento e acqua potabile"@it ;
     schema:identifier "02.5" ;
-    rdfs:comment """
-Fütterung und Trinkwasser
-"""@de,
-        """
-Alimentation et eau de boisson
-"""@fr,
-        """
-Foraggiamento e acqua potabile
-"""@it ;
     :belongsToGroup :57A74BCEABAE1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 01, 02.5" .
 
@@ -43559,15 +40457,6 @@ Aspetti riguardanti il trasporto (durata, documenti, etichettatura, scarico)
         "Exigences applicables au personnel"@fr,
         "Requisiti relativi al personale"@it ;
     schema:identifier "03.1" ;
-    rdfs:comment """
-Personelle Voraussetzungen
-"""@de,
-        """
-Exigences applicables au personnel
-"""@fr,
-        """
-Requisiti relativi al personale
-"""@it ;
     :belongsToGroup :57A74BCEABAE1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 01, 03.1" .
 
@@ -43593,15 +40482,6 @@ Unità di detenzione: occupazione (densità, compatibilità, detenzione individu
         "Alimentation et eau de boisson"@fr,
         "Foraggiamento e acqua potabile"@it ;
     schema:identifier "02.5" ;
-    rdfs:comment """
-Fütterung und Trinkwasser
-"""@de,
-        """
-Alimentation et eau de boisson
-"""@fr,
-        """
-Foraggiamento e acqua potabile
-"""@it ;
     :belongsToGroup :57A74BCEABBE1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 02, 02.5" .
 
@@ -43729,15 +40609,6 @@ Clima/luce (qualità dell'acqua)
         "Santé et soins des animaux"@fr,
         "Salute e cura degli animali"@it ;
     schema:identifier "02.8" ;
-    rdfs:comment """
-Gesundheit und Pflege Tiere
-"""@de,
-        """
-Santé et soins des animaux
-"""@fr,
-        """
-Salute e cura degli animali
-"""@it ;
     :belongsToGroup :57A74BCEABF31D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 05, 02.8" .
 
@@ -43746,15 +40617,6 @@ Salute e cura degli animali
         "Enrichissement: sortie"@fr,
         "Miglioramento: uscita"@it ;
     schema:identifier "02.2" ;
-    rdfs:comment """
-Enrichment: Auslauf
-"""@de,
-        """
-Enrichissement: sortie
-"""@fr,
-        """
-Miglioramento: uscita
-"""@it ;
     :belongsToGroup :57A74BCEAC181D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 07, 02.2" .
 
@@ -43780,15 +40642,6 @@ Igiene e manutenzione della gabbia (containment)
         "Manquements zootechniques à l'égard des animaux"@fr,
         "Inadempimenti zootecnici nei confronti degli animali"@it ;
     schema:identifier "02.11" ;
-    rdfs:comment """
-Zuchtbedingte Mängel an den Tieren
-"""@de,
-        """
-Manquements zootechniques à l'égard des animaux
-"""@fr,
-        """
-Inadempimenti zootecnici nei confronti degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAC181D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 07, 02.11" .
 
@@ -43814,15 +40667,6 @@ Documentazione/registrazioni/ requisiti amministrativi (controllo dell'effettivo
         "Partenaire social, contact social avec l'homme et socialisation"@fr,
         "Partner sociale, contatto sociale con l'uomo e socializzazione"@it ;
     schema:identifier "02.1" ;
-    rdfs:comment """
-Sozialpartner, Sozialkontakt Mensch und Sozialisierung
-"""@de,
-        """
-Partenaire social, contact social avec l'homme et socialisation
-"""@fr,
-        """
-Partner sociale, contatto sociale con l'uomo e socializzazione
-"""@it ;
     :belongsToGroup :57A74BCEAC281D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 08, 02.1" .
 
@@ -43848,15 +40692,6 @@ Igiene e manutenzione della gabbia (containment)
         "Manquements zootechniques à l'égard des animaux"@fr,
         "Inadempimenti zootecnici nei confronti degli animali"@it ;
     schema:identifier "02.11" ;
-    rdfs:comment """
-Zuchtbedingte Mängel an den Tieren
-"""@de,
-        """
-Manquements zootechniques à l'égard des animaux
-"""@fr,
-        """
-Inadempimenti zootecnici nei confronti degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAC281D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 08, 02.11" .
 
@@ -43882,15 +40717,6 @@ Fragole: l'impianto deve essere costruito in maniera tale da consentire la racco
         "Partenaire social, contact social avec l'homme et socialisation"@fr,
         "Partner sociale, contatto sociale con l'uomo e socializzazione"@it ;
     schema:identifier "02.1" ;
-    rdfs:comment """
-Sozialpartner, Sozialkontakt Mensch und Sozialisierung
-"""@de,
-        """
-Partenaire social, contact social avec l'homme et socialisation
-"""@fr,
-        """
-Partner sociale, contatto sociale con l'uomo e socializzazione
-"""@it ;
     :belongsToGroup :57A74BCEAC4D1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 20, 02.1" .
 
@@ -43899,15 +40725,6 @@ Partner sociale, contatto sociale con l'uomo e socializzazione
         "Alimentation et eau de boisson"@fr,
         "Foraggiamento e acqua potabile"@it ;
     schema:identifier "02.5" ;
-    rdfs:comment """
-Fütterung und Trinkwasser
-"""@de,
-        """
-Alimentation et eau de boisson
-"""@fr,
-        """
-Foraggiamento e acqua potabile
-"""@it ;
     :belongsToGroup :57A74BCEAC4D1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 20, 02.5" .
 
@@ -43933,15 +40750,6 @@ Aspetti riguardanti il trasporto (durata, documenti, etichettatura, scarico)
         "Exigences applicables au personnel"@fr,
         "Requisiti relativi al personale"@it ;
     schema:identifier "03.1" ;
-    rdfs:comment """
-Personelle Voraussetzungen
-"""@de,
-        """
-Exigences applicables au personnel
-"""@fr,
-        """
-Requisiti relativi al personale
-"""@it ;
     :belongsToGroup :57A74BCEAC4D1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 20, 03.1" .
 
@@ -43967,15 +40775,6 @@ Unità di detenzione: occupazione (densità, compatibilità, detenzione individu
         "Alimentation et eau de boisson"@fr,
         "Foraggiamento e acqua potabile"@it ;
     schema:identifier "02.5" ;
-    rdfs:comment """
-Fütterung und Trinkwasser
-"""@de,
-        """
-Alimentation et eau de boisson
-"""@fr,
-        """
-Foraggiamento e acqua potabile
-"""@it ;
     :belongsToGroup :57A74BCEAC5D1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 30, 02.5" .
 
@@ -44001,15 +40800,6 @@ Aspetti riguardanti il trasporto (durata, documenti, etichettatura, scarico)
         "Manquements zootechniques à l'égard des animaux"@fr,
         "Inadempimenti zootecnici nei confronti degli animali"@it ;
     schema:identifier "02.11" ;
-    rdfs:comment """
-Zuchtbedingte Mängel an den Tieren
-"""@de,
-        """
-Manquements zootechniques à l'égard des animaux
-"""@fr,
-        """
-Inadempimenti zootecnici nei confronti degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAC6E1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 40, 02.11" .
 
@@ -44035,15 +40825,6 @@ Documentazione/registrazioni/ requisiti amministrativi (controllo dell'effettivo
         "Partenaire social, contact social avec l'homme et socialisation"@fr,
         "Partner sociale, contatto sociale con l'uomo e socializzazione"@it ;
     schema:identifier "02.1" ;
-    rdfs:comment """
-Sozialpartner, Sozialkontakt Mensch und Sozialisierung
-"""@de,
-        """
-Partenaire social, contact social avec l'homme et socialisation
-"""@fr,
-        """
-Partner sociale, contatto sociale con l'uomo e socializzazione
-"""@it ;
     :belongsToGroup :57A74BCEAC801D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 50, 02.1" .
 
@@ -44069,15 +40850,6 @@ Igiene e manutenzione della gabbia (containment)
         "Manquements zootechniques à l'égard des animaux"@fr,
         "Inadempimenti zootecnici nei confronti degli animali"@it ;
     schema:identifier "02.11" ;
-    rdfs:comment """
-Zuchtbedingte Mängel an den Tieren
-"""@de,
-        """
-Manquements zootechniques à l'égard des animaux
-"""@fr,
-        """
-Inadempimenti zootecnici nei confronti degli animali
-"""@it ;
     :belongsToGroup :57A74BCEAC801D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 50, 02.11" .
 
@@ -44086,15 +40858,6 @@ Inadempimenti zootecnici nei confronti degli animali
         "Exigences applicables au personnel"@fr,
         "Requisiti relativi al personale"@it ;
     schema:identifier "03.1" ;
-    rdfs:comment """
-Personelle Voraussetzungen
-"""@de,
-        """
-Exigences applicables au personnel
-"""@fr,
-        """
-Requisiti relativi al personale
-"""@it ;
     :belongsToGroup :57A74BCEAC801D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5b_v1, 50, 03.1" .
 
@@ -45531,15 +42294,6 @@ Clima/luce (qualità dell'acqua)
         "Santé et soins des animaux"@fr,
         "Salute e cura degli animali"@it ;
     schema:identifier "02.8" ;
-    rdfs:comment """
-Gesundheit und Pflege Tiere
-"""@de,
-        """
-Santé et soins des animaux
-"""@fr,
-        """
-Salute e cura degli animali
-"""@it ;
     :belongsToGroup :57A74BCEA86B1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 08, 02.8" .
 
@@ -45582,15 +42336,6 @@ Unità di detenzione: installazioni (struttura, possibilità di ritiro, suolo, p
         "Enrichissement: occupation"@fr,
         "Miglioramento: occupazione"@it ;
     schema:identifier "02.3" ;
-    rdfs:comment """
-Enrichment: Beschäftigung
-"""@de,
-        """
-Enrichissement: occupation
-"""@fr,
-        """
-Miglioramento: occupazione
-"""@it ;
     :belongsToGroup :57A74BCEA87B1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 10, 02.3" .
 
@@ -45599,15 +42344,6 @@ Miglioramento: occupazione
         "Santé et soins des animaux"@fr,
         "Salute e cura degli animali"@it ;
     schema:identifier "02.8" ;
-    rdfs:comment """
-Gesundheit und Pflege Tiere
-"""@de,
-        """
-Santé et soins des animaux
-"""@fr,
-        """
-Salute e cura degli animali
-"""@it ;
     :belongsToGroup :57A74BCEA87B1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 10, 02.8" .
 
@@ -45616,15 +42352,6 @@ Salute e cura degli animali
         "Enrichissement: sortie"@fr,
         "Miglioramento: uscita"@it ;
     schema:identifier "02.2" ;
-    rdfs:comment """
-Enrichment: Auslauf
-"""@de,
-        """
-Enrichissement: sortie
-"""@fr,
-        """
-Miglioramento: uscita
-"""@it ;
     :belongsToGroup :57A74BCEA8A01D05E0532D0E870A0EAF ;
     :conjunctIdentifier "03.5a_v1, 30, 02.2" .
 
@@ -46822,9 +43549,6 @@ Le esigenze del livello qualitativo I sono adempiute.
 Biodiversität fördernde Strukturen regelmässig vorhanden
 """@de,
         """
-Présence de structures favorisant la biodiversité
-"""@fr,
-        """
 Sono presenti regolarmente strutture favorevoli alla biodiversità.
 """@it ;
     :belongsToGroup :57A74BCEBD141D05E0532D0E870A0EAF ;
@@ -47357,9 +44081,6 @@ Le esigenze del livello qualitativo I sono adempiute.
     rdfs:comment """
 Biodiversität fördernde Strukturen regelmässig vorhanden
 """@de,
-        """
-Présence de structures favorisant la biodiversité
-"""@fr,
         """
 Sono presenti regolarmente strutture favorevoli alla biodiversità.
 """@it ;
@@ -51463,15 +48184,6 @@ Il termine minimo di conservazione ai sensi dell'articolo 13 capoverso 1 OID dev
         "Autres aspects concernant les médicaments vétérinaires"@fr,
         "Altri aspetti concernenti i medicamenti veterinari"@it ;
     schema:identifier "+" ;
-    rdfs:comment """
-Weitere Aspekte Tierarzneimittel
-"""@de,
-        """
-Autres aspects concernant les médicaments vétérinaires
-"""@fr,
-        """
-Altri aspetti concernenti i medicamenti veterinari
-"""@it ;
     :belongsToGroup :57A74BCEC41B1D05E0532D0E870A0EAF ;
     :conjunctIdentifier "01.4_83_v3, +" .
 
@@ -53036,15 +49748,6 @@ Animali per hobby: norme di foraggiamento e allevamento adempiute per analogia
         "Autres aspects Infrastructure"@fr,
         "Altri Aspetti Infrastruttura"@it ;
     schema:identifier "+" ;
-    rdfs:comment """
-Weitere Aspekte Infrastruktur
-"""@de,
-        """
-Autres aspects Infrastructure
-"""@fr,
-        """
-Altri Aspetti Infrastruttura
-"""@it ;
     :belongsToGroup :57A74BCEC7301D05E0532D0E870A0EAF ;
     :conjunctIdentifier "01.51_v2, +" .
 
@@ -57930,15 +54633,6 @@ Osservazione
         "Autres aspects concernant l'hygiène dans la production primaire"@fr,
         "Altri aspetti concernenti l'igiene nella produzione primaria"@it ;
     schema:identifier "+" ;
-    rdfs:comment """
-Weitere Aspekte Hygiene in der Primärproduktion
-"""@de,
-        """
-Autres aspects concernant l'hygiène dans la production primaire
-"""@fr,
-        """
-Altri aspetti concernenti l'igiene nella produzione primaria
-"""@it ;
     :belongsToGroup :0C013B70947F489594C0B5EB06812258 ;
     :conjunctIdentifier "01.2_85_v1, +" .
 
@@ -73891,15 +70585,6 @@ Superficie totale del suolo nell'ACE sufficientemente ricoperta da lettiera; fa 
         "En cas de dommages, aucune semence issue de la sélection n'a été utilisée."@fr,
         "In caso di danni non sono impiegate sementi selezionate."@it ;
     schema:identifier "02" ;
-    rdfs:comment """
-Bei Schäden wurde kein Zuchtsaatgut eingesetzt.
-"""@de,
-        """
-En cas de dommages, aucune semence issue de la sélection n'a été utilisée.
-"""@fr,
-        """
-In caso di danni non sono impiegate sementi selezionate.
-"""@it ;
     :belongsToGroup :620C05912BA845DE9289F9C2F1F4CF42 ;
     :conjunctIdentifier "15.01_2025, 02" .
 

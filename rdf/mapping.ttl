@@ -7,6 +7,7 @@
     rdfs:label "Luftreinhaltung"@de,
         "Protection de l'air"@fr,
         "Inquinamento atmosferico"@it ;
+    schema:hasPart :C3AC1DC7CB4A4CBCA428AB4C0446C4B5 ;
     schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 ;
     :hierarchyLevel "2" .
 
@@ -14,6 +15,7 @@
     rdfs:label "Gewässerschutz"@de,
         "FR: Gewässerschutz"@fr,
         "Ambito Protezione delle acque"@it ;
+    schema:hasPart :957859627D824A60B076A86082454FCC ;
     schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 ;
     :hierarchyLevel "2" .
 
@@ -21,7 +23,8 @@
     rdfs:label "Umwelt"@de,
         "FR: Bereich Umwelt"@fr,
         "Ambito Ambiente"@it ;
-    schema:hasPart :57A74BCEB4C11D05E0532D0E870A0EAF ;
+    schema:hasPart :57A74BCEB4C11D05E0532D0E870A0EAF,
+        :57A74BCEB5A41D05E0532D0E870A0EAF ;
     schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 ;
     :hierarchyLevel "2" .
 
@@ -29,6 +32,7 @@
     rdfs:label "Beitragsvoraussetzungen"@de,
         "FR: Beitragsvoraussetzungen"@fr,
         "Ambito Condizioni per i contributi"@it ;
+    schema:hasPart :57A74BCEB8251D05E0532D0E870A0EAF ;
     schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
     :hierarchyLevel "2" .
 
@@ -36,6 +40,9 @@
     rdfs:label "Strukturdaten"@de,
         "FR: Strukturdaten"@fr,
         "Ambito Dati strutturali"@it ;
+    schema:hasPart :57A74BCEB82A1D05E0532D0E870A0EAF,
+        :57A74BCEB82D1D05E0532D0E870A0EAF,
+        :57A74BCEBD821D05E0532D0E870A0EAF ;
     schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
     :hierarchyLevel "2" .
 
@@ -63,7 +70,8 @@
     rdfs:label "Biodiversitätsförderflächen (BFF)"@de,
         "FR: Biodiversitätsförderflächen"@fr,
         "Ambito Superfici per la promozione della biodiversità"@it ;
-    schema:hasPart :57A74BCEB3AD1D05E0532D0E870A0EAF,
+    schema:hasPart :03CBA0CCC0334AA497E94B0613BC4976,
+        :57A74BCEB3AD1D05E0532D0E870A0EAF,
         :57A74BCEB3B11D05E0532D0E870A0EAF,
         :57A74BCEB3B51D05E0532D0E870A0EAF,
         :57A74BCEB3B91D05E0532D0E870A0EAF,
@@ -73,6 +81,8 @@
         :57A74BCEBC5F1D05E0532D0E870A0EAF,
         :57A74BCEBC631D05E0532D0E870A0EAF,
         :57A74BCEBC671D05E0532D0E870A0EAF,
+        :57A74BCEBCDD1D05E0532D0E870A0EAF,
+        :57A74BCEBCE21D05E0532D0E870A0EAF,
         :57A74BCEBD101D05E0532D0E870A0EAF,
         :57A74BCEBD141D05E0532D0E870A0EAF,
         :57A74BCEBD191D05E0532D0E870A0EAF,
@@ -86,7 +96,9 @@
         :57A74BCEC6F31D05E0532D0E870A0EAF,
         :57A74BCEC6F81D05E0532D0E870A0EAF,
         :57A74BCEC6FC1D05E0532D0E870A0EAF,
-        :57A74BCEC7051D05E0532D0E870A0EAF ;
+        :57A74BCEC7051D05E0532D0E870A0EAF,
+        :57A74BCEC7091D05E0532D0E870A0EAF,
+        :57A74BCEC70D1D05E0532D0E870A0EAF ;
     schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
     :hierarchyLevel "2" .
 
@@ -104,7 +116,8 @@
         :57A74BCEBDBA1D05E0532D0E870A0EAF,
         :57A74BCEC0C31D05E0532D0E870A0EAF,
         :57A74BCEC7111D05E0532D0E870A0EAF,
-        :57A74BCEC7131D05E0532D0E870A0EAF ;
+        :57A74BCEC7131D05E0532D0E870A0EAF,
+        :B58ACD9163A64A3C8ABD18580BFFE780 ;
     schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
     :hierarchyLevel "2" .
 
@@ -112,6 +125,9 @@
     rdfs:label "Graslandbasierte Milch- und Fleischproduktion (GMF)"@de,
         "FR: Graslandbasierte Milch- und Fleischproduktion"@fr,
         "Ambito Produzione di latte e carne basata sulla superficie inerbita"@it ;
+    schema:hasPart :42322B5300474C3D944CC1033F7653B6,
+        :57A74BCEC0C61D05E0532D0E870A0EAF,
+        :ABF667644332451BA425C81187877E8C ;
     schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
     :hierarchyLevel "2" .
 
@@ -138,10 +154,25 @@
         "FR: Bereich Tiergesundheit (Nutztiere, Bienen, Fische)"@fr,
         "Ambito Salute degli animali (animali da reddito, api, pesci)"@it ;
     schema:hasPart :52DC821592B2498586EC8ACB0677DC3B,
+        :57A74BCEB0391D05E0532D0E870A0EAF,
+        :57A74BCEB06A1D05E0532D0E870A0EAF,
+        :57A74BCEB09A1D05E0532D0E870A0EAF,
+        :57A74BCEB09F1D05E0532D0E870A0EAF,
         :57A74BCEB0A91D05E0532D0E870A0EAF,
         :57A74BCEB0D71D05E0532D0E870A0EAF,
+        :57A74BCEB0F81D05E0532D0E870A0EAF,
         :57A74BCEB1001D05E0532D0E870A0EAF,
-        :57A74BCEBDD51D05E0532D0E870A0EAF ;
+        :57A74BCEB1581D05E0532D0E870A0EAF,
+        :57A74BCEB3C31D05E0532D0E870A0EAF,
+        :57A74BCEB4641D05E0532D0E870A0EAF,
+        :57A74BCEB4991D05E0532D0E870A0EAF,
+        :57A74BCEB55C1D05E0532D0E870A0EAF,
+        :57A74BCEBDD51D05E0532D0E870A0EAF,
+        :57A74BCEC41B1D05E0532D0E870A0EAF,
+        :69186F6ECF984CF79B567FC343EBE531,
+        :C8F4B68654354A44867D9DC2E372236A,
+        :F6F1708780C448C9A9218E008BB65138,
+        :F7953CB58EF845568D2DBEB476E6E926 ;
     schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 ;
     :hierarchyLevel "2" .
 
@@ -153,6 +184,13 @@
         :1A1882BA1BE14BB480673263D608DFC9,
         :2DA5033E61C6452FBDD77197702098CE,
         :38234EBF19B24BA79C14948CB183F4DD,
+        :45DFDCDB687747CB8ACA3B575287DEFD,
+        :57A74BCEA8CF1D05E0532D0E870A0EAF,
+        :57A74BCEAA931D05E0532D0E870A0EAF,
+        :57A74BCEAAA31D05E0532D0E870A0EAF,
+        :57A74BCEABAD1D05E0532D0E870A0EAF,
+        :57A74BCEAC901D05E0532D0E870A0EAF,
+        :57A74BCEB03E1D05E0532D0E870A0EAF,
         :5EE7A5BDD9B549E4B5B219797AA02CA2,
         :74C45BEBE6E74C65B2CCC4D449A7AC52,
         :7C3B43BB6CCC4BE7B3A34E5A8A7524A6,
@@ -168,6 +206,11 @@
     rdfs:label "Ressourceneffizienz (REB)"@de,
         "FR: Ressourceneffizienz"@fr,
         "Ambito Efficienza delle risorse"@it ;
+    schema:hasPart :5DA9BCDCEA7A4445A9C0C66132ACCEE9,
+        :AC65422D5D9143E3B974E4782451FE70,
+        :B1B0ED7A3BCE4EF4A49E90BDE3CDEB69,
+        :B8752E0F955A4D979A3DA906C5F346A4,
+        :C6EB9867709F4C64BD1F07E716804FAA ;
     schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
     :hierarchyLevel "2" .
 
@@ -211,6 +254,7 @@
     rdfs:label "in-situ"@de,
         "FR: in-situ"@fr,
         "in-situ"@it ;
+    schema:hasPart :620C05912BA845DE9289F9C2F1F4CF42 ;
     schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
     :hierarchyLevel "2" .
 
@@ -245,6 +289,8 @@
     rdfs:label "Pflanzliche Primärproduktion"@de,
         "FR: Pflanzliche Primärproduktion"@fr,
         "Pflanzliche Primärproduktion"@it ;
+    schema:hasPart :856F1ACB7CD14DFC9911D2A31FAAEBFB,
+        :B76AEEB28B54425DB79A3FC4193501E5 ;
     schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 ;
     :hierarchyLevel "2" .
 
@@ -252,6 +298,12 @@
     rdfs:label "Tierische Primärproduktion"@de,
         "FR: Tierische Primärproduktion"@fr,
         "Tierische Primärproduktion"@it ;
+    schema:hasPart :0C013B70947F489594C0B5EB06812258,
+        :57A74BCEAFDE1D05E0532D0E870A0EAF,
+        :57A74BCEB34B1D05E0532D0E870A0EAF,
+        :57A74BCEB4CD1D05E0532D0E870A0EAF,
+        :57A74BCEC4121D05E0532D0E870A0EAF,
+        :57A74BCEC7301D05E0532D0E870A0EAF ;
     schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 ;
     :hierarchyLevel "2" .
 
@@ -259,6 +311,7 @@
     rdfs:label "Effizienter Stickstoffeinsatz im Ackerbau"@de,
         "FR: Effizienter Stickstoffeinsatz im Ackerbau"@fr,
         "IT: Effizienter Stickstoffeinsatz im Ackerbau"@it ;
+    schema:hasPart :D1B396D806B14F5BBF8B23AF22ED13BF ;
     schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
     :hierarchyLevel "2" .
 
@@ -266,6 +319,8 @@
     rdfs:label "Bodenbedeckung/Bodenbearbeitung"@de,
         "FR: Bodenbedeckung/Bodenbearbeitung"@fr,
         "IT: Bodenbedeckung/Bodenbearbeitung"@it ;
+    schema:hasPart :1F44218E7A46479B8A982149FD01B279,
+        :D14116474BB345F5A176DB200E40A8DD ;
     schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
     :hierarchyLevel "2" .
 

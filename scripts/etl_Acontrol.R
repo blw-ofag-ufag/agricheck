@@ -33,18 +33,25 @@ rm(xml_file_path, url, temp_zip, unzip_dir)
 describe <- function(x, class, hierarchyLevel = NULL, relationPredicate = "schema:isPartOf") {
   subject <- x |> getElement("versionStableId") |> unlist() |> uri(base)
   triple(subject, "a", uri(class))
-  for (tag in c("elementShortName", "elementName")) {
-    for (lang in c("De", "Fr", "It")) {
-      predicate <- ifelse(tag=="elementShortName", "rdfs:label", "rdfs:comment")
-      langKey <- paste0("name", lang)
-      text <- x |> getElement(tag) |>
-        getElement(langKey) |>
-        unlist()
-      text |>
-        langstring(tolower(lang), multiline = tag=="elementName") |>
-        triple(subject, predicate, object = _)
+  for (lang in c("De", "Fr", "It"))
+  {
+    elementShortName <- x |> getElement("elementShortName") |>
+      getElement(paste0("name", lang)) |>
+      unlist()
+    elementName <- x |> getElement("elementName") |>
+      getElement(paste0("name", lang)) |>
+      unlist()
+    elementShortName |>
+      langstring(tolower(lang), multiline = FALSE) |>
+      triple(subject, "rdfs:label", object = _)
+    if(!is.na(elementName) && length(elementName)>0 && (elementName != elementShortName))
+    {
+      elementName |>
+        langstring(tolower(lang), multiline = TRUE) |>
+        triple(subject, "rdfs:comment", object = _)
     }
   }
+
   x |>
     getElement("parentVersionStableId") |>
     unlist() |>
