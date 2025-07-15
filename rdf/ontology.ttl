@@ -7,44 +7,30 @@
 
 dcterms:Collection a owl:Class ;
     rdfs:label "Kontrollpunkt-Gruppe"@de ;
-    rdfs:subClassOf [
-            a owl:Restriction ;
+    rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty rdfs:label ;
-            owl:someValuesFrom xsd:string
-        ],
-        [
-            a owl:Restriction ;
+            owl:someValuesFrom xsd:string ],
+        [ a owl:Restriction ;
             owl:onProperty schema:identifier ;
-            owl:someValuesFrom xsd:string
-        ],
-        [
-            a owl:Restriction ;
+            owl:someValuesFrom xsd:string ],
+        [ a owl:Restriction ;
             owl:onProperty :conjunctIdentifier ;
-            owl:someValuesFrom xsd:string
-        ] .
+            owl:someValuesFrom xsd:string ] .
 
 :InspectionPoint a owl:Class ;
     rdfs:label "Kontrollpunkt"@de ;
-    rdfs:subClassOf [
-            a owl:Restriction ;
+    rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty rdfs:label ;
-            owl:someValuesFrom xsd:string
-        ],
-        [
-            a owl:Restriction ;
+            owl:someValuesFrom xsd:string ],
+        [ a owl:Restriction ;
             owl:onProperty rdfs:comment ;
-            owl:someValuesFrom xsd:string
-        ],
-        [
-            a owl:Restriction ;
+            owl:someValuesFrom xsd:string ],
+        [ a owl:Restriction ;
             owl:onProperty schema:identifier ;
-            owl:someValuesFrom xsd:string
-        ],
-        [
-            a owl:Restriction ;
+            owl:someValuesFrom xsd:string ],
+        [ a owl:Restriction ;
             owl:onProperty :conjunctIdentifier ;
-            owl:someValuesFrom xsd:string
-        ] .
+            owl:someValuesFrom xsd:string ] .
 
 :conjunctIdentifier a owl:DatatypeProperty ;
     rdfs:label "Zusammengesetzter Acontrol-Identifikator"@de,
