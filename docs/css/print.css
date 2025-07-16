@@ -50,4 +50,8 @@
     page-break-inside: avoid;
   }
 
+  ul.checklist ul {
+    page-break-inside: avoid;
+  }
+
 }

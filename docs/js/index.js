@@ -27,12 +27,12 @@ let selectedSet = new Set(); // URIs currently ticked
 
     // Search text = own label/comment + direct IP labels/comments
     const searchParts = [];
-    if (n.label)   searchParts.push(n.label);
-    if (n.comment) searchParts.push(n.comment);
+    if (n.label) searchParts.push(n.label);
+    (n.comments ?? []).forEach(c => searchParts.push(c));
     (n.inspectionPoints ?? []).forEach(ipUri => {
       const ip = nodeMap.get(ipUri);
-      if (ip?.label)   searchParts.push(ip.label);
-      if (ip?.comment) searchParts.push(ip.comment);
+      if (ip?.label) searchParts.push(ip.label);
+      (ip?.comments ?? []).forEach(c => searchParts.push(c));
     });
 
     return {

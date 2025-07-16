@@ -42,10 +42,10 @@ ul.checklist        {
     margin: 0 0 1rem 0;
     padding: 0; 
 }
-ul.checklist li     { 
-    margin-bottom: 0.75rem; 
+ul.checklist li     {
+    margin-bottom: 0.75rem;
 }
-ul.checklist input  { 
+ul.checklist input  {
     margin-right: .5rem; 
 }
 ul.checklist label  { 
@@ -53,6 +53,16 @@ ul.checklist label  {
 }
 ul.checklist input[type="checkbox"] {
     border: 1px solid #000000;       /* darker border */
+}
+
+/* comment list under each inspection point */
+ul.checklist ul {
+    list-style: disc;
+    margin: .25rem 0 .5rem 2rem;
+    padding-left: 0;
+}
+ul.checklist ul li {
+    margin-bottom: .25rem;
 }
   
 

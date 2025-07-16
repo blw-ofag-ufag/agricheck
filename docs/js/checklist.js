@@ -75,10 +75,12 @@ metaDateEl.textContent = today.toLocaleDateString('de-CH', {
     heading.append(node.label ?? uri.split('/').pop());
     content.appendChild(heading);
 
-    if (node.comment) {
-      const p = document.createElement('p');
-      p.textContent = node.comment;
-      content.appendChild(p);
+    if (node.comments?.length) {
+      node.comments.forEach(c => {
+        const p = document.createElement('p');
+        p.textContent = c;
+        content.appendChild(p);
+      });
     }
 
     /* checklist points */
@@ -102,8 +104,26 @@ metaDateEl.textContent = today.toLocaleDateString('de-CH', {
         strong.textContent = ip.label ?? ipUri.split('/').pop();
         label.appendChild(strong);
 
-        if (ip.comment) label.append(' – ' + ip.comment);
+        if (ip.identifier) {
+          const codeSpan = document.createElement('span');
+          codeSpan.className = 'ms-1 text-muted';
+          codeSpan.textContent = `(${ip.identifier})`;
+          label.append(' ');
+          label.appendChild(codeSpan);
+        }
+
         li.appendChild(label);
+
+        if (ip.comments?.length) {
+          const commentsUl = document.createElement('ul');
+          ip.comments.forEach(c => {
+            const ci = document.createElement('li');
+            ci.textContent = c;
+            commentsUl.appendChild(ci);
+          });
+          li.appendChild(commentsUl);
+        }
+
         ul.appendChild(li);
       });
       content.appendChild(ul);
