@@ -62,11 +62,21 @@ schema:isPartOf a owl:ObjectProperty ;
     rdfs:range dcterms:Collection ;
     owl:inverseOf :includesInspectionPoints .
 
+:defect a owl:ObjectProperty ;
+    owl:inverseOf :possibleOutcomeForDefect .
+
 :includesInspectionPoints a owl:ObjectProperty ;
     rdfs:label "beinhaltet Kontrollpunkte"@de ;
     rdfs:domain dcterms:Collection ;
     rdfs:range :InspectionPoint ;
     owl:inverseOf :belongsToGroup .
+
+:inspectionPoint a owl:ObjectProperty ;
+    rdfs:label "Bezugs-Kontrollpunkt"@de .
+
+:possibleOutcome a owl:ObjectProperty ;
+    rdfs:label "Mögliches Ergebnis"@de ;
+    owl:inverseOf :inspectionPoint .
 
 : a owl:Ontology ;
     dcterms:title "Kontrollpunkte-Liste"@de ;

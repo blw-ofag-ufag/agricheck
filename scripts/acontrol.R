@@ -120,5 +120,62 @@ for (i in 1:length(data)) {
     describe(class = "https://agriculture.ld.admin.ch/inspection/InspectionPoint", relationPredicate = ":belongsToGroup")
 }
 
+
+# PARSE POSSIBLE DEFECTS
+# ======================
+
+# function to convert a string to a valid URI
+hashURI <- function(x, base)
+{
+  rdfhelper::uri(toupper(rlang::hash(x)), prefix = base)
+}
+
+# Function to describe one defect and give it an URI
+# - Defects in the XML are used strictly hierarchical, which creates redundant information.
+# - To reduce redundancy, we introduce two new classes: :Defect and :Sanction
+describe_Defect <- function(x) {
+  subject <- unlist(x[["nameDe"]]) |> hashURI(base)
+  rdfhelper::triple(subject, "a", ":Defect")
+  for (lang in c("De", "Fr", "It"))
+  {
+    x |> getElement(paste0("name", lang)) |>
+      unlist() |>
+      rdfhelper::langstring(lang = tolower(lang)) |>
+      triple(subject, "rdfs:label", object = _)
+  }
+}
+
+# function to convert one [thing] description
+describe_PossibleOutcome <- function(x) {
+
+  subject <- x |> getElement("versionStableId") |> unlist() |> uri(base)
+
+  defect <- unlist(x[["nameDe"]]) |> hashURI(base)
+
+  triple(subject, "a", uri("PossibleOutcome", base))
+
+  triple(subject, uri("defect", base), defect)
+
+
+  x |>
+    getElement("parentVersionStableId") |>
+    unlist() |>
+    uri(prefix = base) |>
+    triple(subject, uri("inspectionPoint", base), object = _)
+  x |>
+    getElement("conjunctElementId") |>
+    unlist() |>
+    literal() |>
+    triple(subject, uri("conjunctIdentifier", base), object = _)
+}
+
+data <- xml_to_list(XML, "//possibleDefect")
+for (i in 1:length(data)) {
+  data[[i]] |>
+    describe_Defect()
+  data[[i]] |>
+    describe_PossibleOutcome()
+}
+
 sink()
 
