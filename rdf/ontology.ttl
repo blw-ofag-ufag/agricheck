@@ -1,6 +1,7 @@
 @prefix : <https://agriculture.ld.admin.ch/inspection/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -17,6 +18,10 @@ dcterms:Collection a owl:Class ;
             owl:onProperty :conjunctIdentifier ;
             owl:someValuesFrom xsd:string ] .
 
+:Defect a owl:Class ;
+    rdfs:label "Mangel"@de,
+        "Defect"@en .
+
 :InspectionPoint a owl:Class ;
     rdfs:label "Kontrollpunkt"@de ;
     rdfs:subClassOf [ a owl:Restriction ;
@@ -31,6 +36,13 @@ dcterms:Collection a owl:Class ;
         [ a owl:Restriction ;
             owl:onProperty :conjunctIdentifier ;
             owl:someValuesFrom xsd:string ] .
+
+:PossibleOutcome a owl:Class ;
+    rdfs:label "Mögliches Ergebnis"@de .
+
+:Sanction a owl:Class ;
+    rdfs:label "Konsequenz"@de,
+        "Consequence"@en .
 
 :conjunctIdentifier a owl:DatatypeProperty ;
     rdfs:label "Zusammengesetzter Acontrol-Identifikator"@de,
@@ -57,28 +69,56 @@ schema:isPartOf a owl:ObjectProperty ;
     owl:inverseOf schema:hasPart .
 
 :belongsToGroup a owl:ObjectProperty ;
-    rdfs:label "gehört zu Kontrollpunkt-Gruppe"@de ;
+    rdfs:label "Inspection point group",
+        "Kontrollpunkte-Gruppe"@de ;
     rdfs:domain :InspectionPoint ;
     rdfs:range dcterms:Collection ;
     owl:inverseOf :includesInspectionPoints .
 
 :defect a owl:ObjectProperty ;
-    owl:inverseOf :possibleOutcomeForDefect .
+    rdfs:label "Mangel"@de,
+        "Defect"@en ;
+    rdfs:range :Defect .
 
 :includesInspectionPoints a owl:ObjectProperty ;
     rdfs:label "beinhaltet Kontrollpunkte"@de ;
     rdfs:domain dcterms:Collection ;
-    rdfs:range :InspectionPoint ;
-    owl:inverseOf :belongsToGroup .
+    rdfs:inverseOf :belongsToGroup ;
+    rdfs:range :InspectionPoint .
 
 :inspectionPoint a owl:ObjectProperty ;
-    rdfs:label "Bezugs-Kontrollpunkt"@de .
+    rdfs:label "Kontrollpunkt"@de,
+        "Inspection point"@en ;
+    rdfs:comment "The inspection point that something relates to."@en ;
+    rdfs:range :InspectionPoint .
 
 :possibleOutcome a owl:ObjectProperty ;
-    rdfs:label "Mögliches Ergebnis"@de ;
-    owl:inverseOf :inspectionPoint .
+    rdfs:label "Mögliches Ergebnis"@de .
+
+:suggestedSanction a owl:ObjectProperty ;
+    rdfs:label "Vorgeschlagene Konsequenz"@de,
+        "Suggested consequence"@en ;
+    rdfs:range :Sanction .
 
 : a owl:Ontology ;
     dcterms:title "Kontrollpunkte-Liste"@de ;
     owl:versionInfo "0.1.1" .
+
+schema:description rdfs:label "Beschreibung"@de,
+        "Description"@en .
+
+schema:name rdfs:label "Name"@de,
+        "Name"@en .
+
+rdf:type rdfs:label "Typ"@de,
+        "Type"@en .
+
+rdfs:comment rdfs:label "Kommentar"@de,
+        "Comment"@en .
+
+schema:identifier rdfs:label "Identifikator"@de,
+        "Identifier"@en .
+
+rdfs:label rdfs:label "Bezeichnung"@de,
+        "Label"@en .
 

@@ -3,3 +3,7 @@ data/
 .Rhistory
 upload.sh
 notes.md
+rdf/test.ttl
+rdf/graph.ttl
+rdf/acontrol.ttl
+rdf/bioinspecta.ttl
