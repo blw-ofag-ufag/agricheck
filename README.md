@@ -9,28 +9,7 @@ The data model was written using OWL, the web ontology language. It is not only 
 
 # Example queries
 
-- [Return the URI, name and level of each inspection point](https://s.zazuko.com/GA9HNb)
-- [How many inspection points can we find under each inspection point group?](https://s.zazuko.com/24AEuhj)
+- [First three hierarchy levels with URI and labels](https://s.zazuko.com/BGqwXc)
+- [Get all inspection points with labels, comment and codes](https://s.zazuko.com/2CfsZvV)
+- [How many inspection points can we find under each inspection point group?](https://s.zazuko.com/2d1U59s)
 - [Find inspection point groups with exactly one sub-item](https://s.zazuko.com/3pmApnf)
-
-```
-PREFIX : <https://agriculture.ld.admin.ch/inspection/>
-PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX schema: <http://schema.org/>
-SELECT ?grandParent ?grandParentLabel ?parent ?parentLabel ?child ?childLabel ?childIdentifier
-WHERE {
-  ?grandParent a dcterms:Collection ;
-    :hierarchyLevel "1" ;
-    schema:hasPart ?parent ;
-    rdfs:label ?grandParentLabel .
-  ?parent a dcterms:Collection ;
-    schema:hasPart ?child ;
-    rdfs:label ?parentLabel .
-  ?child a dcterms:Collection ;
-    rdfs:label ?childLabel ;
-    schema:identifier ?childIdentifier .
-  FILTER(LANG(?parentLabel)="de" && LANG(?childLabel)="de" && LANG(?grandParentLabel)="de")
-}
-ORDER BY ?childIdentifier
-```
