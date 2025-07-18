@@ -101,3 +101,15 @@ foldTreeBtn.on('click', () => {
   generateBtn.prop('disabled', true);
 });
 
+/* Fallback for browsers that load the JS before the navbar exists */
+:root { --akc-navbar-h: 56px; }
+
+@media (min-width: 992px) {          /* only make it sticky on lg‑up */
+  #actionsWrapper{
+    position: sticky;                /* ① pin it */
+    top: calc(var(--akc-navbar-h)    /* ② always sit just below the nav   */
+           + 1rem);
+    align-self: flex-start;          /* ③ STOP flexbox from stretching     */
+    z-index: 1010;                   /* ④ stay above the tree if it overlaps */
+  }
+}
