@@ -80,19 +80,19 @@ ul.checklist label  { cursor: pointer; }
   opacity: 0.5;
 }
 
-// ===============================
-//  js/index.js (only lines that changed)  
-// ===============================
-/* The majority of logic is identical – two tiny tweaks below.  */
+/* ===============================
+js/index.js (only lines that changed)
+The majority of logic is identical – two tiny tweaks below.
+===============================*/
 
-// 1) Remove colour‑toggle logic – button style is fixed, we only change disabled state
+/* 1) Remove colour‑toggle logic – button style is fixed, we only change disabled state */
 .on('changed.jstree', (_, data) => {
   selectedSet = new Set(data.selected);
   const empty = selectedSet.size === 0;
   generateBtn.prop('disabled', empty);
 })
 
-// 2) When resetting, only disable the button (class toggles removed)  
+/* 2) When resetting, only disable the button (class toggles removed)  */
 foldTreeBtn.on('click', () => {
   const jsTree = treeEl.jstree(true);
   jsTree.deselect_all();
@@ -112,4 +112,16 @@ foldTreeBtn.on('click', () => {
     align-self: flex-start;          /* ③ STOP flexbox from stretching     */
     z-index: 1010;                   /* ④ stay above the tree if it overlaps */
   }
+}
+
+
+/* ===== hide the browser's native “clear” icon on <input type="search"> ===== */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration,
+input[type="search"]::-ms-clear {
+  display: none;
+  width: 0;     /* for Edge */
+  height: 0;
 }
