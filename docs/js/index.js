@@ -4,15 +4,15 @@ import {
   buildNodeMap
 } from './model.js';
 
-const BASE_URI = 'https://agriculture.ld.admin.ch/inspection/';
-const treeEl         = $('#tree');
-const searchInput    = $('#search');
-const searchBtn      = $('#searchBtn');
-const foldTreeBtn    = $('#foldTreeBtn');
-const generateBtn    = $('#generate');
+const BASE_URI      = 'https://agriculture.ld.admin.ch/inspection/';
+const treeEl        = $('#tree');
+const searchInput   = $('#search');
+const searchBtn     = $('#searchBtn');
+const generateBtn   = $('#generate');
 
-let nodeMap;                 // Map<uri, node>
-let selectedSet = new Set(); // URIs currently ticked
+let nodeMap;                   // Map<uri, node>
+let selectedSet = new Set();   // URIs currently ticked
+let searchActive = false;      // remembers if a query is active
 
 /* -------------------------------------------------------
  *  Build jsTree data & initialise widget
@@ -85,38 +85,77 @@ let selectedSet = new Set(); // URIs currently ticked
 /* -------------------------------------------------------
  *  Search helpers
  * -----------------------------------------------------*/
+function updateSearchBtn() {                     // toggles button UI
+  if (searchActive) {
+    searchBtn
+      .html('<i class="bi bi-x-lg me-2"></i>Suche zurücksetzen')
+      .removeClass('btn-outline-primary')
+      .addClass('btn-outline-secondary');
+  } else {
+    searchBtn
+      .html('<i class="bi bi-search me-2"></i>Suche')
+      .removeClass('btn-outline-secondary')
+      .addClass('btn-outline-primary');
+  }
+}
+updateSearchBtn();                                // set initial label
+
+function resetSearch() {                          // clears input & highlights
+  const jsTree = treeEl.jstree(true);
+  jsTree.clear_search();
+  jsTree.close_all();
+  searchInput.val('');
+  searchActive = false;
+  updateSearchBtn();
+}
+
 function performSearch() {
-  const q = searchInput.val().trim();
+  const q      = searchInput.val().trim();
   const jsTree = treeEl.jstree(true);
 
   jsTree.clear_search();
   jsTree.close_all();
 
-  if (!q) return;
+  if (!q) {                                      // empty ⇒ just reset
+    resetSearch();
+    return;
+  }
 
   jsTree.search(q);
 
-  // open each hit & its ancestors once
-  const { nodes: hits } = jsTree.get_search_result();
-  hits.forEach(id => {
-    const node = jsTree.get_node(id);
-    node.parents.forEach(p => { if (p !== '#') jsTree.open_node(p); });
-    jsTree.open_node(id);
-  });
+  /* ------------------------------------------------------------------
+    jsTree ≥ 3.3 no longer exposes get_search_result().  
+    Instead, wait a tick for the plugin to paint `.jstree-search`
+    classes, grab the DOM matches and open them together with
+    all their ancestors.                                           */
+  setTimeout(() => {
+    treeEl.find('a.jstree-search').each((_, a) => {
+      const id   = $(a).closest('li').attr('id');
+      const node = jsTree.get_node(id);
+      // open the full ancestry chain once
+      node.parents.forEach(p => { if (p !== '#') jsTree.open_node(p); });
+      jsTree.open_node(id);
+    });
+  }, 0);
+
+  searchActive = true;
+  updateSearchBtn();
 }
 
-searchInput.on('keydown', e => { if (e.key === 'Enter') performSearch(); });
-searchBtn.on('click', performSearch);
+// Enter key triggers search
+searchInput.on('keydown', e => {
+  if (e.key === 'Enter') performSearch();
+});
 
-/* Collapse tree & untick everything */
-foldTreeBtn.on('click', () => {
-  const jsTree = treeEl.jstree(true);
-  jsTree.deselect_all();
-  jsTree.close_all();
-  selectedSet.clear();
-  generateBtn.prop('disabled', true);
-  generateBtn.removeClass('btn-success');
-  generateBtn.addClass('btn-outline-secondary');
+// live‑reset when the user deletes everything manually
+searchInput.on('input', e => {
+  if (!e.target.value.trim() && searchActive) resetSearch();
+});
+
+// dual‑behaviour button
+searchBtn.on('click', () => {
+  if (searchActive) resetSearch();
+  else              performSearch();
 });
 
 /* -------------------------------------------------------
@@ -155,3 +194,12 @@ generateBtn.on('click', () => {
 
   location.href = `checklist.html?groups=${qs}`;
 });
+
+// when clearing selection we now only deselect & disable generateBtn
+export function resetTree() {
+  const jsTree = treeEl.jstree(true);
+  jsTree.deselect_all();
+  jsTree.close_all();
+  selectedSet.clear();
+  generateBtn.prop('disabled', true);
+}

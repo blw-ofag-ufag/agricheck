@@ -9,7 +9,7 @@
   /* 2) page dimensions & margins */
   @page {
     size: A4 portrait;
-    margin: 1.5m;                /* 1 cm on all four sides */
+    margin: 1cm;                /* 1 cm on all four sides */
     margin-left: .5cm;
     margin-right: .5cm;
     

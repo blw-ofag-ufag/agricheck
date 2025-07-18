@@ -32,7 +32,7 @@ copyLinkBtn.addEventListener('click', () => {
 
 /* ---------- show current date in German ------------------------------ */
 const today = new Date();
-metaDateEl.textContent = today.toLocaleDateString('de-CH', {
+metaDateEl.textContent = today.toLocaleDateString('de', {
   weekday: 'long',
   year:    'numeric',
   month:   'long',
@@ -98,11 +98,20 @@ metaDateEl.textContent = today.toLocaleDateString('de-CH', {
         cb.className = 'form-check-input';
         label.appendChild(cb);
 
+        /* ─ label on first line ────────────────────────────── */
         const strong = document.createElement('strong');
         strong.textContent = ip.label ?? ipUri.split('/').pop();
         label.appendChild(strong);
 
-        if (ip.comment) label.append(' – ' + ip.comment);
+        /* ─ comment on its own line underneath ─────────────── */
+        if (ip.comment) {
+          label.appendChild(document.createElement('br'));
+          const span = document.createElement('span');
+          span.className = 'text-muted';
+          span.textContent = ip.comment;
+          label.appendChild(span);
+        }
+        
         li.appendChild(label);
         ul.appendChild(li);
       });
