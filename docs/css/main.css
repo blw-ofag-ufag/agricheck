@@ -1,8 +1,14 @@
+main { flex: 1 0 auto; }
+.site-footer { flex-shrink: 0; }
+.hover-opacity:hover { opacity: 0.8; }
+
 /* google font already pulled in <head> – just set globally */
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: 'Inter', system-ui, sans-serif;
   background-image: linear-gradient(180deg, #f8f9fa 0%, #ffffff 40%);
-  min-height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -94,3 +100,4 @@ foldTreeBtn.on('click', () => {
   selectedSet.clear();
   generateBtn.prop('disabled', true);
 });
+

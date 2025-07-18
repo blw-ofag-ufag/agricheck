@@ -5,11 +5,10 @@ import {
 } from './model.js';
 
 const BASE_URI = 'https://agriculture.ld.admin.ch/inspection/';
-const treeEl         = $('#tree');
-const searchInput    = $('#search');
-const searchBtn      = $('#searchBtn');
-const foldTreeBtn    = $('#foldTreeBtn');
-const generateBtn    = $('#generate');
+const treeEl      = $('#tree');
+const searchInput = $('#search');
+const searchBtn   = $('#searchBtn');
+const generateBtn = $('#generate');
 
 let nodeMap;                 // Map<uri, node>
 let selectedSet = new Set(); // URIs currently ticked
@@ -82,6 +81,21 @@ let selectedSet = new Set(); // URIs currently ticked
     });
 })();
 
+
+// when clearing selection we now only deselect & disable generateBtn
+export function resetTree() {
+  const jsTree = treeEl.jstree(true);
+  jsTree.deselect_all();
+  jsTree.close_all();
+  selectedSet.clear();
+  generateBtn.prop('disabled', true);
+}
+
+/* optional: reset tree when search input cleared */
+searchInput.on('input', e => {
+  if (!e.target.value.trim()) resetTree();
+});
+
 /* -------------------------------------------------------
  *  Search helpers
  * -----------------------------------------------------*/
@@ -107,17 +121,6 @@ function performSearch() {
 
 searchInput.on('keydown', e => { if (e.key === 'Enter') performSearch(); });
 searchBtn.on('click', performSearch);
-
-/* Collapse tree & untick everything */
-foldTreeBtn.on('click', () => {
-  const jsTree = treeEl.jstree(true);
-  jsTree.deselect_all();
-  jsTree.close_all();
-  selectedSet.clear();
-  generateBtn.prop('disabled', true);
-  generateBtn.removeClass('btn-success');
-  generateBtn.addClass('btn-outline-secondary');
-});
 
 /* -------------------------------------------------------
  *  Launch checklist – compress selection first
