@@ -1,121 +1,96 @@
-/* Google Font import */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700;900&display=swap');
+/* google font already pulled in <head> – just set globally */
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-image: linear-gradient(180deg, #f8f9fa 0%, #ffffff 40%);
+  min-height: 100vh;
+}
 
-/* Typography -------------------------------------------------------------- */
-body { font-family: 'Lato', sans-serif; font-weight: 400; }
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
 
 strong, b { font-weight: 900; }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 900;
-  margin-top: 2rem;
-  margin-bottom: .75rem;
+.navbar-icons .nav-link {
+  color: #ffffff !important;
+  opacity: 0.9;
 }
-/* DEMO ribbon */
-.demo-ribbon {
-  width: 120px;
-  background: #d32f2f;
-  color: #fff;
-  text-align: center;
-  line-height: 32px;
-  font-weight: bold;
-  font-family: Arial, sans-serif;
-  position: fixed;
-  top: 24px;
-  right: 60px;
-  z-index: 9999;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  font-size: 18px;
-  letter-spacing: 2px;
-  pointer-events: none;
+.navbar-icons .nav-link:hover { opacity: 1; }
+
+/* Card header weight */
+.card-header {
+  font-weight: 600;
 }
 
-/* Section-number prefix */
+/* Section number styling stays from original */
 .section-number {
   color: #888;
   margin-right: .5rem;
 }
 
-/* Checklist styling ------------------------------------------------------- */
-ul.checklist        { 
-    list-style: none;
-    margin: 0 0 1rem 0;
-    padding: 0; 
-}
-ul.checklist li     { 
-    margin-bottom: 0.75rem; 
-}
-ul.checklist input  { 
-    margin-right: .5rem; 
-}
-ul.checklist label  { 
-    cursor: pointer; 
-}
-ul.checklist input[type="checkbox"] {
-    border: 1px solid #000000;       /* darker border */
-}
-  
+/* Checklist list style remains identical */
+ul.checklist        { list-style: none; margin: 0 0 1rem 0; padding: 0; }
+ul.checklist li     { margin-bottom: 0.75rem; }
+ul.checklist input  { margin-right: .5rem; }
+ul.checklist label  { cursor: pointer; }
 
-/* JStree search */
+/* jsTree search highlight */
 .jstree-search {
-    background: rgb(255, 255, 173) !important;
-    color: inherit  !important;
-    font-weight: normal !important;
-    font-style:  normal !important;
+  background: rgb(255, 255, 173) !important;
+  color: inherit !important;
 }
 
-/* Agricheck navbar ------------------------------------------------------ */
-.navbar-agricheck {
-    background: #b3b8bd;        /* light grey */
-    padding: .5rem 1rem;
+/* ---- Custom coloured jsTree checkboxes (copy‑pasted from original) ---- */
+#tree li.jstree-checked > .jstree-anchor > .jstree-checkbox,
+#tree li.jstree-undetermined > .jstree-anchor > .jstree-checkbox {
+  background: #0d6efd;          /* bootstrap primary */
+  border-color: #0d6efd;
+  position: relative;
 }
-.navbar-agricheck .navbar-brand,
-.navbar-agricheck .nav-link {
-    color: #fff !important;     /* white text & icons */
-    text-decoration: none;
+#tree li.jstree-checked > .jstree-anchor > .jstree-checkbox::after {
+  content: '';
+  position: absolute;
+  top: 0.15em;
+  left: 0.26em;
+  width: 0.55em;
+  height: 0.3em;
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  transform: rotate(-45deg);
 }
-.navbar-agricheck .nav-link:hover,
-.navbar-agricheck .navbar-brand:hover {
-    opacity: .8;
+#tree li.jstree-undetermined > .jstree-anchor > .jstree-checkbox::after {
+  content: '';
+  position: absolute;
+  top: 0.44em;
+  left: 0.2em;
+  width: 0.6em;
+  height: 2px;
+  background: #fff;
 }
 
-/* ------------------------------------------------------------------
-   jsTree custom checkbox states – blue tick / blue indeterminate bar
-   (selector must dig into the <a> wrapper to reach the <i>)
--------------------------------------------------------------------*/
+/* Disabled primary button opacity */
+.btn-primary:disabled {
+  opacity: 0.5;
+}
 
-/* fully-checked node: blue background + white tick */
-#tree li.jstree-checked > .jstree-anchor > .jstree-checkbox {
-    background: #0d6efd;
-    border-color: #0d6efd;
-    position: relative;
-  }
-  #tree li.jstree-checked > .jstree-anchor > .jstree-checkbox::after {
-    content: '';
-    position: absolute;
-    top: 0.15em;
-    left: 0.26em;
-    width: 0.55em;
-    height: 0.3em;
-    border: 2px solid #fff;          /* create the ✓ with borders */
-    border-top: none;
-    border-right: none;
-    transform: rotate(-45deg);
-  }
-  
-  /* half-checked (undetermined) node: blue background + white bar */
-  #tree li.jstree-undetermined > .jstree-anchor > .jstree-checkbox {
-    background: #0d6efd;
-    border-color: #0d6efd;
-    position: relative;
-  }
-  #tree li.jstree-undetermined > .jstree-anchor > .jstree-checkbox::after {
-    content: '';
-    position: absolute;
-    top: 0.44em;
-    left: 0.2em;
-    width: 0.6em;
-    height: 2px;
-    background: #fff;
-  }
-  
+// ===============================
+//  js/index.js (only lines that changed)  
+// ===============================
+/* The majority of logic is identical – two tiny tweaks below.  */
+
+// 1) Remove colour‑toggle logic – button style is fixed, we only change disabled state
+.on('changed.jstree', (_, data) => {
+  selectedSet = new Set(data.selected);
+  const empty = selectedSet.size === 0;
+  generateBtn.prop('disabled', empty);
+})
+
+// 2) When resetting, only disable the button (class toggles removed)  
+foldTreeBtn.on('click', () => {
+  const jsTree = treeEl.jstree(true);
+  jsTree.deselect_all();
+  jsTree.close_all();
+  selectedSet.clear();
+  generateBtn.prop('disabled', true);
+});
