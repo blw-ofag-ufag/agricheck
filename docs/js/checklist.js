@@ -32,7 +32,7 @@ copyLinkBtn.addEventListener('click', () => {
 
 /* ---------- show current date in German ------------------------------ */
 const today = new Date();
-metaDateEl.textContent = today.toLocaleDateString('de-CH', {
+metaDateEl.textContent = today.toLocaleDateString('de', {
   weekday: 'long',
   year:    'numeric',
   month:   'long',

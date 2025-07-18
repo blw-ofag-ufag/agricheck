@@ -15,6 +15,12 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: none;
+}
+
 strong, b { font-weight: 900; }
 
 .navbar-icons .nav-link {
@@ -124,4 +130,25 @@ input[type="search"]::-ms-clear {
   display: none;
   width: 0;     /* for Edge */
   height: 0;
+}
+
+.form-check-input {
+  --bs-form-check-bg: #f7f7f9;
+  flex-shrink: 0;
+  width: 1em;
+  height: 1em;
+  margin-top: .25em;
+  vertical-align: top;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: var(--bs-form-check-bg);
+  background-image: var(--bs-form-check-bg-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: var(--bs-border-width) solid black;
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
+  print-color-adjust: exact;
 }
