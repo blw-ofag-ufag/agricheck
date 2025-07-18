@@ -1,0 +1,202 @@
+@prefix : <https://agriculture.ld.admin.ch/inspection/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+
+:00299B00F7BA45D3C8B6C52C521DB1F1 a :InspectionPoint ;
+    rdfs:label "Tierschutz Gebäude"@de,
+        "Opani bâtiments"@fr,
+        "Stabulazioni e attrezzature secondo OPAn"@it ;
+    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
+    rdfs:comment "Stallungen und Einrichtungen gemäss TSCHV,"@de,
+        "Étables et installations conformes à l'Opani"@fr,
+        "Stabulazioni e attrezzature secondo OPAn"@it .
+
+:01320225FB23AEEE776E34F9548C5506 a :InspectionPoint ;
+    rdfs:label "Letzte Tierschutz-Kontrolle"@de,
+        "Dernier contrôle Pani"@fr,
+        "Ultima ispezione PAn"@it ;
+    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
+    rdfs:comment "Letzte Tierschutz-Kontrolle (nicht vor 1.11.20): Bestätigung / Beweis"@de,
+        "Dernier contrôle Pani (pas avant 1.11.20), confirmation"@fr,
+        "Ultima ispezione PAn (non prima di 1.1.20)"@it .
+
+:0C9D756D3567451E0B1112E480181338 a :InspectionPoint ;
+    rdfs:label "Konformität Futter"@de,
+        "Aliments conformes"@fr,
+        "foraggi conformi"@it ;
+    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
+    rdfs:comment "Eingesetzte und gelagerte Futtermittel sind konform (kein GVO, keine unerlaubten Zusatzstoffe etc.)"@de,
+        "Aliments utilisés et stockés sont conformes (pas d'OGM, pas d'intrants non permis etc.)"@fr,
+        "I foraggi impiegati e stoccati sono conformi (niente OGM, niente additivi vietati ecc.)"@it .
+
+:0E29B9ADC14E559C5227ADEA07189AF1 a :InspectionPoint ;
+    rdfs:label "Einstreu, Sauberkeit"@de,
+        "Litière, propreté"@fr,
+        "Lettiere pulite, nimali puliti"@it ;
+    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
+    rdfs:comment "Einstreu und Entmistung ausreichend, Sauberkeit der Tiere in Ordnung"@de,
+        "Litière et évacuation du fumier suffisantes, propreté des animaux en ordre"@fr,
+        "Lettiere pulite e sufficientemente fornite, animali puliti"@it .
+
+:17AF02488AFADA29B919F559F4E40B62 a :InspectionPoint ;
+    rdfs:label "Letzte RAUS-Kontrolle"@de,
+        "Dernier contrôle SRPA"@fr,
+        "Ultima ispezione URA"@it ;
+    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
+    rdfs:comment "Letzte RAUS-Kontrolle: Bestätigung / Beweis"@de,
+        "Dernier contrôle SRPA, confirmation"@fr,
+        "Ultima ispezione URA"@it .
+
+:4EEF7E30081E9BD28BCC55D64C977E70 a :InspectionPoint ;
+    rdfs:label "Letzte ÖLN-/Bio-Kontrolle"@de,
+        "Dernier contrôle PER/Bio"@fr,
+        "Ultima ispezione PER/BIO"@it ;
+    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
+    rdfs:comment "Letzte ÖLN-/Bio-Kontrolle: Bestätigung / Beweis"@de,
+        "Dernier contrôle PER/Bio, confirmation"@fr,
+        "Ultima ispezione PER/BIO"@it .
+
+:5A7A00D5B7B02732540BEAA7E308D0EA a :InspectionPoint ;
+    rdfs:label "GMF erfüllt"@de,
+        "PLVH rempli"@fr,
+        "PLCSI"@it ;
+    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
+    rdfs:comment "GMF-Bund erfüllt / GMF für Mutterkühe, Kälber, Aufzuchttiere und Weidemasttiere erfüllt"@de,
+        "PLVH remplie / PLVH remplie pour les vaches allaitantes, les veaux, le bétail d'élevage et les animaux engraissés au pâturage"@fr,
+        "PLCSI Confederazione/PLCSI per vacche madri, vitelli, animali da riproduzione e animali da ingrasso al pascolo"@it .
+
+:7C091DD8905CBE598F09A6277A9FC391 a :InspectionPoint ;
+    rdfs:label "Trinkwasser"@de,
+        "Approvisionnement en eau"@fr,
+        "Approvvigionamento con acqua"@it ;
+    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
+    rdfs:comment "Versorgung mit einwandfreiem Trinkwasser gewährleistet"@de,
+        "Approvisionnement en eau non souillée garantie"@fr,
+        "Approvvigionamento garantito con acqua potabile di qualità ineccepibile"@it .
+
+:7C74A73C6B91350A13B754BF04CA6AF6 a :InspectionPoint ;
+    rdfs:label "Lizenz Direktvermarkung"@de,
+        "Vente directe: licence"@fr,
+        "vendita diretta: licenza"@it ;
+    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
+    rdfs:comment "Direktvermarktung: Lizenz vorhanden"@de,
+        "Vente directe: licence"@fr,
+        "vendita diretta: licenza"@it .
+
+:850EDA33FBAA56803A2630B747A4570C a :InspectionPoint ;
+    rdfs:label "Auslauf Vegetationszeit"@de,
+        "Sorties pendant végàtation"@fr,
+        "Periodo vegetativo: pascolo giornaliero"@it ;
+    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
+    rdfs:comment "Auslauf Vegetationszeit: täglich mehrstündiger Weidegang und entsprechend genügend Weidefläche"@de,
+        "Période de végétation: plusieurs heures de détention au pâturage par jour et surface de pâture suffisante"@fr,
+        "Periodo vegetativo: pascolo giornaliero di diverse ore e superficie disponibile sufficiente"@it .
+
+:A5E77EFCA690A1B57C79B735ABCB3063 a :InspectionPoint ;
+    rdfs:label "Auslaufjournal"@de,
+        "Journal des sorties"@fr,
+        "Registro delle uscite"@it ;
+    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
+    rdfs:comment "Auslaufjournal vorhanden und nachgeführt"@de,
+        "Journal des sorties disponible et à jour Journal des sorties disponible et à jour"@fr,
+        "Registro delle uscite aggiornato e disponibile"@it .
+
+:AA69EABEA74B16A28082BADD28C78E8C a :InspectionPoint ;
+    rdfs:label "Kälber Fütterung"@de,
+        "Alimentation veaux"@fr,
+        "alimentazione vitelli lattanti"@it ;
+    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
+    rdfs:comment "Kein Soja eingesetzt, keine zusätzl. Milchgaben an säugende Kälber"@de,
+        "Pas d'utilisation de soja, pas d'apports suppl. de lait aux veaux qui têtent"@fr,
+        "Nessun uso di soia, nessuna somministrazione di latte supplementare ai vitelli lattanti"@it .
+
+:B581833229EEC59C9AE533566241BCA0 a :InspectionPoint ;
+    rdfs:label "Produktionsreglement, BTS und RAUS"@de,
+        "Règlement de production, SST et la SRPA,"@fr,
+        "Regolamento di produzione, in part. SSRA e URA"@it ;
+    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
+    rdfs:comment "Für alle Tiere der Markenprogrammkategorien A2-A9Produktionsreglement insb. BTS und RAUS inkl. täglichem Auslauf erfüllt"@de,
+        "Les règlements de production (en particulier la SST et la SRPA avec les sorties journalières inclues) sont respectés pour toutes les catégories d'animaux des programmes de marques (A2-A9)"@fr,
+        "Per tutti gli animali dei programmi di marchio compresi nelle categorie A2-A9 il regolamento di produzione è rispettato (in part. SSRA e URA, inclusa uscita giornaliera)."@it .
+
+:BF516E1DF5F44DA920EBB4C5007E3B11 a :InspectionPoint ;
+    rdfs:label "Letzte BTS-Kontrolle"@de,
+        "Dernier contrôle SST"@fr,
+        "Ultima ispezione SSRA"@it ;
+    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
+    rdfs:comment "Letzte BTS-Kontrolle: Bestätigung / Beweis"@de,
+        "Dernier contrôle SST, confirmation"@fr,
+        "Ultima ispezione SSRA"@it .
+
+:C24D40616D39B79436DFC5A164E99333 a :InspectionPoint ;
+    rdfs:label "Meldungen TVD, Tieridentifikation"@de,
+        "Annonces BDTA, Marquages"@fr,
+        "Identificazione degli animali, BDTA"@it ;
+    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
+    rdfs:comment "Korrekte Tieridentifikation, korrekte Meldungen an TVD"@de,
+        "Marquage des animaux correct, annonces à la BDTA correctes Marquage des animaux correct, annonces à la BDTA correctes"@fr,
+        "Identificazione degli animali corretta, notifiche alla BDTA corrette"@it .
+
+:CA48B68E3495957B8BFB764CF796878F a :InspectionPoint ;
+    rdfs:label "Einhaltung der gesetzlichen Anforderungen"@de,
+        "Conformité aux exigences légales"@fr,
+        "Disposizioni della legislazione in vigore"@it ;
+    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
+    rdfs:comment "Keine Hinweise auf Nichteinhaltung der gesetzlichen Anforderungen"@de,
+        "Pas d'indications de non-conformité aux exigences légales"@fr,
+        "Nessun segno di infrazione alle disposizioni della legislazione in vigore"@it .
+
+:CD36BC194EC49B212BF242962E451BBA a :InspectionPoint ;
+    rdfs:label "Palmfett im Futter"@de,
+        "Huile/graisse de palme"@fr,
+        "olio/grasso di palma"@it ;
+    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
+    rdfs:comment "kein Palmfett in eingesetzten Futtermitteln"@de,
+        "Pas d'huile/graisse de palme dans les aliments utilisés"@fr,
+        "I foraggi impiegati non contengono olio/grasso di palma"@it .
+
+:CE397C651693E165C971C4676FA6E131 a :InspectionPoint ;
+    rdfs:label "SPB nachhaltiges Soja"@de,
+        "Seulement SPB: Soja durable"@fr,
+        "Solo SPB: soia sostenibile"@it ;
+    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
+    rdfs:comment "Nur SPB: Soja aus nachhaltiger Produktion (von Futtermühle mit Status Soja-Netzwerk) eingesetzt"@de,
+        "Seulement SPB: Soja issu de modes de production durables (d'un moulin bénéficiant du status 'Réseau soja')"@fr,
+        "Solo SPB: soia da produzione sostenibile (prov. da mulini che aderiscono alla Rete svizzera per la soia)"@it .
+
+:E794C2C1F5FCB994AD289D29D4197DA1 a :InspectionPoint ;
+    rdfs:label "Auslauf Nichtvegetationszeit"@de,
+        "Sorties hors végétation"@fr,
+        "Periodo di riposo veg. uscita giornaliera"@it ;
+    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
+    rdfs:comment "Nichtvegetationszeit / witterungsbedingter Weideunterbruch: täglich Auslauf"@de,
+        "En dehors de la période de végétation ou si la météo empêche la pâture: sorties journalières"@fr,
+        "Periodo di riposo veg. o interruzione del pascolo dovuta alla meteo: uscita giornaliera all'aperto"@it .
+
+:E9EDA953680CF88C53B9D0133AAB955F a :InspectionPoint ;
+    rdfs:label "Maximale Tierzahl"@de,
+        "Nombre maximum d'animaux"@fr,
+        "Numero massimo di animali"@it ;
+    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
+    rdfs:comment "Max. zulässige Tierzahl nicht überschritten"@de,
+        "Nombre maximum d'animaux toléré respecté Nombre maximum d'animaux toléré respecté"@fr,
+        "Numero massimo di animali ammesso non superato"@it .
+
+:F9AD11395688FC5AA5EA31CAF8E42954 a :InspectionPoint ;
+    rdfs:label "Letzte GMF-Kontrolle"@de,
+        "Dernier contrôle PLVH"@fr,
+        "Ultima ispezione PLCSI"@it ;
+    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
+    rdfs:comment "Letzte GMF-Kontrolle: Bestätigung / Beweis"@de,
+        "Dernier contrôle PLVH, confirmation"@fr,
+        "Ultima ispezione PLCSI"@it .
+
+:FA8262B41FDA41294CB583EE8CBBFE08 a :InspectionPoint ;
+    rdfs:label "Medikamente und TMV"@de,
+        "Traitements, médicaments, etc"@fr,
+        "Registro d. trattamenti, medicamenti"@it ;
+    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
+    rdfs:comment "Inventar der vorrätigen Medikamente und Vereinbarung mit Tierarzt vorhanden Behandlungsjournal nachgeführt"@de,
+        "Journal des traitements à jour, inventaire des médicaments en stock et convention méd. vét. disponible"@fr,
+        "Registro d. trattamenti aggiornato, inventario d. medicamenti in riserva e convenzione con il vet. disponibile"@it .
+

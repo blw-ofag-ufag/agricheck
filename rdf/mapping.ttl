@@ -2,6 +2,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 :38EA1020A8794BB0AFB1B7A486619C7F a dcterms:Collection ;
     rdfs:label "Luftreinhaltung"@de,
@@ -9,7 +10,7 @@
         "Inquinamento atmosferico"@it ;
     schema:hasPart :C3AC1DC7CB4A4CBCA428AB4C0446C4B5 ;
     schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 ;
-    :hierarchyLevel "2" .
+    :hierarchyLevel 2 .
 
 :57A74BCEB4BF1D05E0532D0E870A0EAF a dcterms:Collection ;
     rdfs:label "Gewässerschutz"@de,
@@ -17,7 +18,15 @@
         "Ambito Protezione delle acque"@it ;
     schema:hasPart :957859627D824A60B076A86082454FCC ;
     schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 ;
-    :hierarchyLevel "2" .
+    :hierarchyLevel 2 .
+
+:84EA1092A8794BB0AFD2B7A486619C7G a dcterms:Collection ;
+    rdfs:label "Mutterkuh Schweiz"@de,
+        "Vache mère suisse"@fr,
+        "Vacca madre svizzera"@it,
+        "Vatga mamma svizra"@rm ;
+    schema:isPartOf :A07EF60442B92B978CCC3B546480A7C5 ;
+    :hierarchyLevel 2 .
 
 :A07EF60442B92B9700003B546480A7C5 a dcterms:Collection ;
     rdfs:label "Umwelt"@de,
@@ -26,7 +35,7 @@
     schema:hasPart :57A74BCEB4C11D05E0532D0E870A0EAF,
         :57A74BCEB5A41D05E0532D0E870A0EAF ;
     schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 ;
-    :hierarchyLevel "2" .
+    :hierarchyLevel 2 .
 
 :A07EF60442B92B9711113B546480A7C5 a dcterms:Collection ;
     rdfs:label "Beitragsvoraussetzungen"@de,
@@ -34,7 +43,7 @@
         "Ambito Condizioni per i contributi"@it ;
     schema:hasPart :57A74BCEB8251D05E0532D0E870A0EAF ;
     schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
-    :hierarchyLevel "2" .
+    :hierarchyLevel 2 .
 
 :A07EF60442B92B9722223B546480A7C5 a dcterms:Collection ;
     rdfs:label "Strukturdaten"@de,
@@ -44,7 +53,7 @@
         :57A74BCEB82D1D05E0532D0E870A0EAF,
         :57A74BCEBD821D05E0532D0E870A0EAF ;
     schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
-    :hierarchyLevel "2" .
+    :hierarchyLevel 2 .
 
 :A07EF60442B92B9733333B546480A7C5 a dcterms:Collection ;
     rdfs:label "Ökologischer Leistungsnachweis (ÖLN)"@de,
@@ -64,7 +73,7 @@
         :57A74BCEC5681D05E0532D0E870A0EAF,
         :57A74BCEC56A1D05E0532D0E870A0EAF ;
     schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
-    :hierarchyLevel "2" .
+    :hierarchyLevel 2 .
 
 :A07EF60442B92B9744443B546480A7C5 a dcterms:Collection ;
     rdfs:label "Biodiversitätsförderflächen (BFF)"@de,
@@ -100,7 +109,7 @@
         :57A74BCEC7091D05E0532D0E870A0EAF,
         :57A74BCEC70D1D05E0532D0E870A0EAF ;
     schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
-    :hierarchyLevel "2" .
+    :hierarchyLevel 2 .
 
 :A07EF60442B92B9755553B546480A7C5 a dcterms:Collection ;
     rdfs:label "Biologische Landwirtschaft"@de,
@@ -119,7 +128,7 @@
         :57A74BCEC7131D05E0532D0E870A0EAF,
         :B58ACD9163A64A3C8ABD18580BFFE780 ;
     schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
-    :hierarchyLevel "2" .
+    :hierarchyLevel 2 .
 
 :A07EF60442B92B9777773B546480A7C5 a dcterms:Collection ;
     rdfs:label "Graslandbasierte Milch- und Fleischproduktion (GMF)"@de,
@@ -129,25 +138,25 @@
         :57A74BCEC0C61D05E0532D0E870A0EAF,
         :ABF667644332451BA425C81187877E8C ;
     schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
-    :hierarchyLevel "2" .
+    :hierarchyLevel 2 .
 
 :A07EF60442B92B978AAA3B546480A7C5 a dcterms:Collection ;
     rdfs:label "Gesätzliche Minimalanforderungen"@de,
         "Exigences légales minimales"@fr,
         "Requisiti minimi di legge"@it ;
-    :hierarchyLevel "1" .
+    :hierarchyLevel 1 .
 
 :A07EF60442B92B978BBB3B546480A7C5 a dcterms:Collection ;
     rdfs:label "Direktzahlungen"@de,
         "Paiements directs"@fr,
         "Pagamenti diretti"@it ;
-    :hierarchyLevel "1" .
+    :hierarchyLevel 1 .
 
 :A07EF60442B92B978CCC3B546480A7C5 a dcterms:Collection ;
     rdfs:label "Labels"@de,
         "Labels"@fr,
         "Labels"@it ;
-    :hierarchyLevel "1" .
+    :hierarchyLevel 1 .
 
 :A07EF60442B92B978EEE3B546480A7C5 a dcterms:Collection ;
     rdfs:label "Bereich Tiergesundheit (Nutztiere, Bienen, Fische)"@de,
@@ -174,7 +183,7 @@
         :F6F1708780C448C9A9218E008BB65138,
         :F7953CB58EF845568D2DBEB476E6E926 ;
     schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 ;
-    :hierarchyLevel "2" .
+    :hierarchyLevel 2 .
 
 :A07EF60442B92B978FFF3B546480A7C5 a dcterms:Collection ;
     rdfs:label "Tierschutz (Nutztiere)"@de,
@@ -200,7 +209,7 @@
         :C35517EED4C645939FAA761A87F35F85,
         :CB5C473CB3F348FF867610CD77F846AA ;
     schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 ;
-    :hierarchyLevel "2" .
+    :hierarchyLevel 2 .
 
 :A07EF60442B92B9799993B546480A7C5 a dcterms:Collection ;
     rdfs:label "Ressourceneffizienz (REB)"@de,
@@ -212,7 +221,7 @@
         :B8752E0F955A4D979A3DA906C5F346A4,
         :C6EB9867709F4C64BD1F07E716804FAA ;
     schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
-    :hierarchyLevel "2" .
+    :hierarchyLevel 2 .
 
 :A07EF60442B92B97BBBB3B546480A7C5 a dcterms:Collection ;
     rdfs:label "Sömmerung"@de,
@@ -227,28 +236,28 @@
         :57A74BCEC3EC1D05E0532D0E870A0EAF,
         :D21C9F2A93694CB48564CE922D20643F ;
     schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
-    :hierarchyLevel "2" .
+    :hierarchyLevel 2 .
 
 :A3B3FF82CFC6FC6683E03B546480AE08 a dcterms:Collection ;
     rdfs:label "Bio Suisse"@de,
         "FR: Bio Suisse"@fr,
         "Bio Suisse"@it ;
     schema:isPartOf :A07EF60442B92B978CCC3B546480A7C5 ;
-    :hierarchyLevel "2" .
+    :hierarchyLevel 2 .
 
 :A3B3FF82D326326683E03B546480AE08 a dcterms:Collection ;
     rdfs:label "Vernetzung"@de,
         "FR: Vernetzung"@fr,
         "Vernetzung"@it ;
     schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
-    :hierarchyLevel "2" .
+    :hierarchyLevel 2 .
 
 :A3B3FF82D453453683E03B546480AE08 a dcterms:Collection ;
     rdfs:label "Landschaftsqualität"@de,
         "FR: Landschaftsqualität"@fr,
         "Landschaftsqualität"@it ;
     schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
-    :hierarchyLevel "2" .
+    :hierarchyLevel 2 .
 
 :BC2A4CD9A00500553AE03B546480AF5B a dcterms:Collection ;
     rdfs:label "in-situ"@de,
@@ -256,7 +265,7 @@
         "in-situ"@it ;
     schema:hasPart :620C05912BA845DE9289F9C2F1F4CF42 ;
     schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
-    :hierarchyLevel "2" .
+    :hierarchyLevel 2 .
 
 :CD483976909F09F029E03B446480A754 a dcterms:Collection ;
     rdfs:label "BTS"@de,
@@ -269,7 +278,7 @@
         :57A74BCEC1A71D05E0532D0E870A0EAF,
         :57A74BCEC2421D05E0532D0E870A0EAF ;
     schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
-    :hierarchyLevel "2" .
+    :hierarchyLevel 2 .
 
 :CD48397690A00A0029E03B446480A754 a dcterms:Collection ;
     rdfs:label "RAUS"@de,
@@ -283,7 +292,7 @@
         :A8D4945497524A4A9871B2BF6FECFA06,
         :B30B90DFC2CE4DA9B6B2E9CBEC8BA383 ;
     schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
-    :hierarchyLevel "2" .
+    :hierarchyLevel 2 .
 
 :CD4C74B78680680174E03B546480A6E4 a dcterms:Collection ;
     rdfs:label "Pflanzliche Primärproduktion"@de,
@@ -292,7 +301,7 @@
     schema:hasPart :856F1ACB7CD14DFC9911D2A31FAAEBFB,
         :B76AEEB28B54425DB79A3FC4193501E5 ;
     schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 ;
-    :hierarchyLevel "2" .
+    :hierarchyLevel 2 .
 
 :CD4C74B78681681174E03B546480A6E4 a dcterms:Collection ;
     rdfs:label "Tierische Primärproduktion"@de,
@@ -305,7 +314,7 @@
         :57A74BCEC4121D05E0532D0E870A0EAF,
         :57A74BCEC7301D05E0532D0E870A0EAF ;
     schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 ;
-    :hierarchyLevel "2" .
+    :hierarchyLevel 2 .
 
 :ED616BC429519513A9E03B446480AB1A a dcterms:Collection ;
     rdfs:label "Effizienter Stickstoffeinsatz im Ackerbau"@de,
@@ -313,7 +322,7 @@
         "IT: Effizienter Stickstoffeinsatz im Ackerbau"@it ;
     schema:hasPart :D1B396D806B14F5BBF8B23AF22ED13BF ;
     schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
-    :hierarchyLevel "2" .
+    :hierarchyLevel 2 .
 
 :ED616BC429529523A9E03B446480AB1A a dcterms:Collection ;
     rdfs:label "Bodenbedeckung/Bodenbearbeitung"@de,
@@ -322,12 +331,12 @@
     schema:hasPart :1F44218E7A46479B8A982149FD01B279,
         :D14116474BB345F5A176DB200E40A8DD ;
     schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
-    :hierarchyLevel "2" .
+    :hierarchyLevel 2 .
 
 :ED616BC429539533A9E03B446480AB1A a dcterms:Collection ;
     rdfs:label "Produktionssysteme Ackerbau und Dauerkulturen"@de,
         "FR: Produktionssysteme Ackerbau und Dauerkulturen"@fr,
         "IT: Produktionssysteme Ackerbau und Dauerkulturen"@it ;
     schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
-    :hierarchyLevel "2" .
+    :hierarchyLevel 2 .
 
