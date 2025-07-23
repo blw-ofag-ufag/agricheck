@@ -108,7 +108,7 @@ cat(prefixes)
 
 # State something about the provenience of the used data
 rdfhelper::triple(biosuisse, "a", uri("http://purl.org/dc/terms/Collection"))
-rdfhelper::triple(biosuisse, "rdfs:comment", rdfhelper::langstring("Hier aufgeführt sind die Anforderungen der BioSuisse, welche über die Verordnung über die biologische Landwirtschaft und die Kennzeichnung biologisch produzierter Erzeugnisse und Lebensmittel (Bio-Verordnung) hinausgehen. Die Informationen kommen aus einer Excel-Liste von bio.inspecta.", "de"))
+rdfhelper::triple(biosuisse, "schema:description", rdfhelper::langstring("Hier aufgeführt sind die Anforderungen der BioSuisse, welche über die Verordnung über die biologische Landwirtschaft und die Kennzeichnung biologisch produzierter Erzeugnisse und Lebensmittel (Bio-Verordnung) hinausgehen. Die Informationen kommen aus einer Excel-Liste von bio.inspecta.", "de"))
 
 # Process each row in the data frame individually
 for (i in 1:nrow(data))
@@ -165,10 +165,11 @@ for (i in 1:nrow(data))
       # generate the triple statement
       rdfhelper::triple(
         subject = subject,
-        predicate = ifelse(variable=="Bezeichnung", "rdfs:label", "rdfs:comment"),
+        predicate = ifelse(variable=="Bezeichnung", "schema:name", "schema:description"),
         object = langstring(string, tolower(substr(lang, 1, 2)))
       )
     }
   }
 }
 sink()
+

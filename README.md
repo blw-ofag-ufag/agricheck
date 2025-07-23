@@ -11,6 +11,16 @@ The data model was written using OWL, the web ontology language. It is not only 
 
 - For some inspection points, there are multiple `rdfs:comment` of a given language (e.g. <https://agriculture.ld.admin.ch/inspection/B0CA9B64FBCDCAD179B51207E8A7E0BE>).
 
+# Run the etl pipeline
+
+```sh
+Rscript scripts/acontrol.R
+Rscript scripts/bioinspecta.R
+Rscript scripts/mutterkuh.R
+python3 scripts/validate-syntax.py
+python3 scripts/reason.py rdf/ontology.ttl rdf/bioinspecta.ttl rdf/mapping.ttl rdf/acontrol.ttl rdf/mutterkuh.ttl
+```
+
 # Example queries
 
 - [First three hierarchy levels with URI and labels](https://s.zazuko.com/BGqwXc)

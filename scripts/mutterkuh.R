@@ -1,4 +1,5 @@
 library(rdfhelper)
+library(readxl)
 
 # read data
 data <- readxl::read_excel("data/mutterkuh.xlsx")
@@ -26,14 +27,14 @@ for (i in 1:nrow(data))
     )
 
   # give all the labels and comments
-  for (property in c("label", "comment"))
+  for (property in c("name", "description"))
   {
     for (lang in c("de", "fr", "it"))
     {
       x <- as.character(data[i, paste(property, lang, sep = "_")])
       rdfhelper::triple(
         subject = subject,
-        predicate = rdfhelper::uri(property, prefix = rdfs),
+        predicate = rdfhelper::uri(property, prefix = schema),
         object = rdfhelper::langstring(x, lang = lang)
         )
     }

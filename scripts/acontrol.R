@@ -43,12 +43,12 @@ describe <- function(x, class, hierarchyLevel = NULL, relationPredicate = "schem
       unlist()
     elementShortName |>
       langstring(tolower(lang), multiline = FALSE) |>
-      triple(subject, "rdfs:label", object = _)
+      triple(subject, "schema:name", object = _)
     if(!is.na(elementName) && length(elementName)>0 && (elementName != elementShortName))
     {
       elementName |>
         langstring(tolower(lang), multiline = TRUE) |>
-        triple(subject, "rdfs:comment", object = _)
+        triple(subject, "schema:description", object = _)
     }
   }
 
@@ -165,7 +165,7 @@ describe_Defect <- function(x) {
     x |> getElement(paste0("name", lang)) |>
       unlist() |>
       rdfhelper::langstring(lang = tolower(lang)) |>
-      triple(subject, "rdfs:label", object = _)
+      triple(subject, "schema:name", object = _)
   }
 }
 
@@ -179,7 +179,7 @@ describe_Sanction <- function(x) {
       getElement(paste0("name", lang)) |>
       unlist() |>
       rdfhelper::langstring(lang = tolower(lang)) |>
-      triple(subject, "rdfs:label", object = _)
+      triple(subject, "schema:name", object = _)
   }
 }
 
