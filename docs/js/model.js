@@ -18,8 +18,8 @@ WHERE {
   ?s a ?sType .
   FILTER(?sType IN (dcterms:Collection, :InspectionPoint))
 
-  OPTIONAL { ?s rdfs:label   ?sLabel   . FILTER(LANG(?sLabel)   = "de") }
-  OPTIONAL { ?s rdfs:comment ?sComment . FILTER(LANG(?sComment) = "de") }
+  OPTIONAL { ?s schema:name   ?sLabel   . FILTER(LANG(?sLabel)   = "de") }
+  OPTIONAL { ?s schema:description ?sComment . FILTER(LANG(?sComment) = "de") }
   OPTIONAL { ?s :hierarchyLevel ?hierarchyLevel }
 
   OPTIONAL {
