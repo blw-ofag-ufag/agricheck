@@ -24,16 +24,16 @@ WHERE {
 
   OPTIONAL {
     ?s schema:hasPart ?subGroup .
-    OPTIONAL { ?subGroup rdfs:label   ?subGroupLabel   . FILTER(LANG(?subGroupLabel)   = "de") }
-    OPTIONAL { ?subGroup rdfs:comment ?subGroupComment . FILTER(LANG(?subGroupComment) = "de") }
+    OPTIONAL { ?subGroup schema:name ?subGroupLabel   . FILTER(LANG(?subGroupLabel)   = "de") }
+    OPTIONAL { ?subGroup schema:comment ?subGroupComment . FILTER(LANG(?subGroupComment) = "de") }
   }
 
   OPTIONAL { ?s schema:isPartOf ?superGroup }
 
   OPTIONAL {
     ?s :includesInspectionPoints ?inspectionPoint .
-    OPTIONAL { ?inspectionPoint rdfs:label   ?inspectionPointLabel   . FILTER(LANG(?inspectionPointLabel)   = "de") }
-    OPTIONAL { ?inspectionPoint rdfs:comment ?inspectionPointComment . FILTER(LANG(?inspectionPointComment) = "de") }
+    OPTIONAL { ?inspectionPoint schema:name ?inspectionPointLabel   . FILTER(LANG(?inspectionPointLabel)   = "de") }
+    OPTIONAL { ?inspectionPoint schema:comment ?inspectionPointComment . FILTER(LANG(?inspectionPointComment) = "de") }
   }
 
   OPTIONAL { ?s :belongsToGroup ?parentGroup }
