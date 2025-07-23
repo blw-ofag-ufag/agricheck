@@ -8,32 +8,26 @@ PREFIX dcterms:    <http://purl.org/dc/terms/>
 PREFIX schema:     <http://schema.org/>
 PREFIX rdfs:       <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT
-  ?s ?sType ?sLabel ?sComment ?hierarchyLevel
-  ?subGroup ?subGroupLabel ?subGroupComment
-  ?superGroup
-  ?inspectionPoint ?inspectionPointLabel ?inspectionPointComment
-  ?parentGroup
+SELECT *
 WHERE {
   ?s a ?sType .
   FILTER(?sType IN (dcterms:Collection, :InspectionPoint))
 
   OPTIONAL { ?s schema:name   ?sLabel   . FILTER(LANG(?sLabel)   = "de") }
   OPTIONAL { ?s schema:description ?sComment . FILTER(LANG(?sComment) = "de") }
-  OPTIONAL { ?s :hierarchyLevel ?hierarchyLevel }
 
   OPTIONAL {
     ?s schema:hasPart ?subGroup .
-    OPTIONAL { ?subGroup schema:name ?subGroupLabel   . FILTER(LANG(?subGroupLabel)   = "de") }
-    OPTIONAL { ?subGroup schema:comment ?subGroupComment . FILTER(LANG(?subGroupComment) = "de") }
+    OPTIONAL { ?subGroup schema:name   ?subGroupLabel   . FILTER(LANG(?subGroupLabel)   = "de") }
+    OPTIONAL { ?subGroup schema:description ?subGroupComment . FILTER(LANG(?subGroupComment) = "de") }
   }
 
   OPTIONAL { ?s schema:isPartOf ?superGroup }
 
   OPTIONAL {
     ?s :includesInspectionPoints ?inspectionPoint .
-    OPTIONAL { ?inspectionPoint schema:name ?inspectionPointLabel   . FILTER(LANG(?inspectionPointLabel)   = "de") }
-    OPTIONAL { ?inspectionPoint schema:comment ?inspectionPointComment . FILTER(LANG(?inspectionPointComment) = "de") }
+    OPTIONAL { ?inspectionPoint schema:name   ?inspectionPointLabel   . FILTER(LANG(?inspectionPointLabel)   = "de") }
+    OPTIONAL { ?inspectionPoint schema:description ?inspectionPointComment . FILTER(LANG(?inspectionPointComment) = "de") }
   }
 
   OPTIONAL { ?s :belongsToGroup ?parentGroup }
