@@ -5,197 +5,197 @@
     schema:description "Nichtvegetationszeit / witterungsbedingter Weideunterbruch: täglich Auslauf"@de,
         "En dehors de la période de végétation ou si la météo empêche la pâture: sorties journalières"@fr,
         "Periodo di riposo veg. o interruzione del pascolo dovuta alla meteo: uscita giornaliera all'aperto"@it ;
-    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
     schema:name "Auslauf Nichtvegetationszeit"@de,
         "Sorties hors végétation"@fr,
-        "Periodo di riposo veg. uscita giornaliera"@it .
+        "Periodo di riposo veg. uscita giornaliera"@it ;
+    :belongsToGroup :84EA1092A8794BB0AFD2B7A486619C7G .
 
 :0BA4DF60303BD1BC148D4351F675AA6D a :InspectionPoint ;
     schema:description "Einstreu und Entmistung ausreichend, Sauberkeit der Tiere in Ordnung"@de,
         "Litière et évacuation du fumier suffisantes, propreté des animaux en ordre"@fr,
         "Lettiere pulite e sufficientemente fornite, animali puliti"@it ;
-    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
     schema:name "Einstreu, Sauberkeit"@de,
         "Litière, propreté"@fr,
-        "Lettiere pulite, nimali puliti"@it .
+        "Lettiere pulite, nimali puliti"@it ;
+    :belongsToGroup :84EA1092A8794BB0AFD2B7A486619C7G .
 
 :4353647B41AFBD88F0DC11438D894E71 a :InspectionPoint ;
     schema:description "Letzte RAUS-Kontrolle: Bestätigung / Beweis"@de,
         "Dernier contrôle SRPA, confirmation"@fr,
         "Ultima ispezione URA"@it ;
-    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
     schema:name "Letzte RAUS-Kontrolle"@de,
         "Dernier contrôle SRPA"@fr,
-        "Ultima ispezione URA"@it .
+        "Ultima ispezione URA"@it ;
+    :belongsToGroup :84EA1092A8794BB0AFD2B7A486619C7G .
 
 :4877A5680E7F526A2118C74D0C308221 a :InspectionPoint ;
     schema:description "GMF-Bund erfüllt / GMF für Mutterkühe, Kälber, Aufzuchttiere und Weidemasttiere erfüllt"@de,
         "PLVH remplie / PLVH remplie pour les vaches allaitantes, les veaux, le bétail d'élevage et les animaux engraissés au pâturage"@fr,
         "PLCSI Confederazione/PLCSI per vacche madri, vitelli, animali da riproduzione e animali da ingrasso al pascolo"@it ;
-    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
     schema:name "GMF erfüllt"@de,
         "PLVH rempli"@fr,
-        "PLCSI"@it .
+        "PLCSI"@it ;
+    :belongsToGroup :84EA1092A8794BB0AFD2B7A486619C7G .
 
 :5A7C6C254964E522EE6FAA160A386F99 a :InspectionPoint ;
     schema:description "Korrekte Tieridentifikation, korrekte Meldungen an TVD"@de,
         "Marquage des animaux correct, annonces à la BDTA correctes Marquage des animaux correct, annonces à la BDTA correctes"@fr,
         "Identificazione degli animali corretta, notifiche alla BDTA corrette"@it ;
-    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
     schema:name "Meldungen TVD, Tieridentifikation"@de,
         "Annonces BDTA, Marquages"@fr,
-        "Identificazione degli animali, BDTA"@it .
+        "Identificazione degli animali, BDTA"@it ;
+    :belongsToGroup :84EA1092A8794BB0AFD2B7A486619C7G .
 
 :6DB2499B5F9770DC4B02CFA501A42C11 a :InspectionPoint ;
     schema:description "Letzte GMF-Kontrolle: Bestätigung / Beweis"@de,
         "Dernier contrôle PLVH, confirmation"@fr,
         "Ultima ispezione PLCSI"@it ;
-    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
     schema:name "Letzte GMF-Kontrolle"@de,
         "Dernier contrôle PLVH"@fr,
-        "Ultima ispezione PLCSI"@it .
+        "Ultima ispezione PLCSI"@it ;
+    :belongsToGroup :84EA1092A8794BB0AFD2B7A486619C7G .
 
 :79EC056289E2CF03C48AB71E408DCBE8 a :InspectionPoint ;
     schema:description "Eingesetzte und gelagerte Futtermittel sind konform (kein GVO, keine unerlaubten Zusatzstoffe etc.)"@de,
         "Aliments utilisés et stockés sont conformes (pas d'OGM, pas d'intrants non permis etc.)"@fr,
         "I foraggi impiegati e stoccati sono conformi (niente OGM, niente additivi vietati ecc.)"@it ;
-    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
     schema:name "Konformität Futter"@de,
         "Aliments conformes"@fr,
-        "foraggi conformi"@it .
+        "foraggi conformi"@it ;
+    :belongsToGroup :84EA1092A8794BB0AFD2B7A486619C7G .
 
 :869B0C9785E8604A08FF2FC2434D912D a :InspectionPoint ;
     schema:description "Direktvermarktung: Lizenz vorhanden"@de,
         "Vente directe: licence"@fr,
         "vendita diretta: licenza"@it ;
-    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
     schema:name "Lizenz Direktvermarkung"@de,
         "Vente directe: licence"@fr,
-        "vendita diretta: licenza"@it .
+        "vendita diretta: licenza"@it ;
+    :belongsToGroup :84EA1092A8794BB0AFD2B7A486619C7G .
 
 :94393119EF603C458B7A2087D403EE6E a :InspectionPoint ;
     schema:description "Letzte Tierschutz-Kontrolle (nicht vor 1.11.20): Bestätigung / Beweis"@de,
         "Dernier contrôle Pani (pas avant 1.11.20), confirmation"@fr,
         "Ultima ispezione PAn (non prima di 1.1.20)"@it ;
-    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
     schema:name "Letzte Tierschutz-Kontrolle"@de,
         "Dernier contrôle Pani"@fr,
-        "Ultima ispezione PAn"@it .
+        "Ultima ispezione PAn"@it ;
+    :belongsToGroup :84EA1092A8794BB0AFD2B7A486619C7G .
 
 :9A1BC2437E5E96E9ED939CFD435D2007 a :InspectionPoint ;
     schema:description "Inventar der vorrätigen Medikamente und Vereinbarung mit Tierarzt vorhanden Behandlungsjournal nachgeführt"@de,
         "Journal des traitements à jour, inventaire des médicaments en stock et convention méd. vét. disponible"@fr,
         "Registro d. trattamenti aggiornato, inventario d. medicamenti in riserva e convenzione con il vet. disponibile"@it ;
-    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
     schema:name "Medikamente und TMV"@de,
         "Traitements, médicaments, etc"@fr,
-        "Registro d. trattamenti, medicamenti"@it .
+        "Registro d. trattamenti, medicamenti"@it ;
+    :belongsToGroup :84EA1092A8794BB0AFD2B7A486619C7G .
 
 :AEBE03FF32A3646E02D1776330DBDE92 a :InspectionPoint ;
     schema:description "Letzte BTS-Kontrolle: Bestätigung / Beweis"@de,
         "Dernier contrôle SST, confirmation"@fr,
         "Ultima ispezione SSRA"@it ;
-    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
     schema:name "Letzte BTS-Kontrolle"@de,
         "Dernier contrôle SST"@fr,
-        "Ultima ispezione SSRA"@it .
+        "Ultima ispezione SSRA"@it ;
+    :belongsToGroup :84EA1092A8794BB0AFD2B7A486619C7G .
 
 :C1352D0D900FF7244D63435C17270952 a :InspectionPoint ;
     schema:description "Auslaufjournal vorhanden und nachgeführt"@de,
         "Journal des sorties disponible et à jour Journal des sorties disponible et à jour"@fr,
         "Registro delle uscite aggiornato e disponibile"@it ;
-    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
     schema:name "Auslaufjournal"@de,
         "Journal des sorties"@fr,
-        "Registro delle uscite"@it .
+        "Registro delle uscite"@it ;
+    :belongsToGroup :84EA1092A8794BB0AFD2B7A486619C7G .
 
 :CDC9285C1F6E76AFE5E7491C32ED4DB1 a :InspectionPoint ;
     schema:description "Max. zulässige Tierzahl nicht überschritten"@de,
         "Nombre maximum d'animaux toléré respecté Nombre maximum d'animaux toléré respecté"@fr,
         "Numero massimo di animali ammesso non superato"@it ;
-    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
     schema:name "Maximale Tierzahl"@de,
         "Nombre maximum d'animaux"@fr,
-        "Numero massimo di animali"@it .
+        "Numero massimo di animali"@it ;
+    :belongsToGroup :84EA1092A8794BB0AFD2B7A486619C7G .
 
 :CE17846A0744CC3EE096AD1D9336FCBB a :InspectionPoint ;
     schema:description "Auslauf Vegetationszeit: täglich mehrstündiger Weidegang und entsprechend genügend Weidefläche"@de,
         "Période de végétation: plusieurs heures de détention au pâturage par jour et surface de pâture suffisante"@fr,
         "Periodo vegetativo: pascolo giornaliero di diverse ore e superficie disponibile sufficiente"@it ;
-    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
     schema:name "Auslauf Vegetationszeit"@de,
         "Sorties pendant végàtation"@fr,
-        "Periodo vegetativo: pascolo giornaliero"@it .
+        "Periodo vegetativo: pascolo giornaliero"@it ;
+    :belongsToGroup :84EA1092A8794BB0AFD2B7A486619C7G .
 
 :CED09157BBD28C72F1F6E92246702A83 a :InspectionPoint ;
     schema:description "Nur SPB: Soja aus nachhaltiger Produktion (von Futtermühle mit Status Soja-Netzwerk) eingesetzt"@de,
         "Seulement SPB: Soja issu de modes de production durables (d'un moulin bénéficiant du status 'Réseau soja')"@fr,
         "Solo SPB: soia da produzione sostenibile (prov. da mulini che aderiscono alla Rete svizzera per la soia)"@it ;
-    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
     schema:name "SPB nachhaltiges Soja"@de,
         "Seulement SPB: Soja durable"@fr,
-        "Solo SPB: soia sostenibile"@it .
+        "Solo SPB: soia sostenibile"@it ;
+    :belongsToGroup :84EA1092A8794BB0AFD2B7A486619C7G .
 
 :D22A3B7CA6ED17B4A1153C974C71F265 a :InspectionPoint ;
     schema:description "Versorgung mit einwandfreiem Trinkwasser gewährleistet"@de,
         "Approvisionnement en eau non souillée garantie"@fr,
         "Approvvigionamento garantito con acqua potabile di qualità ineccepibile"@it ;
-    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
     schema:name "Trinkwasser"@de,
         "Approvisionnement en eau"@fr,
-        "Approvvigionamento con acqua"@it .
+        "Approvvigionamento con acqua"@it ;
+    :belongsToGroup :84EA1092A8794BB0AFD2B7A486619C7G .
 
 :DE7B7C6AAFE204AD38F83F21F72A9C2C a :InspectionPoint ;
     schema:description "Keine Hinweise auf Nichteinhaltung der gesetzlichen Anforderungen"@de,
         "Pas d'indications de non-conformité aux exigences légales"@fr,
         "Nessun segno di infrazione alle disposizioni della legislazione in vigore"@it ;
-    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
     schema:name "Einhaltung der gesetzlichen Anforderungen"@de,
         "Conformité aux exigences légales"@fr,
-        "Disposizioni della legislazione in vigore"@it .
+        "Disposizioni della legislazione in vigore"@it ;
+    :belongsToGroup :84EA1092A8794BB0AFD2B7A486619C7G .
 
 :E0F212B23AABF799F93FB296CD946E98 a :InspectionPoint ;
     schema:description "Für alle Tiere der Markenprogrammkategorien A2-A9Produktionsreglement insb. BTS und RAUS inkl. täglichem Auslauf erfüllt"@de,
         "Les règlements de production (en particulier la SST et la SRPA avec les sorties journalières inclues) sont respectés pour toutes les catégories d'animaux des programmes de marques (A2-A9)"@fr,
         "Per tutti gli animali dei programmi di marchio compresi nelle categorie A2-A9 il regolamento di produzione è rispettato (in part. SSRA e URA, inclusa uscita giornaliera)."@it ;
-    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
     schema:name "Produktionsreglement, BTS und RAUS"@de,
         "Règlement de production, SST et la SRPA,"@fr,
-        "Regolamento di produzione, in part. SSRA e URA"@it .
+        "Regolamento di produzione, in part. SSRA e URA"@it ;
+    :belongsToGroup :84EA1092A8794BB0AFD2B7A486619C7G .
 
 :E11FCCD491479272EEDF795C7BFE7272 a :InspectionPoint ;
     schema:description "Stallungen und Einrichtungen gemäss TSCHV,"@de,
         "Étables et installations conformes à l'Opani"@fr,
         "Stabulazioni e attrezzature secondo OPAn"@it ;
-    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
     schema:name "Tierschutz Gebäude"@de,
         "Opani bâtiments"@fr,
-        "Stabulazioni e attrezzature secondo OPAn"@it .
+        "Stabulazioni e attrezzature secondo OPAn"@it ;
+    :belongsToGroup :84EA1092A8794BB0AFD2B7A486619C7G .
 
 :F108626CF9E74ADB7C785AA82E6A6607 a :InspectionPoint ;
     schema:description "Kein Soja eingesetzt, keine zusätzl. Milchgaben an säugende Kälber"@de,
         "Pas d'utilisation de soja, pas d'apports suppl. de lait aux veaux qui têtent"@fr,
         "Nessun uso di soia, nessuna somministrazione di latte supplementare ai vitelli lattanti"@it ;
-    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
     schema:name "Kälber Fütterung"@de,
         "Alimentation veaux"@fr,
-        "alimentazione vitelli lattanti"@it .
+        "alimentazione vitelli lattanti"@it ;
+    :belongsToGroup :84EA1092A8794BB0AFD2B7A486619C7G .
 
 :F3F71330E5475BC5F0806AE798AEDD96 a :InspectionPoint ;
     schema:description "Letzte ÖLN-/Bio-Kontrolle: Bestätigung / Beweis"@de,
         "Dernier contrôle PER/Bio, confirmation"@fr,
         "Ultima ispezione PER/BIO"@it ;
-    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
     schema:name "Letzte ÖLN-/Bio-Kontrolle"@de,
         "Dernier contrôle PER/Bio"@fr,
-        "Ultima ispezione PER/BIO"@it .
+        "Ultima ispezione PER/BIO"@it ;
+    :belongsToGroup :84EA1092A8794BB0AFD2B7A486619C7G .
 
 :F9BA468698B63B89C72280AB0C6CC2C2 a :InspectionPoint ;
     schema:description "kein Palmfett in eingesetzten Futtermitteln"@de,
         "Pas d'huile/graisse de palme dans les aliments utilisés"@fr,
         "I foraggi impiegati non contengono olio/grasso di palma"@it ;
-    schema:isPartOf :84EA1092A8794BB0AFD2B7A486619C7G ;
     schema:name "Palmfett im Futter"@de,
         "Huile/graisse de palme"@fr,
-        "olio/grasso di palma"@it .
+        "olio/grasso di palma"@it ;
+    :belongsToGroup :84EA1092A8794BB0AFD2B7A486619C7G .
 

@@ -3,6 +3,13 @@ agricheck
 
 A collection of checkpoints for inspections in the agri-food sector. [Here's an example of such an inspection point.](https://agriculture.ld.admin.ch/inspection/0A60DB5BD8144E25B550D03A3B176B66)
 
+Here are the links to the top-level collections:
+
+- [Legal minimum](https://agriculture.ld.admin.ch/inspection/A07EF60442B92B978AAA3B546480A7C5)
+- [Direct payments](https://agriculture.ld.admin.ch/inspection/A07EF60442B92B978BBB3B546480A7C5)
+- [Labels](https://agriculture.ld.admin.ch/inspection/A07EF60442B92B978CCC3B546480A7C5)
+
+
 # The data model
 
 The data model was written using OWL, the web ontology language. It is not only used as a map to write queries, but also for a automatic reasoning process. [You can inspect the data model here.](https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/blw-ofag-ufag/agricheck/refs/heads/main/rdf/ontology.ttl)
@@ -13,13 +20,13 @@ The data model was written using OWL, the web ontology language. It is not only 
 
 # Run the etl pipeline
 
+To run the data integration from excel or XML files to standardized RDF turtle files, run
+
 ```sh
-Rscript scripts/acontrol.R
-Rscript scripts/bioinspecta.R
-Rscript scripts/mutterkuh.R
-python3 scripts/validate-syntax.py
-python3 scripts/reason.py rdf/ontology.ttl rdf/bioinspecta.ttl rdf/mapping.ttl rdf/acontrol.ttl rdf/mutterkuh.ttl
+sh scripts/pipeline.sh
 ```
+
+This executes the R script for data conversion (`acontrol.R`, `bioinspecta.R` and `mutterkuh.R`) as well as the data validation, reasoning and merging `validate-syntax.py` and `reason.py`.
 
 # Example queries
 

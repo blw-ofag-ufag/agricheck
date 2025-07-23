@@ -22,7 +22,7 @@ for (i in 1:nrow(data))
   rdfhelper::triple(subject, "a", rdfhelper::uri("InspectionPoint", base))
   rdfhelper::triple(
     subject = subject,
-    predicate = rdfhelper::uri("isPartOf", prefix = schema),
+    predicate = rdfhelper::uri("belongsToGroup", prefix = base),
     object = rdfhelper::uri("84EA1092A8794BB0AFD2B7A486619C7G", prefix = base)
     )
 
