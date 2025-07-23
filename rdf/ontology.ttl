@@ -57,13 +57,15 @@ dcterms:Collection a owl:Class ;
     rdfs:domain dcterms:Collection .
 
 schema:hasPart a owl:ObjectProperty ;
-    rdfs:label "beinhaltet Untergruppen"@de ;
+    rdfs:label "hat Teil"@de,
+        "has part"@en ;
     rdfs:domain dcterms:Collection ;
     rdfs:range dcterms:Collection ;
     owl:inverseOf schema:isPartOf .
 
 schema:isPartOf a owl:ObjectProperty ;
-    rdfs:label "hat Übergruppe"@de ;
+    rdfs:label "ist Teil von"@de,
+        "is part of"@en ;
     rdfs:domain dcterms:Collection ;
     rdfs:range dcterms:Collection ;
     owl:inverseOf schema:hasPart .
