@@ -6,6 +6,9 @@ library(purrr)
 library(dplyr)
 library(stringr)
 
+# helper functions
+source("scripts/helpers.R")
+
 # define RDF prefixes, bases etc.
 base <- "https://agriculture.ld.admin.ch/inspection/"
 prefixes <- "
@@ -60,6 +63,7 @@ describe <- function(x, class, hierarchyLevel = NULL, relationPredicate = "schem
   x |>
     getElement("elementId") |>
     unlist() |>
+    cleanIdentifier() |>
     literal() |>
     triple(subject, "schema:identifier", object = _)
   x |>

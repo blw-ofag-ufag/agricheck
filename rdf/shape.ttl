@@ -93,3 +93,9 @@
 
 # TODO: shape of :InspectionPoint
 # ===============================
+
+# Pattern of schema:identifier
+# ==================================
+# Example: 02.31.3 is OK,
+#          02.31.3_2016 is not OK
+# "^[0-9]+(\\.[0-9]+)*$"
