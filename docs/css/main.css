@@ -138,11 +138,11 @@ ul.checklist label  { cursor: pointer; }
 }
 
 /* 2 · if something is *still* too wide, let the container scroll */
-#tree,
-#tree .jstree-container-ul,   /* root <ul> that jsTree generates            */
-.card-body {                  /* card body that holds the tree              */
-  overflow-x: auto;           /* horizontal scroll instead of grow‑out      */
-  max-width: 100%;            /* never exceed the column’s width            */
+#tree,                             /* the tree itself                      */
+#tree .jstree-container-ul,        /* root <ul> that jsTree injects        */
+#treeCard .card-body {             /* give your tree card an id first      */
+  overflow-x: auto;
+  max-width: 100%;
 }
 
 /*────────────────────────────
