@@ -16,7 +16,8 @@
     rdfs:label "Gewässerschutz"@de,
         "Protection des eaux"@fr,
         "Protezione delle acque"@it ;
-    schema:hasPart :57A74BCEB4BF1D05E0532D0E870A0EAF ;
+    schema:hasPart :57A74BCEB4BF1D05E0532D0E870A0EAF,
+        :957859627D824A60B076A86082454FCC ;
     schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 ;
     :hierarchyLevel 2 .
 
