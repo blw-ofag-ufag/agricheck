@@ -12,11 +12,11 @@
     schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 ;
     :hierarchyLevel 2 .
 
-:57A74BCEB4BF1D05E0532D0E870A0EAF a dcterms:Collection ;
+:57A74BCEB4BF1D05E0532D0E870A0EAC a dcterms:Collection ;
     rdfs:label "Gewässerschutz"@de,
-        "FR: Gewässerschutz"@fr,
-        "Ambito Protezione delle acque"@it ;
-    schema:hasPart :957859627D824A60B076A86082454FCC ;
+        "Protection des eaux"@fr,
+        "Protezione delle acque"@it ;
+    schema:hasPart :57A74BCEB4BF1D05E0532D0E870A0EAF ;
     schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 ;
     :hierarchyLevel 2 .
 

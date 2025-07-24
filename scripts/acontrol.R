@@ -69,7 +69,7 @@ describe <- function(x, class, hierarchyLevel = NULL, relationPredicate = "schem
     triple(subject, uri("conjunctIdentifier", base), object = _)
 
   if(!is.null(hierarchyLevel)) {
-    triple(subject, ":hierarchyLevel", literal(hierarchyLevel))
+    triple(subject, ":hierarchyLevel", hierarchyLevel)
   }
 }
 
@@ -158,7 +158,7 @@ describe_PossibleOutcome <- function(x) {
 # - Defects in the XML are used strictly hierarchical, which creates redundant information.
 # - To reduce redundancy, we introduce two new classes: :Defect and :Sanction
 describe_Defect <- function(x) {
-  subject <- unlist(x[["nameDe"]]) |> hashURI(base)
+  subject <- hashURI(x, base)
   rdfhelper::triple(subject, "a", ":Defect")
   for (lang in c("De", "Fr", "It"))
   {
@@ -170,7 +170,7 @@ describe_Defect <- function(x) {
 }
 
 describe_Sanction <- function(x) {
-  subject <- x |> getElement("suggestedSanction") |> getElement("nameDe") |> unlist() |> hashURI(base)
+  subject <- x |> getElement("suggestedSanction") |> hashURI(base)
   rdfhelper::triple(subject, "a", ":Sanction")
   for (lang in c("De", "Fr", "It"))
   {

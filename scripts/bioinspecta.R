@@ -67,6 +67,11 @@ for (i in 1:nrow(data))
     length() + 1 # add one, because the top level node `biosuisse` is actually hierarchy level 2
 }
 
+# create new variable for unified `Text` and `Beschreibung`
+for (lang in language_codes) {
+   data[[paste(lang, "Description")]] <- NA
+}
+
 # Remove all duplicate titles, comments etc.
 # Often, the comment duplicates what is written in the title.
 # This is better avoided by just leaving said cell empty (NA)
@@ -94,6 +99,14 @@ for (i in 1:nrow(data))
       # override the previous string for the next comparison
       previous <- string
     }
+
+    # create unified variable
+    a <- as.character(data[i,paste(lang, "Text")])
+    b <- as.character(data[i,paste(lang, "Beschreibung")])
+
+    data[[paste(lang, "Description")]][i] <- paste(ifelse(is.na(a), "", a), ifelse(is.na(b), "", b)) |>
+      trimws()
+
   }
 }
 
@@ -133,7 +146,7 @@ for (i in 1:nrow(data))
 
     # State the hierarchy level of the specific collection
     # (The hierarchy level was computed earlier already based on the periods in the "Code")
-    triple(subject, ":hierarchyLevel", as.character(data[i,"hierarchyLevel"]))
+    triple(subject, ":hierarchyLevel", data[i,"hierarchyLevel"])
   }
 
   # process individual inspection points
@@ -150,7 +163,7 @@ for (i in 1:nrow(data))
 
   # Generate all labels and comments.
   # (Note that some objects have two comments for some reason...)
-  for (variable in c("Bezeichnung", "Text", "Beschreibung"))
+  for (variable in c("Bezeichnung", "Description"))
   {
     for (lang in language_codes) {
       varname <- paste(lang, variable)
