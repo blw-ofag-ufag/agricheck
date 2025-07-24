@@ -13,7 +13,7 @@ const copyLinkBtn  = document.getElementById('copyLinkBtn');
 printBtn.addEventListener('click', () => window.print());
 
 excelBtn.addEventListener('click', () => {
-  alert('Excel-Export wird demnächst unterstützt.');
+  alert('Excel‑Export wird demnächst unterstützt.');
 });
 
 copyLinkBtn.addEventListener('click', () => {
@@ -21,11 +21,11 @@ copyLinkBtn.addEventListener('click', () => {
     .then(() => {
       copyLinkBtn.classList.remove('btn-outline-secondary');
       copyLinkBtn.classList.add('btn-success');
-      copyLinkBtn.innerHTML = '<i class="bi bi-clipboard-check"></i> Kopiert!';
+      copyLinkBtn.innerHTML = '<i class="bi bi-clipboard-check"></i> Kopiert!';
       setTimeout(() => {
         copyLinkBtn.classList.add('btn-outline-secondary');
         copyLinkBtn.classList.remove('btn-success');
-        copyLinkBtn.innerHTML = '<i class="bi bi-clipboard"></i> Link kopieren';
+        copyLinkBtn.innerHTML = '<i class="bi bi-clipboard"></i> Link kopieren';
       }, 2000);
     });
 });
@@ -37,12 +37,12 @@ metaDateEl.textContent = today.toLocaleDateString('de', {
   year:    'numeric',
   month:   'long',
   day:     'numeric'
-});  // e.g. "Donnerstag, 1. Mai 2025"
+});  // e.g. "Donnerstag, 1. Mai 2025"
 
 /* ---------- fetch data and render checklist -------------------------- */
 (async function init () {
 
-  /* 1. read slugs, rebuild full URIs */
+  /* 1 · read slugs, rebuild full URIs */
   const params    = new URLSearchParams(location.search);
   const slugParam = params.get('groups');
   if (!slugParam) {
@@ -53,11 +53,11 @@ metaDateEl.textContent = today.toLocaleDateString('de', {
     .map(decodeURIComponent)
     .map(slug => BASE_URI + slug);
 
-  /* 2. fetch & map data */
+  /* 2 · fetch & map data */
   const bindings = await fetchBindings();
   const nodeMap  = buildNodeMap(bindings);
 
-  /* 3. render each root collection with recursive section numbers */
+  /* 3 · render each root collection with recursive section numbers */
   groupUris.forEach((uri, idx) => renderCollection(uri, [idx + 1]));
 
   /* ---------- helper: recursively render a collection --------------- */
@@ -73,6 +73,18 @@ metaDateEl.textContent = today.toLocaleDateString('de', {
     numSpan.textContent = numbers.join('.');
     heading.appendChild(numSpan);
     heading.append(node.label ?? uri.split('/').pop());
+
+    /* ────────────────────────────────────────────────────────────────
+       NEW:  pretty “chip” that shows the Collection’s identifier.
+       Only added for dct:Collection nodes that actually have one.    */
+    if (node.type === 'Collection' && node.identifier) {
+      const chip = document.createElement('span');
+      chip.className = 'badge id-chip ms-2';   // see CSS below
+      chip.textContent = node.identifier;
+      heading.appendChild(chip);
+    }
+    /* ──────────────────────────────────────────────────────────────── */
+
     content.appendChild(heading);
 
     if (node.comment) {
@@ -98,12 +110,10 @@ metaDateEl.textContent = today.toLocaleDateString('de', {
         cb.className = 'form-check-input';
         label.appendChild(cb);
 
-        /* ─ label on first line ────────────────────────────── */
         const strong = document.createElement('strong');
         strong.textContent = ip.label ?? ipUri.split('/').pop();
         label.appendChild(strong);
 
-        /* ─ comment on its own line underneath ─────────────── */
         if (ip.comment) {
           label.appendChild(document.createElement('br'));
           const span = document.createElement('span');
@@ -111,14 +121,14 @@ metaDateEl.textContent = today.toLocaleDateString('de', {
           span.textContent = ip.comment;
           label.appendChild(span);
         }
-        
+
         li.appendChild(label);
         ul.appendChild(li);
       });
       content.appendChild(ul);
     }
 
-    /* recurse into sub-collections */
+    /* recurse into sub‑collections */
     (node.subGroups ?? []).forEach((subUri, i) =>
       renderCollection(subUri, numbers.concat(i + 1))
     );

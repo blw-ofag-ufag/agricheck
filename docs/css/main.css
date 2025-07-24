@@ -1,21 +1,37 @@
-main { flex: 1 0 auto; }
-.site-footer { flex-shrink: 0; }
-.hover-opacity:hover { opacity: 0.8; }
+/*───────────────────────────────────────────────
+  Agricheck ‑ clean, unified stylesheet
+────────────────────────────────────────────────*/
+:root {
+  --primary:   #3db85d;
+  --secondary: #98eeaf;
+  --light:     #f8f9fa;
+  --white:     #ffffff;
+  --muted:     #6c757d;
+  --border:    #dee2e6;
+  --navbar-h:  56px;
+}
 
-/* google font already pulled in <head> – just set globally */
+/*────────────────────────────
+  Base layout & typography
+────────────────────────────*/
+html, body {
+  height: 100%;
+}
+
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   font-family: 'Inter', system-ui, sans-serif;
-  background-image: linear-gradient(180deg, #f8f9fa 0%, #ffffff 40%);
+  font-size: 12pt;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-}
+main   { flex: 1 0 auto; }
+footer { flex-shrink: 0; }
 
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Inter', system-ui, sans-serif;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: none;
@@ -23,132 +39,122 @@ h1, h2, h3, h4, h5, h6 {
 
 strong, b { font-weight: 900; }
 
-.navbar-icons .nav-link {
-  color: #ffffff !important;
-  opacity: 0.9;
-}
-.navbar-icons .nav-link:hover { opacity: 1; }
+/*────────────────────────────
+  Helpers
+────────────────────────────*/
+.hover-opacity:hover { opacity: 0.8; }
 
-/* Card header weight */
-.card-header {
-  font-weight: 600;
-}
-
-/* Section number styling stays from original */
-.section-number {
-  color: #888;
-  margin-right: .5rem;
-}
-
-/* Checklist list style remains identical */
-ul.checklist        { list-style: none; margin: 0 0 1rem 0; padding: 0; }
-ul.checklist li     { margin-bottom: 0.75rem; }
-ul.checklist input  { margin-right: .5rem; }
-ul.checklist label  { cursor: pointer; }
-
-/* jsTree search highlight */
-.jstree-search {
-  background: rgb(255, 255, 173) !important;
-  color: inherit !important;
-}
-
-/* ---- Custom coloured jsTree checkboxes (copy‑pasted from original) ---- */
-#tree li.jstree-checked > .jstree-anchor > .jstree-checkbox,
-#tree li.jstree-undetermined > .jstree-anchor > .jstree-checkbox {
-  background: #0d6efd;          /* bootstrap primary */
-  border-color: #0d6efd;
-  position: relative;
-}
-#tree li.jstree-checked > .jstree-anchor > .jstree-checkbox::after {
-  content: '';
-  position: absolute;
-  top: 0.15em;
-  left: 0.26em;
-  width: 0.55em;
-  height: 0.3em;
-  border: 2px solid #fff;
-  border-top: none;
-  border-right: none;
-  transform: rotate(-45deg);
-}
-#tree li.jstree-undetermined > .jstree-anchor > .jstree-checkbox::after {
-  content: '';
-  position: absolute;
-  top: 0.44em;
-  left: 0.2em;
-  width: 0.6em;
-  height: 2px;
-  background: #fff;
-}
-
-/* Disabled primary button opacity */
-.btn-primary:disabled {
-  opacity: 0.5;
-}
-
-/* ===============================
-js/index.js (only lines that changed)
-The majority of logic is identical – two tiny tweaks below.
-===============================*/
-
-/* 1) Remove colour‑toggle logic – button style is fixed, we only change disabled state */
-.on('changed.jstree', (_, data) => {
-  selectedSet = new Set(data.selected);
-  const empty = selectedSet.size === 0;
-  generateBtn.prop('disabled', empty);
-})
-
-/* 2) When resetting, only disable the button (class toggles removed)  */
-foldTreeBtn.on('click', () => {
-  const jsTree = treeEl.jstree(true);
-  jsTree.deselect_all();
-  jsTree.close_all();
-  selectedSet.clear();
-  generateBtn.prop('disabled', true);
-});
-
-/* Fallback for browsers that load the JS before the navbar exists */
-:root { --akc-navbar-h: 56px; }
-
-@media (min-width: 992px) {          /* only make it sticky on lg‑up */
-  #actionsWrapper{
-    position: sticky;                /* ① pin it */
-    top: calc(var(--akc-navbar-h)    /* ② always sit just below the nav   */
-           + 1rem);
-    align-self: flex-start;          /* ③ STOP flexbox from stretching     */
-    z-index: 1010;                   /* ④ stay above the tree if it overlaps */
-  }
-}
-
-
-/* ===== hide the browser's native “clear” icon on <input type="search"> ===== */
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration,
 input[type="search"]::-ms-clear {
   display: none;
-  width: 0;     /* for Edge */
-  height: 0;
+  width: 0; height: 0;
 }
 
+/*────────────────────────────
+  Navigation bar
+────────────────────────────*/
+.navbar-icons .nav-link {
+  color: var(--white) !important;
+  opacity: 0.9;
+}
+.navbar-icons .nav-link:hover { opacity: 1; }
+
+/*────────────────────────────
+  Cards
+────────────────────────────*/
+.card-header { font-weight: 600; }
+
+/*────────────────────────────
+  Section headings & chips
+────────────────────────────*/
+.section-number {
+  color: var(--muted);
+  margin-right: .5rem;
+}
+
+/* Chip for the (human readable) identifier */
+.id-chip {
+  color:            var(--primary);
+  border:           2px solid var(--primary);
+  border-radius:    0.5rem;
+  padding:          0.15rem 0.3rem;
+  background-color: var(--white);
+}
+
+/*────────────────────────────
+  Checklist
+────────────────────────────*/
+ul.checklist        { list-style: none; margin: 0 0 1rem; padding: 0; }
+ul.checklist li     { margin-bottom: 0.75rem; }
+ul.checklist input  { margin-right: .5rem; }
+ul.checklist label  { cursor: pointer; }
+
+/*────────────────────────────
+  jsTree
+────────────────────────────*/
+
+/* search highlight */
+.jstree-search {
+  background: var(--secondary) !important;
+  color: inherit !important;
+  font-weight: inherit !important;
+  font-style:  normal !important;
+}
+
+/* custom coloured checkboxes */
+#tree li.jstree-checked > .jstree-anchor > .jstree-checkbox,
+#tree li.jstree-undetermined > .jstree-anchor > .jstree-checkbox {
+  background: var(--primary);
+  border-color: var(--primary);
+  position: relative;
+}
+#tree li.jstree-checked > .jstree-anchor > .jstree-checkbox::after {
+  content: '';
+  position: absolute;
+  top: 0.15em; left: 0.26em;
+  width: 0.55em; height: 0.3em;
+  border: 2px solid var(--white);
+  border-top: none; border-right: none;
+  transform: rotate(-45deg);
+}
+#tree li.jstree-undetermined > .jstree-anchor > .jstree-checkbox::after {
+  content: '';
+  position: absolute;
+  top: 0.44em; left: 0.2em;
+  width: 0.6em; height: 2px;
+  background: var(--white);
+}
+
+/*────────────────────────────
+  Buttons & forms
+────────────────────────────*/
+.btn-primary:disabled { opacity: 0.5; }
+
 .form-check-input {
-  --bs-form-check-bg: #f7f7f9;
   flex-shrink: 0;
   width: 1em;
   height: 1em;
   margin-top: .25em;
-  vertical-align: top;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
-  background-color: var(--bs-form-check-bg);
-  background-image: var(--bs-form-check-bg-image);
+  background-color: var(--light);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  border: var(--bs-border-width) solid black;
-  -webkit-print-color-adjust: exact;
-  color-adjust: exact;
-  print-color-adjust: exact;
+  border: 2px solid var(--muted);
+}
+
+/*────────────────────────────
+  Sticky action column (desktop)
+────────────────────────────*/
+@media (min-width: 992px) {
+  #actionsWrapper {
+    position: sticky;
+    top: calc(var(--navbar-h) + 1rem);
+    align-self: flex-start;
+    z-index: 1010;
+  }
+  
 }
