@@ -1,5 +1,8 @@
-/* checklist.js – builds list, fills date, handles toolbar actions ----------*/
+/* checklist.js – builds list, fills date, handles toolbar actions --------*/
 import { fetchBindings, buildNodeMap } from './model.js';
+
+/* wait for i18n before anything else */
+await window.__i18nReady;
 
 const BASE_URI = 'https://agriculture.ld.admin.ch/inspection/';
 
@@ -9,15 +12,13 @@ const printBtn     = document.getElementById('printBtn');
 const excelBtn     = document.getElementById('excelBtn');
 const copyLinkBtn  = document.getElementById('copyLinkBtn');
 
-/* ---------- toolbar interactions --------------------------------------- */
+/* ---------- toolbar ---------------------------------------------------- */
 printBtn.addEventListener('click', () => window.print());
 
-excelBtn.addEventListener('click', () => {
-  alert(t('excelSoon'));
-});
+excelBtn.addEventListener('click', () => alert(t('excelSoon')));
 
 copyLinkBtn.addEventListener('click', () => {
-  navigator.clipboard.writeText(window.location.href).then(() => {
+  navigator.clipboard.writeText(location.href).then(() => {
     copyLinkBtn.classList.replace('btn-outline-secondary', 'btn-success');
     copyLinkBtn.innerHTML = `<i class="bi bi-clipboard-check"></i> ${t('copied')}`;
     setTimeout(() => {
@@ -27,20 +28,21 @@ copyLinkBtn.addEventListener('click', () => {
   });
 });
 
-/* ---------- show current date in UI language --------------------------- */
-const today = new Date();
-metaDateEl.textContent = today.toLocaleDateString(window.__APP_LANG, {
+/* ---------- current date in UI language ------------------------------- */
+metaDateEl.textContent = new Date().toLocaleDateString(window.__APP_LANG, {
   weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
 });
 
-/* ---------- fetch data and render checklist --------------------------- */
+/* ---------- fetch data & render list ---------------------------------- */
 (async function init() {
   const params    = new URLSearchParams(location.search);
   const slugParam = params.get('groups');
+
   if (!slugParam) {
     content.innerHTML = `<p class="text-danger">${t('noGroups')}</p>`;
     return;
   }
+
   const groupUris = slugParam.split(',')
     .map(decodeURIComponent)
     .map(slug => BASE_URI + slug);
@@ -50,6 +52,7 @@ metaDateEl.textContent = today.toLocaleDateString(window.__APP_LANG, {
 
   groupUris.forEach((uri, idx) => renderCollection(uri, [idx + 1]));
 
+  /* recurse ------------------------------------------------------------- */
   function renderCollection(uri, numbers) {
     const node = nodeMap.get(uri);
     if (!node) return;

@@ -1,5 +1,8 @@
-/* index.js – navigator logic with cascading checkboxes -------------------*/
+/* index.js – navigator logic with cascading checkboxes ------------------*/
 import { fetchBindings, buildNodeMap } from './model.js';
+
+/* ── wait until i18n is ready so t() exists ─────────────────────────────*/
+await window.__i18nReady;
 
 const BASE_URI      = 'https://agriculture.ld.admin.ch/inspection/';
 const treeEl        = $('#tree');
@@ -7,18 +10,17 @@ const searchInput   = $('#search');
 const searchBtn     = $('#searchBtn');
 const generateBtn   = $('#generate');
 
-let nodeMap;                 // Map<uri, node>
-let selectedSet = new Set(); // URIs currently ticked
-let searchActive = false;    // remembers if a query is active
+let nodeMap;
+let selectedSet = new Set();
+let searchActive = false;
 
-/* ---------- init tree -------------------------------------------------- */
+/* ---------- build jsTree ---------------------------------------------- */
 (async function initTree() {
   const bindings = await fetchBindings();
   nodeMap = buildNodeMap(bindings);
 
   function buildNode(uri) {
     const n = nodeMap.get(uri);
-
     const searchParts = [];
     if (n.label)   searchParts.push(n.label);
     if (n.comment) searchParts.push(n.comment);
@@ -29,7 +31,7 @@ let searchActive = false;    // remembers if a query is active
     });
 
     return {
-      id:   uri,
+      id: uri,
       text: n.label ?? uri.split('/').pop(),
       a_attr: { 'data-search': searchParts.join(' ').toLowerCase() },
       children: (n.subGroups ?? []).map(buildNode)
@@ -44,33 +46,30 @@ let searchActive = false;    // remembers if a query is active
     .jstree({
       plugins: ['search', 'checkbox'],
       core: { data: roots, themes: { icons: false } },
-      checkbox: {
-        three_state: true,
-        cascade: 'up+down+undetermined'
-      },
+      checkbox: { three_state: true, cascade: 'up+down+undetermined' },
       search: {
         show_only_matches: false,
-        search_callback(query, node) {
+        search_callback(q, node) {
           const hay = treeEl.jstree(true)
                             .get_node(node)
                             .a_attr['data-search'] || '';
-          return hay.includes(query.toLowerCase());
+          return hay.includes(q.toLowerCase());
         }
       }
     })
     .on('changed.jstree', (_, data) => {
       selectedSet = new Set(data.selected);
       const empty = selectedSet.size === 0;
-      generateBtn.prop('disabled', empty);
-      generateBtn.toggleClass('btn-success', !empty);
-      generateBtn.toggleClass('btn-outline-secondary', empty);
+      generateBtn.prop('disabled', empty)
+                 .toggleClass('btn-success', !empty)
+                 .toggleClass('btn-outline-secondary', empty);
     })
     .on('select_node.jstree', (_, data) => {
       treeEl.jstree(true).open_node(data.node);
     });
 })();
 
-/* ---------- search helpers --------------------------------------------- */
+/* ---------- search helpers -------------------------------------------- */
 function updateSearchBtn() {
   if (searchActive) {
     searchBtn
@@ -103,13 +102,11 @@ function performSearch() {
   jsTree.clear_search();
   jsTree.close_all();
 
-  if (!q) {
-    resetSearch();
-    return;
-  }
+  if (!q) { resetSearch(); return; }
 
   jsTree.search(q);
 
+  /* open matches + their ancestors */
   setTimeout(() => {
     treeEl.find('a.jstree-search').each((_, a) => {
       const id   = $(a).closest('li').attr('id');
@@ -124,19 +121,18 @@ function performSearch() {
 }
 
 searchInput.on('keydown', e => { if (e.key === 'Enter') performSearch(); });
-searchInput.on('input', e => { if (!e.target.value.trim() && searchActive) resetSearch(); });
-searchBtn.on('click', () => { searchActive ? resetSearch() : performSearch(); });
+searchInput.on('input',  e => { if (!e.target.value.trim() && searchActive) resetSearch(); });
+searchBtn  .on('click',  () => { searchActive ? resetSearch() : performSearch(); });
 
-/* ---------- launch checklist ------------------------------------------- */
+/* ---------- launch checklist ------------------------------------------ */
 function compressSelection(set) {
   const compressed = new Set();
   for (const uri of set) {
     let skip = false;
     let cur  = uri;
     while (true) {
-      const node = nodeMap.get(cur);
-      if (!node) break;
-      const parent = node.superGroup || node.parentGroup;
+      const node   = nodeMap.get(cur);
+      const parent = node?.superGroup || node?.parentGroup;
       if (!parent) break;
       if (set.has(parent)) { skip = true; break; }
       cur = parent;
@@ -150,9 +146,7 @@ generateBtn.on('click', () => {
   if (!selectedSet.size) return;
 
   const minimal = compressSelection(selectedSet);
-  const qs = [...minimal]
-    .map(uri => encodeURIComponent(uri.split('/').pop()))
-    .join(',');
+  const qs = [...minimal].map(u => encodeURIComponent(u.split('/').pop())).join(',');
 
   const url = new URL('checklist.html', location.origin);
   url.searchParams.set('groups', qs);
@@ -160,7 +154,7 @@ generateBtn.on('click', () => {
   location.href = url.pathname + url.search;
 });
 
-/* resetTree remains unchanged */
+/* external helper ------------------------------------------------------- */
 export function resetTree() {
   const jsTree = treeEl.jstree(true);
   jsTree.deselect_all();
