@@ -16,29 +16,34 @@ const ENDPOINT = 'https://lindas.admin.ch/query';
    – VALUES blocks keep the query planner tiny
 ───────────────────────────────────────────────────────────────────── */
 const SPARQL_QUERY = `
-  PREFIX :        <https://agriculture.ld.admin.ch/inspection/>
-  PREFIX schema:  <http://schema.org/>
-  PREFIX dct:     <http://purl.org/dc/terms/>
+PREFIX :        <https://agriculture.ld.admin.ch/inspection/>
+PREFIX schema:  <http://schema.org/>
+PREFIX dct:     <http://purl.org/dc/terms/>
 
-  SELECT ?class ?item ?name ?description ?parent
-  WHERE {
-    VALUES ?lang   { "de" }
-    VALUES ?class  { :InspectionPoint dct:Collection }
+SELECT ?class ?item ?name ?description ?parent ?id
+WHERE {
+  VALUES ?lang   { "de" }
+  VALUES ?class  { :InspectionPoint dct:Collection }
 
-    ?item a ?class ;
-          schema:name ?name .
-    FILTER(LANG(?name) = ?lang)
+  ?item a ?class ;
+  schema:name ?name .
+  FILTER(LANG(?name) = ?lang)
 
-    OPTIONAL {
-      ?item schema:description ?description .
-      FILTER(LANG(?description) = ?lang)
-    }
-
-    OPTIONAL {
-      ?item ?link ?parent .
-      VALUES ?link { schema:isPartOf :belongsToGroup }
-    }
+  OPTIONAL {
+    ?item schema:description ?description .
+    FILTER(LANG(?description) = ?lang)
   }
+
+  OPTIONAL {
+    ?item ?link ?parent .
+    VALUES ?link { schema:isPartOf :belongsToGroup }
+  }
+  
+  OPTIONAL {
+    ?item schema:identifier ?id .
+  }
+}
+ORDER BY ?id ?item
 `;
 
 /* ------------------------------------------------------------------ */
