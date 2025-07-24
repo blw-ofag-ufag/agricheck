@@ -1,5 +1,8 @@
-/* checklist.js – builds list, fills date, handles toolbar actions */
+/* checklist.js – builds list, fills date, handles toolbar actions --------*/
 import { fetchBindings, buildNodeMap } from './model.js';
+
+/* wait for i18n before anything else */
+await window.__i18nReady;
 
 const BASE_URI = 'https://agriculture.ld.admin.ch/inspection/';
 
@@ -9,63 +12,51 @@ const printBtn     = document.getElementById('printBtn');
 const excelBtn     = document.getElementById('excelBtn');
 const copyLinkBtn  = document.getElementById('copyLinkBtn');
 
-/* ---------- toolbar interactions ------------------------------------ */
+/* ---------- toolbar ---------------------------------------------------- */
 printBtn.addEventListener('click', () => window.print());
 
-excelBtn.addEventListener('click', () => {
-  alert('Excel‑Export wird demnächst unterstützt.');
-});
+excelBtn.addEventListener('click', () => alert(t('excelSoon')));
 
 copyLinkBtn.addEventListener('click', () => {
-  navigator.clipboard.writeText(window.location.href)
-    .then(() => {
-      copyLinkBtn.classList.remove('btn-outline-secondary');
-      copyLinkBtn.classList.add('btn-success');
-      copyLinkBtn.innerHTML = '<i class="bi bi-clipboard-check"></i> Kopiert!';
-      setTimeout(() => {
-        copyLinkBtn.classList.add('btn-outline-secondary');
-        copyLinkBtn.classList.remove('btn-success');
-        copyLinkBtn.innerHTML = '<i class="bi bi-clipboard"></i> Link kopieren';
-      }, 2000);
-    });
+  navigator.clipboard.writeText(location.href).then(() => {
+    copyLinkBtn.classList.replace('btn-outline-secondary', 'btn-success');
+    copyLinkBtn.innerHTML = `<i class="bi bi-clipboard-check"></i> ${t('copied')}`;
+    setTimeout(() => {
+      copyLinkBtn.classList.replace('btn-success', 'btn-outline-secondary');
+      copyLinkBtn.innerHTML = `<i class="bi bi-clipboard"></i> ${t('copyLink')}`;
+    }, 2000);
+  });
 });
 
-/* ---------- show current date in German ------------------------------ */
-const today = new Date();
-metaDateEl.textContent = today.toLocaleDateString('de', {
-  weekday: 'long',
-  year:    'numeric',
-  month:   'long',
-  day:     'numeric'
-});  // e.g. "Donnerstag, 1. Mai 2025"
+/* ---------- current date in UI language ------------------------------- */
+metaDateEl.textContent = new Date().toLocaleDateString(window.__APP_LANG, {
+  weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+});
 
-/* ---------- fetch data and render checklist -------------------------- */
-(async function init () {
-
-  /* 1 · read slugs, rebuild full URIs */
+/* ---------- fetch data & render list ---------------------------------- */
+(async function init() {
   const params    = new URLSearchParams(location.search);
   const slugParam = params.get('groups');
+
   if (!slugParam) {
-    content.innerHTML = '<p class="text-danger">Keine Gruppen angegeben.</p>';
+    content.innerHTML = `<p class="text-danger">${t('noGroups')}</p>`;
     return;
   }
+
   const groupUris = slugParam.split(',')
     .map(decodeURIComponent)
     .map(slug => BASE_URI + slug);
 
-  /* 2 · fetch & map data */
   const bindings = await fetchBindings();
   const nodeMap  = buildNodeMap(bindings);
 
-  /* 3 · render each root collection with recursive section numbers */
   groupUris.forEach((uri, idx) => renderCollection(uri, [idx + 1]));
 
-  /* ---------- helper: recursively render a collection --------------- */
-  function renderCollection (uri, numbers) {
+  /* recurse ------------------------------------------------------------- */
+  function renderCollection(uri, numbers) {
     const node = nodeMap.get(uri);
     if (!node) return;
 
-    /* heading */
     const hLevel  = Math.min(numbers.length, 6);
     const heading = document.createElement('h' + hLevel);
     const numSpan = document.createElement('span');
@@ -74,17 +65,12 @@ metaDateEl.textContent = today.toLocaleDateString('de', {
     heading.appendChild(numSpan);
     heading.append(node.label ?? uri.split('/').pop());
 
-    /* ────────────────────────────────────────────────────────────────
-       NEW:  pretty “chip” that shows the Collection’s identifier.
-       Only added for dct:Collection nodes that actually have one.    */
     if (node.type === 'Collection' && node.identifier) {
       const chip = document.createElement('span');
-      chip.className = 'badge id-chip ms-2';   // see CSS below
+      chip.className = 'badge id-chip ms-2';
       chip.textContent = node.identifier;
       heading.appendChild(chip);
     }
-    /* ──────────────────────────────────────────────────────────────── */
-
     content.appendChild(heading);
 
     if (node.comment) {
@@ -93,7 +79,6 @@ metaDateEl.textContent = today.toLocaleDateString('de', {
       content.appendChild(p);
     }
 
-    /* checklist points */
     if (node.inspectionPoints?.length) {
       const ul = document.createElement('ul');
       ul.className = 'checklist';
@@ -101,11 +86,11 @@ metaDateEl.textContent = today.toLocaleDateString('de', {
         const ip = nodeMap.get(ipUri);
         if (!ip) return;
 
-        const li    = document.createElement('li');
+        const li = document.createElement('li');
         const label = document.createElement('label');
         label.className = 'd-block';
 
-        const cb    = document.createElement('input');
+        const cb = document.createElement('input');
         cb.type = 'checkbox';
         cb.className = 'form-check-input';
         label.appendChild(cb);
@@ -128,7 +113,6 @@ metaDateEl.textContent = today.toLocaleDateString('de', {
       content.appendChild(ul);
     }
 
-    /* recurse into sub‑collections */
     (node.subGroups ?? []).forEach((subUri, i) =>
       renderCollection(subUri, numbers.concat(i + 1))
     );

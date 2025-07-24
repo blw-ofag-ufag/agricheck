@@ -20,19 +20,22 @@
   <div class="container py-4">
 
     <!-- Meta headline + date -->
-    <h1 class="mb-2">Meine Agricheck-Liste</h1>
+    <h1 class="mb-2" data-i18n="checklistTitle">Meine Agricheck-Liste</h1>
     <p id="metaDate" class="text-muted mb-4"></p>
 
     <!-- Toolbar (hidden for print) -->
-    <div id="toolbar" class="d-print-none mb-3">
-      <button id="printBtn"    class="btn btn-outline-secondary me-2">
-        <i class="bi bi-printer"></i> Drucken / PDF
+    <div id="toolbar" class="d-print-none mb-3"">
+      <button id="printBtn" class="btn btn-outline-secondary me-2">
+        <i class="bi bi-printer"></i>
+        <span class="ms-1" data-i18n="print">Drucken / PDF</span>
       </button>
-      <button id="excelBtn"    class="btn btn-outline-secondary me-2">
-        <i class="bi bi-file-earmark-excel"></i> Excel
+      <button id="excelBtn" class="btn btn-outline-secondary me-2">
+        <i class="bi bi-file-earmark-excel"></i>
+        <span class="ms-1" data-i18n="excel">Excel</span>
       </button>
       <button id="copyLinkBtn" class="btn btn-outline-secondary">
-        <i class="bi bi-clipboard"></i> Link kopieren
+        <i class="bi bi-clipboard"></i>
+        <span class="ms-1" data-i18n="copyLink">Link kopieren</span>
       </button>
     </div>
 

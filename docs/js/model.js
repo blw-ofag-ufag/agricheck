@@ -1,17 +1,17 @@
-// model.js – streamlined data layer for Agricheck, now with `identifier`
+// model.js – data layer for Agricheck, language‑aware -----------------------
 const ENDPOINT = 'https://lindas.admin.ch/query';
 
-/* Language‑filtered, hierarchy‑friendly query.
-   NOTE: ?identifier (schema:identifier) is OPTIONAL and may be absent.     */
-const SPARQL_QUERY = `
+/* build the SPARQL query for the requested UI language */
+function buildQuery(lang) {
+  return `
 PREFIX :        <https://agriculture.ld.admin.ch/inspection/>
 PREFIX schema:  <http://schema.org/>
 PREFIX dct:     <http://purl.org/dc/terms/>
 
 SELECT ?class ?item ?name ?description ?parent ?identifier
 WHERE {
-  VALUES ?lang   { "de" }
-  VALUES ?class  { :InspectionPoint dct:Collection }
+  VALUES ?lang  { "${lang}" }
+  VALUES ?class { :InspectionPoint dct:Collection }
 
   ?item a ?class ;
         schema:name ?name .
@@ -31,31 +31,31 @@ WHERE {
 }
 ORDER BY ?identifier ?item
 `;
+}
 
 /* ------------------------------------------------------------------ */
-/** Run the query and return raw JSON bindings. */
-export async function fetchBindings () {
-  const res = await fetch(ENDPOINT, {
+export async function fetchBindings() {
+  const lang = window.__APP_LANG || 'de';
+  const res  = await fetch(ENDPOINT, {
     method:  'POST',
     headers: {
       'Content-Type': 'application/sparql-query',
       'Accept':       'application/sparql-results+json'
     },
-    body:    SPARQL_QUERY
+    body: buildQuery(lang)
   });
   if (!res.ok) {
-    throw new Error(`SPARQL request failed: ${res.status} – ${res.statusText}`);
+    throw new Error(`SPARQL request failed: ${res.status} – ${res.statusText}`);
   }
   return res.json();
 }
 
-/* ------------------------------------------------------------------ */
-/** Build Map<uri,node> – identical API, plus `.identifier`. */
-export function buildNodeMap (bindingsJson) {
+/* unchanged helper functions ---------------------------------------- */
+export function buildNodeMap(bindingsJson) {
   const rows = bindingsJson.results.bindings;
   const v = (row, key) => row[key]?.value;
 
-  /* 1 · instantiate every node once */
+  /* instantiate every node once */
   const map = new Map();
   for (const row of rows) {
     const uri = v(row, 'item');
@@ -66,7 +66,7 @@ export function buildNodeMap (bindingsJson) {
 
         label:      v(row, 'name'),
         comment:    v(row, 'description') || null,
-        identifier: v(row, 'identifier')   || null,   //  ← NEW
+        identifier: v(row, 'identifier')   || null,
 
         subGroups:        [],
         inspectionPoints: [],
@@ -77,7 +77,7 @@ export function buildNodeMap (bindingsJson) {
     }
   }
 
-  /* 2 · wire parents/children */
+  /* wire parents/children */
   for (const row of rows) {
     const uri    = v(row, 'item');
     const parent = v(row, 'parent');
@@ -95,12 +95,10 @@ export function buildNodeMap (bindingsJson) {
       parentNode.inspectionPoints.push(uri);
     }
   }
-
   return map;
 }
 
-/* ------------------------------------------------------------------ */
-export function getDescendantIPs (collectionURI, nodeMap, visited = new Set()) {
+export function getDescendantIPs(collectionURI, nodeMap, visited = new Set()) {
   if (visited.has(collectionURI)) return [];
   visited.add(collectionURI);
 
@@ -114,7 +112,7 @@ export function getDescendantIPs (collectionURI, nodeMap, visited = new Set()) {
   return ips;
 }
 
-export function getBreadcrumbs (uri, nodeMap) {
+export function getBreadcrumbs(uri, nodeMap) {
   const trail = [];
   let cur = uri;
   while (cur) {
