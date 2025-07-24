@@ -128,6 +128,23 @@ ul.checklist label  { cursor: pointer; }
   background: var(--white);
 }
 
+/* ── jsTree overflow fix ─────────────────────────────────────────────── */
+
+/* 1 · wrap long node labels */
+#tree a,                     /* the anchor inside each node                */
+#tree .jstree-anchor {        /* selector alias used by some themes         */
+  white-space: normal;        /* allow wrapping                             */
+  word-break: break-word;     /* break very long identifiers if necessary   */
+}
+
+/* 2 · if something is *still* too wide, let the container scroll */
+#tree,
+#tree .jstree-container-ul,   /* root <ul> that jsTree generates            */
+.card-body {                  /* card body that holds the tree              */
+  overflow-x: auto;           /* horizontal scroll instead of grow‑out      */
+  max-width: 100%;            /* never exceed the column’s width            */
+}
+
 /*────────────────────────────
   Buttons & forms
 ────────────────────────────*/
