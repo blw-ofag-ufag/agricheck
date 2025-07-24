@@ -14,10 +14,6 @@ Here are the links to the top-level collections:
 
 The data model was written using OWL, the web ontology language. It is not only used as a map to write queries, but also for a automatic reasoning process. [You can inspect the data model here.](https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/blw-ofag-ufag/agricheck/refs/heads/main/rdf/ontology.ttl)
 
-## Notes
-
-- For some inspection points, there are multiple `rdfs:comment` of a given language (e.g. <https://agriculture.ld.admin.ch/inspection/B0CA9B64FBCDCAD179B51207E8A7E0BE>).
-
 # Run the etl pipeline
 
 To run the data integration from excel or XML files to standardized RDF turtle files, run
