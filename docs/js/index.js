@@ -1,7 +1,7 @@
 /* index.js – navigator logic with cascading checkboxes ------------------*/
 import { fetchBindings, buildNodeMap } from './model.js';
 
-/* ── wait until i18n is ready so t() exists ─────────────────────────────*/
+/* ensure translations are ready so t() exists ---------------------------*/
 await window.__i18nReady;
 
 const BASE_URI      = 'https://agriculture.ld.admin.ch/inspection/';
@@ -21,6 +21,7 @@ let searchActive = false;
 
   function buildNode(uri) {
     const n = nodeMap.get(uri);
+
     const searchParts = [];
     if (n.label)   searchParts.push(n.label);
     if (n.comment) searchParts.push(n.comment);
@@ -106,7 +107,6 @@ function performSearch() {
 
   jsTree.search(q);
 
-  /* open matches + their ancestors */
   setTimeout(() => {
     treeEl.find('a.jstree-search').each((_, a) => {
       const id   = $(a).closest('li').attr('id');
@@ -148,7 +148,8 @@ generateBtn.on('click', () => {
   const minimal = compressSelection(selectedSet);
   const qs = [...minimal].map(u => encodeURIComponent(u.split('/').pop())).join(',');
 
-  const url = new URL('checklist.html', location.origin);
+  /* use *current location* as base so the deeper path is preserved ---- */
+  const url = new URL('checklist.html', location.href); // keeps /s/…/docs/
   url.searchParams.set('groups', qs);
   url.searchParams.set('lang', window.__APP_LANG);
   location.href = url.pathname + url.search;
