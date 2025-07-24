@@ -53,11 +53,11 @@
     sh:message    "Collection {this} must not have more than one hierarchyLevel." ;
   ] ;
 
-  # (b) must be a positive integer
+  # (b) must be a integer
   sh:property [
     sh:path        :hierarchyLevel ;
-    sh:datatype    xsd:positiveInteger ;
-    sh:message     "hierarchyLevel for {this} has wrong datatype or non‐positive value: {value}" ;
+    sh:datatype    xsd:integer ;
+    sh:message     "Hierarchy level for {this} has wrong datatype" ;
     sh:resultPath  :hierarchyLevel ;
   ] ;
 
