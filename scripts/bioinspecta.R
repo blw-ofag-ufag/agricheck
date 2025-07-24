@@ -146,7 +146,7 @@ for (i in 1:nrow(data))
 
     # State the hierarchy level of the specific collection
     # (The hierarchy level was computed earlier already based on the periods in the "Code")
-    triple(subject, ":hierarchyLevel", data[i,"hierarchyLevel"])
+    triple(subject, ":hierarchyLevel", as.integer(data[i,"hierarchyLevel"]))
   }
 
   # process individual inspection points
