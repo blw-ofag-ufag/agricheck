@@ -152,3 +152,12 @@ input[type="search"]::-ms-clear {
   color-adjust: exact;
   print-color-adjust: exact;
 }
+
+
+/* ID “chip” – bright, subtle outline, pill shape */
+.id-chip {
+  color:            #a7aaad;
+  border:           2px solid #a7aaad;
+  border-radius:    0.5rem;
+  padding:          0.15rem 0.55rem;
+}

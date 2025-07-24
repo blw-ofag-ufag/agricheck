@@ -1,32 +1,20 @@
-// model.js – streamlined data layer for Agricheck
-//
-//   • uses a much smaller SPARQL query (≈ 5× faster on lindas.admin.ch)
-//   • constructs the same node map API the rest of the app expects
-//   • avoids several expensive OPTIONAL sub‑patterns of the old query
-//
+// model.js – streamlined data layer for Agricheck, now with `identifier`
 const ENDPOINT = 'https://lindas.admin.ch/query';
 
-/* ────────────────────────────────────────────────────────────────────
-   Fast, language‑filtered query
-   – one row per resource (Collection or InspectionPoint)
-   – at most one OPTIONAL for the description
-   – parent link captured once (schema:isPartOf OR :belongsToGroup)
-   – no deep joins; hierarchy is rebuilt client‑side
-   – returns only German literals
-   – VALUES blocks keep the query planner tiny
-───────────────────────────────────────────────────────────────────── */
+/* Language‑filtered, hierarchy‑friendly query.
+   NOTE: ?identifier (schema:identifier) is OPTIONAL and may be absent.     */
 const SPARQL_QUERY = `
 PREFIX :        <https://agriculture.ld.admin.ch/inspection/>
 PREFIX schema:  <http://schema.org/>
 PREFIX dct:     <http://purl.org/dc/terms/>
 
-SELECT ?class ?item ?name ?description ?parent ?id
+SELECT ?class ?item ?name ?description ?parent ?identifier
 WHERE {
   VALUES ?lang   { "de" }
   VALUES ?class  { :InspectionPoint dct:Collection }
 
   ?item a ?class ;
-  schema:name ?name .
+        schema:name ?name .
   FILTER(LANG(?name) = ?lang)
 
   OPTIONAL {
@@ -38,12 +26,10 @@ WHERE {
     ?item ?link ?parent .
     VALUES ?link { schema:isPartOf :belongsToGroup }
   }
-  
-  OPTIONAL {
-    ?item schema:identifier ?id .
-  }
+
+  OPTIONAL { ?item schema:identifier ?identifier }
 }
-ORDER BY ?id ?item
+ORDER BY ?identifier ?item
 `;
 
 /* ------------------------------------------------------------------ */
@@ -64,52 +50,47 @@ export async function fetchBindings () {
 }
 
 /* ------------------------------------------------------------------ */
-/** Build the same Map<uri,node> structure expected by the UI. */
+/** Build Map<uri,node> – identical API, plus `.identifier`. */
 export function buildNodeMap (bindingsJson) {
   const rows = bindingsJson.results.bindings;
-
-  // Helper – pull a literal/URI from a row
   const v = (row, key) => row[key]?.value;
 
-  /* First pass – create a node entry for every item */
+  /* 1 · instantiate every node once */
   const map = new Map();
   for (const row of rows) {
     const uri = v(row, 'item');
     if (!map.has(uri)) {
       map.set(uri, {
         uri,
-        type:    v(row, 'class').includes('Collection') ? 'Collection'
-                                                          : 'InspectionPoint',
+        type: v(row, 'class').includes('Collection') ? 'Collection' : 'InspectionPoint',
 
-        label:   v(row, 'name'),
-        comment: v(row, 'description') || null,
+        label:      v(row, 'name'),
+        comment:    v(row, 'description') || null,
+        identifier: v(row, 'identifier')   || null,   //  ← NEW
 
-        /* the following are filled in later, kept as Arrays
-           to stay compatible with the original code */
         subGroups:        [],
         inspectionPoints: [],
 
-        /* parent links (used by the navigator) */
-        superGroup:  null,   // parent Collection for a sub‑collection
-        parentGroup: null    // Collection owning an inspection point
+        superGroup:  null,
+        parentGroup: null
       });
     }
   }
 
-  /* Second pass – wire up the hierarchy & fill child arrays */
+  /* 2 · wire parents/children */
   for (const row of rows) {
     const uri    = v(row, 'item');
     const parent = v(row, 'parent');
-    if (!parent) continue;                   // root collections
+    if (!parent) continue;
 
     const node       = map.get(uri);
     const parentNode = map.get(parent);
-    if (!node || !parentNode) continue;      // should never happen
+    if (!node || !parentNode) continue;
 
     if (node.type === 'Collection') {
       node.superGroup = parent;
       parentNode.subGroups.push(uri);
-    } else {                                // InspectionPoint
+    } else {
       node.parentGroup = parent;
       parentNode.inspectionPoints.push(uri);
     }
@@ -119,7 +100,6 @@ export function buildNodeMap (bindingsJson) {
 }
 
 /* ------------------------------------------------------------------ */
-/** Recursively collect all InspectionPoint URIs under a Collection. */
 export function getDescendantIPs (collectionURI, nodeMap, visited = new Set()) {
   if (visited.has(collectionURI)) return [];
   visited.add(collectionURI);
@@ -134,7 +114,6 @@ export function getDescendantIPs (collectionURI, nodeMap, visited = new Set()) {
   return ips;
 }
 
-/** Return breadcrumb labels from the given node up to the root. */
 export function getBreadcrumbs (uri, nodeMap) {
   const trail = [];
   let cur = uri;
