@@ -21,6 +21,12 @@
     schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 ;
     :hierarchyLevel 2 .
 
+:84EA0583A8534BB0AFDC27A486652C3C a dcterms:Collection ;
+    rdfs:label "QM Schweizer Fleisch"@de,
+        "AQ-Viande Suisse"@fr ;
+    schema:isPartOf :A07EF60442B92B978CCC3B546480A7C5 ;
+    :hierarchyLevel 2 .
+
 :84EA1092A8794BB0AFD2B7A486619C7G a dcterms:Collection ;
     rdfs:label "Mutterkuh Schweiz"@de,
         "Vache mère suisse"@fr,

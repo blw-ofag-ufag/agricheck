@@ -5,5 +5,5 @@ done
 
 # Validate and reason over the RDF
 python3 scripts/validate-syntax.py
-python3 scripts/reason.py rdf/{ontology,bioinspecta,mapping,acontrol,mutterkuh}.ttl
+python3 scripts/reason.py rdf/{ontology,bioinspecta,mapping,acontrol,mutterkuh,qm}.ttl
 python3 scripts/validate-shape.py
