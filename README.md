@@ -1,3 +1,4 @@
+
 agricheck
 =========
 
@@ -26,8 +27,8 @@ This executes the R script for data conversion (`acontrol.R`, `bioinspecta.R` an
 
 # Example queries
 
-- [First three hierarchy levels with URI and labels](https://s.zazuko.com/BGqwXc)
-- [Get all inspection points with labels, comment and codes](https://s.zazuko.com/2CfsZvV)
-- [How many inspection points can we find under each inspection point group?](https://s.zazuko.com/2d1U59s)
-- [Find inspection point groups with exactly one sub-item](https://s.zazuko.com/3pmApnf)
-- [How many distinct inspection points are there under the public domain?](https://s.zazuko.com/2Dt89JU)
+- [First three hierarchy levels with URI and labels](https://s.zazuko.com/2r4Xdfn)
+- [Get all inspection points with labels, comment and codes](https://s.zazuko.com/2kyE73x)
+- [How many inspection points can we find under each inspection point group?](https://s.zazuko.com/76Yr3m)
+- [Find inspection point groups with exactly one sub-item](https://s.zazuko.com/32yA9Wd)
+- [How many distinct inspection points are there under the public domain?](https://s.zazuko.com/2E3RsSk)
