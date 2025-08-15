@@ -9,8 +9,7 @@
         "Protection de l'air"@fr,
         "Inquinamento atmosferico"@it ;
     schema:hasPart :C3AC1DC7CB4A4CBCA428AB4C0446C4B5 ;
-    schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 ;
-    :hierarchyLevel 2 .
+    schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 .
 
 :57A74BCEB4BF1D05E0532D0E870A0EAC a dcterms:Collection ;
     rdfs:label "Gewässerschutz"@de,
@@ -18,22 +17,26 @@
         "Protezione delle acque"@it ;
     schema:hasPart :57A74BCEB4BF1D05E0532D0E870A0EAF,
         :957859627D824A60B076A86082454FCC ;
-    schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 ;
-    :hierarchyLevel 2 .
+    schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 .
 
 :84EA0583A8534BB0AFDC27A486652C3C a dcterms:Collection ;
     rdfs:label "QM Schweizer Fleisch"@de,
         "AQ-Viande Suisse"@fr ;
-    schema:isPartOf :A07EF60442B92B978CCC3B546480A7C5 ;
-    :hierarchyLevel 2 .
+    rdfs:comment """
+        Die Kontrollpunkte gelten für alle Betriebe, die beim privatrechtlichen Programm QM Schweizer Fleisch mitmachen, d.h. es sind privatrechtliche Kontrollpukte.
+        Die Produktionsrichtlinien von QM Schweizer Fleisch finden Sie unter: <qm-schweizerfleisch.ch>.
+        """@de ;
+    schema:isPartOf :A07EF60442B92B978CCC3B546480A7C5 .
 
 :84EA1092A8794BB0AFD2B7A486619C7G a dcterms:Collection ;
     rdfs:label "Mutterkuh Schweiz"@de,
         "Vache mère suisse"@fr,
         "Vacca madre svizzera"@it,
         "Vatga mamma svizra"@rm ;
-    schema:isPartOf :A07EF60442B92B978CCC3B546480A7C5 ;
-    :hierarchyLevel 2 .
+    rdfs:comment """
+        Die Kontrollpunkte gelten für das Label \"Mutterkuh Schweiz\".
+        """@de ;
+    schema:isPartOf :A07EF60442B92B978CCC3B546480A7C5 .
 
 :A07EF60442B92B9700003B546480A7C5 a dcterms:Collection ;
     rdfs:label "Umwelt"@de,
@@ -41,16 +44,14 @@
         "Ambito Ambiente"@it ;
     schema:hasPart :57A74BCEB4C11D05E0532D0E870A0EAF,
         :57A74BCEB5A41D05E0532D0E870A0EAF ;
-    schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 ;
-    :hierarchyLevel 2 .
+    schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 .
 
 :A07EF60442B92B9711113B546480A7C5 a dcterms:Collection ;
     rdfs:label "Beitragsvoraussetzungen"@de,
         "FR: Beitragsvoraussetzungen"@fr,
         "Ambito Condizioni per i contributi"@it ;
     schema:hasPart :57A74BCEB8251D05E0532D0E870A0EAF ;
-    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
-    :hierarchyLevel 2 .
+    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
 
 :A07EF60442B92B9722223B546480A7C5 a dcterms:Collection ;
     rdfs:label "Strukturdaten"@de,
@@ -59,8 +60,7 @@
     schema:hasPart :57A74BCEB82A1D05E0532D0E870A0EAF,
         :57A74BCEB82D1D05E0532D0E870A0EAF,
         :57A74BCEBD821D05E0532D0E870A0EAF ;
-    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
-    :hierarchyLevel 2 .
+    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
 
 :A07EF60442B92B9733333B546480A7C5 a dcterms:Collection ;
     rdfs:label "Ökologischer Leistungsnachweis (ÖLN)"@de,
@@ -79,8 +79,7 @@
         :57A74BCEC5661D05E0532D0E870A0EAF,
         :57A74BCEC5681D05E0532D0E870A0EAF,
         :57A74BCEC56A1D05E0532D0E870A0EAF ;
-    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
-    :hierarchyLevel 2 .
+    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
 
 :A07EF60442B92B9744443B546480A7C5 a dcterms:Collection ;
     rdfs:label "Biodiversitätsförderflächen (BFF)"@de,
@@ -115,8 +114,7 @@
         :57A74BCEC7051D05E0532D0E870A0EAF,
         :57A74BCEC7091D05E0532D0E870A0EAF,
         :57A74BCEC70D1D05E0532D0E870A0EAF ;
-    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
-    :hierarchyLevel 2 .
+    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
 
 :A07EF60442B92B9755553B546480A7C5 a dcterms:Collection ;
     rdfs:label "Biologische Landwirtschaft"@de,
@@ -134,8 +132,7 @@
         :57A74BCEC7111D05E0532D0E870A0EAF,
         :57A74BCEC7131D05E0532D0E870A0EAF,
         :B58ACD9163A64A3C8ABD18580BFFE780 ;
-    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
-    :hierarchyLevel 2 .
+    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
 
 :A07EF60442B92B9777773B546480A7C5 a dcterms:Collection ;
     rdfs:label "Graslandbasierte Milch- und Fleischproduktion (GMF)"@de,
@@ -144,8 +141,7 @@
     schema:hasPart :42322B5300474C3D944CC1033F7653B6,
         :57A74BCEC0C61D05E0532D0E870A0EAF,
         :ABF667644332451BA425C81187877E8C ;
-    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
-    :hierarchyLevel 2 .
+    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
 
 :A07EF60442B92B978AAA3B546480A7C5 a dcterms:Collection ;
     rdfs:label "Gesätzliche Minimalanforderungen"@de,
@@ -156,27 +152,24 @@
         Betriebszweige bewirtschaften -- unabhängig davon, ob sie Direktzahlungen beziehen oder nicht.
         Es handeln sich z.B. um Vorgaben im Tierschutz und Umweltschutz. Die Kontrollpunkte und Hilfstexte wurden erarbeitet für die Kontrolleure.
         Sie wurden nicht überarbeitet für Agricheck. Deshalb können sie teilweise sehr umfangreich und unübersichtlich sein. 
-        """@de ;
-    :hierarchyLevel 1 .
+        """@de .
 
 :A07EF60442B92B978BBB3B546480A7C5 a dcterms:Collection ;
+    rdfs:label "Direktzahlungen"@de,
+        "Paiements directs"@fr,
+        "Pagamenti diretti"@it ;
     rdfs:label """
         Diese Kontrollpunkte beinhalten alle Punkte, welche erfüllt werden müssen, damit Sie Direktzahlungen erhalten.
         Ebenfalls hier enthalten sind die Kontrollpunkte der Bio-Verordnung (Bundes-Bio). 
         Die Einhaltung von einem Teil der Kontrollpunkte sind Grundlage für die Direktzahlungsberechtigung (z.B. Einhaltung des ÖLN für ihre Betriebszweige).
         Andere Punkte sind nur gültig, wenn Sie sich für das entsprechende Programm angemeldet haben.
         Nur die schweizweit gültigen Kontrollpunkte sind abgebildet, das heisst Landschaftsqualitätsbeiträge sind z.B. ausgenommen.
-        """@de,
-        "Direktzahlungen"@de,
-        "Paiements directs"@fr,
-        "Pagamenti diretti"@it ;
-    :hierarchyLevel 1 .
+        """@de .
 
 :A07EF60442B92B978CCC3B546480A7C5 a dcterms:Collection ;
     rdfs:label "Labels"@de,
         "Labels"@fr,
-        "Labels"@it ;
-    :hierarchyLevel 1 .
+        "Labels"@it .
 
 :A07EF60442B92B978EEE3B546480A7C5 a dcterms:Collection ;
     rdfs:label "Bereich Tiergesundheit (Nutztiere, Bienen, Fische)"@de,
@@ -202,8 +195,7 @@
         :C8F4B68654354A44867D9DC2E372236A,
         :F6F1708780C448C9A9218E008BB65138,
         :F7953CB58EF845568D2DBEB476E6E926 ;
-    schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 ;
-    :hierarchyLevel 2 .
+    schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 .
 
 :A07EF60442B92B978FFF3B546480A7C5 a dcterms:Collection ;
     rdfs:label "Tierschutz (Nutztiere)"@de,
@@ -228,8 +220,7 @@
         :BDAE131E2B6E45E9843E06849E70972C,
         :C35517EED4C645939FAA761A87F35F85,
         :CB5C473CB3F348FF867610CD77F846AA ;
-    schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 ;
-    :hierarchyLevel 2 .
+    schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 .
 
 :A07EF60442B92B9799993B546480A7C5 a dcterms:Collection ;
     rdfs:label "Ressourceneffizienz (REB)"@de,
@@ -240,8 +231,7 @@
         :B1B0ED7A3BCE4EF4A49E90BDE3CDEB69,
         :B8752E0F955A4D979A3DA906C5F346A4,
         :C6EB9867709F4C64BD1F07E716804FAA ;
-    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
-    :hierarchyLevel 2 .
+    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
 
 :A07EF60442B92B97BBBB3B546480A7C5 a dcterms:Collection ;
     rdfs:label "Sömmerung"@de,
@@ -255,37 +245,51 @@
         :57A74BCEBEBC1D05E0532D0E870A0EAF,
         :57A74BCEC3EC1D05E0532D0E870A0EAF,
         :D21C9F2A93694CB48564CE922D20643F ;
-    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
-    :hierarchyLevel 2 .
+    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
 
 :A3B3FF82CFC6FC6683E03B546480AE08 a dcterms:Collection ;
     rdfs:label "Bio Suisse"@de,
         "FR: Bio Suisse"@fr,
         "Bio Suisse"@it ;
-    schema:isPartOf :A07EF60442B92B978CCC3B546480A7C5 ;
-    :hierarchyLevel 2 .
+    rdfs:comment """
+        Die Kontrollpunkte gelten für das privatrechtliche Label Bio-Suisse.
+        Zum Teil können die Kontrollpunkte sehr ähnlich sein, wie die Kontrollpunkte von Bundes-Bio.
+        Weil die Konsequenzen bei einem Mangel aber unterschiedlich sind, werden diese Kontrollpunkte separat aufgelistet.
+        """@de ;
+    schema:isPartOf :A07EF60442B92B978CCC3B546480A7C5 .
+
+:B3A2CF324826FC66839483546480AE12 a dcterms:Collection ;
+    rdfs:label "SwissGAP"@de ;
+    rdfs:comment """
+        Diese Punkte gelten nur für SwissGAP-Betriebe und sind privatrechtlich geregelt.
+        Nicht alle der nachfolgenden Checklisten-Punkte werden bei Ihnen zwingend abgefragt.
+        Zudem sind nicht alle Ihrer Kontrollpunkte kritisch für die Anerkennung.
+        Es sind alle Kontrollpunkte für Produktions-und Vermarktungsbetriebe aufgelistet.
+        Einige wenige Punkte sind nur für Betriebe gültig, welche in der Vermarktung tätig sind.
+        Wir empfehlen Ihnen, auf www.agrosolution.ch eine betriebsindividuelle Checkliste erstellen.
+        Wenn sie dort bestimmte Pauschaldeklarationen angeben (z.B. ÖLN erfüllt, Angaben zur betrieblichen Ausgangslage etc.), werden bestimmte Kapitel und Fragen ausgeblendet oder vorausgefüllt.
+        So profitieren Sie von erheblichen administrativen Vereinfachungen, welche SwissGAP für Sie erarbeitet hat.
+        """@de ;
+    schema:isPartOf :A07EF60442B92B978CCC3B546480A7C5 .
 
 :A3B3FF82D326326683E03B546480AE08 a dcterms:Collection ;
     rdfs:label "Vernetzung"@de,
         "FR: Vernetzung"@fr,
         "Vernetzung"@it ;
-    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
-    :hierarchyLevel 2 .
+    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
 
 :A3B3FF82D453453683E03B546480AE08 a dcterms:Collection ;
     rdfs:label "Landschaftsqualität"@de,
         "FR: Landschaftsqualität"@fr,
         "Landschaftsqualität"@it ;
-    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
-    :hierarchyLevel 2 .
+    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
 
 :BC2A4CD9A00500553AE03B546480AF5B a dcterms:Collection ;
     rdfs:label "in-situ"@de,
         "FR: in-situ"@fr,
         "in-situ"@it ;
     schema:hasPart :620C05912BA845DE9289F9C2F1F4CF42 ;
-    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
-    :hierarchyLevel 2 .
+    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
 
 :CD483976909F09F029E03B446480A754 a dcterms:Collection ;
     rdfs:label "BTS"@de,
@@ -297,8 +301,7 @@
         :57A74BCEC0D11D05E0532D0E870A0EAF,
         :57A74BCEC1A71D05E0532D0E870A0EAF,
         :57A74BCEC2421D05E0532D0E870A0EAF ;
-    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
-    :hierarchyLevel 2 .
+    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
 
 :CD48397690A00A0029E03B446480A754 a dcterms:Collection ;
     rdfs:label "RAUS"@de,
@@ -311,8 +314,7 @@
         :A8249C889C964BA1B97B0633AD25B9B8,
         :A8D4945497524A4A9871B2BF6FECFA06,
         :B30B90DFC2CE4DA9B6B2E9CBEC8BA383 ;
-    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
-    :hierarchyLevel 2 .
+    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
 
 :CD4C74B78680680174E03B546480A6E4 a dcterms:Collection ;
     rdfs:label "Pflanzliche Primärproduktion"@de,
@@ -320,8 +322,7 @@
         "Pflanzliche Primärproduktion"@it ;
     schema:hasPart :856F1ACB7CD14DFC9911D2A31FAAEBFB,
         :B76AEEB28B54425DB79A3FC4193501E5 ;
-    schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 ;
-    :hierarchyLevel 2 .
+    schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 .
 
 :CD4C74B78681681174E03B546480A6E4 a dcterms:Collection ;
     rdfs:label "Tierische Primärproduktion"@de,
@@ -333,16 +334,14 @@
         :57A74BCEB4CD1D05E0532D0E870A0EAF,
         :57A74BCEC4121D05E0532D0E870A0EAF,
         :57A74BCEC7301D05E0532D0E870A0EAF ;
-    schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 ;
-    :hierarchyLevel 2 .
+    schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 .
 
 :ED616BC429519513A9E03B446480AB1A a dcterms:Collection ;
     rdfs:label "Effizienter Stickstoffeinsatz im Ackerbau"@de,
         "FR: Effizienter Stickstoffeinsatz im Ackerbau"@fr,
         "IT: Effizienter Stickstoffeinsatz im Ackerbau"@it ;
     schema:hasPart :D1B396D806B14F5BBF8B23AF22ED13BF ;
-    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
-    :hierarchyLevel 2 .
+    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
 
 :ED616BC429529523A9E03B446480AB1A a dcterms:Collection ;
     rdfs:label "Bodenbedeckung/Bodenbearbeitung"@de,
@@ -350,13 +349,11 @@
         "IT: Bodenbedeckung/Bodenbearbeitung"@it ;
     schema:hasPart :1F44218E7A46479B8A982149FD01B279,
         :D14116474BB345F5A176DB200E40A8DD ;
-    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
-    :hierarchyLevel 2 .
+    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
 
 :ED616BC429539533A9E03B446480AB1A a dcterms:Collection ;
     rdfs:label "Produktionssysteme Ackerbau und Dauerkulturen"@de,
         "FR: Produktionssysteme Ackerbau und Dauerkulturen"@fr,
         "IT: Produktionssysteme Ackerbau und Dauerkulturen"@it ;
-    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
-    :hierarchyLevel 2 .
+    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
 
