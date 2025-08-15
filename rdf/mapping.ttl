@@ -151,10 +151,23 @@
     rdfs:label "Gesätzliche Minimalanforderungen"@de,
         "Exigences légales minimales"@fr,
         "Requisiti minimi di legge"@it ;
+    rdfs:comment """
+        Diese Kontrollpunkte sind allgemeingültig und müssen von allen landwirtschaftlichen Betrieben erfüllt werden, welche die entsprechenden
+        Betriebszweige bewirtschaften -- unabhängig davon, ob sie Direktzahlungen beziehen oder nicht.
+        Es handeln sich z.B. um Vorgaben im Tierschutz und Umweltschutz. Die Kontrollpunkte und Hilfstexte wurden erarbeitet für die Kontrolleure.
+        Sie wurden nicht überarbeitet für Agricheck. Deshalb können sie teilweise sehr umfangreich und unübersichtlich sein. 
+        """@de ;
     :hierarchyLevel 1 .
 
 :A07EF60442B92B978BBB3B546480A7C5 a dcterms:Collection ;
-    rdfs:label "Direktzahlungen"@de,
+    rdfs:label """
+        Diese Kontrollpunkte beinhalten alle Punkte, welche erfüllt werden müssen, damit Sie Direktzahlungen erhalten.
+        Ebenfalls hier enthalten sind die Kontrollpunkte der Bio-Verordnung (Bundes-Bio). 
+        Die Einhaltung von einem Teil der Kontrollpunkte sind Grundlage für die Direktzahlungsberechtigung (z.B. Einhaltung des ÖLN für ihre Betriebszweige).
+        Andere Punkte sind nur gültig, wenn Sie sich für das entsprechende Programm angemeldet haben.
+        Nur die schweizweit gültigen Kontrollpunkte sind abgebildet, das heisst Landschaftsqualitätsbeiträge sind z.B. ausgenommen.
+        """@de,
+        "Direktzahlungen"@de,
         "Paiements directs"@fr,
         "Pagamenti diretti"@it ;
     :hierarchyLevel 1 .
