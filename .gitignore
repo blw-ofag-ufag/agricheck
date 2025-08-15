@@ -2,7 +2,8 @@ data/
 .DS_Store
 .Rhistory
 upload.sh
-notes.md
+notes.*
+test.*
 
 rdf/*.ttl
 !rdf/ontology.ttl
