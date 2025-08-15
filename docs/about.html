@@ -22,58 +22,40 @@
     <h1 class="mb-3">
         Agricheck &ndash; Ihr Schnellzugriff auf Schweizer Kontrollpunkte
     </h1>
-      
+    
     <p>
-        Agricheck ist eine Prototyp-Webapplikation, die Landwirt:innen digitalen Zugang zu allen relevanten Kontrollpunkten des Schweizer Agrar- und Ernährungssektors bietet.
-        Die Anwendung verknüpft dafür offene Daten des Bundes, von Kantonen und Label-Organisationen mit einer modernen UI.
+      Agricheck ist eine Prototyp-Webapplikation, die Landwirt:innen digitalen Zugang zu möglichst allen relevanten Kontrollpunkten auf Schweizer Landwirtschafsbetrieben bietet.
+      Die Anwendung verknüpft dafür offene Daten des Bundes, von Kantonen und Label-Organisationen mit einer modernen UI.
     </p>
 
-    <h2 class=" h3 mt-4">Wer hat diesen Prototyp umgesetzt?</h2>
-
+    <h2 class=" h3 mt-4">Wer hat diese App umgesetzt?</h2>
+    
     <p>
-    Dieser Prototyp wurde im Frühjahr 2025 am Bundesamt für Landwirtschaft in Zusammenarbeit mit Externen
-    während drei Hackathon-Tagen erarbeitet. Er dient nur Demonstrationszwecken.
-    Wenden Sie sich bei Fragen an <a href="mailto:info@blw.admin.ch">info@blw.admin.ch</a>.
+      Das Bundesamt für Landwirtschaft hat diesen Prototyp im Jahr 2025 im Rahmen des Aktionsplans «Kontrollen auf Landwirtschaftsbetrieben» in Zusammenarbeit mit unterzeichnenden Organisationen des Aktionsplans erarbeitet.
+      Bis Ende 2025 handelt es sich um einen Prototyp, der weiter optimiert wird.
     </p>
     
-    <h2 class=" h3 mt-4">Was kann die Web-App?</h2>
+    <p>
+      Zu berücksichtigen sind folgende Punkte:
+    </p>
+    
     <ul>
-    <li><strong>Zentrale Suche und Navigation:</strong>
-        Öffentliche, kantonale und privatrechtliche
-        Kontrollpunkt-Gruppen sind in einer Baumansicht
-        (jsTree + Lunr Search) schnell durchsuchbar.</li>
-    
-    <li><strong>Individuelle Checklisten per Klick:</strong>
-        Gewählte Gruppen lassen sich als druck- und PDF-taugliche
-        Checkliste (<code>window.print()</code>) oder als Excel-Datei
-        (SheetJS) exportieren.</li>
-    
-    <li><strong>Teilen per URL:</strong>
-        Ihre Auswahl wird in der Adresszeile codiert – so reicht
-        ein Link, um die gleiche Liste mit Kolleg innen zu teilen.</li>
+      <li>Die Kontrollpunkte werden einmal jährlich aktualisiert, und zwar vor dem neuen Kalenderjahr.</li>
+      <li>Einige, eher unbedeutende Betriebszweige sind zugunsten der Übersichtlichkeit nicht abgebildet (z.B. Insekten).</li>
+      <li>Es sind Kontrollpunkte von Labels abgebildet, welche den Aktionsplan Kontrollen in der Landwirtschaft unterzeichnet haben, sofern sie ihre Kontrollpunkte-Listen zur Verfügung gestellt haben. Kontrollpunkte von weiteren privatrechtlichen Organisationen könnten künftig ergänzt werden.</li>
+      <li>Es wurden die Texte aus den Kontrollpunkte-Listen übernommen. Die Hilfstexte sind für Kontrolleure geschrieben worden und können deshalb für andere Personen nicht immer selbsterklärend sein.</li>
+      <li>Die Herausgeber übernehmen keine Verantwortung für die Vollständigkeit, Verständlichkeit und Korrektheit der Kontrollpunktelisten.</li>
     </ul>
-      
-      <h2 class=" h3 mt-4">So funktioniert&rsquo;s unter der Haube</h2>
-      <p>
-        Agricheck ruft live Daten über einen
-        <a href="https://lindas.admin.ch" target="_blank">SPARQL-Endpoint</a> ab:
-      </p>
-      <ol>
-        <li>Eine SPARQL-Query liefert alle Collection- und Kontrollpunkt-Knoten als
-            JSON.</li>
-        <li>Ein JavaScript-Datenmodell normalisiert die Knoten in Maps und
-            baut daraus den Navigationsbaum.</li>
-        <li>Die gesamte Logik läuft im Browser &ndash; es ist
-            <em>kein</em> Backend erforderlich; statisches Hosting
-            (z. B. GitHub Pages) genügt.</li>
-      </ol>
+
+    <p>
+      Wenden Sie sich bei Fragen an <a href='mailto:acontrol@blw.admin.ch'>acontrol@blw.admin.ch</a>.
+    </p>
 
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>AOS.init({ once:true });</script>
   
-
   <!-- Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
