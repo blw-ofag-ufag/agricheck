@@ -7,26 +7,23 @@ function buildQuery(lang) {
 PREFIX :        <https://agriculture.ld.admin.ch/inspection/>
 PREFIX schema:  <http://schema.org/>
 PREFIX dct:     <http://purl.org/dc/terms/>
-
-SELECT ?class ?item ?name ?description ?parent ?identifier
-WHERE {
-  VALUES ?lang  { "${lang}" }
-  VALUES ?class { :InspectionPoint dct:Collection }
-
-  ?item a ?class ;
-        schema:name ?name .
+SELECT *
+FROM <https://lindas.admin.ch/foag/ontologies>
+WHERE
+{
+  VALUES ?lang { "${lang}" }
+  :42EA1020A8742ACABFB1B7A426619C42 schema:hasPart+ / :includesInspectionPoints* ?item .
+  ?item a ?class .
+  ?item schema:name ?name .
   FILTER(LANG(?name) = ?lang)
-
   OPTIONAL {
     ?item schema:description ?description .
     FILTER(LANG(?description) = ?lang)
   }
-
   OPTIONAL {
     ?item ?link ?parent .
     VALUES ?link { schema:isPartOf :belongsToGroup }
   }
-
   OPTIONAL { ?item schema:identifier ?identifier }
 }
 ORDER BY ?identifier ?item
