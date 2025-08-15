@@ -33,7 +33,7 @@ rm(xml_file_path, url, temp_zip, unzip_dir)
 # ================
 
 # function to convert one [thing] description
-describe <- function(x, class, hierarchyLevel = NULL, relationPredicate = "schema:isPartOf") {
+describe <- function(x, class, relationPredicate = "schema:isPartOf") {
   subject <- x |> getElement("versionStableId") |> unlist() |> uri(base)
   triple(subject, "a", uri(class))
   for (lang in c("De", "Fr", "It"))
@@ -71,10 +71,6 @@ describe <- function(x, class, hierarchyLevel = NULL, relationPredicate = "schem
     unlist() |>
     literal() |>
     triple(subject, uri("conjunctIdentifier", base), object = _)
-
-  if(!is.null(hierarchyLevel)) {
-    triple(subject, ":hierarchyLevel", hierarchyLevel)
-  }
 }
 
 # convert (a part of the XML) to an R list for quicker processing
@@ -97,7 +93,7 @@ data <- xml_to_list(XML, "//rubric")
 # convert all rubrics
 for (i in 1:length(data)) {
   data[[i]][["description"]] |>
-    describe(class = "http://purl.org/dc/terms/Collection", hierarchyLevel = 3)
+    describe(class = "http://purl.org/dc/terms/Collection")
 }
 
 # PARSE GROUPS
@@ -109,7 +105,7 @@ data <- xml_to_list(XML, "//group")
 # convert all rubrics
 for (i in 1:length(data)) {
   data[[i]][["description"]] |>
-    describe(class = "http://purl.org/dc/terms/Collection", hierarchyLevel = 4)
+    describe(class = "http://purl.org/dc/terms/Collection")
 }
 
 # PARSE INSPECTION POINTS

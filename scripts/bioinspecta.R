@@ -54,19 +54,6 @@ for (i in 1:nrow(data)) {
 # (they are invalid because within the BioSuisse data set, no top level parent is defined)
 data[data$parent=="character(0)","parent"] <- biosuisse
 
-# determine the hierarchy level of each point
-data$hierarchyLevel <- NA
-for (i in 1:nrow(data))
-{
-
-  # Determine the hierarchy level of each point by counting the number of periods in its code
-  data[i,"hierarchyLevel"] <- data[i,"Code"] |>
-    as.character() |>
-    strsplit("\\.") |> # split code by periods
-    unlist() |>
-    length() + 1 # add one, because the top level node `biosuisse` is actually hierarchy level 2
-}
-
 # create new variable for unified `Text` and `Beschreibung`
 for (lang in language_codes) {
    data[[paste(lang, "Description")]] <- NA
@@ -142,10 +129,6 @@ for (i in 1:nrow(data))
     # State the parent of this specific collection
     # (The parent was computed earlier already)
     rdfhelper::triple(subject, "schema:isPartOf", as.character(data[i,"parent"]))
-
-    # State the hierarchy level of the specific collection
-    # (The hierarchy level was computed earlier already based on the periods in the "Code")
-    triple(subject, ":hierarchyLevel", as.integer(data[i,"hierarchyLevel"]))
   }
 
   # process individual inspection points
