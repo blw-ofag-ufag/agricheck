@@ -8,7 +8,7 @@ PREFIX :        <https://agriculture.ld.admin.ch/inspection/>
 PREFIX schema:  <http://schema.org/>
 PREFIX dct:     <http://purl.org/dc/terms/>
 SELECT *
-FROM <https://lindas.admin.ch/foag/ontologies>
+FROM <https://lindas.admin.ch/foag/inspections>
 WHERE
 {
   VALUES ?lang { "${lang}" }
