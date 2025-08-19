@@ -1,9 +1,18 @@
 
-agricheck
+AGRICHECK
 =========
 
-A collection of checkpoints for inspections in the agri-food sector. [Here's an example of such an inspection point.](https://agriculture.ld.admin.ch/inspection/0A60DB5BD8144E25B550D03A3B176B66)
+The current multitude of inspections in both the private and public sectors represents a significant administrative burden for farms in Switzerland. With over 5000 inspection points[^1] and more than 20 different inspection programs, the system lacks a user-friendly coordination. Existing processes are neither very digitized nor harmonized, leading to redundancies and inefficiencies for both farmers and authorities.
 
+[^1]: Here, an inspection point is a specific, verifiable criterion within an agricultural control program used to assess a farm's compliance with a particular regulation or standard.
+
+The goal of agricheck is to first collect and harmonize inspection points from both the private and public agricultural sector, and second to provide [a simple web application for farmers](https://blw-ofag-ufag.github.io/agricheck/) to quickly search and navigate these inspection points.
+
+# The data
+
+The data from various sources is standardized and freely provided in the RDF format via the linked data service LINDAS by the Federal Archive. [Here's an example example inspection point as a linked data object on LINDAS.](https://agriculture.ld.admin.ch/inspection/0A60DB5BD8144E25B550D03A3B176B66)
+
+The data of agricheck is organized hierarchically.
 Here are the links to the top-level collections:
 
 - [Legal minimum](https://agriculture.ld.admin.ch/inspection/A07EF60442B92B978AAA3B546480A7C5)
