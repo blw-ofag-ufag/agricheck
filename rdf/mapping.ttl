@@ -149,7 +149,7 @@
     schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
 
 :A07EF60442B92B978AAA3B546480A7C5 a dcterms:Collection ;
-    rdfs:label "Gesätzliche Minimalanforderungen"@de,
+    rdfs:label "Gesetzliche Minimalanforderungen"@de,
         "Exigences légales minimales"@fr,
         "Requisiti minimi di legge"@it ;
     rdfs:comment """
