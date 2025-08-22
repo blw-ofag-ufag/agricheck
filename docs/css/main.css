@@ -60,13 +60,6 @@ input[type="search"]::-webkit-search-results-decoration {
 .section-number {
   color: var(--muted);
 }
-.id-chip {
-  color: var(--primary);
-  border: 2px solid var(--primary);
-  border-radius: 0.5rem;
-  padding: 0.15rem 0.3rem;
-  background-color: var(--white);
-}
 ul.checklist {
   list-style: none;
   margin: 0 0 1rem;

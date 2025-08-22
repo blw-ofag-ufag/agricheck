@@ -68,13 +68,6 @@ function renderCollection(uri, numbers, lang) {
   numSpan.textContent = numbers.join('.');
   heading.appendChild(numSpan);
   heading.innerHTML += window.getLocalizedText(node.label, lang);
-
-  if (node.type === 'Collection' && node.identifier) {
-    const chip = document.createElement('span');
-    chip.className = 'badge id-chip ms-2';
-    chip.textContent = node.identifier;
-    heading.appendChild(chip);
-  }
   content.appendChild(heading);
 
   const commentText = window.getLocalizedText(node.comment, lang);
