@@ -9,13 +9,11 @@ const BASE_URI = 'https://agriculture.ld.admin.ch/inspection/';
 const content      = document.getElementById('content');
 const metaDateEl   = document.getElementById('metaDate');
 const printBtn     = document.getElementById('printBtn');
-const excelBtn     = document.getElementById('excelBtn');
 const copyLinkBtn  = document.getElementById('copyLinkBtn');
 let nodeMap;
 
 /* ---------- toolbar (unchanged) ---------------------------------------- */
 printBtn.addEventListener('click', () => window.print());
-excelBtn.addEventListener('click', () => alert(t('excelSoon')));
 copyLinkBtn.addEventListener('click', () => {
   navigator.clipboard.writeText(location.href).then(() => {
     copyLinkBtn.classList.replace('btn-outline-secondary', 'btn-success');
