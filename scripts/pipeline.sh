@@ -1,5 +1,5 @@
 # Run R preprocessing steps
-for r in acontrol bioinspecta mutterkuh; do
+for r in acontrol bioinspecta mutterkuh qm; do
   Rscript "scripts/${r}.R"
 done
 
