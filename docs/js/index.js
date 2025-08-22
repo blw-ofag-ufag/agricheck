@@ -14,27 +14,42 @@ let nodeMap;
 let selectedSet = new Set();
 let searchActive = false;
 
-/* ---------- build jsTree ---------------------------------------------- */
-(async function initTree() {
+/* ---------- top-level data fetch and initial render ------------------- */
+(async function init() {
   const bindings = await fetchBindings();
   nodeMap = buildNodeMap(bindings);
+  rebuildPage(window.__APP_LANG); // Initial render
+})();
 
+/* ---------- page render/rerender function ----------------------------- */
+window.rebuildPage = function(lang) {
+  if (treeEl.jstree(true)) {
+    treeEl.jstree(true).destroy();
+  }
+  selectedSet.clear(); // Reset selection on language change
+  generateBtn.prop('disabled', true);
+  
   function buildNode(uri) {
     const n = nodeMap.get(uri);
+    const labelText = window.getLocalizedText(n.label, lang);
 
-    const searchParts = [];
-    if (n.label)   searchParts.push(n.label);
-    if (n.comment) searchParts.push(n.comment);
+    // Search should cover all available languages for an item
+    const searchHaystack = [
+        ...Object.values(n.label),
+        ...Object.values(n.comment)
+    ];
     (n.inspectionPoints ?? []).forEach(ipUri => {
-      const ip = nodeMap.get(ipUri);
-      if (ip?.label)   searchParts.push(ip.label);
-      if (ip?.comment) searchParts.push(ip.comment);
+        const ip = nodeMap.get(ipUri);
+        if (ip) {
+            searchHaystack.push(...Object.values(ip.label));
+            searchHaystack.push(...Object.values(ip.comment));
+        }
     });
 
     return {
       id: uri,
-      text: n.label ?? uri.split('/').pop(),
-      a_attr: { 'data-search': searchParts.join(' ').toLowerCase() },
+      text: labelText,
+      a_attr: { 'data-search': searchHaystack.join(' ').toLowerCase() },
       children: (n.subGroups ?? []).map(buildNode)
     };
   }
@@ -63,14 +78,19 @@ let searchActive = false;
       const empty = selectedSet.size === 0;
       generateBtn.prop('disabled', empty)
                  .toggleClass('btn-success', !empty)
-                 .toggleClass('btn-outline-secondary', empty);
+                 .toggleClass('btn-primary', empty); // Use primary when enabled
     })
     .on('select_node.jstree', (_, data) => {
       treeEl.jstree(true).open_node(data.node);
     });
-})();
 
-/* ---------- search helpers -------------------------------------------- */
+  // Re-apply static translations and search state
+  updateSearchBtn();
+  searchInput.attr('placeholder', t('searchPlaceholder'));
+};
+
+
+/* ---------- search helpers (unchanged but depend on t()) -------------- */
 function updateSearchBtn() {
   if (searchActive) {
     searchBtn
@@ -79,13 +99,11 @@ function updateSearchBtn() {
       .addClass('btn-outline-secondary');
   } else {
     searchBtn
-      .html(`<i class="bi bi-search me-2"></i>${t('search')}`)
+      .html(`<span data-i18n="search">${t('search')}</span>`)
       .removeClass('btn-outline-secondary')
       .addClass('btn-outline-primary');
   }
 }
-updateSearchBtn();
-searchInput.attr('placeholder', t('searchPlaceholder'));
 
 function resetSearch() {
   const jsTree = treeEl.jstree(true);
@@ -124,7 +142,7 @@ searchInput.on('keydown', e => { if (e.key === 'Enter') performSearch(); });
 searchInput.on('input',  e => { if (!e.target.value.trim() && searchActive) resetSearch(); });
 searchBtn  .on('click',  () => { searchActive ? resetSearch() : performSearch(); });
 
-/* ---------- launch checklist ------------------------------------------ */
+/* ---------- launch checklist (unchanged) ------------------------------ */
 function compressSelection(set) {
   const compressed = new Set();
   for (const uri of set) {
@@ -148,14 +166,13 @@ generateBtn.on('click', () => {
   const minimal = compressSelection(selectedSet);
   const qs = [...minimal].map(u => encodeURIComponent(u.split('/').pop())).join(',');
 
-  /* use *current location* as base so the deeper path is preserved ---- */
-  const url = new URL('checklist.html', location.href); // keeps /s/…/docs/
+  const url = new URL('checklist.html', location.href);
   url.searchParams.set('groups', qs);
   url.searchParams.set('lang', window.__APP_LANG);
   location.href = url.pathname + url.search;
 });
 
-/* external helper ------------------------------------------------------- */
+/* external helper (unchanged) ------------------------------------------- */
 export function resetTree() {
   const jsTree = treeEl.jstree(true);
   jsTree.deselect_all();

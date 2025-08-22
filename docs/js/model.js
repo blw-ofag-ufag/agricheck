@@ -1,8 +1,8 @@
 // model.js – data layer for Agricheck, language‑aware -----------------------
 const ENDPOINT = 'https://lindas.admin.ch/query';
 
-/* build the SPARQL query for the requested UI language */
-function buildQuery(lang) {
+/* build the SPARQL query for ALL UI languages */
+function buildQuery() {
   return `
 PREFIX :        <https://agriculture.ld.admin.ch/inspection/>
 PREFIX schema:  <http://schema.org/>
@@ -11,15 +11,10 @@ SELECT *
 FROM <https://lindas.admin.ch/foag/inspections>
 WHERE
 {
-  VALUES ?lang { "${lang}" }
   :42EA1020A8742ACABFB1B7A426619C42 schema:hasPart+ / :includesInspectionPoints* ?item .
   ?item a ?class .
-  ?item schema:name ?name .
-  FILTER(LANG(?name) = ?lang)
-  OPTIONAL {
-    ?item schema:description ?description .
-    FILTER(LANG(?description) = ?lang)
-  }
+  OPTIONAL { ?item schema:name ?name }
+  OPTIONAL { ?item schema:description ?description }
   OPTIONAL {
     ?item ?link ?parent .
     VALUES ?link { schema:isPartOf :belongsToGroup }
@@ -32,14 +27,13 @@ ORDER BY ?identifier ?item
 
 /* ------------------------------------------------------------------ */
 export async function fetchBindings() {
-  const lang = window.__APP_LANG || 'de';
   const res  = await fetch(ENDPOINT, {
     method:  'POST',
     headers: {
       'Content-Type': 'application/sparql-query',
       'Accept':       'application/sparql-results+json'
     },
-    body: buildQuery(lang)
+    body: buildQuery()
   });
   if (!res.ok) {
     throw new Error(`SPARQL request failed: ${res.status} – ${res.statusText}`);
@@ -47,12 +41,13 @@ export async function fetchBindings() {
   return res.json();
 }
 
-/* unchanged helper functions ---------------------------------------- */
+/* buildNodeMap now handles multiple languages from the query results */
 export function buildNodeMap(bindingsJson) {
   const rows = bindingsJson.results.bindings;
   const v = (row, key) => row[key]?.value;
+  const l = (row, key) => row[key]?.['xml:lang'];
 
-  /* instantiate every node once */
+  /* instantiate every node once, with objects for labels/comments */
   const map = new Map();
   for (const row of rows) {
     const uri = v(row, 'item');
@@ -60,25 +55,31 @@ export function buildNodeMap(bindingsJson) {
       map.set(uri, {
         uri,
         type: v(row, 'class').includes('Collection') ? 'Collection' : 'InspectionPoint',
-
-        label:      v(row, 'name'),
-        comment:    v(row, 'description') || null,
-        identifier: v(row, 'identifier')   || null,
-
+        label:      {}, // Will be {de: '...', fr: '...'}
+        comment:    {}, // Will be {de: '...', fr: '...'}
+        identifier: v(row, 'identifier') || null,
         subGroups:        [],
         inspectionPoints: [],
-
         superGroup:  null,
         parentGroup: null
       });
     }
+    // Populate language variants
+    const node = map.get(uri);
+    if (v(row, 'name'))        node.label[l(row, 'name')] = v(row, 'name');
+    if (v(row, 'description')) node.comment[l(row, 'description')] = v(row, 'description');
   }
 
   /* wire parents/children */
+  const processedLinks = new Set();
   for (const row of rows) {
     const uri    = v(row, 'item');
     const parent = v(row, 'parent');
     if (!parent) continue;
+
+    const linkId = `${uri}->${parent}`;
+    if (processedLinks.has(linkId)) continue;
+    processedLinks.add(linkId);
 
     const node       = map.get(uri);
     const parentNode = map.get(parent);
@@ -86,10 +87,10 @@ export function buildNodeMap(bindingsJson) {
 
     if (node.type === 'Collection') {
       node.superGroup = parent;
-      parentNode.subGroups.push(uri);
+      if (!parentNode.subGroups.includes(uri)) parentNode.subGroups.push(uri);
     } else {
       node.parentGroup = parent;
-      parentNode.inspectionPoints.push(uri);
+      if (!parentNode.inspectionPoints.includes(uri)) parentNode.inspectionPoints.push(uri);
     }
   }
   return map;

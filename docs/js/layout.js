@@ -1,5 +1,22 @@
 /* layout.js – inject header/footer, manage language & internal links -----*/
 
+/* helper for localized text with fallback system ----------------------*/
+window.getLocalizedText = (textObj, lang, fallbackWrapper = true) => {
+  const fallbackOrder = [lang, 'de', 'fr', 'it'];
+  for (const l of fallbackOrder) {
+    if (textObj[l]) {
+      if (l === lang || !fallbackWrapper) {
+        return textObj[l];
+      } else {
+        return `${l.toUpperCase()}: <em>${textObj[l]}</em>`;
+      }
+    }
+  }
+  const anyLang = Object.keys(textObj)[0];
+  return anyLang ? `<strong>${anyLang.toUpperCase()}:</strong> <em>${textObj[anyLang]}</em>` : '';
+};
+
+
 /* expose a promise so other modules can await translations --------------*/
 window.__i18nReady = (async () => {
   const urlParams  = new URLSearchParams(location.search);
@@ -17,6 +34,15 @@ window.__i18nReady = (async () => {
 
   return { lang };
 })();
+
+function applyTranslations(root = document) {
+  root.querySelectorAll('[data-i18n]').forEach(el => {
+    el.innerHTML = t(el.dataset.i18n);
+  });
+  root.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    el.setAttribute('placeholder', t(el.dataset.i18nPlaceholder));
+  });
+}
 
 /* ----------------------------------------------------------------------*/
 document.addEventListener('DOMContentLoaded', async () => {
@@ -37,16 +63,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   /* wait until translations exist, then translate static markup --------*/
   const { lang } = await window.__i18nReady;
-
-  function applyTranslations(root = document) {
-    root.querySelectorAll('[data-i18n]').forEach(el => {
-      el.innerHTML = t(el.dataset.i18n);
-    });
-    root.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-      el.setAttribute('placeholder', t(el.dataset.i18nPlaceholder));
-    });
-  }
   applyTranslations(document);
+  patchLinks(lang);
 
   /* ---------- language dropdown -------------------------------------- */
   const curLabel = document.getElementById('currentLangLabel');
@@ -57,30 +75,42 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (code === lang) a.classList.add('active');
     a.addEventListener('click', e => {
       e.preventDefault();
-      const params = new URLSearchParams(location.search);
-      params.set('lang', code);
-      location.search = params.toString();          // reload in new lang
+      if (code === window.__APP_LANG) return; // No change
+
+      // Update state
+      window.__APP_LANG = code;
+      localStorage.setItem('akcLang', code);
+      document.documentElement.lang = code;
+
+      // Update UI
+      window.__i18nReady = (async () => {
+          const translationsAll = await fetch('i18n/translations.json').then(r => r.json());
+          const translations    = translationsAll[code] || translationsAll['de'];
+          window.t = key => translations[key] ?? key;
+          return { lang: code };
+      })();
+      
+      applyTranslations();
+      patchLinks(code);
+      curLabel.textContent = code.toUpperCase();
+      document.querySelectorAll('.lang-option').forEach(el => el.classList.remove('active'));
+      e.target.classList.add('active');
+
+      // Trigger page-specific rerender if the function exists
+      if (typeof window.rebuildPage === 'function') {
+        window.rebuildPage(code);
+      }
     });
   });
 
   /* ---------- keep ?lang= in all internal links ---------------------- */
-  function patchLinks() {
-    /* base directory of current file, incl. trailing slash              */
-    const baseDir = location.pathname.replace(/[^/]*$/, '');
-
+  function patchLinks(currentLang) {
     document.querySelectorAll('a[href$=".html"]').forEach(a => {
       const raw = a.getAttribute('href');
-
-      /* skip absolute URLs or “rooted” paths that already start with / */
       if (/^(https?:)?\/\//.test(raw) || raw.startsWith('/')) return;
-
-      /* resolve relative link *against the full current URL*           */
-      const u = new URL(raw, location.href);        // keeps /s/…/docs/…
-      u.searchParams.set('lang', lang);
-
-      /* set absolute path incl. dir + query – keeps env sub‑path       */
+      const u = new URL(raw, location.href);
+      u.searchParams.set('lang', currentLang);
       a.setAttribute('href', u.pathname + u.search);
     });
   }
-  patchLinks();
 });
