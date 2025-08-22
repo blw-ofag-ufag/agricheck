@@ -135,3 +135,14 @@ ul.checklist label {
     z-index: 1010;
   }
 }
+.tooltip {
+  z-index: 1080 !important;
+}
+.wide-tooltip .tooltip-inner {
+  --bs-tooltip-max-width: 800px;
+  text-align: left;
+}
+.wide-tooltip .tooltip-inner a {
+  color: var(--white);
+  text-decoration: underline;
+}

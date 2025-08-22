@@ -32,6 +32,7 @@ window.rebuildPage = function(lang) {
   function buildNode(uri) {
     const n = nodeMap.get(uri);
     const labelText = window.getLocalizedText(n.label, lang);
+    const descriptionText = window.getLocalizedText(n.comment, lang, false);
 
     // Search should cover all available languages for an item
     const searchHaystack = [
@@ -45,13 +46,22 @@ window.rebuildPage = function(lang) {
             searchHaystack.push(...Object.values(ip.comment));
         }
     });
-
-    return {
+    
+    const nodeData = {
       id: uri,
       text: labelText,
       a_attr: { 'data-search': searchHaystack.join(' ').toLowerCase() },
       children: (n.subGroups ?? []).map(buildNode)
     };
+    
+    // If a description exists, add Bootstrap tooltip attributes
+    if (descriptionText) {
+      nodeData.a_attr['data-bs-toggle'] = 'tooltip';
+      nodeData.a_attr['data-bs-placement'] = 'right';
+      nodeData.a_attr['title'] = descriptionText;
+    }
+
+    return nodeData;
   }
 
   const roots = [...nodeMap.values()]
@@ -83,6 +93,15 @@ window.rebuildPage = function(lang) {
     .on('select_node.jstree', (_, data) => {
       treeEl.jstree(true).open_node(data.node);
     });
+    
+  // Initialize Bootstrap tooltips with new options
+  new bootstrap.Tooltip(treeEl[0], {
+    selector: '[data-bs-toggle="tooltip"]',
+    trigger: 'hover',
+    html: true,
+    customClass: 'wide-tooltip',
+    delay: { show: 500, hide: 50 }
+  });
 
   // Re-apply static translations and search state
   updateSearchBtn();
