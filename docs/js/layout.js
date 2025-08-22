@@ -8,7 +8,7 @@ window.getLocalizedText = (textObj, lang, fallbackWrapper = true) => {
       if (l === lang || !fallbackWrapper) {
         return textObj[l];
       } else {
-        return `${l.toUpperCase()}: <em>${textObj[l]}</em>`;
+        return `<strong>${l.toUpperCase()}:</strong> <em>${textObj[l]}</em>`;
       }
     }
   }
@@ -17,32 +17,20 @@ window.getLocalizedText = (textObj, lang, fallbackWrapper = true) => {
 };
 
 
-/* expose a promise so other modules can await translations --------------*/
+/* expose a promise so other modules can await initial translations ------*/
 window.__i18nReady = (async () => {
   const urlParams  = new URLSearchParams(location.search);
   const urlLang    = urlParams.get('lang');
   const storedLang = localStorage.getItem('akcLang');
   const lang       = (urlLang || storedLang || 'de').toLowerCase();
 
-  window.__APP_LANG          = lang;
+  window.__APP_LANG = lang;
   document.documentElement.lang = lang;
   localStorage.setItem('akcLang', lang);
 
   const translationsAll = await fetch('i18n/translations.json').then(r => r.json());
-  const translations    = translationsAll[lang] || translationsAll['de'];
-  window.t = key => translations[key] ?? key;
-
-  return { lang };
+  return { lang, translationsAll };
 })();
-
-function applyTranslations(root = document) {
-  root.querySelectorAll('[data-i18n]').forEach(el => {
-    el.innerHTML = t(el.dataset.i18n);
-  });
-  root.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-    el.setAttribute('placeholder', t(el.dataset.i18nPlaceholder));
-  });
-}
 
 /* ----------------------------------------------------------------------*/
 document.addEventListener('DOMContentLoaded', async () => {
@@ -61,49 +49,22 @@ document.addEventListener('DOMContentLoaded', async () => {
             .setProperty('--akc-navbar-h', nav.offsetHeight + 'px');
   }
 
-  /* wait until translations exist, then translate static markup --------*/
-  const { lang } = await window.__i18nReady;
-  applyTranslations(document);
-  patchLinks(lang);
+  /* wait until initial language and all translations are ready --------*/
+  const { lang: initialLang, translationsAll } = await window.__i18nReady;
 
-  /* ---------- language dropdown -------------------------------------- */
-  const curLabel = document.getElementById('currentLangLabel');
-  if (curLabel) curLabel.textContent = lang.toUpperCase();
+  /* define the global translation function `t` for the first time -----*/
+  window.t = key => (translationsAll[initialLang] || translationsAll['de'])[key] ?? key;
 
-  document.querySelectorAll('.lang-option').forEach(a => {
-    const code = a.dataset.lang;
-    if (code === lang) a.classList.add('active');
-    a.addEventListener('click', e => {
-      e.preventDefault();
-      if (code === window.__APP_LANG) return; // No change
-
-      // Update state
-      window.__APP_LANG = code;
-      localStorage.setItem('akcLang', code);
-      document.documentElement.lang = code;
-
-      // Update UI
-      window.__i18nReady = (async () => {
-          const translationsAll = await fetch('i18n/translations.json').then(r => r.json());
-          const translations    = translationsAll[code] || translationsAll['de'];
-          window.t = key => translations[key] ?? key;
-          return { lang: code };
-      })();
-      
-      applyTranslations();
-      patchLinks(code);
-      curLabel.textContent = code.toUpperCase();
-      document.querySelectorAll('.lang-option').forEach(el => el.classList.remove('active'));
-      e.target.classList.add('active');
-
-      // Trigger page-specific rerender if the function exists
-      if (typeof window.rebuildPage === 'function') {
-        window.rebuildPage(code);
-      }
+  function applyTranslations(root = document) {
+    root.querySelectorAll('[data-i18n]').forEach(el => {
+      el.innerHTML = t(el.dataset.i18n);
     });
-  });
+    root.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      el.setAttribute('placeholder', t(el.dataset.i18nPlaceholder));
+    });
+  }
+  applyTranslations(document); // Initial translation run
 
-  /* ---------- keep ?lang= in all internal links ---------------------- */
   function patchLinks(currentLang) {
     document.querySelectorAll('a[href$=".html"]').forEach(a => {
       const raw = a.getAttribute('href');
@@ -113,4 +74,47 @@ document.addEventListener('DOMContentLoaded', async () => {
       a.setAttribute('href', u.pathname + u.search);
     });
   }
+  patchLinks(initialLang); // Initial link patching
+
+  /* ---------- language dropdown -------------------------------------- */
+  const curLabel = document.getElementById('currentLangLabel');
+  if (curLabel) curLabel.textContent = initialLang.toUpperCase();
+
+  document.querySelectorAll('.lang-option').forEach(a => {
+    const code = a.dataset.lang;
+    if (code === initialLang) a.classList.add('active');
+
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const newLang = a.dataset.lang;
+      if (newLang === window.__APP_LANG) return;
+
+      // 1. Update global state
+      window.__APP_LANG = newLang;
+      localStorage.setItem('akcLang', newLang);
+      document.documentElement.lang = newLang;
+
+      // 2. Update the URL without reloading the page
+      const url = new URL(location.href);
+      url.searchParams.set('lang', newLang);
+      history.pushState({}, '', url.toString());
+
+      // 3. Update the `t` function and re-apply all static translations
+      window.t = key => (translationsAll[newLang] || translationsAll['de'])[key] ?? key;
+      applyTranslations(document);
+
+      // 4. Update the language selector's UI
+      curLabel.textContent = newLang.toUpperCase();
+      document.querySelectorAll('.lang-option').forEach(el => el.classList.remove('active'));
+      a.classList.add('active');
+
+      // 5. Update internal links to carry the new language parameter
+      patchLinks(newLang);
+
+      // 6. Trigger a re-render of the page's dynamic content
+      if (typeof window.rebuildPage === 'function') {
+        window.rebuildPage(newLang);
+      }
+    });
+  });
 });
