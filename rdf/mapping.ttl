@@ -3,22 +3,12 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
 
-:38EA1020A8794BB0AFB1B7A486619C7F a dcterms:Collection ;
-    rdfs:label "Luftreinhaltung"@de,
-        "Protection de l'air"@fr,
-        "Inquinamento atmosferico"@it ;
-    schema:hasPart :C3AC1DC7CB4A4CBCA428AB4C0446C4B5 ;
-    schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 .
-
 :42EA1020A8742ACABFB1B7A426619C42 a dcterms:Collection ;
     rdfs:label "BFC"@en ;
     schema:hasPart :A07EF60442B92B978AAA3B546480A7C5,
         :A07EF60442B92B978BBB3B546480A7C5,
         :A07EF60442B92B978CCC3B546480A7C5 ;
     rdfs:comment "A collection of all collections, makes querying easier."@de .
-
-:957859627D824A60B076A86082454FCC a dcterms:Collection ;
-    schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 .
 
 :84EA0583A8534BB0AFDC27A486652C3C a dcterms:Collection ;
     rdfs:label "QM Schweizer Fleisch"@de,
@@ -39,9 +29,11 @@
         Die Kontrollpunkte gelten für das Label "Mutterkuh Schweiz".
         """@de .
 
+:957859627D824A60B076A86082454FCC a dcterms:Collection ;
+    schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 .
+
 :A07EF60442B92B9700003B546480A7C5 a dcterms:Collection ;
     rdfs:label "Umwelt"@de,
-        "FR: Bereich Umwelt"@fr,
         "Ambito Ambiente"@it ;
     schema:hasPart :57A74BCEB4C11D05E0532D0E870A0EAF,
         :57A74BCEB5A41D05E0532D0E870A0EAF ;
@@ -49,14 +41,12 @@
 
 :A07EF60442B92B9711113B546480A7C5 a dcterms:Collection ;
     rdfs:label "Beitragsvoraussetzungen"@de,
-        "FR: Beitragsvoraussetzungen"@fr,
         "Ambito Condizioni per i contributi"@it ;
     schema:hasPart :57A74BCEB8251D05E0532D0E870A0EAF ;
     schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
 
 :A07EF60442B92B9722223B546480A7C5 a dcterms:Collection ;
     rdfs:label "Strukturdaten"@de,
-        "FR: Strukturdaten"@fr,
         "Ambito Dati strutturali"@it ;
     schema:hasPart :57A74BCEB82A1D05E0532D0E870A0EAF,
         :57A74BCEB82D1D05E0532D0E870A0EAF,
@@ -65,7 +55,6 @@
 
 :A07EF60442B92B9733333B546480A7C5 a dcterms:Collection ;
     rdfs:label "Ökologischer Leistungsnachweis (ÖLN)"@de,
-        "FR: Ökologischer Leistungsnachweis"@fr,
         "Ambito Prova che le esigenze ecologiche sono rispettates"@it ;
     schema:hasPart :1D0B4931DC8C42C1A2DB50F8EB7961D4,
         :25502ED4E5AC443FB25B7708CFBD797C,
@@ -84,7 +73,6 @@
 
 :A07EF60442B92B9744443B546480A7C5 a dcterms:Collection ;
     rdfs:label "Biodiversitätsförderflächen (BFF)"@de,
-        "FR: Biodiversitätsförderflächen"@fr,
         "Ambito Superfici per la promozione della biodiversità"@it ;
     schema:hasPart :03CBA0CCC0334AA497E94B0613BC4976,
         :57A74BCEB3AD1D05E0532D0E870A0EAF,
@@ -119,7 +107,6 @@
 
 :A07EF60442B92B9755553B546480A7C5 a dcterms:Collection ;
     rdfs:label "Biologische Landwirtschaft"@de,
-        "FR: Biologische Landwirtschaft"@fr,
         "Ambito Agricoltura biologica"@it ;
     schema:hasPart :57A74BCEBCE51D05E0532D0E870A0EAF,
         :57A74BCEBCED1D05E0532D0E870A0EAF,
@@ -132,15 +119,6 @@
         :57A74BCEC0C31D05E0532D0E870A0EAF,
         :57A74BCEC7111D05E0532D0E870A0EAF,
         :57A74BCEC7131D05E0532D0E870A0EAF ;
-    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
-
-:A07EF60442B92B9777773B546480A7C5 a dcterms:Collection ;
-    rdfs:label "Graslandbasierte Milch- und Fleischproduktion (GMF)"@de,
-        "FR: Graslandbasierte Milch- und Fleischproduktion"@fr,
-        "Ambito Produzione di latte e carne basata sulla superficie inerbita"@it ;
-    schema:hasPart :42322B5300474C3D944CC1033F7653B6,
-        :57A74BCEC0C61D05E0532D0E870A0EAF,
-        :ABF667644332451BA425C81187877E8C ;
     schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
 
 :A07EF60442B92B978AAA3B546480A7C5 a dcterms:Collection ;
@@ -173,7 +151,6 @@
 
 :A07EF60442B92B978EEE3B546480A7C5 a dcterms:Collection ;
     rdfs:label "Bereich Tiergesundheit (Nutztiere, Bienen, Fische)"@de,
-        "FR: Bereich Tiergesundheit (Nutztiere, Bienen, Fische)"@fr,
         "Ambito Salute degli animali (animali da reddito, api, pesci)"@it ;
     schema:hasPart :57A74BCEB4991D05E0532D0E870A0EAF,
         :F6F1708780C448C9A9218E008BB65138 ;
@@ -181,7 +158,6 @@
 
 :A07EF60442B92B978FFF3B546480A7C5 a dcterms:Collection ;
     rdfs:label "Tierschutz (Nutztiere)"@de,
-        "FR: Bereich Tierschutz (Nutztiere)"@fr,
         "Ambito Protezione degli animali (animali da reddito)"@it ;
     schema:hasPart :00DB673864714391B5EF1EE5B07D4274,
         :1A1882BA1BE14BB480673263D608DFC9,
@@ -198,15 +174,8 @@
         :CB5C473CB3F348FF867610CD77F846AA ;
     schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 .
 
-:A07EF60442B92B9799993B546480A7C5 a dcterms:Collection ;
-    rdfs:label "Ressourceneffizienz (REB)"@de,
-        "FR: Ressourceneffizienz"@fr,
-        "Ambito Efficienza delle risorse"@it ;
-    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
-
 :A07EF60442B92B97BBBB3B546480A7C5 a dcterms:Collection ;
     rdfs:label "Sömmerung"@de,
-        "FR: Sömmerung"@fr,
         "Ambito Estivazione"@it ;
     schema:hasPart :57A74BCEBD7A1D05E0532D0E870A0EAF,
         :57A74BCEBE031D05E0532D0E870A0EAF,
@@ -220,7 +189,6 @@
 
 :A3B3FF82CFC6FC6683E03B546480AE08 a dcterms:Collection ;
     rdfs:label "Bio Suisse"@de,
-        "FR: Bio Suisse"@fr,
         "Bio Suisse"@it ;
     schema:isPartOf :A07EF60442B92B978CCC3B546480A7C5 ;
     rdfs:comment """
@@ -238,21 +206,21 @@
         Zudem sind nicht alle Ihrer Kontrollpunkte kritisch für die Anerkennung.
         Es sind alle Kontrollpunkte für Produktions-und Vermarktungsbetriebe aufgelistet.
         Einige wenige Punkte sind nur für Betriebe gültig, welche in der Vermarktung tätig sind.
-        Wir empfehlen Ihnen, auf www.agrosolution.ch eine betriebsindividuelle Checkliste erstellen.
+        Wir empfehlen Ihnen, auf <a href="https://agrosolution.ch" target="_blank">agrosolution.ch</a> eine betriebsindividuelle Checkliste erstellen.
         Wenn sie dort bestimmte Pauschaldeklarationen angeben (z.B. ÖLN erfüllt, Angaben zur betrieblichen Ausgangslage etc.), werden bestimmte Kapitel und Fragen ausgeblendet oder vorausgefüllt.
         So profitieren Sie von erheblichen administrativen Vereinfachungen, welche SwissGAP für Sie erarbeitet hat.
         """@de .
 
 :BC2A4CD9A00500553AE03B546480AF5B a dcterms:Collection ;
     rdfs:label "in-situ"@de,
-        "FR: in-situ"@fr,
+        "in-situ"@fr,
         "in-situ"@it ;
     schema:hasPart :620C05912BA845DE9289F9C2F1F4CF42 ;
     schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
 
 :CD483976909F09F029E03B446480A754 a dcterms:Collection ;
     rdfs:label "BTS"@de,
-        "FR: BTS"@fr,
+        "SST"@fr,
         "SSRA"@it ;
     schema:hasPart :57A74BCEBDC31D05E0532D0E870A0EAF,
         :57A74BCEBE681D05E0532D0E870A0EAF,
@@ -264,7 +232,7 @@
 
 :CD48397690A00A0029E03B446480A754 a dcterms:Collection ;
     rdfs:label "RAUS"@de,
-        "FR: RAUS"@fr,
+        "SRPA"@fr,
         "URA"@it ;
     schema:hasPart :57A74BCEBF2C1D05E0532D0E870A0EAF,
         :57A74BCEC3B11D05E0532D0E870A0EAF,
@@ -276,46 +244,36 @@
     schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
 
 :CD4C74B78680680174E03B546480A6E4 a dcterms:Collection ;
-    rdfs:label "Pflanzliche Primärproduktion"@de,
-        "FR: Pflanzliche Primärproduktion"@fr,
-        "Pflanzliche Primärproduktion"@it ;
+    rdfs:label "Pflanzliche Primärproduktion"@de ;
     schema:hasPart :856F1ACB7CD14DFC9911D2A31FAAEBFB,
         :B76AEEB28B54425DB79A3FC4193501E5 ;
     schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 .
 
 :CD4C74B78681681174E03B546480A6E4 a dcterms:Collection ;
-    rdfs:label "Tierische Primärproduktion"@de,
-        "FR: Tierische Primärproduktion"@fr,
-        "Tierische Primärproduktion"@it ;
+    rdfs:label "Tierische Primärproduktion"@de ;
     schema:hasPart :57A74BCEAFDE1D05E0532D0E870A0EAF,
         :57A74BCEC4121D05E0532D0E870A0EAF ;
     schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 .
 
-:ED616BC429519513A9E03B446480AB1A a dcterms:Collection ;
-    rdfs:label "Effizienter Stickstoffeinsatz im Ackerbau"@de,
-        "FR: Effizienter Stickstoffeinsatz im Ackerbau"@fr,
-        "IT: Effizienter Stickstoffeinsatz im Ackerbau"@it ;
-    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
-
-:ED616BC429529523A9E03B446480AB1A a dcterms:Collection ;
-    rdfs:label "Bodenbedeckung/Bodenbearbeitung"@de,
-        "FR: Bodenbedeckung/Bodenbearbeitung"@fr,
-        "IT: Bodenbedeckung/Bodenbearbeitung"@it ;
-    schema:hasPart :D14116474BB345F5A176DB200E40A8DD ;
-    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
-
 :ED616BC429539533A9E03B446480AB1A a dcterms:Collection ;
-    rdfs:label "Produktionssystembeiträge"@de,
-        "FR: Produktionssystembeiträge"@fr,
-        "IT: Produktionssystembeiträge"@it ;
+    rdfs:label "Produktionssystembeiträge"@de ;
     schema:hasPart :1F44218E7A46479B8A982149FD01B279,
         :5DA9BCDCEA7A4445A9C0C66132ACCEE9,
         :AC65422D5D9143E3B974E4782451FE70,
         :B1B0ED7A3BCE4EF4A49E90BDE3CDEB69,
         :B58ACD9163A64A3C8ABD18580BFFE780,
         :B8752E0F955A4D979A3DA906C5F346A4,
-        :C6EB9867709F4C64BD1F07E716804FAA,
         :D14116474BB345F5A176DB200E40A8DD,
         :D1B396D806B14F5BBF8B23AF22ED13BF ;
     schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
+
+:42322B5300474C3D944CC1033F7653B6 schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
+
+:57A74BCEC0C61D05E0532D0E870A0EAF schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
+
+:ABF667644332451BA425C81187877E8C schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
+
+:C3AC1DC7CB4A4CBCA428AB4C0446C4B5 schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 .
+
+:C6EB9867709F4C64BD1F07E716804FAA schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
 
