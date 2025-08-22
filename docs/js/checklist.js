@@ -75,7 +75,7 @@ metaDateEl.textContent = new Date().toLocaleDateString(window.__APP_LANG, {
 
     if (node.comment) {
       const p = document.createElement('p');
-      p.textContent = node.comment;
+      p.innerHTML = node.comment;
       content.appendChild(p);
     }
 

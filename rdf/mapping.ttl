@@ -17,12 +17,7 @@
         :A07EF60442B92B978CCC3B546480A7C5 ;
     rdfs:comment "A collection of all collections, makes querying easier."@de .
 
-:57A74BCEB4BF1D05E0532D0E870A0EAC a dcterms:Collection ;
-    rdfs:label "Gewässerschutz"@de,
-        "Protection des eaux"@fr,
-        "Protezione delle acque"@it ;
-    schema:hasPart :57A74BCEB4BF1D05E0532D0E870A0EAF,
-        :957859627D824A60B076A86082454FCC ;
+:957859627D824A60B076A86082454FCC a dcterms:Collection ;
     schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 .
 
 :84EA0583A8534BB0AFDC27A486652C3C a dcterms:Collection ;
@@ -31,7 +26,7 @@
     schema:isPartOf :A07EF60442B92B978CCC3B546480A7C5 ;
     rdfs:comment """
         Die Kontrollpunkte gelten für alle Betriebe, die beim privatrechtlichen Programm QM Schweizer Fleisch mitmachen, d.h. es sind privatrechtliche Kontrollpukte.
-        Die Produktionsrichtlinien von QM Schweizer Fleisch finden Sie unter: <qm-schweizerfleisch.ch>.
+        Die Produktionsrichtlinien von QM Schweizer Fleisch finden Sie unter <a href="https://qm-schweizerfleisch.ch" target="_blank">qm-schweizerfleisch.ch</a>.
         """@de .
 
 :84EA1092A8794BB0AFD2B7A486619C7G a dcterms:Collection ;
