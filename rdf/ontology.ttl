@@ -23,7 +23,8 @@ dcterms:Collection a owl:Class ;
         "Defect"@en .
 
 :InspectionPoint a owl:Class ;
-    rdfs:label "Kontrollpunkt"@de ;
+    rdfs:label "Kontrollpunkt"@de,
+        "Inspection Point"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty rdfs:label ;
             owl:someValuesFrom xsd:string ],
@@ -53,7 +54,8 @@ dcterms:Collection a owl:Class ;
     rdfs:range xsd:string .
 
 :hierarchyLevel a owl:DatatypeProperty ;
-    rdfs:label "Hierarchieebene"@de ;
+    rdfs:label "Hierarchieebene"@de,
+        "Hierarchy level"@en ;
     rdfs:domain dcterms:Collection .
 
 schema:hasPart a owl:ObjectProperty ;
@@ -83,7 +85,8 @@ schema:isPartOf a owl:ObjectProperty ;
     rdfs:range :Defect .
 
 :includesInspectionPoints a owl:ObjectProperty ;
-    rdfs:label "beinhaltet Kontrollpunkte"@de ;
+    rdfs:label "beinhaltet Kontrollpunkte"@de,
+        "includes inspection points"@de ;
     rdfs:domain dcterms:Collection ;
     rdfs:inverseOf :belongsToGroup ;
     rdfs:range :InspectionPoint .
