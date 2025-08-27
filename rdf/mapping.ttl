@@ -311,9 +311,9 @@
 
 :ED616BC429539533A9E03B446480AB1A a dcterms:Collection ;
     rdfs:label "Produktionssystembeiträge"@de,
-            "Production system contributions"@en,
-            "Contributions aux systèmes de production"@fr,
-            "Contributi ai sistemi di produzione"@it ;
+        "Production system contributions"@en,
+        "Contributions aux systèmes de production"@fr,
+        "Contributi ai sistemi di produzione"@it ;
     schema:hasPart :1F44218E7A46479B8A982149FD01B279,
         :5DA9BCDCEA7A4445A9C0C66132ACCEE9,
         :AC65422D5D9143E3B974E4782451FE70,
