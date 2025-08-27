@@ -49,20 +49,26 @@
 
 :A07EF60442B92B9700003B546480A7C5 a dcterms:Collection ;
     rdfs:label "Umwelt"@de,
-        "Ambito Ambiente"@it ;
+        "Environment"@en,
+        "Environnement"@fr,
+        "Ambiente"@it ;
     schema:hasPart :57A74BCEB4C11D05E0532D0E870A0EAF,
         :57A74BCEB5A41D05E0532D0E870A0EAF ;
     schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 .
 
 :A07EF60442B92B9711113B546480A7C5 a dcterms:Collection ;
     rdfs:label "Beitragsvoraussetzungen"@de,
-        "Ambito Condizioni per i contributi"@it ;
+        "Contribution requirements"@en,
+        "Conditions de contribution"@fr,
+        "Condizioni per i contributi"@it ;
     schema:hasPart :57A74BCEB8251D05E0532D0E870A0EAF ;
     schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
 
 :A07EF60442B92B9722223B546480A7C5 a dcterms:Collection ;
     rdfs:label "Strukturdaten"@de,
-        "Ambito Dati strutturali"@it ;
+        "Structural data"@en,
+        "Données structurelles"@fr,
+        "Dati strutturali"@it ;
     schema:hasPart :57A74BCEB82A1D05E0532D0E870A0EAF,
         :57A74BCEB82D1D05E0532D0E870A0EAF,
         :57A74BCEBD821D05E0532D0E870A0EAF ;
@@ -70,7 +76,9 @@
 
 :A07EF60442B92B9733333B546480A7C5 a dcterms:Collection ;
     rdfs:label "Ökologischer Leistungsnachweis (ÖLN)"@de,
-        "Ambito Prova che le esigenze ecologiche sono rispettates"@it ;
+        "Ecological performance proof (ÖLN)"@en,
+        "Preuve de performance écologique (ÖLN)"@fr,
+        "Prova del rendimento ecologico (ÖLN)"@it ;
     schema:hasPart :1D0B4931DC8C42C1A2DB50F8EB7961D4,
         :25502ED4E5AC443FB25B7708CFBD797C,
         :57A74BCEB1981D05E0532D0E870A0EAF,
@@ -88,7 +96,9 @@
 
 :A07EF60442B92B9744443B546480A7C5 a dcterms:Collection ;
     rdfs:label "Biodiversitätsförderflächen (BFF)"@de,
-        "Ambito Superfici per la promozione della biodiversità"@it ;
+        "Biodiversity promotion areas (BFF)"@en,
+        "Surfaces de promotion de la biodiversité (SPB)"@fr,
+        "Superfici per la promozione della biodiversità (SPB)"@it ;
     schema:hasPart :03CBA0CCC0334AA497E94B0613BC4976,
         :57A74BCEB3AD1D05E0532D0E870A0EAF,
         :57A74BCEB3B11D05E0532D0E870A0EAF,
@@ -122,7 +132,9 @@
 
 :A07EF60442B92B9755553B546480A7C5 a dcterms:Collection ;
     rdfs:label "Biologische Landwirtschaft"@de,
-        "Ambito Agricoltura biologica"@it ;
+        "Organic farming"@en,
+        "Agriculture biologique"@fr,
+        "Agricoltura biologica"@it ;
     schema:hasPart :57A74BCEBCE51D05E0532D0E870A0EAF,
         :57A74BCEBCED1D05E0532D0E870A0EAF,
         :57A74BCEBCFE1D05E0532D0E870A0EAF,
@@ -173,7 +185,9 @@
 
 :A07EF60442B92B978FFF3B546480A7C5 a dcterms:Collection ;
     rdfs:label "Tierschutz (Nutztiere)"@de,
-        "Ambito Protezione degli animali (animali da reddito)"@it ;
+        "Animal welfare (farm animals)"@en,
+        "Protection des animaux (animaux de rente)"@fr,
+        "Protezione degli animali (animali da reddito)"@it ;
     schema:hasPart :00DB673864714391B5EF1EE5B07D4274,
         :1A1882BA1BE14BB480673263D608DFC9,
         :2DA5033E61C6452FBDD77197702098CE,
@@ -191,7 +205,9 @@
 
 :A07EF60442B92B97BBBB3B546480A7C5 a dcterms:Collection ;
     rdfs:label "Sömmerung"@de,
-        "Ambito Estivazione"@it ;
+        "Alpine summering"@en,
+        "Estivage"@fr,
+        "Estivazione"@it ;
     schema:hasPart :57A74BCEBD7A1D05E0532D0E870A0EAF,
         :57A74BCEBE031D05E0532D0E870A0EAF,
         :57A74BCEBE951D05E0532D0E870A0EAF,
@@ -204,13 +220,30 @@
 
 :A3B3FF82CFC6FC6683E03B546480AE08 a dcterms:Collection ;
     rdfs:label "Bio Suisse"@de,
+        "Bio Suisse"@en,
+        "Bio Suisse"@fr,
         "Bio Suisse"@it ;
     schema:isPartOf :A07EF60442B92B978CCC3B546480A7C5 ;
     rdfs:comment """
-        Die Kontrollpunkte gelten für das privatrechtliche Label Bio-Suisse.
-        Zum Teil können die Kontrollpunkte sehr ähnlich sein, wie die Kontrollpunkte von Bundes-Bio.
-        Weil die Konsequenzen bei einem Mangel aber unterschiedlich sind, werden diese Kontrollpunkte separat aufgelistet.
-        """@de .
+        Die Kontrollpunkte gelten für das privatrechtliche Label Bio Suisse.
+        Zum Teil können die Kontrollpunkte sehr ähnlich sein wie die Kontrollpunkte von Bundes-Bio.
+        Weil die Konsequenzen bei einem Mangel jedoch unterschiedlich sind, werden diese Kontrollpunkte separat aufgelistet.
+        """@de,
+        """
+        The control points apply to the private label Bio Suisse.
+        In some cases, the control points can be very similar to those of Federal Organic.
+        However, because the consequences of deficiencies differ, these control points are listed separately.
+        """@en,
+        """
+        Les points de contrôle s'appliquent au label privé Bio Suisse.
+        Dans certains cas, les points de contrôle peuvent être très similaires à ceux de Bio fédéral.
+        Toutefois, comme les conséquences en cas de manquement diffèrent, ces points de contrôle sont répertoriés séparément.
+        """@fr,
+        """
+        I punti di controllo si applicano al marchio privato Bio Suisse.
+        In alcuni casi, i punti di controllo possono essere molto simili a quelli del marchio Bio federale.
+        Tuttavia, poiché le conseguenze in caso di carenze sono diverse, questi punti di controllo vengono elencati separatamente.
+        """@it .
 
 :B3A2CF324826FC66839483546480AE12 a dcterms:Collection ;
     rdfs:label "SwissGAP"@de ;
@@ -259,19 +292,28 @@
     schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
 
 :CD4C74B78680680174E03B546480A6E4 a dcterms:Collection ;
-    rdfs:label "Pflanzliche Primärproduktion"@de ;
+    rdfs:label "Pflanzliche Primärproduktion"@de,
+        "Plant primary production"@en,
+        "Production primaire végétale"@fr,
+        "Produzione primaria vegetale"@it ;
     schema:hasPart :856F1ACB7CD14DFC9911D2A31FAAEBFB,
         :B76AEEB28B54425DB79A3FC4193501E5 ;
     schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 .
 
 :CD4C74B78681681174E03B546480A6E4 a dcterms:Collection ;
-    rdfs:label "Tierische Primärproduktion"@de ;
+    rdfs:label "Tierische Primärproduktion"@de,
+        "Animal primary production"@en,
+        "Production primaire animale"@fr,
+        "Produzione primaria animale"@it ;
     schema:hasPart :57A74BCEAFDE1D05E0532D0E870A0EAF,
         :57A74BCEC4121D05E0532D0E870A0EAF ;
     schema:isPartOf :A07EF60442B92B978AAA3B546480A7C5 .
 
 :ED616BC429539533A9E03B446480AB1A a dcterms:Collection ;
-    rdfs:label "Produktionssystembeiträge"@de ;
+    rdfs:label "Produktionssystembeiträge"@de,
+            "Production system contributions"@en,
+            "Contributions aux systèmes de production"@fr,
+            "Contributi ai sistemi di produzione"@it ;
     schema:hasPart :1F44218E7A46479B8A982149FD01B279,
         :5DA9BCDCEA7A4445A9C0C66132ACCEE9,
         :AC65422D5D9143E3B974E4782451FE70,
