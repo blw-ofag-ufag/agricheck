@@ -157,7 +157,25 @@
         Betriebszweige bewirtschaften -- unabhängig davon, ob sie Direktzahlungen beziehen oder nicht.
         Es handeln sich z.B. um Vorgaben im Tierschutz und Umweltschutz. Die Kontrollpunkte und Hilfstexte wurden erarbeitet für die Kontrolleure.
         Sie wurden nicht überarbeitet für Agricheck. Deshalb können sie teilweise sehr umfangreich und unübersichtlich sein.
-        """@de .
+        """@de,
+        """
+        These control points are universally applicable and must be met by all agricultural holdings that manage the corresponding
+        farm branches -- regardless of whether they receive direct payments or not.
+        These are, for example, requirements in animal welfare and environmental protection. The control points and help texts were developed for inspectors.
+        They have not been revised for Agricheck. Therefore, they can sometimes be very extensive and confusing.
+        """@en,
+        """
+        Ces points de contrôle sont d'application générale et doivent être respectés par toutes les exploitations agricoles qui gèrent les branches
+        d'exploitation correspondantes -- qu'elles perçoivent ou non des paiements directs.
+        Il s'agit par exemple de prescriptions en matière de protection des animaux et de l'environnement. Les points de contrôle et les textes d'aide ont été élaborés pour les contrôleurs.
+        Ils n'ont pas été révisés pour Agricheck. C'est pourquoi ils peuvent parfois être très volumineux et peu clairs.
+        """@fr,
+        """
+        Questi punti di controllo sono di validità generale e devono essere soddisfatti da tutte le aziende agricole che gestiscono i corrispondenti
+        rami aziendali, indipendentemente dal fatto che ricevano o meno pagamenti diretti.
+        Si tratta, ad esempio, di requisiti in materia di protezione degli animali e dell'ambiente. I punti di controllo e i testi di aiuto sono stati sviluppati per gli ispettori.
+        Non sono stati rivisti per Agricheck. Pertanto, a volte possono essere molto estesi e poco chiari.
+        """@it .
 
 :A07EF60442B92B978BBB3B546480A7C5 a dcterms:Collection ;
     rdfs:label "Direktzahlungen"@de,
@@ -169,7 +187,28 @@
         Die Einhaltung von einem Teil der Kontrollpunkte sind Grundlage für die Direktzahlungsberechtigung (z.B. Einhaltung des ÖLN für ihre Betriebszweige).
         Andere Punkte sind nur gültig, wenn Sie sich für das entsprechende Programm angemeldet haben.
         Nur die schweizweit gültigen Kontrollpunkte sind abgebildet, das heisst Landschaftsqualitätsbeiträge sind z.B. ausgenommen.
-        """@de .
+        """@de,
+        """
+        These control points include all points that must be met in order to receive direct payments.
+        Also included here are the control points of the Organic Farming Ordinance (Federal Organic).
+        Compliance with some of the control points is the basis for eligibility for direct payments (e.g., compliance with the Proof of Ecological Performance (PEP) for your farm branches).
+        Other points are only valid if you have registered for the corresponding program.
+        Only the control points valid throughout Switzerland are shown, meaning that landscape quality contributions, for example, are excluded.
+        """@en,
+        """
+        Ces points de contrôle comprennent tous les points qui doivent être remplis pour que vous puissiez recevoir des paiements directs.
+        Les points de contrôle de l'ordonnance sur l'agriculture biologique (Bio fédéral) y sont également inclus.
+        Le respect d'une partie des points de contrôle est la base du droit aux paiements directs (p. ex. le respect des PER pour vos branches d'exploitation).
+        D'autres points ne sont valables que si vous vous êtes inscrit au programme correspondant.
+        Seuls les points de contrôle valables pour toute la Suisse sont représentés, c'est-à-dire que les contributions à la qualité du paysage sont par exemple exclues.
+        """@fr,
+        """
+        Questi punti di controllo includono tutti i punti che devono essere soddisfatti per ricevere i pagamenti diretti.
+        Sono qui inclusi anche i punti di controllo dell'ordinanza sull'agricoltura biologica (Bio federale).
+        Il rispetto di una parte dei punti di controllo è la base per avere diritto ai pagamenti diretti (ad es. il rispetto della PER per i vostri rami aziendali).
+        Altri punti sono validi solo se vi siete iscritti al programma corrispondente.
+        Sono rappresentati solo i punti di controllo validi a livello svizzero, ciò significa che i contributi per la qualità del paesaggio, ad esempio, sono esclusi.
+        """@it .
 
 :A07EF60442B92B978CCC3B546480A7C5 a dcterms:Collection ;
     rdfs:label "Labels"@de,
@@ -178,6 +217,8 @@
 
 :A07EF60442B92B978EEE3B546480A7C5 a dcterms:Collection ;
     rdfs:label "Bereich Tiergesundheit (Nutztiere, Bienen, Fische)"@de,
+        "Animal health sector (livestock, bees, fish)"@en,
+        "Domaine de la santé animale (animaux de rente, abeilles, poissons)"@fr,
         "Ambito Salute degli animali (animali da reddito, api, pesci)"@it ;
     schema:hasPart :57A74BCEB4991D05E0532D0E870A0EAF,
         :F6F1708780C448C9A9218E008BB65138 ;
@@ -246,7 +287,10 @@
         """@it .
 
 :B3A2CF324826FC66839483546480AE12 a dcterms:Collection ;
-    rdfs:label "SwissGAP"@de ;
+    rdfs:label "SwissGAP"@de,
+        "SwissGAP"@en,
+        "SwissGAP"@fr,
+        "SwissGAP"@it ;
     schema:isPartOf :A07EF60442B92B978CCC3B546480A7C5 ;
     rdfs:comment """
         Diese Punkte gelten nur für SwissGAP-Betriebe und sind privatrechtlich geregelt.
@@ -257,7 +301,37 @@
         Wir empfehlen Ihnen, auf <a href="https://agrosolution.ch" target="_blank">agrosolution.ch</a> eine betriebsindividuelle Checkliste erstellen.
         Wenn sie dort bestimmte Pauschaldeklarationen angeben (z.B. ÖLN erfüllt, Angaben zur betrieblichen Ausgangslage etc.), werden bestimmte Kapitel und Fragen ausgeblendet oder vorausgefüllt.
         So profitieren Sie von erheblichen administrativen Vereinfachungen, welche SwissGAP für Sie erarbeitet hat.
-        """@de .
+        """@de,
+        """
+        These points only apply to SwissGAP farms and are governed by private law.
+        Not all of the following checklist points will necessarily be checked on your farm.
+        Furthermore, not all of your control points are critical for recognition.
+        All control points for production and marketing operations are listed.
+        A few points are only valid for businesses active in marketing.
+        We recommend that you create a farm-specific checklist on <a href="https://agrosolution.ch" target="_blank">agrosolution.ch</a>.
+        If you make certain flat-rate declarations there (e.g., proof of ecological performance met, information on the farm's initial situation, etc.), certain chapters and questions will be hidden or pre-filled.
+        This allows you to benefit from significant administrative simplifications that SwissGAP has developed for you.
+        """@en,
+        """
+        Ces points ne s'appliquent qu'aux exploitations SwissGAP et sont régis par le droit privé.
+        Tous les points de la liste de contrôle suivante ne seront pas forcément interrogés chez vous.
+        De plus, tous vos points de contrôle ne sont pas critiques pour la reconnaissance.
+        Tous les points de contrôle pour les entreprises de production et de commercialisation sont listés.
+        Quelques rares points ne sont valables que pour les entreprises actives dans la commercialisation.
+        Nous vous recommandons de créer une liste de contrôle spécifique à votre exploitation sur <a href="https://agrosolution.ch" target="_blank">agrosolution.ch</a>.
+        Si vous y indiquez certaines déclarations forfaitaires (p. ex. prestations écologiques requises remplies, indications sur la situation initiale de l'exploitation, etc.), certains chapitres et questions seront masqués ou pré-remplis.
+        Vous profitez ainsi des simplifications administratives considérables que SwissGAP a élaborées pour vous.
+        """@fr,
+        """
+        Questi punti si applicano solo alle aziende SwissGAP e sono regolati dal diritto privato.
+        Non tutti i seguenti punti della lista di controllo saranno necessariamente richiesti per la vostra azienda.
+        Inoltre, non tutti i vostri punti di controllo sono critici per il riconoscimento.
+        Sono elencati tutti i punti di controllo per le aziende di produzione e commercializzazione.
+        Pochissimi punti sono validi solo per le aziende attive nella commercializzazione.
+        Vi consigliamo di creare una lista di controllo specifica per la vostra azienda su <a href="https://agrosolution.ch" target="_blank">agrosolution.ch</a>.
+        Se lì inserite determinate dichiarazioni forfettarie (ad es. PER soddisfatta, dati sulla situazione di partenza dell'azienda, ecc.), alcuni capitoli e domande verranno nascosti o precompilati.
+        In questo modo, potrete beneficiare di notevoli semplificazioni amministrative che SwissGAP ha elaborato per voi.
+        """@it .
 
 :BC2A4CD9A00500553AE03B546480AF5B a dcterms:Collection ;
     rdfs:label "in-situ"@de,
