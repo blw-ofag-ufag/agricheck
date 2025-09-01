@@ -18,7 +18,17 @@ let searchActive = false;
 (async function init() {
   const bindings = await fetchBindings();
   nodeMap = buildNodeMap(bindings);
-  rebuildPage(window.__APP_LANG); // Initial render
+
+  treeEl.one('ready.jstree', function () {
+    const urlParams = new URLSearchParams(location.search);
+    const searchTerms = urlParams.getAll('search');
+    if (searchTerms.length > 0) {
+      searchInput.val(searchTerms.join(' '));
+      performSearch();
+    }
+  });
+
+  rebuildPage(window.__APP_LANG);
 })();
 
 /* ---------- page render/rerender function ----------------------------- */
@@ -79,7 +89,11 @@ window.rebuildPage = function(lang) {
           const hay = treeEl.jstree(true)
                             .get_node(node)
                             .a_attr['data-search'] || '';
-          return hay.includes(q.toLowerCase());
+          const tokens = q.toLowerCase()
+                          .split(/[ ,/]+| OR /i)
+                          .filter(Boolean);
+          if (tokens.length === 0) return false;
+          return tokens.some(token => hay.includes(token));
         }
       }
     })
@@ -88,7 +102,7 @@ window.rebuildPage = function(lang) {
       const empty = selectedSet.size === 0;
       generateBtn.prop('disabled', empty)
                  .toggleClass('btn-success', !empty)
-                 .toggleClass('btn-primary', empty); // Use primary when enabled
+                 .toggleClass('btn-primary', empty);
     })
     .on('select_node.jstree', (_, data) => {
       treeEl.jstree(true).open_node(data.node);
@@ -108,8 +122,6 @@ window.rebuildPage = function(lang) {
   searchInput.attr('placeholder', t('searchPlaceholder'));
 };
 
-
-/* ---------- search helpers (unchanged but depend on t()) -------------- */
 function updateSearchBtn() {
   if (searchActive) {
     searchBtn
@@ -125,22 +137,30 @@ function updateSearchBtn() {
 }
 
 function resetSearch() {
-  const jsTree = treeEl.jstree(true);
-  jsTree.clear_search();
-  jsTree.close_all();
   searchInput.val('');
-  searchActive = false;
-  updateSearchBtn();
+  performSearch();
 }
 
 function performSearch() {
   const q      = searchInput.val().trim();
   const jsTree = treeEl.jstree(true);
 
+  const url = new URL(location.href);
+  url.searchParams.delete('search');
+  if (q) {
+    const tokens = q.toLowerCase().split(/[ ,/]+| OR /i).filter(Boolean);
+    tokens.forEach(token => url.searchParams.append('search', token));
+  }
+  history.pushState({}, '', url.toString());
+
   jsTree.clear_search();
   jsTree.close_all();
 
-  if (!q) { resetSearch(); return; }
+  if (!q) {
+    searchActive = false;
+    updateSearchBtn();
+    return;
+  }
 
   jsTree.search(q);
 
@@ -157,11 +177,12 @@ function performSearch() {
   updateSearchBtn();
 }
 
+
 searchInput.on('keydown', e => { if (e.key === 'Enter') performSearch(); });
 searchInput.on('input',  e => { if (!e.target.value.trim() && searchActive) resetSearch(); });
 searchBtn  .on('click',  () => { searchActive ? resetSearch() : performSearch(); });
 
-/* ---------- launch checklist (unchanged) ------------------------------ */
+/* ---------- launch checklist ------------------------------ */
 function compressSelection(set) {
   const compressed = new Set();
   for (const uri of set) {
@@ -191,7 +212,7 @@ generateBtn.on('click', () => {
   location.href = url.pathname + url.search;
 });
 
-/* external helper (unchanged) ------------------------------------------- */
+/* external helper ------------------------------------------- */
 export function resetTree() {
   const jsTree = treeEl.jstree(true);
   jsTree.deselect_all();
