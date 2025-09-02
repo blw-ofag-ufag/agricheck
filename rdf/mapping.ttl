@@ -77,7 +77,7 @@
 :A07EF60442B92B9733333B546480A7C5 a dcterms:Collection ;
     rdfs:label "Ökologischer Leistungsnachweis (ÖLN)"@de,
         "Ecological performance proof (ÖLN)"@en,
-        "Preuve de performance écologique (ÖLN)"@fr,
+        "Prestations écologiques requises (PER)"@fr,
         "Prova del rendimento ecologico (ÖLN)"@it ;
     schema:hasPart :1D0B4931DC8C42C1A2DB50F8EB7961D4,
         :25502ED4E5AC443FB25B7708CFBD797C,
