@@ -3,7 +3,8 @@
 }
 :root {
   --primary: #3db85d;
-  --secondary: #98eeaf;
+  --secondary: #6fe28e;
+  --secondary-light: #c8f7d4;
   --light: #f8f9fa;
   --white: #ffffff;
   --muted: #6c757d;
@@ -73,6 +74,12 @@ ul.checklist label {
 }
 .jstree-search {
   background: var(--secondary) !important;
+  color: inherit !important;
+  font-weight: inherit !important;
+  font-style: normal !important;
+}
+.jstree-search-weak {
+  background: var(--secondary-light) !important;
   color: inherit !important;
   font-weight: inherit !important;
   font-style: normal !important;

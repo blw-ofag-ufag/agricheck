@@ -37,24 +37,29 @@ window.rebuildPage = function(lang) {
     const n = nodeMap.get(uri);
     const labelText = window.getLocalizedText(n.label, lang);
     const descriptionText = window.getLocalizedText(n.comment, lang, false);
-    const searchHaystack = [
-        ...Object.values(n.label),
-        ...Object.values(n.comment)
-    ];
+
+    const strongHaystack = [...Object.values(n.label)];
+    const weakHaystack   = [...Object.values(n.comment)];
+
     (n.inspectionPoints ?? []).forEach(ipUri => {
         const ip = nodeMap.get(ipUri);
         if (ip) {
-            searchHaystack.push(...Object.values(ip.label));
-            searchHaystack.push(...Object.values(ip.comment));
+            strongHaystack.push(...Object.values(ip.label));
+            weakHaystack.push(...Object.values(ip.comment));
         }
     });
     
     const nodeData = {
       id: uri,
       text: labelText,
-      a_attr: { 'data-search': searchHaystack.join(' ').toLowerCase() },
+      a_attr: {
+        'data-search':        [...strongHaystack, ...weakHaystack].join(' ').toLowerCase(),
+        'data-search-strong': strongHaystack.join(' ').toLowerCase(),
+        'data-search-weak':   weakHaystack.join(' ').toLowerCase()
+      },
       children: (n.subGroups ?? []).map(buildNode)
     };
+
     if (descriptionText) {
       nodeData.a_attr['data-bs-toggle'] = 'tooltip';
       nodeData.a_attr['data-bs-placement'] = 'right';
@@ -138,6 +143,7 @@ function performSearch() {
   }
   history.pushState({}, '', url.toString());
 
+  treeEl.find('.jstree-search-weak').removeClass('jstree-search-weak');
   jsTree.clear_search();
   jsTree.close_all();
 
@@ -150,11 +156,21 @@ function performSearch() {
   jsTree.search(q);
 
   setTimeout(() => {
+    const tokens = q.toLowerCase().split(/[ ,/]+| OR /i).filter(Boolean);
     treeEl.find('a.jstree-search').each((_, a) => {
-      const id   = $(a).closest('li').attr('id');
-      const node = jsTree.get_node(id);
+      const anchor = $(a);
+      const id     = anchor.closest('li').attr('id');
+      const node   = jsTree.get_node(id);
+
       node.parents.forEach(p => { if (p !== '#') jsTree.open_node(p); });
       jsTree.open_node(id);
+
+      const strongHay = anchor.attr('data-search-strong') || '';
+      const isStrongMatch = tokens.some(token => strongHay.includes(token));
+
+      if (!isStrongMatch) {
+          anchor.removeClass('jstree-search').addClass('jstree-search-weak');
+      }
     });
   }, 0);
 
