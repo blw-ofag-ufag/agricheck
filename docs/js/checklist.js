@@ -1,18 +1,13 @@
-/* checklist.js – builds list, fills date, handles toolbar actions --------*/
 import { fetchBindings, buildNodeMap } from './model.js';
-
-/* wait for i18n before anything else */
 await window.__i18nReady;
 
 const BASE_URI = 'https://agriculture.ld.admin.ch/inspection/';
-
 const content      = document.getElementById('content');
 const metaDateEl   = document.getElementById('metaDate');
 const printBtn     = document.getElementById('printBtn');
 const copyLinkBtn  = document.getElementById('copyLinkBtn');
 let nodeMap;
 
-/* ---------- toolbar (unchanged) ---------------------------------------- */
 printBtn.addEventListener('click', () => window.print());
 copyLinkBtn.addEventListener('click', () => {
   navigator.clipboard.writeText(location.href).then(() => {
@@ -25,19 +20,14 @@ copyLinkBtn.addEventListener('click', () => {
   });
 });
 
-/* ---------- top-level data fetch and initial render -------------------- */
 (async function init() {
   const bindings = await fetchBindings();
   nodeMap  = buildNodeMap(bindings);
-  rebuildPage(window.__APP_LANG); // Initial render
+  rebuildPage(window.__APP_LANG);
 })();
 
-
-/* ---------- page render/rerender function ----------------------------- */
 window.rebuildPage = function(lang) {
-  content.innerHTML = ''; // Clear previous content
-
-  // Update date based on new language
+  content.innerHTML = '';
   metaDateEl.textContent = new Date().toLocaleDateString(lang, {
     weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
   });
@@ -56,7 +46,6 @@ window.rebuildPage = function(lang) {
   groupUris.forEach((uri, idx) => renderCollection(uri, [idx + 1], lang));
 };
 
-/* recurse and render a collection with the correct language and fallbacks */
 function renderCollection(uri, numbers, lang) {
   const node = nodeMap.get(uri);
   if (!node) return;

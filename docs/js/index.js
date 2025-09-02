@@ -1,10 +1,6 @@
-/* index.js – navigator logic with cascading checkboxes ------------------*/
 import { fetchBindings, buildNodeMap } from './model.js';
-
-/* ensure translations are ready so t() exists ---------------------------*/
 await window.__i18nReady;
 
-const BASE_URI      = 'https://agriculture.ld.admin.ch/inspection/';
 const treeEl        = $('#tree');
 const searchInput   = $('#search');
 const searchBtn     = $('#searchBtn');
@@ -14,7 +10,6 @@ let nodeMap;
 let selectedSet = new Set();
 let searchActive = false;
 
-/* ---------- top-level data fetch and initial render ------------------- */
 (async function init() {
   const bindings = await fetchBindings();
   nodeMap = buildNodeMap(bindings);
@@ -31,20 +26,17 @@ let searchActive = false;
   rebuildPage(window.__APP_LANG);
 })();
 
-/* ---------- page render/rerender function ----------------------------- */
 window.rebuildPage = function(lang) {
   if (treeEl.jstree(true)) {
     treeEl.jstree(true).destroy();
   }
-  selectedSet.clear(); // Reset selection on language change
+  selectedSet.clear();
   generateBtn.prop('disabled', true);
   
   function buildNode(uri) {
     const n = nodeMap.get(uri);
     const labelText = window.getLocalizedText(n.label, lang);
     const descriptionText = window.getLocalizedText(n.comment, lang, false);
-
-    // Search should cover all available languages for an item
     const searchHaystack = [
         ...Object.values(n.label),
         ...Object.values(n.comment)
@@ -63,14 +55,11 @@ window.rebuildPage = function(lang) {
       a_attr: { 'data-search': searchHaystack.join(' ').toLowerCase() },
       children: (n.subGroups ?? []).map(buildNode)
     };
-    
-    // If a description exists, add Bootstrap tooltip attributes
     if (descriptionText) {
       nodeData.a_attr['data-bs-toggle'] = 'tooltip';
       nodeData.a_attr['data-bs-placement'] = 'right';
       nodeData.a_attr['title'] = descriptionText;
     }
-
     return nodeData;
   }
 
@@ -107,8 +96,6 @@ window.rebuildPage = function(lang) {
     .on('select_node.jstree', (_, data) => {
       treeEl.jstree(true).open_node(data.node);
     });
-    
-  // Initialize Bootstrap tooltips with new options
   new bootstrap.Tooltip(treeEl[0], {
     selector: '[data-bs-toggle="tooltip"]',
     trigger: 'hover',
@@ -116,8 +103,6 @@ window.rebuildPage = function(lang) {
     customClass: 'wide-tooltip',
     delay: { show: 500, hide: 50 }
   });
-
-  // Re-apply static translations and search state
   updateSearchBtn();
   searchInput.attr('placeholder', t('searchPlaceholder'));
 };
@@ -179,10 +164,9 @@ function performSearch() {
 
 
 searchInput.on('keydown', e => { if (e.key === 'Enter') performSearch(); });
-searchInput.on('input',  e => { if (!e.target.value.trim() && searchActive) resetSearch(); });
+searchInput.on('input',   e => { if (!e.target.value.trim() && searchActive) resetSearch(); });
 searchBtn  .on('click',  () => { searchActive ? resetSearch() : performSearch(); });
 
-/* ---------- launch checklist ------------------------------ */
 function compressSelection(set) {
   const compressed = new Set();
   for (const uri of set) {
@@ -212,7 +196,6 @@ generateBtn.on('click', () => {
   location.href = url.pathname + url.search;
 });
 
-/* external helper ------------------------------------------- */
 export function resetTree() {
   const jsTree = treeEl.jstree(true);
   jsTree.deselect_all();

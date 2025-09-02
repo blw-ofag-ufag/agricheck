@@ -1,7 +1,5 @@
-// model.js – data layer for Agricheck, language‑aware -----------------------
 const ENDPOINT = 'https://lindas.admin.ch/query';
 
-/* build the SPARQL query for ALL UI languages */
 function buildQuery() {
   return `
 PREFIX :        <https://agriculture.ld.admin.ch/inspection/>
@@ -25,7 +23,6 @@ ORDER BY ?identifier ?item
 `;
 }
 
-/* ------------------------------------------------------------------ */
 export async function fetchBindings() {
   const res  = await fetch(ENDPOINT, {
     method:  'POST',
@@ -41,13 +38,11 @@ export async function fetchBindings() {
   return res.json();
 }
 
-/* buildNodeMap now handles multiple languages from the query results */
 export function buildNodeMap(bindingsJson) {
   const rows = bindingsJson.results.bindings;
   const v = (row, key) => row[key]?.value;
   const l = (row, key) => row[key]?.['xml:lang'];
 
-  /* instantiate every node once, with objects for labels/comments */
   const map = new Map();
   for (const row of rows) {
     const uri = v(row, 'item');
@@ -55,8 +50,8 @@ export function buildNodeMap(bindingsJson) {
       map.set(uri, {
         uri,
         type: v(row, 'class').includes('Collection') ? 'Collection' : 'InspectionPoint',
-        label:      {}, // Will be {de: '...', fr: '...'}
-        comment:    {}, // Will be {de: '...', fr: '...'}
+        label:      {},
+        comment:    {},
         identifier: v(row, 'identifier') || null,
         subGroups:        [],
         inspectionPoints: [],
@@ -64,13 +59,11 @@ export function buildNodeMap(bindingsJson) {
         parentGroup: null
       });
     }
-    // Populate language variants
     const node = map.get(uri);
     if (v(row, 'name'))        node.label[l(row, 'name')] = v(row, 'name');
     if (v(row, 'description')) node.comment[l(row, 'description')] = v(row, 'description');
   }
 
-  /* wire parents/children */
   const processedLinks = new Set();
   for (const row of rows) {
     const uri    = v(row, 'item');
