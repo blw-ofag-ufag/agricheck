@@ -86,7 +86,7 @@ schema:isPartOf a owl:ObjectProperty ;
 
 :includesInspectionPoints a owl:ObjectProperty ;
     rdfs:label "beinhaltet Kontrollpunkte"@de,
-        "includes inspection points"@de ;
+        "includes inspection points"@en ;
     rdfs:domain dcterms:Collection ;
     rdfs:inverseOf :belongsToGroup ;
     rdfs:range :InspectionPoint .
@@ -98,7 +98,8 @@ schema:isPartOf a owl:ObjectProperty ;
     rdfs:range :InspectionPoint .
 
 :possibleOutcome a owl:ObjectProperty ;
-    rdfs:label "Mögliches Ergebnis"@de .
+    rdfs:label "Mögliches Ergebnis"@de,
+        "Possible outcome"@en .
 
 :suggestedSanction a owl:ObjectProperty ;
     rdfs:label "Vorgeschlagene Konsequenz"@de,
