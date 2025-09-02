@@ -34,7 +34,7 @@ export async function fetchBindings() {
     body: buildQuery()
   });
   if (!res.ok) {
-    throw new Error(`SPARQL request failed: ${res.status} – ${res.statusText}`);
+    throw new Error(`SPARQL request failed: ${res.status} - ${res.statusText}`);
   }
   return res.json();
 }

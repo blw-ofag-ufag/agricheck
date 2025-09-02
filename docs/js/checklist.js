@@ -26,6 +26,13 @@ copyLinkBtn.addEventListener('click', () => {
   rebuildPage(window.__APP_LANG);
 })();
 
+function addDescendantsAndSelf(uri, set) {
+  if (!uri || set.has(uri)) return; // Base case: stop if null or already processed
+  set.add(uri);
+  const node = nodeMap.get(uri);
+  (node?.subGroups ?? []).forEach(subUri => addDescendantsAndSelf(subUri, set));
+}
+
 window.rebuildPage = function(lang) {
   content.innerHTML = '';
   metaDateEl.textContent = new Date().toLocaleDateString(lang, {
@@ -42,14 +49,34 @@ window.rebuildPage = function(lang) {
   const groupUris = slugParam.split(',')
     .map(decodeURIComponent)
     .map(slug => BASE_URI + slug);
-
-  groupUris.forEach((uri, idx) => renderCollection(uri, [idx + 1], lang));
+  const displayableUris = new Set();
+  groupUris.forEach(uri => {
+    addDescendantsAndSelf(uri, displayableUris);
+    let current = nodeMap.get(uri);
+    while (current) {
+      const parentUri = current.superGroup || current.parentGroup;
+      if (parentUri) {
+        displayableUris.add(parentUri);
+        current = nodeMap.get(parentUri);
+      } else {
+        break;
+      }
+    }
+  });
+  const rootNodes = [...displayableUris].filter(uri => {
+    const node = nodeMap.get(uri);
+    const parentUri = node?.superGroup || node?.parentGroup;
+    return !parentUri || !displayableUris.has(parentUri);
+  });
+  rootNodes.forEach((uri, idx) => renderCollection(uri, [idx + 1], lang, displayableUris));
 };
 
-function renderCollection(uri, numbers, lang) {
+function renderCollection(uri, numbers, lang, displayableUris) {
+  if (!displayableUris.has(uri)) {
+    return;
+  }
   const node = nodeMap.get(uri);
   if (!node) return;
-
   const hLevel  = Math.min(numbers.length, 6);
   const heading = document.createElement('h' + hLevel);
   const numSpan = document.createElement('span');
@@ -101,6 +128,6 @@ function renderCollection(uri, numbers, lang) {
   }
 
   (node.subGroups ?? []).forEach((subUri, i) =>
-    renderCollection(subUri, numbers.concat(i + 1), lang)
+    renderCollection(subUri, numbers.concat(i + 1), lang, displayableUris)
   );
 }
