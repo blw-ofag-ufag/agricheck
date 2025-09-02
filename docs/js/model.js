@@ -11,6 +11,7 @@ WHERE
 {
   :42EA1020A8742ACABFB1B7A426619C42 schema:hasPart+ / :includesInspectionPoints* ?item .
   ?item a ?class .
+  VALUES ?class { dct:Collection :InspectionPoint }
   OPTIONAL { ?item schema:name ?name }
   OPTIONAL { ?item schema:description ?description }
   OPTIONAL {
