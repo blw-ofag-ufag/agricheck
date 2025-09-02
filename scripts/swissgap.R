@@ -9,13 +9,6 @@ library(stringr)
 
 # define RDF prefixes, bases etc.
 base <- "https://agriculture.ld.admin.ch/inspection/"
-prefixes <- "
-@prefix : <https://agriculture.ld.admin.ch/inspection/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix schema: <http://schema.org/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-"
 
 # Define language codes used in the headers of the excel data
 language_codes <- c("Anforderungen 2026", "Exigences  2026", "Esigenze 2026")
