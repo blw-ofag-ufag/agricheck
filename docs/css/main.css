@@ -111,9 +111,9 @@ ul.checklist label {
   height: 2px;
   background: var(--white);
 }
-#tree .jstree-anchor, #tree a {
-  white-space: normal;
-  word-break: break-word;
+#tree .jstree-anchor {
+  white-space: nowrap;
+  overflow: hidden;
 }
 #tree, #tree .jstree-container-ul, #treeCard .card-body {
   overflow-x: auto;
