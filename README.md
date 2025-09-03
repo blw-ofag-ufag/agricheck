@@ -18,7 +18,6 @@ Here are the links to the top-level collections:
 - [Direct payments](https://agriculture.ld.admin.ch/inspection/A07EF60442B92B978BBB3B546480A7C5)
 - [Labels](https://agriculture.ld.admin.ch/inspection/A07EF60442B92B978CCC3B546480A7C5)
 
-
 # The data model
 
 The data model was written using OWL, the web ontology language. It is not only used as a map to write queries, but also for a automatic reasoning process. [You can inspect the data model here.](https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/blw-ofag-ufag/agricheck/refs/heads/main/rdf/ontology.ttl)
@@ -36,21 +35,11 @@ This executes the R script for data conversion (`acontrol.R`, `bioinspecta.R` an
 # Cleaning duplicate descriptions
 
 In the source data, some inspection points contain a `schema:description` value that is *nearly* identical to their `schema:name`.
-Unfortunately, this is often the case for one language but not another:
-
-```ttl
-@prefix schema: <http://schema.org/> .
-@prefix : <https://agriculture.ld.admin.ch/inspection/> .
-:A840D786ADB72973920872FB24C575ED a :InspectionPoint ;
-	schema:name        "Tutti i contratti di trasformazione con dei trasformatori non certificati sono aggiornati e completi"@it ;
-    schema:description "Tutti i certificati e gli elenchi dei prodotti dei trasformatori certificati sono aggiornati e completi"@it .
-```
-
-which leads to weird fallback langauge behavior. To fix this, the similarity is measured using the normalized Levenshtein distance, which computes the number of single-character edits (insertions, deletions, substitutions) needed to transform one string into the other.
+Unfortunately, this is often the case for one language but not another, which leads to weird fallback langauge behavior. To fix this, the similarity is measured using the normalized Levenshtein distance, which computes the number of single-character edits (insertions, deletions, substitutions) needed to transform one string into the other.
 The raw distance is then divided by the maximum string length, which makes the metric length-agnostic and comparable across strings of different sizes:
 
 $$
-\text{normalized\_lv}(a, b) = \frac{\text{levenshtein}(a, b)}{\max\left(\lvert a \rvert, \lvert b \rvert\right)}
+\text{Normalized Levenshtein}(a, b) = \frac{\text{Levenshtein}(a, b)}{\max\left(\lvert a \rvert, \lvert b \rvert\right)}
 $$
 
 If the normalized distance between schema:name and schema:description is ≤ 0.1, the description is considered redundant and removed from the RDF graph.
