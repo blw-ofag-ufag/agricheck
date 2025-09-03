@@ -9,3 +9,5 @@ rdf/*.ttl
 !rdf/ontology.ttl
 !rdf/shape.ttl
 !rdf/mapping.ttl
+
+*.db
