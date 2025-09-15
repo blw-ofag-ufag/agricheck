@@ -25,7 +25,7 @@ parse_identifier <- function(x)
 # ===============================
 
 # Read Excel file from SwissGAP
-data <- readxl::read_excel("data/swissgap.xlsx", range = readxl::cell_cols("F:I"), skip = 0)
+data <- readxl::read_excel("data/sga.xlsx", range = readxl::cell_cols("A:D"), skip = 0)
 
 # Re-assign column names
 colnames(data) <- c("id", "de", "fr", "it")
@@ -34,7 +34,7 @@ colnames(data) <- c("id", "de", "fr", "it")
 data$URI <- NA
 for (i in 1:nrow(data))
 {
-  data[i,"URI"] <- rdfhelper::uri(toupper(rlang::hash(paste0("SwissGAP_",data[i,"id"]))), base)
+  data[i,"URI"] <- rdfhelper::uri(toupper(rlang::hash(paste0("SwisseGarantie",data[i,"id"]))), base)
 }
 
 # Assign a code that allows quick search of a parent
@@ -58,10 +58,10 @@ for (i in 1:nrow(data)) {
 }
 
 # Save SwissGAP IRI
-swissgap <- rdfhelper::uri("B3A2CF324826FC66839483546480AE12", prefix = base)
+swissgap <- rdfhelper::uri("B3A2CF324826FC66839483546480AE23", prefix = base)
 
 # open new RDF file
-sink("rdf/swissgap.ttl")
+sink("rdf/sga.ttl")
 
 # loop through table and convert to RDF
 for (i in 1:nrow(data)) {

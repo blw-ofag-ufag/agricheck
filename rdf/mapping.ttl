@@ -333,6 +333,45 @@
         In questo modo, potrete beneficiare di notevoli semplificazioni amministrative che SwissGAP ha elaborato per voi.
         """@it .
 
+:B3A2CF324826FC66839483546480AE23 a dcterms:Collection ;
+    rdfs:label "Suisse Garantie"@de,
+        "Suisse Garantie"@fr,
+        "Suisse Garantie"@it ;
+    schema:isPartOf :A07EF60442B92B978CCC3B546480A7C5 ;
+    rdfs:comment """
+        <p>
+            Die Kontrollpunkte für Suisse Garantie basieren auf den Anforderungen anerkannter Qualitätssicherungsprogramme der jeweiligen landwirtschaftlichen Branchen.
+            <ul>
+                <li>Milch: Es gibt keine spezifischen Kontrollpunkte für Landwirtschaftsbetriebe; es wird auf anerkannte QS-Programme und die ÖLN-Kontrollen des Bundes abgestellt.</li>
+                <li>Fleisch: Es gelten die Kontrollpunkte von QM-Schweizer Fleisch.</li>
+                <li>Früchte, Gemüse, Kartoffeln: Die Kontrollpunkte werden zusammen mit SwissGAP in einer Checkliste geführt. Diese unterliegt Anpassungen und ist nicht final. Die Anforderungen sind nicht alle gleichwertig; es wird zwischen kritischen (100% Erfüllung) und nicht-kritischen (95% Erfüllung) Punkten unterschieden. Zudem gelten nicht alle Punkte für jeden Betrieb, da zwischen Produktion und Vermarktung differenziert wird.</li>
+            </ul>
+            Für eine betriebsindividuelle und administrativ vereinfachte Checkliste wird dringend empfohlen, das Portal <a href="[https://agrosolution.ch](https://agrosolution.ch)" target="\_blank">agrosolution.ch</a> zu nutzen.
+        </p>
+        """@de,
+        """
+        <p>
+            Les points de contrôle pour Suisse Garantie se basent sur les exigences des programmes d'assurance qualité reconnus des branches agricoles respectives.
+            <ul>
+                <li>Lait: Il n'existe pas de points de contrôle spécifiques pour les exploitations agricoles; on se base sur des programmes de QS reconnus et sur les contrôles PER de la Confédération.</li>
+                <li>Viande: Les points de contrôle de QM-Viande Suisse s'appliquent.</li>
+                <li>Fruits, légumes, pommes de terre: Les points de contrôle sont gérés dans une check-liste commune avec SwissGAP. Celle-ci est sujette à des adaptations et n'est pas définitive. Les exigences ne sont pas toutes équivalentes; une distinction est faite entre les points critiques (100% de conformité) et non critiques (95% de conformité). De plus, tous les points ne s'appliquent pas à chaque exploitation, car une différenciation est faite entre la production et la commercialisation.</li>
+            </ul>
+            Pour une check-liste individualisée et administrativement simplifiée, il est vivement recommandé d'utiliser le portail <a href="[https://agrosolution.ch](https://agrosolution.ch)" target="\_blank">agrosolution.ch</a>.
+        </p>
+        """@fr,
+        """
+        <p>
+            I punti di controllo per Suisse Garantie si basano sui requisiti dei programmi di garanzia della qualità riconosciuti dei rispettivi settori agricoli.
+            <ul>
+                <li>Latte: Non esistono punti di controllo specifici per le aziende agricole; ci si basa su programmi di GQ riconosciuti e sui controlli della Confederazione relativi alla PER.</li>
+                <li>Carne: Si applicano i punti di controllo di QM-Carne Svizzera.</li>
+                <li>Frutta, verdura, patate: I punti di controllo sono gestiti in una lista di controllo insieme a SwissGAP. Questa è soggetta a modifiche e non è definitiva. I requisiti non sono tutti equivalenti; si distingue tra punti critici (soddisfazione al 100%) e non critici (soddisfazione al 95%). Inoltre, non tutti i punti si applicano a ogni azienda, poiché si distingue tra produzione e commercializzazione.</li>
+            </ul>
+            Per una lista di controllo personalizzata e semplificata dal punto di vista amministrativo, si raccomanda vivamente di utilizzare il portale <a href="[https://agrosolution.ch](https://agrosolution.ch)" target="\_blank">agrosolution.ch</a>.
+        </p>
+        """@it .
+
 :BC2A4CD9A00500553AE03B546480AF5B a dcterms:Collection ;
     rdfs:label "in-situ"@de,
         "in-situ"@fr,
