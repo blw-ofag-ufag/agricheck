@@ -17,15 +17,15 @@
     schema:isPartOf :A07EF60442B92B978CCC3B546480A7C5 ;
     rdfs:comment """
         Die Kontrollpunkte gelten für alle Betriebe, die beim privatrechtlichen Programm QM Schweizer Fleisch mitmachen, d.h. es sind privatrechtliche Kontrollpunkte.
-        Die Produktionsrichtlinien von QM Schweizer Fleisch finden Sie unter <a href=\"https://qm-schweizerfleisch.ch\" target="_blank">qm-schweizerfleisch.ch</a>.
+        Die Produktionsrichtlinien von QM Schweizer Fleisch finden Sie unter <a href="https://qm-schweizerfleisch.ch" target="_blank">qm-schweizerfleisch.ch</a>.
         """@de,
         """
         Les points de contrôle s'appliquent à toutes les exploitations participant au programme privé AQ-Viande Suisse, c'est-à-dire qu'il s'agit de points de contrôle privés.
-        Les directives de production de AQ-Viande Suisse se trouvent sur <a href=\"https://www.aq-viandesuisse.ch/\" target="_blank">aq-viandesuisse.ch/</a>.
+        Les directives de production de AQ-Viande Suisse se trouvent sur <a href="https://www.aq-viandesuisse.ch/" target="_blank">aq-viandesuisse.ch/</a>.
         """@fr,
         """
         I punti di controllo si applicano a tutte le aziende che partecipano al programma privato QM Carne Svizzera, cioè si tratta di punti di controllo privati.
-        Le linee guida di produzione di QM Carne Svizzera sono disponibili su <a href=\"https://qm-schweizerfleisch.ch\" target="_blank">qm-schweizerfleisch.ch</a>.
+        Le linee guida di produzione di QM Carne Svizzera sono disponibili su <a href="https://qm-schweizerfleisch.ch" target="_blank">qm-schweizerfleisch.ch</a>.
         """@it .
 
 :84EA1092A8794BB0AFD2B7A486619C7G a dcterms:Collection ;
@@ -298,7 +298,7 @@
         Zudem sind nicht alle Ihrer Kontrollpunkte kritisch für die Anerkennung.
         Es sind alle Kontrollpunkte für Produktions-und Vermarktungsbetriebe aufgelistet.
         Einige wenige Punkte sind nur für Betriebe gültig, welche in der Vermarktung tätig sind.
-        Wir empfehlen Ihnen, auf <a href=\"https://agrosolution.ch\" target="_blank">agrosolution.ch</a> eine betriebsindividuelle Checkliste erstellen.
+        Wir empfehlen Ihnen, auf <a href="https://agrosolution.ch" target="_blank">agrosolution.ch</a> eine betriebsindividuelle Checkliste erstellen.
         Wenn sie dort bestimmte Pauschaldeklarationen angeben (z.B. ÖLN erfüllt, Angaben zur betrieblichen Ausgangslage etc.), werden bestimmte Kapitel und Fragen ausgeblendet oder vorausgefüllt.
         So profitieren Sie von erheblichen administrativen Vereinfachungen, welche SwissGAP für Sie erarbeitet hat.
         """@de,
@@ -308,7 +308,7 @@
         Furthermore, not all of your control points are critical for recognition.
         All control points for production and marketing operations are listed.
         A few points are only valid for businesses active in marketing.
-        We recommend that you create a farm-specific checklist on <a href=\"https://agrosolution.ch\" target="_blank">agrosolution.ch</a>.
+        We recommend that you create a farm-specific checklist on <a href="https://agrosolution.ch" target="_blank">agrosolution.ch</a>.
         If you make certain flat-rate declarations there (e.g., proof of ecological performance met, information on the farm's initial situation, etc.), certain chapters and questions will be hidden or pre-filled.
         This allows you to benefit from significant administrative simplifications that SwissGAP has developed for you.
         """@en,
@@ -318,7 +318,7 @@
         De plus, tous vos points de contrôle ne sont pas critiques pour la reconnaissance.
         Tous les points de contrôle pour les entreprises de production et de commercialisation sont listés.
         Quelques rares points ne sont valables que pour les entreprises actives dans la commercialisation.
-        Nous vous recommandons de créer une liste de contrôle spécifique à votre exploitation sur <a href=\"https://agrosolution.ch\" target="_blank">agrosolution.ch</a>.
+        Nous vous recommandons de créer une liste de contrôle spécifique à votre exploitation sur <a href="https://agrosolution.ch" target="_blank">agrosolution.ch</a>.
         Si vous y indiquez certaines déclarations forfaitaires (p. ex. prestations écologiques requises remplies, indications sur la situation initiale de l'exploitation, etc.), certains chapitres et questions seront masqués ou pré-remplis.
         Vous profitez ainsi des simplifications administratives considérables que SwissGAP a élaborées pour vous.
         """@fr,
@@ -328,7 +328,7 @@
         Inoltre, non tutti i vostri punti di controllo sono critici per il riconoscimento.
         Sono elencati tutti i punti di controllo per le aziende di produzione e commercializzazione.
         Pochissimi punti sono validi solo per le aziende attive nella commercializzazione.
-        Vi consigliamo di creare una lista di controllo specifica per la vostra azienda su <a href=\"https://agrosolution.ch\" target="_blank">agrosolution.ch</a>.
+        Vi consigliamo di creare una lista di controllo specifica per la vostra azienda su <a href="https://agrosolution.ch" target="_blank">agrosolution.ch</a>.
         Se lì inserite determinate dichiarazioni forfettarie (ad es. PER soddisfatta, dati sulla situazione di partenza dell'azienda, ecc.), alcuni capitoli e domande verranno nascosti o precompilati.
         In questo modo, potrete beneficiare di notevoli semplificazioni amministrative che SwissGAP ha elaborato per voi.
         """@it .
