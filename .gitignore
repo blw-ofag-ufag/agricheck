@@ -11,3 +11,4 @@ rdf/*.ttl
 !rdf/mapping.ttl
 
 *.db
+.env
