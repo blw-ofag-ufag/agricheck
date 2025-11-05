@@ -365,6 +365,18 @@
         </p>
         """@it .
 
+:B3A2CF324826FC66839483546480AE24 a dcterms:Collection ;
+    rdfs:label "Gemüse, Kartoffel, Obst"@de ;
+    schema:isPartOf :B3A2CF324826FC66839483546480AE23 .
+
+:B3A2CF324826FC66839483546480AE25 a dcterms:Collection ;
+    rdfs:label "Getreide und Ölsaaten"@de ;
+    schema:isPartOf :B3A2CF324826FC66839483546480AE23 .
+
+:B3A2CF324826FC66839483546480AE26 a dcterms:Collection ;
+    rdfs:label "Eier (nur Produktion)"@de ;
+    schema:isPartOf :B3A2CF324826FC66839483546480AE23 .
+
 :BC2A4CD9A00500553AE03B546480AF5B a dcterms:Collection ;
     rdfs:label "in-situ"@de,
         "in-situ"@fr,

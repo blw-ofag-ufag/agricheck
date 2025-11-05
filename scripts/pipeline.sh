@@ -4,7 +4,7 @@
 source .env
 
 # Run R preprocessing steps
-for r in acontrol bioinspecta mutterkuh qm swissgap sga; do
+for r in acontrol bioinspecta mutterkuh qm swissgap sga sga-manual; do
   Rscript "scripts/${r}.R"
 done
 

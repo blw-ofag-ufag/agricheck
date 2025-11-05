@@ -58,7 +58,7 @@ for (i in 1:nrow(data)) {
 }
 
 # Save SwissGAP IRI
-swissgap <- rdfhelper::uri("B3A2CF324826FC66839483546480AE23", prefix = base)
+swissgap <- rdfhelper::uri("B3A2CF324826FC66839483546480AE24", prefix = base)
 
 # open new RDF file
 sink("rdf/sga.ttl")
