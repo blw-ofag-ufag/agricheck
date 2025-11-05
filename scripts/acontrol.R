@@ -20,12 +20,12 @@ prefixes <- "
 "
 
 # read Acontrol XML
-url <- "https://backend.blw.admin.ch/fileservice/sdweb-docs-prod-blwch-files/files/2024/09/09/d9cdabc0-2f76-4343-8ec5-5e5bd328dce1.zip"
+url <- "https://www.blw.admin.ch/dam/de/sd-web/KDcHFyWZPHes/Masterliste%202026.zip" #nolint
 temp_zip <- tempfile(fileext = ".zip")
 unzip_dir <- tempdir()
 download.file(url, temp_zip, mode = "wb")
 unzip(temp_zip, exdir = unzip_dir)
-xml_file_path <- file.path(unzip_dir, "Masterliste 2025.xml")
+xml_file_path <- file.path(unzip_dir, "Masterliste 2026.xml")
 XML <- read_xml(xml_file_path)
 rm(xml_file_path, url, temp_zip, unzip_dir)
 
