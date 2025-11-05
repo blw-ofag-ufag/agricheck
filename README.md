@@ -22,15 +22,24 @@ Here are the links to the top-level collections:
 
 The data model was written using OWL, the web ontology language. It is not only used as a map to write queries, but also for a automatic reasoning process. [You can inspect the data model here.](https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/blw-ofag-ufag/agricheck/refs/heads/main/rdf/ontology.ttl)
 
-# Run the ETL pipeline
+# Run data integration pipeline
 
-To run the data integration from excel or XML files to standardized RDF turtle files, run
+To run the data integration from excel or XML files to standardized RDF turtle files, do the following:
 
-```sh
-sh scripts/pipeline.sh
-```
+1. Add variables to `.env`
 
-This executes the R script for data conversion (`acontrol.R`, `bioinspecta.R` and `mutterkuh.R`) as well as the data validation, reasoning and merging `validate-syntax.py` and `reason.py`.
+    ```sh
+    USER=lindas-foag
+    PASSWORD=********
+    GRAPH=https://lindas.admin.ch/foag/crops
+    ENDPOINT=https://stardog.cluster.ldbar.ch/lindas
+    ```
+
+2. Add all relevant excel data sheets to the `/data` folder.
+3. Run the ETL pipeline `sh scripts/pipeline.sh`
+4. Check out the results on LINDAS.
+
+Step 3 executes the R scripts for data conversion (`acontrol.R`, `bioinspecta.R` and `mutterkuh.R`...) as well as the data validation, reasoning and merging `validate-syntax.py` and `reason.py`.
 
 # Cleaning duplicate descriptions
 
