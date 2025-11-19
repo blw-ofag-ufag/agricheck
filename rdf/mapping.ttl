@@ -11,7 +11,16 @@
     rdfs:comment "A collection of all collections, makes querying easier."@de .
 
 :57A74BCEBD7A1D05E0532D0E870A0EAF a dcterms:Collection ;
-    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
+    schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 ;
+    rdfs:comment """
+        Für Sömmerung gelten nur die Kategorien Anmeldung für Direktzahlungen, Gesuchseinreichung und Kontrolle auf dem Betrieb.
+        """@de,
+        """
+        Pour l'estivage, seules les catégories « Inscription aux paiements directs », « Dépôt de la demande » et « Contrôle dans l'exploitation » s'appliquent.
+        """@fr,
+        """
+        Per l'estivazione valgono solo le categorie «Domanda di pagamenti diretti», «Presentazione della domanda» e «Controllo nell'azienda».
+        """@it .
 
 :84EA0583A8534BB0AFDC27A486652C3C a dcterms:Collection ;
     rdfs:label "QM Schweizer Fleisch"@de,
