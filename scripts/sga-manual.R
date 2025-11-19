@@ -43,12 +43,16 @@ for (i in seq_len(nrow(data))) {
         "http://schema.org/name",
         "http://schema.org/description"
       )
-      rdfhelper::triple(uri, uri("http://schema.org/name"), langstring(x, lang))
+      rdfhelper::triple(uri, rdfhelper::uri(predicate), langstring(x, lang))
     }
   }
 
   # parent statement
-  rdfhelper::triple(uri, uri("http://schema.org/isPartOf"), rdfhelper::uri(data[i, "parent_id"], base))
+  rdfhelper::triple(
+    uri,
+    uri("http://schema.org/isPartOf"),
+    rdfhelper::uri(data[i, "parent_id"], base)
+  )
 }
 
 sink()
