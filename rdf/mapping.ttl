@@ -41,20 +41,14 @@
         """@it .
 
 :84EA1092A8794BB0AFD2B7A486619C7G a dcterms:Collection ;
-    rdfs:label "Mutterkuh Schweiz"@de,
-        "Vache mère suisse"@fr,
-        "Vacca madre svizzera"@it,
-        "Vatga mamma svizra"@rm ;
+    rdfs:label "Natura-Beef / Natura-Veal"@de,
+        "Natura-Beef / Natura-Veal"@fr,
+        "Natura-Beef / Natura-Veal"@it,
+        "Natura-Beef / Natura-Veal"@rm ;
     schema:isPartOf :A07EF60442B92B978CCC3B546480A7C5 ;
     rdfs:comment """
-        Die Kontrollpunkte gelten für das Label "Mutterkuh Schweiz".
-        """@de,
-        """
-        Les points de contrôle s'appliquent au label "Vache mère suisse".
-        """@fr,
-        """
-        I punti di controllo si applicano al marchio "Vacca madre svizzera".
-        """@it .
+        Die Kontrollpunkte gelten für das Label "Natura-Beef / Natura-Veal" von Mutterkuh Schweiz.
+        """@de .
 
 :A07EF60442B92B9700003B546480A7C5 a dcterms:Collection ;
     rdfs:label "Umwelt"@de,
