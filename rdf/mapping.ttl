@@ -47,7 +47,7 @@
         "Natura-Beef / Natura-Veal"@rm ;
     schema:isPartOf :A07EF60442B92B978CCC3B546480A7C5 ;
     rdfs:comment """
-        Die Kontrollpunkte gelten für das Label "Natura-Beef / Natura-Veal" von Mutterkuh Schweiz.
+        Die Kontrollpunkte gelten für die Labels "Natura-Beef" und "Natura-Veal" von Mutterkuh Schweiz.
         """@de .
 
 :A07EF60442B92B9700003B546480A7C5 a dcterms:Collection ;
