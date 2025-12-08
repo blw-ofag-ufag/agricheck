@@ -108,11 +108,11 @@ function renderCollection(uri, numbers, lang, displayableUris) {
       cb.className = 'form-check-input';
       label.appendChild(cb);
 
-      const strong = document.createElement('strong');
-      strong.innerHTML = window.getLocalizedText(ip.label, lang);
-      label.appendChild(strong);
-
       const ipCommentText = window.getLocalizedText(ip.comment, lang);
+      const nameEl = document.createElement(ipCommentText ? 'strong' : 'span');
+      nameEl.innerHTML = window.getLocalizedText(ip.label, lang);
+      label.appendChild(nameEl);
+
       if (ipCommentText) {
         label.appendChild(document.createElement('br'));
         const span = document.createElement('span');
