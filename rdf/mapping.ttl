@@ -293,41 +293,12 @@
         Nicht alle der nachfolgenden Checklisten-Punkte werden bei Ihnen zwingend abgefragt.
         Zudem sind nicht alle Ihrer Kontrollpunkte kritisch für die Anerkennung.
         Es sind alle Kontrollpunkte für Produktions-und Vermarktungsbetriebe aufgelistet.
-        Einige wenige Punkte sind nur für Betriebe gültig, welche in der Vermarktung tätig sind.
         Wir empfehlen Ihnen, auf <a href="https://agrosolution.ch" target="_blank">agrosolution.ch</a> eine betriebsindividuelle Checkliste erstellen.
-        Wenn sie dort bestimmte Pauschaldeklarationen angeben (z.B. ÖLN erfüllt, Angaben zur betrieblichen Ausgangslage etc.), werden bestimmte Kapitel und Fragen ausgeblendet oder vorausgefüllt.
+        Wenn Sie dort bestimmte Pauschaldeklarationen angeben (z.B. ÖLN erfüllt, Angaben zur betrieblichen Ausgangslage etc.), werden bestimmte Kapitel und Fragen ausgeblendet oder vorausgefüllt.
         So profitieren Sie von erheblichen administrativen Vereinfachungen, welche SwissGAP für Sie erarbeitet hat.
-        """@de,
-        """
-        These points only apply to SwissGAP farms and are governed by private law.
-        Not all of the following checklist points will necessarily be checked on your farm.
-        Furthermore, not all of your control points are critical for recognition.
-        All control points for production and marketing operations are listed.
-        A few points are only valid for businesses active in marketing.
-        We recommend that you create a farm-specific checklist on <a href="https://agrosolution.ch" target="_blank">agrosolution.ch</a>.
-        If you make certain flat-rate declarations there (e.g., proof of ecological performance met, information on the farm's initial situation, etc.), certain chapters and questions will be hidden or pre-filled.
-        This allows you to benefit from significant administrative simplifications that SwissGAP has developed for you.
-        """@en,
-        """
-        Ces points ne s'appliquent qu'aux exploitations SwissGAP et sont régis par le droit privé.
-        Tous les points de la liste de contrôle suivante ne seront pas forcément interrogés chez vous.
-        De plus, tous vos points de contrôle ne sont pas critiques pour la reconnaissance.
-        Tous les points de contrôle pour les entreprises de production et de commercialisation sont listés.
-        Quelques rares points ne sont valables que pour les entreprises actives dans la commercialisation.
-        Nous vous recommandons de créer une liste de contrôle spécifique à votre exploitation sur <a href="https://agrosolution.ch" target="_blank">agrosolution.ch</a>.
-        Si vous y indiquez certaines déclarations forfaitaires (p. ex. prestations écologiques requises remplies, indications sur la situation initiale de l'exploitation, etc.), certains chapitres et questions seront masqués ou pré-remplis.
-        Vous profitez ainsi des simplifications administratives considérables que SwissGAP a élaborées pour vous.
-        """@fr,
-        """
-        Questi punti si applicano solo alle aziende SwissGAP e sono regolati dal diritto privato.
-        Non tutti i seguenti punti della lista di controllo saranno necessariamente richiesti per la vostra azienda.
-        Inoltre, non tutti i vostri punti di controllo sono critici per il riconoscimento.
-        Sono elencati tutti i punti di controllo per le aziende di produzione e commercializzazione.
-        Pochissimi punti sono validi solo per le aziende attive nella commercializzazione.
-        Vi consigliamo di creare una lista di controllo specifica per la vostra azienda su <a href="https://agrosolution.ch" target="_blank">agrosolution.ch</a>.
-        Se lì inserite determinate dichiarazioni forfettarie (ad es. PER soddisfatta, dati sulla situazione di partenza dell'azienda, ecc.), alcuni capitoli e domande verranno nascosti o precompilati.
-        In questo modo, potrete beneficiare di notevoli semplificazioni amministrative che SwissGAP ha elaborato per voi.
-        """@it .
+        Massgeblich sind letztlich die auf <a href="https://agrosolution.ch" target="_blank">agrosolution.ch</a> veröffentlichten Dokumente (einschliesslich der normativen Unterlagen).
+        Die Angaben auf Agricheck erfolgen ohne Gewähr.
+        """@de .
 
 :B3A2CF324826FC66839483546480AE23 a dcterms:Collection ;
     rdfs:label "Suisse Garantie"@de,
