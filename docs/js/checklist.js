@@ -27,7 +27,7 @@ copyLinkBtn.addEventListener('click', () => {
 })();
 
 function addDescendantsAndSelf(uri, set) {
-  if (!uri || set.has(uri)) return; // Base case: stop if null or already processed
+  if (!uri || set.has(uri)) return;
   set.add(uri);
   const node = nodeMap.get(uri);
   (node?.subGroups ?? []).forEach(subUri => addDescendantsAndSelf(subUri, set));

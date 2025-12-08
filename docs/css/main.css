@@ -153,3 +153,27 @@ ul.checklist label {
   color: var(--white);
   text-decoration: underline;
 }
+
+/* Harmonize checklist fonts */
+ul.checklist label {
+  /* Ensure the container sets the baseline */
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--bs-body-color); /* Standard text color */
+}
+
+/* Ensure both the Name-Span and Description-Span inherit exactly */
+ul.checklist label span {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 400; /* Ensure normal weight */
+}
+
+/* Specific override for the description to only change color */
+ul.checklist label .text-muted {
+  color: var(--muted) !important;
+  /* Prevent any theme-specific font shrinking or changing */
+  font-size: inherit; 
+  font-family: inherit;
+}
