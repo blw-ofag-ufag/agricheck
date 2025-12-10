@@ -2,9 +2,9 @@ const ENDPOINT = 'https://lindas-cached.cluster.ldbar.ch/query';
 
 function buildQuery() {
   return `
-PREFIX :        <https://agriculture.ld.admin.ch/inspection/>
-PREFIX schema:  <http://schema.org/>
-PREFIX dct:     <http://purl.org/dc/terms/>
+PREFIX : <https://agriculture.ld.admin.ch/inspection/>
+PREFIX schema: <http://schema.org/>
+PREFIX dct: <http://purl.org/dc/terms/>
 SELECT *
 FROM <https://lindas.admin.ch/foag/inspections>
 WHERE
@@ -14,6 +14,8 @@ WHERE
   VALUES ?class { dct:Collection :InspectionPoint }
   OPTIONAL { ?item schema:name ?name }
   OPTIONAL { ?item schema:description ?description }
+  # FILTER: Ensure name and description use the same language (if both exist)
+  FILTER ( !BOUND(?name) || !BOUND(?description) || lang(?name) = lang(?description) )
   OPTIONAL {
     ?item ?link ?parent .
     VALUES ?link { schema:isPartOf :belongsToGroup }
