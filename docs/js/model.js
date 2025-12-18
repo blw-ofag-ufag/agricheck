@@ -1,4 +1,4 @@
-const ENDPOINT = 'https://lindas-cached.cluster.ldbar.ch/query';
+const ENDPOINT = 'https://agriculture.ld.admin.ch/query';
 
 function buildQuery() {
   return `
