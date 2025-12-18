@@ -27,3 +27,4 @@ curl \
   -H "Content-Type: text/turtle" \
   --data-binary @rdf/graph.ttl \
   "$ENDPOINT?graph=$GRAPH"
+echo "LINDAS graph upload completed"

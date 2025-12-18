@@ -36,7 +36,7 @@ for row in results:
     lv = levenshtein(str(name), str(desc))
     norm_lv = lv / max(len(str(name)), len(str(desc)))
 
-    if norm_lv <= 0.1:
+    if norm_lv <= 0.05:
         print(
           f"Remove schema:description from {uri} (Levenshtein distance = {norm_lv:.3f})",
           f"Name:        '{name}'",
