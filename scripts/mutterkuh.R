@@ -13,7 +13,7 @@ schema <- "http://schema.org/"
 sink("rdf/mutterkuh.ttl")
 
 # loop over each row in excel table
-for (i in 1:nrow(data)) {
+for (i in seq_len(nrow(data))) {
 
   # define a URI based on hashed entry
   subject <- rdfhelper::uri(toupper(rlang::hash(data[i, 2])), base)
@@ -28,7 +28,7 @@ for (i in 1:nrow(data)) {
   rdfhelper::triple(
     subject,
     rdfhelper::uri("identifier", schema),
-    literal(as.character(data[i, "ID"]))
+    literal(sprintf("%03d", as.integer(data[i, "ID"])))
   )
 
   # give all the labels and comments
