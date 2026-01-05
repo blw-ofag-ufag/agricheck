@@ -262,24 +262,24 @@
         "Bio Suisse"@it ;
     schema:isPartOf :A07EF60442B92B978CCC3B546480A7C5 ;
     rdfs:comment """
-        Die Kontrollpunkte gelten für das privatrechtliche Label Bio Suisse.
-        Zum Teil können die Kontrollpunkte sehr ähnlich sein wie die Kontrollpunkte von Bundes-Bio.
-        Weil die Konsequenzen bei einem Mangel jedoch unterschiedlich sind, werden diese Kontrollpunkte separat aufgelistet.
+        Zusätzlich zu den hier aufgelisteten Kontrollpunkten für das Label «Bio Suisse», sind auf der gleichen Kontrolle auch die Checkpunkte der BioV relevant.
+        Weiterhin besteht die Möglichkeit, dass die Bio Kontrollstelle auch öffentlich rechtliche, wie auch weitere Programme kontrolliert, sofern sie hierfür einen entsprechenden Auftrag der Kantone haben.
+        Auskunft hierüber kann Ihnen Ihre Kontrollstelle erteilen.
         """@de,
         """
-        The control points apply to the private label Bio Suisse.
-        In some cases, the control points can be very similar to those of Federal Organic.
-        However, because the consequences of deficiencies differ, these control points are listed separately.
+        In addition to the control points listed here for the \"Bio Suisse\" label, the checkpoints of the Organic Farming Ordinance are also relevant during the same inspection.
+        Furthermore, it is possible that the organic inspection body also inspects public law programs as well as other programs, provided they have a corresponding mandate from the cantons.
+        Your inspection body can provide you with information regarding this.
         """@en,
         """
-        Les points de contrôle s'appliquent au label privé Bio Suisse.
-        Dans certains cas, les points de contrôle peuvent être très similaires à ceux de Bio fédéral.
-        Toutefois, comme les conséquences en cas de manquement diffèrent, ces points de contrôle sont répertoriés séparément.
+        En plus des points de contrôle énumérés ici pour le label «Bio Suisse», les points de contrôle de l'Ordonnance bio sont également pertinents lors du même contrôle.
+        De plus, il est possible que l'organisme de contrôle bio vérifie également des programmes de droit public ainsi que d'autres programmes, pour autant qu'il dispose d'un mandat correspondant des cantons.
+        Votre organisme de contrôle peut vous renseigner à ce sujet.
         """@fr,
         """
-        I punti di controllo si applicano al marchio privato Bio Suisse.
-        In alcuni casi, i punti di controllo possono essere molto simili a quelli del marchio Bio federale.
-        Tuttavia, poiché le conseguenze in caso di carenze sono diverse, questi punti di controllo vengono elencati separatamente.
+        Oltre ai punti di controllo elencati qui per il marchio «Bio Suisse», durante lo stesso controllo sono rilevanti anche i punti di controllo dell'Ordinanza bio.
+        Inoltre, esiste la possibilità che l'organismo di controllo bio verifichi anche programmi di diritto pubblico e altri programmi, a condizione che abbia un mandato corrispondente dai cantoni.
+        Il vostro organismo di controllo può fornirvi informazioni al riguardo.
         """@it .
 
 :B3A2CF324826FC66839483546480AE12 a dcterms:Collection ;
