@@ -267,7 +267,7 @@
         Auskunft hierüber kann Ihnen Ihre Kontrollstelle erteilen.
         """@de,
         """
-        In addition to the control points listed here for the \"Bio Suisse\" label, the checkpoints of the Organic Farming Ordinance are also relevant during the same inspection.
+        In addition to the control points listed here for the "Bio Suisse" label, the checkpoints of the Organic Farming Ordinance are also relevant during the same inspection.
         Furthermore, it is possible that the organic inspection body also inspects public law programs as well as other programs, provided they have a corresponding mandate from the cantons.
         Your inspection body can provide you with information regarding this.
         """@en,
