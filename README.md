@@ -28,7 +28,7 @@ To run the data integration from excel or XML files to standardized RDF turtle f
 
 1. Add variables to `.env`
 
-    ```sh
+    ``` sh
     USER=lindas-foag
     PASSWORD=********
     GRAPH=https://lindas.admin.ch/foag/crops
@@ -36,8 +36,21 @@ To run the data integration from excel or XML files to standardized RDF turtle f
     ```
 
 2. Add all relevant excel data sheets to the `/data` folder.
-3. Run the ETL pipeline `sh scripts/pipeline.sh`
-4. Check out the results on LINDAS.
+3. Start a virtual environment and install libraries:
+
+    ``` sh
+    python -m venv venv
+    source venv/bin/activate  # On Windows use: venv\Scripts\activate
+    pip install -r requirements.txt
+    ```
+
+4. Run the ETL pipeline
+
+    ``` sh
+    sh scripts/pipeline.sh
+    ```
+
+5. Check out the results on LINDAS.
 
 Step 3 executes the R scripts for data conversion (`acontrol.R`, `bioinspecta.R` and `mutterkuh.R`...) as well as the data validation, reasoning and merging `validate-syntax.py` and `reason.py`.
 

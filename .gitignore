@@ -12,3 +12,5 @@ rdf/*.ttl
 
 *.db
 .env
+
+venv/
