@@ -64,7 +64,7 @@ for(sheet in 1:3) {
   # Create an ID for each row in the data set
   data$URI <- NA
   for (i in 1:nrow(data)) {
-    data[i,"URI"] <- rdfhelper::uri(toupper(rlang::hash(data[i,"Anforderungen"])), base)
+    data[i,"URI"] <- rdfhelper::uri(toupper(rlang::hash(paste0(data[i,"Anforderungen"], sheet))), base)
   }
 
   # Assign parents
