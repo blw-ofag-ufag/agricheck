@@ -2,28 +2,28 @@ const ENDPOINT = 'https://agriculture.ld.admin.ch/query';
 
 function buildQuery() {
   return `
-PREFIX : <https://agriculture.ld.admin.ch/inspection/>
-PREFIX schema: <http://schema.org/>
-PREFIX dct: <http://purl.org/dc/terms/>
-SELECT *
-FROM <https://lindas.admin.ch/foag/inspections>
-WHERE
-{
-  :42EA1020A8742ACABFB1B7A426619C42 schema:hasPart+ / :includesInspectionPoints* ?item .
-  ?item a ?class .
-  VALUES ?class { dct:Collection :InspectionPoint }
-  OPTIONAL { ?item schema:name ?name }
-  OPTIONAL { ?item schema:description ?description }
-  # FILTER: Ensure name and description use the same language (if both exist)
-  FILTER ( !BOUND(?name) || !BOUND(?description) || lang(?name) = lang(?description) )
-  OPTIONAL {
-    ?item ?link ?parent .
-    VALUES ?link { schema:isPartOf :belongsToGroup }
-  }
-  OPTIONAL { ?item schema:identifier ?identifier }
-}
-ORDER BY ?identifier ?item
-`;
+    PREFIX : <https://agriculture.ld.admin.ch/inspection/>
+    PREFIX schema: <http://schema.org/>
+    PREFIX dct: <http://purl.org/dc/terms/>
+    SELECT DISTINCT ?item ?class ?name ?description ?parent ?identifier
+    FROM <https://lindas.admin.ch/foag/inspections>
+    WHERE
+    {
+      :42EA1020A8742ACABFB1B7A426619C42 schema:hasPart+ / :includesInspectionPoints* ?item .
+      ?item a ?class .
+      VALUES ?class { dct:Collection :InspectionPoint }
+      OPTIONAL { ?item schema:name ?name }
+      OPTIONAL { ?item schema:description ?description }
+      # FILTER: Ensure name and description use the same language (if both exist)
+      FILTER ( !BOUND(?name) || !BOUND(?description) || lang(?name) = lang(?description) )
+      OPTIONAL {
+        ?item ?link ?parent .
+        VALUES ?link { schema:isPartOf :belongsToGroup }
+      }
+      OPTIONAL { ?item schema:identifier ?identifier }
+    }
+    ORDER BY ?identifier ?item
+    `;
 }
 
 export async function fetchBindings() {
