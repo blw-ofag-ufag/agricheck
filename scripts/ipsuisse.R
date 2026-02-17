@@ -56,9 +56,11 @@ for(sheet in 1:3) {
 
   # Clean text
   for (i in seq_len(nrow(data))) {
-    data[i, "Anforderungen"] <- data[i, "Anforderungen"] %>%
-      extract_clean_text() %>%
-      str_squish()
+    for(lang in c("DE", "FR", "IT")) {
+      data[i, sprintf("Anforderungen %s", lang)] <- data[i, sprintf("Anforderungen %s", lang)] %>%
+        extract_clean_text() %>%
+        str_squish()
+    }
   }
 
   # Create an ID for each row in the data set
@@ -94,7 +96,6 @@ for(sheet in 1:3) {
     subject <- as.character(data[i, "URI"])
     class <- as.character(data[i, "class"])
     parent <- as.character(data[i, "parent"])
-    text <- as.character(data[i, "Anforderungen"])
 
     # Process collections of inspection points
     rdfhelper::triple(subject, "a", class)
@@ -111,7 +112,10 @@ for(sheet in 1:3) {
     rdfhelper::triple(subject, "schema:identifier", literal(i))
 
     # Add name
-    rdfhelper::triple(subject, "schema:name", langstring(text, "de"))
+    for(lang in c("DE", "FR", "IT")) {
+      text <- as.character(data[i, sprintf("Anforderungen %s", lang)])
+      rdfhelper::triple(subject, "schema:name", langstring(text, tolower(lang)))
+    }
   }
 
 }

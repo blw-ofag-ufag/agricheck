@@ -417,19 +417,31 @@
     schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
 
 :F3F3FF20CFC6FC66824039A46480AE10 a dcterms:Collection ;
-    rdfs:label "IP-Suisse"@de ;
+    rdfs:label "IP-Suisse"@de,
+        "IP-Suisse"@en,
+        "IP-Suisse"@fr,
+        "IP-Suisse"@it ;
     schema:isPartOf :A07EF60442B92B978CCC3B546480A7C5 .
 
 :F3F3FF20CFC6FC66824039A46480AE11 a dcterms:Collection ;
-    rdfs:label "IPS Label"@de ;
+    rdfs:label "IPS Label"@de,
+        "IPS Label"@en,
+        "Label IPS"@fr,
+        "Label IPS"@it ;
     schema:isPartOf :F3F3FF20CFC6FC66824039A46480AE10 .
 
 :F3F3FF20CFC6FC66824039A46480AE12 a dcterms:Collection ;
-    rdfs:label "IPS WM (Wiesenmilch)"@de ;
+    rdfs:label "IPS WM (Wiesenmilch)"@de,
+        "IPS WM (Meadow Milk)"@en,
+        "IPS PL (Lait de prairie)"@fr,
+        "IPS LP (Latte di prato)"@it ;
     schema:isPartOf :F3F3FF20CFC6FC66824039A46480AE10 .
 
 :F3F3FF20CFC6FC66824039A46480AE13 a dcterms:Collection ;
-    rdfs:label "IPS BD (Biodiversität)"@de ;
+    rdfs:label "IPS BD (Biodiversität)"@de,
+        "IPS BD (Biodiversity)"@en,
+        "IPS BD (Biodiversité)"@fr,
+        "IPS BD (Biodiversità)"@it ;
     schema:isPartOf :F3F3FF20CFC6FC66824039A46480AE10 .
 
 :42322B5300474C3D944CC1033F7653B6 schema:isPartOf :A07EF60442B92B978BBB3B546480A7C5 .
