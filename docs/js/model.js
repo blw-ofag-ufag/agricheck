@@ -1,4 +1,4 @@
-const ENDPOINT = 'https://agriculture.ld.admin.ch/query';
+const ENDPOINT = 'https://cached.lindas.admin.ch/query';
 
 function buildQuery() {
   return `
