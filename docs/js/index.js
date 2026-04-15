@@ -109,18 +109,18 @@ window.rebuildPage = function(lang) {
     delay: { show: 500, hide: 50 }
   });
   updateSearchBtn();
-  searchInput.attr('placeholder', t('searchPlaceholder'));
+  searchInput.attr('placeholder', t('search.placeholder'));
 };
 
 function updateSearchBtn() {
   if (searchActive) {
     searchBtn
-      .html(`<i class="bi bi-x-lg me-2"></i>${t('searchReset')}`)
+      .html(`<i class="bi bi-x-lg me-2"></i><span data-i18n="search.reset">${t('search.reset')}</span>`)
       .removeClass('btn-outline-primary')
       .addClass('btn-outline-secondary');
   } else {
     searchBtn
-      .html(`<span data-i18n="search">${t('search')}</span>`)
+      .html(`<span data-i18n="search.button">${t('search.button')}</span>`)
       .removeClass('btn-outline-secondary')
       .addClass('btn-outline-primary');
   }
