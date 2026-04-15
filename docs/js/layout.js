@@ -23,7 +23,9 @@ window.__i18nReady = (async () => {
   document.documentElement.lang = lang;
   localStorage.setItem('akcLang', lang);
 
-  const translationsAll = await fetch('i18n/translations.json').then(r => r.json());
+  const yamlText = await fetch('i18n/translations.yml').then(r => r.text());
+  const translationsAll = jsyaml.load(yamlText);
+
   return { lang, translationsAll };
 })();
 
@@ -37,13 +39,28 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   const nav = document.querySelector('.navbar');
   if (nav) {
-    document.documentElement.style
-            .setProperty('--akc-navbar-h', nav.offsetHeight + 'px');
+    document.documentElement.style.setProperty('--akc-navbar-h', nav.offsetHeight + 'px');
   }
 
   const { lang: initialLang, translationsAll } = await window.__i18nReady;
 
-  window.t = key => (translationsAll[initialLang] || translationsAll['de'])[key] ?? key;
+  const resolvePath = (obj, path) => path.split('.').reduce((acc, part) => acc && acc[part], obj);
+
+  window.t = key => {
+    const langData = translationsAll[window.__APP_LANG] || translationsAll['de'];
+    let val = resolvePath(langData, key);
+
+    if (val === undefined && window.__APP_LANG !== 'de') {
+      val = resolvePath(translationsAll['de'], key);
+    }
+
+    if (val === undefined) return key;
+
+    if (typeof val === 'string') {
+      return val.includes('\n') ? marked.parse(val) : marked.parseInline(val);
+    }
+    return val;
+  };
 
   function applyTranslations(root = document) {
     root.querySelectorAll('[data-i18n]').forEach(el => {
@@ -86,15 +103,17 @@ document.addEventListener('DOMContentLoaded', async () => {
       url.searchParams.set('lang', newLang);
       history.pushState({}, '', url.toString());
 
-      window.t = key => (translationsAll[newLang] || translationsAll['de'])[key] ?? key;
       applyTranslations(document);
 
-      curLabel.textContent = newLang.toUpperCase();
+      const curLabel = document.getElementById('currentLangLabel');
+      if (curLabel) curLabel.textContent = newLang.toUpperCase();
+      
       document.querySelectorAll('.lang-option').forEach(el => el.classList.remove('active'));
       a.classList.add('active');
 
       patchLinks(newLang);
 
+      // 5. App-spezifische Rebuilds anstossen (z.B. den Tree)
       if (typeof window.rebuildPage === 'function') {
         window.rebuildPage(newLang);
       }
