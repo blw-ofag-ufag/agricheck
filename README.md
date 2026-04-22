@@ -56,6 +56,9 @@ Step 3 executes the R scripts for data conversion (`acontrol.R`, `bioinspecta.R`
 
 # Cleaning duplicate descriptions
 
+> [!NOTE]
+> This feature is deactivated for now. Needs some revisions.
+
 In the source data, some inspection points contain a `schema:description` value that is *nearly* identical to their `schema:name`.
 Unfortunately, this is often the case for one language but not another, which leads to weird fallback langauge behavior. To fix this, the similarity is measured using the normalized Levenshtein distance, which computes the number of single-character edits (insertions, deletions, substitutions) needed to transform one string into the other.
 The raw distance is then divided by the maximum string length, which makes the metric length-agnostic and comparable across strings of different sizes:
