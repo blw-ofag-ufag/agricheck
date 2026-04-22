@@ -48,10 +48,10 @@
     schema:isPartOf :A07EF60442B92B978CCC3B546480A7C5 ;
     rdfs:comment """
         Die Kontrollpunkte gelten für die Labels "Natura-Beef" und "Natura-Veal" von Mutterkuh Schweiz.
-        """@de ,
+        """@de,
         """
         Les points de contrôle s'appliquent aux labels "Natura-Beef" et "Natura-Veal" de Vache mère Suisse.
-        """@fr ,
+        """@fr,
         """
         I punti di controllo si applicano ai marchi "Natura-Beef" e "Natura-Veal" di Vacca madre Svizzera.
         """@it .
@@ -304,7 +304,7 @@
         So profitieren Sie von erheblichen administrativen Vereinfachungen, welche SwissGAP für Sie erarbeitet hat.
         Massgeblich sind letztlich die auf <a href="https://agrosolution.ch" target="_blank">agrosolution.ch</a> veröffentlichten Dokumente (einschliesslich der normativen Unterlagen).
         Die Angaben auf Agricheck erfolgen ohne Gewähr.
-        """@de ,
+        """@de,
         """
         Ces points s'appliquent uniquement aux exploitations SwissGAP et sont régis par le droit privé.
         Tous les points de la liste de contrôle suivante ne vous seront pas obligatoirement demandés.
@@ -315,7 +315,7 @@
         Vous profitez ainsi de simplifications administratives considérables que SwissGAP a élaborées pour vous.
         En fin de compte, les documents publiés sur <a href="https://agrosolution.ch" target="_blank">agrosolution.ch</a> (y compris les documents normatifs) font foi.
         Les informations sur Agricheck sont fournies sans garantie.
-        """@fr ,
+        """@fr,
         """
         Questi punti si applicano solo alle aziende SwissGAP e sono regolati dal diritto privato.
         Non tutti i seguenti punti della lista di controllo vi saranno obbligatoriamente richiesti.
