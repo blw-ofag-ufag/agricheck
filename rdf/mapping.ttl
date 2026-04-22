@@ -48,7 +48,13 @@
     schema:isPartOf :A07EF60442B92B978CCC3B546480A7C5 ;
     rdfs:comment """
         Die Kontrollpunkte gelten für die Labels "Natura-Beef" und "Natura-Veal" von Mutterkuh Schweiz.
-        """@de .
+        """@de ,
+        """
+        Les points de contrôle s'appliquent aux labels "Natura-Beef" et "Natura-Veal" de Vache mère Suisse.
+        """@fr ,
+        """
+        I punti di controllo si applicano ai marchi "Natura-Beef" e "Natura-Veal" di Vacca madre Svizzera.
+        """@it .
 
 :A07EF60442B92B9700003B546480A7C5 a dcterms:Collection ;
     rdfs:label "Umwelt"@de,
@@ -298,7 +304,29 @@
         So profitieren Sie von erheblichen administrativen Vereinfachungen, welche SwissGAP für Sie erarbeitet hat.
         Massgeblich sind letztlich die auf <a href="https://agrosolution.ch" target="_blank">agrosolution.ch</a> veröffentlichten Dokumente (einschliesslich der normativen Unterlagen).
         Die Angaben auf Agricheck erfolgen ohne Gewähr.
-        """@de .
+        """@de ,
+        """
+        Ces points s'appliquent uniquement aux exploitations SwissGAP et sont régis par le droit privé.
+        Tous les points de la liste de contrôle suivante ne vous seront pas obligatoirement demandés.
+        De plus, tous vos points de contrôle ne sont pas critiques pour la reconnaissance.
+        Tous les points de contrôle pour les exploitations de production et de commercialisation sont listés.
+        Nous vous recommandons de créer une liste de contrôle spécifique à votre exploitation sur <a href="https://agrosolution.ch" target="_blank">agrosolution.ch</a>.
+        Si vous y indiquez certaines déclarations forfaitaires (par ex. PER remplies, informations sur la situation initiale de l'exploitation, etc.), certains chapitres et questions seront masqués ou pré-remplis.
+        Vous profitez ainsi de simplifications administratives considérables que SwissGAP a élaborées pour vous.
+        En fin de compte, les documents publiés sur <a href="https://agrosolution.ch" target="_blank">agrosolution.ch</a> (y compris les documents normatifs) font foi.
+        Les informations sur Agricheck sont fournies sans garantie.
+        """@fr ,
+        """
+        Questi punti si applicano solo alle aziende SwissGAP e sono regolati dal diritto privato.
+        Non tutti i seguenti punti della lista di controllo vi saranno obbligatoriamente richiesti.
+        Inoltre, non tutti i vostri punti di controllo sono critici per il riconoscimento.
+        Sono elencati tutti i punti di controllo per le aziende di produzione e commercializzazione.
+        Vi consigliamo di creare una lista di controllo specifica per l'azienda su <a href="https://agrosolution.ch" target="_blank">agrosolution.ch</a>.
+        Se vi inserite determinate dichiarazioni forfettarie (ad es. PER soddisfatta, informazioni sulla situazione di partenza dell'azienda, ecc.), alcuni capitoli e domande verranno nascosti o precompilati.
+        In questo modo beneficiate di notevoli semplificazioni amministrative che SwissGAP ha elaborato per voi.
+        In ultima analisi, fanno stato i documenti pubblicati su <a href="https://agrosolution.ch" target="_blank">agrosolution.ch</a> (compresi i documenti normativi).
+        Le informazioni su Agricheck sono fornite senza garanzia.
+        """@it .
 
 :B3A2CF324826FC66839483546480AE23 a dcterms:Collection ;
     rdfs:label "Suisse Garantie"@de,
