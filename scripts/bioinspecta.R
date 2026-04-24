@@ -67,7 +67,6 @@ for (i in 1:nrow(data))
   for (lang in language_codes)
   {
     # keep track of what came "before"
-    previous = ""
     for (var in c("Bezeichnung", "Text", "Beschreibung"))
     {
       # construct the current variables name
@@ -76,15 +75,6 @@ for (i in 1:nrow(data))
       # read the string in a given cell
       string <- as.character(data[i,varname])
 
-      # If in a given cell, the string is the same as in the previous cell, replace it with NA
-      # (this is the case for example if `DE-CH Bezeichnung` has the same content as `DE-CH Text`)
-      if(!is.na(string) && string==previous)
-      {
-        data[i,varname] <- NA
-      }
-
-      # override the previous string for the next comparison
-      previous <- string
     }
 
     # create unified variable

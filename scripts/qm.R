@@ -10,21 +10,11 @@ rdfs   <- "http://www.w3.org/2000/01/rdf-schema#"
 schema <- "http://schema.org/"
 dct    <- "http://purl.org/dc/terms/"
 
-# remove duplicate labels
-for (lang in c("de", "fr"))
-{
-    x <- paste("name", lang, sep = "_")
-    y <- paste("description", lang, sep = "_")
-    i <- data[[x]] == data[[y]]
-    data[[y]][i] <- NA
-}
-
 # create file
 sink("rdf/qm.ttl")
 
 # loop over each row in excel table
-for (i in 1:nrow(data))
-{
+for (i in 1:nrow(data)) {
   # define a URI based on hashed entry
   subject <- rdfhelper::uri(toupper(rlang::hash(data[i,])), base)
 
