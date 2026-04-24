@@ -1,7 +1,7 @@
 de:
   header:
     title: Schweizer Kontrollpunkte? Einfach gefunden mit Agricheck!
-    lead: Durchsuchen Sie mit Agricheck die Kontrollpunkte, die auf Schweizer Landwirtschaftsbetrieben geprüft werden. Verfügbar sind alle schweizweit geltenden öffentlich-rechtlichen Kontrollpunkte und Kontrollpunkte, die von Label-Organisationen zur Verfügung gestellt wurden. Für weitere Informationen zu Entstehung, Inhalt und Einschränkungen von Agricheck, [besuchen Sie unsere Hilfsseite](about.html).
+    lead: Durchsuchen Sie mit Agricheck die Kontrollpunkte, die auf Schweizer Landwirtschaftsbetrieben geprüft werden. Verfügbar sind alle schweizweit geltenden öffentlich-rechtlichen Kontrollpunkte und Kontrollpunkte, die von unterzeichnenden Label-Organisationen des Aktionsplans «Kontrollen auf Landwirtschaftsbetrieben" zur Verfügung gestellt wurden. Für weitere Informationen zu Entstehung, Inhalt und Einschränkungen von Agricheck, [besuchen Sie unsere Hilfsseite](about.html).
   
   search:
     placeholder: Suchen Sie hier nach einem Stichwort und es werden alle Kontrollbereiche dazu grün eingefärbt.
@@ -42,7 +42,7 @@ de:
     * Eher unbedeutende Produktionszweige sind zugunsten der Übersichtlichkeit nicht abgebildet (z.B. Insekten).
     * Es sind Kontrollpunkte von Labels abgebildet, welche den Aktionsplan Kontrollen in der Landwirtschaft unterzeichnet haben, sofern sie ihre Kontrollpunkte-Listen zur Verfügung gestellt haben. Kontrollpunkte von weiteren privatrechtlichen Organisationen könnten künftig ergänzt werden.
     * Es wurden die Texte aus den Kontrollpunkte-Listen übernommen. Die Hilfstexte sind für Kontrolleure geschrieben worden und können deshalb für andere Personen nicht immer selbsterklärend sein.
-    * Sind die Kontrollpunkte in einer Sprache nicht verfügbar, so werden sie in einer verfügbaren Sprachversion abgebildet.
+    * Sind die Kontrollpunkte in einer Sprache nicht verfügbar bzw. übersetzt, so werden sie in einer verfügbaren Sprachversion abgebildet.
     * Die Herausgeber übernehmen keine Verantwortung für die Vollständigkeit, Verständlichkeit und Korrektheit der privatrechtlichen Kontrollpunktelisten.
     
     Wenden Sie sich bei Fragen an [acontrol@blw.admin.ch](mailto:acontrol@blw.admin.ch).
@@ -63,7 +63,7 @@ de:
 fr:
   header:
     title: Points de contrôle suisses ? Simplifiez-vous la vie avec Agricheck !
-    lead: Avec Agricheck, recherchez les points de contrôle qui sont vérifiés dans les exploitations agricoles suisses. Sont disponibles tous les points de contrôle de droit public valables dans toute la Suisse ainsi que les points de contrôle mis à disposition par les organisations de labels. Pour plus d'informations sur l'origine, le contenu et les limites d'Agricheck, [consultez notre page d'aide](about.html).
+    lead: Avec Agricheck, recherchez les points de contrôle qui sont vérifiés dans les exploitations agricoles suisses. Sont disponibles tous les points de contrôle de droit public valables dans toute la Suisse ainsi que les points de contrôle mis à disposition mis à la disposition des développeurs par les organisations de labellisation signataires du plan d’action « Contrôles dans les exploitations agricoles » . Pour plus d'informations sur l'origine, le contenu et les limites d'Agricheck, [consultez notre page d'aide](about.html).
   
   search:
     placeholder: Recherchez ici un mot-clé et tous les groupes correspondants seront colorés.
@@ -104,6 +104,7 @@ fr:
     * Certaines branches de production plutôt mineures ne sont pas représentées pour des raisons de clarté (par ex. les insectes).
     * Les points de contrôle des labels qui ont signé le plan d'action « Contrôles dans l'agriculture » sont représentés (pour autant qu'ils aient été mis à disposition). Les points de contrôle d'autres organisations de droit privé pourraient être ajoutés à l'avenir.
     * Les textes ont été repris des listes de points de contrôle. Les textes d'aide ont été rédigés pour les contrôleurs et peuvent donc ne pas être toujours explicites pour d'autres personnes.
+    * Si les points de contrôle ne sont pas disponibles ou traduits dans une langue donnée, ils s'affichent dans une version linguistique disponible.
     * Les éditeurs n'assument aucune responsabilité quant à l'exhaustivité, la clarté et l'exactitude des listes de points de contrôle.
     
     Pour toute question, veuillez vous adresser à [acontrol@blw.admin.ch](mailto:acontrol@blw.admin.ch).
@@ -124,7 +125,7 @@ fr:
 it:
   header:
     title: Punti di controllo svizzeri? Trovati facilmente con Agricheck!
-    lead: Con Agricheck puoi cercare i punti di controllo verificati nelle aziende agricole svizzere. Sono disponibili tutti i punti di controllo di diritto pubblico validi a livello nazionale e i punti di controllo messi a disposizione dalle organizzazioni di label. Per maggiori informazioni sull'origine, il contenuto e le limitazioni di Agricheck, [visita la nostra pagina di aiuto](about.html).
+    lead: Con Agricheck puoi cercare i punti di controllo verificati nelle aziende agricole svizzere. Sono disponibili tutti i punti di controllo di diritto pubblico validi a livello nazionale e i punti di controllo messi a disposizione degli sviluppatori dalle organizzazioni di certificazione firmatarie del piano d'azione «Controlli nelle aziende agricole». Per maggiori informazioni sull'origine, il contenuto e le limitazioni di Agricheck, [visita la nostra pagina di aiuto](about.html).
   
   search:
     placeholder: Cerca qui una parola chiave e tutti i gruppi trovati verranno colorati.
@@ -164,6 +165,7 @@ it:
     * I punti di controllo vengono aggiornati una volta all'anno, prima dell'inizio del nuovo anno civile.
     * Alcuni settori di attività piuttosto minori non sono rappresentati per motivi di chiarezza (ad es. gli insetti).
     * Sono rappresentati i punti di controllo dei marchi che hanno sottoscritto il piano d'azione «Controlli in agricoltura», a condizione che abbiano messo a disposizione i loro elenchi di punti di controllo. In futuro potrebbero essere aggiunti i punti di controllo di altre organizzazioni di diritto privato. I testi sono stati ripresi dagli elenchi dei punti di controllo. I testi di aiuto sono stati redatti per i controllori e potrebbero quindi non essere sempre chiari per altre persone.
+    * Se i punti di controllo non sono disponibili o tradotti in una determinata lingua, vengono visualizzati in una versione linguistica disponibile.
     * Gli editori non si assumono alcuna responsabilità per la completezza, la chiarezza e l'accuratezza degli elenchi di punti di controllo.
     
     Per qualsiasi domanda, si prega di contattare [acontrol@blw.admin.ch](mailto:acontrol@blw.admin.ch).
