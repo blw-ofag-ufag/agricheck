@@ -9,7 +9,6 @@ de:
     reset: Suche zurücksetzen
   
   tree:
-    cardTitle: Kontrollpunkte-Gruppen
     quickHelp: Klicken Sie in der Baumansicht auf die Quadrätchen, und wählen Sie alle Gruppen aus, die sie betreffen (grünes Häkchen heisst «ausgewählt»). Klicken sie danach rechts auf «Liste erstellen» und Sie erhalten Ihre Liste mit den für Ihren Betrieb gültigen Kontrollpunkten.
   
   actions:
