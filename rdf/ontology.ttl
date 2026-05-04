@@ -1,7 +1,6 @@
 @prefix : <https://agriculture.ld.admin.ch/inspection/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -109,22 +108,4 @@ schema:isPartOf a owl:ObjectProperty ;
 : a owl:Ontology ;
     dcterms:title "Kontrollpunkte-Liste"@de ;
     owl:versionInfo "0.1.1" .
-
-schema:description rdfs:label "Beschreibung"@de,
-        "Description"@en .
-
-schema:name rdfs:label "Name"@de,
-        "Name"@en .
-
-rdf:type rdfs:label "Typ"@de,
-        "Type"@en .
-
-rdfs:comment rdfs:label "Kommentar"@de,
-        "Comment"@en .
-
-schema:identifier rdfs:label "Identifikator"@de,
-        "Identifier"@en .
-
-rdfs:label rdfs:label "Bezeichnung"@de,
-        "Label"@en .
 
