@@ -9,6 +9,8 @@
   --white: #ffffff;
   --muted: #6c757d;
   --border: #dee2e6;
+  --header-bg: #263645;
+  --footer-bg: #263645;
   --navbar-h: 56px;
 }
 body, html {
@@ -26,6 +28,12 @@ main {
 }
 footer {
   flex-shrink: 0;
+}
+.site-header {
+  background-color: var(--header-bg) !important;
+}
+.site-footer {
+  background-color: var(--footer-bg) !important;
 }
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   font-family: Inter, system-ui, sans-serif;
