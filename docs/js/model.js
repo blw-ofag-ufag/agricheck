@@ -12,10 +12,11 @@ function buildQuery() {
       :42EA1020A8742ACABFB1B7A426619C42 schema:hasPart+ / :includesInspectionPoints* ?item .
       ?item a ?class .
       VALUES ?class { dct:Collection :InspectionPoint }
-      OPTIONAL { ?item schema:name ?name }
-      OPTIONAL { ?item schema:description ?description }
-      # FILTER: Ensure name and description use the same language (if both exist)
-      FILTER ( !BOUND(?name) || !BOUND(?description) || lang(?name) = lang(?description) )
+      OPTIONAL {
+        { ?item schema:name ?name }
+        UNION
+        { ?item schema:description ?description }
+      }
       OPTIONAL {
         ?item ?link ?parent .
         VALUES ?link { schema:isPartOf :belongsToGroup }
