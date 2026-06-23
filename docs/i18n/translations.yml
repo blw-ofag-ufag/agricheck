@@ -34,13 +34,13 @@ de:
 
     ## Wer hat diese App umgesetzt?
 
-    Das Bundesamt für Landwirtschaft hat diese Webapplikation im Jahr 2025 im Rahmen des Aktionsplans «Kontrollen auf Landwirtschaftsbetrieben» erarbeitet. Er ist in Zusammenarbeit mit unterzeichnenden Organisationen des Aktionsplans entstanden.
+    Das Bundesamt für Landwirtschaft hat diese Webapplikation im Jahr 2025 im Rahmen des Aktionsplans [«Kontrollen auf Landwirtschaftsbetrieben»](https://cms.news.admin.ch/fileservice/sdweb-docs-prod-nsbcch-files/files/2025/09/04/433d3db3-d991-42e7-ada0-76ee2dcb564e.pdf) erarbeitet. Er ist in Zusammenarbeit mit unterzeichnenden Organisationen des Aktionsplans entstanden.
 
     Zu berücksichtigen sind folgende Punkte:
 
     * Die Kontrollpunkte werden einmal jährlich aktualisiert, und zwar vor dem neuen Kalenderjahr.
     * Eher unbedeutende Produktionszweige sind zugunsten der Übersichtlichkeit nicht abgebildet (z.B. Insekten).
-    * Es sind Kontrollpunkte von Labels abgebildet, welche den Aktionsplan Kontrollen in der Landwirtschaft unterzeichnet haben, sofern sie ihre Kontrollpunkte-Listen zur Verfügung gestellt haben. Kontrollpunkte von weiteren privatrechtlichen Organisationen könnten künftig ergänzt werden.
+    * Es sind Kontrollpunkte von Labels abgebildet, welche den Aktionsplan Kontrollen auf Landwirtschaftsbetrieben unterzeichnet haben, sofern sie ihre Kontrollpunkte-Listen zur Verfügung gestellt haben. Kontrollpunkte von weiteren privatrechtlichen Organisationen könnten künftig ergänzt werden.
     * Es wurden die Texte aus den Kontrollpunkte-Listen übernommen. Die Hilfstexte sind für Kontrolleure geschrieben worden und können deshalb für andere Personen nicht immer selbsterklärend sein.
     * Sind die Kontrollpunkte in einer Sprache nicht verfügbar bzw. übersetzt, so werden sie in einer verfügbaren Sprachversion abgebildet.
     * Die Herausgeber übernehmen keine Verantwortung für die Vollständigkeit, Verständlichkeit und Korrektheit der privatrechtlichen Kontrollpunktelisten.
@@ -63,7 +63,7 @@ de:
 fr:
   header:
     title: Points de contrôle suisses ? Simplifiez-vous la vie avec Agricheck !
-    lead: Avec Agricheck, recherchez les points de contrôle qui sont vérifiés dans les exploitations agricoles suisses. Sont disponibles tous les points de contrôle de droit public valables dans toute la Suisse ainsi que les points de contrôle mis à disposition mis à la disposition des développeurs par les organisations de labellisation signataires du plan d’action « Contrôles dans les exploitations agricoles » . Pour plus d'informations sur l'origine, le contenu et les limites d'Agricheck, [consultez notre page d'aide](about.html).
+    lead: Avec Agricheck, recherchez les points de contrôle qui sont vérifiés dans les exploitations agricoles suisses. Sont disponibles tous les points de contrôle de droit public valables dans toute la Suisse ainsi que les points de contrôle mis à disposition mis à la disposition des développeurs par les organisations de labellisation signataires du plan d’action « Contrôles dans les exploitations agricoles ». Pour plus d'informations sur l'origine, le contenu et les limites d'Agricheck, [consultez notre page d'aide](about.html).
 
   search:
     placeholder: Recherchez ici un mot-clé et tous les groupes correspondants seront colorés.
@@ -96,7 +96,7 @@ fr:
 
     ## Qui a mis en œuvre cette application ?
 
-    L'Office fédéral de l'agriculture a élaboré cette application web en 2025 dans le cadre du plan d'action « Contrôles sur les exploitations agricoles », en collaboration avec les organisations signataires de ce plan.
+    L'Office fédéral de l'agriculture a élaboré cette application web en 2025 dans le cadre du plan d'action [« Contrôles sur les exploitations agricoles »](https://cms.news.admin.ch/fileservice/sdweb-docs-prod-nsbcch-files/files/2025/09/04/433d3db3-d991-42e7-ada0-76ee2dcb564e.pdf), en collaboration avec les organisations signataires de ce plan.
 
     Les points suivants sont à prendre en considération :
 
@@ -158,7 +158,7 @@ it:
 
     ## Chi ha realizzato questa applicazione?
 
-    L'Ufficio federale dell'agricoltura ha sviluppato questa questa applicazione web nel 2025 nell'ambito del piano d'actione «Controlli sulle aziende agricole», in collaborazione con le organizzazioni firmatarie di tale piano.
+    L'Ufficio federale dell'agricoltura ha sviluppato questa questa applicazione web nel 2025 nell'ambito del piano d'actione [«Controlli sulle aziende agricole»](https://cms.news.admin.ch/fileservice/sdweb-docs-prod-nsbcch-files/files/2025/09/04/433d3db3-d991-42e7-ada0-76ee2dcb564e.pdf), in collaborazione con le organizzazioni firmatarie di tale piano.
 
     È necessario tenere conto dei seguenti punti:
 
