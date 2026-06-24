@@ -33,19 +33,24 @@ window.rebuildPage = function(lang) {
   selectedSet.clear();
   generateBtn.prop('disabled', true);
   
-  function buildNode(uri) {
+function buildNode(uri) {
     const n = nodeMap.get(uri);
     const labelText = window.getLocalizedText(n.label, lang);
     const descriptionText = window.getLocalizedText(n.comment, lang, false);
 
-    const strongHaystack = [...Object.values(n.label)];
-    const weakHaystack   = [...Object.values(n.comment)];
+    const getActiveText = (textObj) => {
+      const text = window.getLocalizedText(textObj, lang, false);
+      return text ? text.replace(/<[^>]+>/g, '') : '';
+    };
+
+    const strongHaystack = [getActiveText(n.label)];
+    const weakHaystack   = [getActiveText(n.comment)];
 
     (n.inspectionPoints ?? []).forEach(ipUri => {
         const ip = nodeMap.get(ipUri);
         if (ip) {
-            strongHaystack.push(...Object.values(ip.label));
-            weakHaystack.push(...Object.values(ip.comment));
+            strongHaystack.push(getActiveText(ip.label));
+            weakHaystack.push(getActiveText(ip.comment));
         }
     });
     
